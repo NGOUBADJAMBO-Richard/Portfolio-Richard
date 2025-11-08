@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f4ed8" stop-opacity="0.92" />
+      <stop offset="100%" stop-color="#1d2e5d" stop-opacity="1" />
+    </linearGradient>
+    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#e7edff" stop-opacity="0.9" />
+    </linearGradient>
+    <style>
+      .title {
+        font-family: "Poppins", "Segoe UI", sans-serif;
+        font-size: 46px;
+        font-weight: 700;
+        fill: #ffffff;
+      }
+      .subtitle {
+        font-family: "Poppins", "Segoe UI", sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        fill: rgba(255, 255, 255, 0.85);
+      }
+      .stat-label {
+        font-family: "Poppins", "Segoe UI", sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        fill: #1f4ed8;
+      }
+      .stat-value {
+        font-family: "Poppins", "Segoe UI", sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        fill: #2a2a2a;
+      }
+    </style>
+  </defs>
+
+  <rect width="960" height="640" rx="42" ry="42" fill="url(#bgGradient)" />
+
+  <path d="M80 520c120-160 220-200 330-120s220 120 330-60 220-160 220-160v460H80Z" fill="rgba(255, 255, 255, 0.06)" />
+
+  <g transform="translate(80 120)">
+    <text class="title">Gestion des Prospects</text>
+    <text class="subtitle" y="68">Pipeline commercial centralisé & automatisations CRM</text>
+  </g>
+
+  <g transform="translate(120 240)">
+    <rect width="720" height="300" rx="28" fill="url(#cardGradient)" />
+    <rect x="30" y="40" width="300" height="220" rx="22" fill="#ffffff" opacity="0.92" />
+    <rect x="60" y="80" width="240" height="16" rx="8" fill="#1f4ed8" opacity="0.6" />
+    <rect x="60" y="120" width="200" height="16" rx="8" fill="#1f4ed8" opacity="0.35" />
+    <rect x="60" y="160" width="220" height="16" rx="8" fill="#1f4ed8" opacity="0.35" />
+    <circle cx="360" cy="100" r="12" fill="#1f4ed8" opacity="0.45" />
+    <circle cx="360" cy="150" r="12" fill="#1f4ed8" opacity="0.3" />
+    <circle cx="360" cy="200" r="12" fill="#1f4ed8" opacity="0.18" />
+
+    <g transform="translate(380 50)">
+      <rect width="280" height="60" rx="16" fill="#ffffff" opacity="0.95" />
+      <text x="30" y="38" class="stat-label">Tunnel de conversion en temps réel</text>
+    </g>
+    <g transform="translate(380 130)">
+      <text class="stat-value" x="0" y="36">+45%</text>
+      <text class="stat-label" x="0" y="66">de prospects qualifiés</text>
+    </g>
+    <g transform="translate(380 200)">
+      <text class="stat-value" x="0" y="36">-30%</text>
+      <text class="stat-label" x="0" y="66">de temps de relance</text>
+    </g>
+  </g>
+</svg>

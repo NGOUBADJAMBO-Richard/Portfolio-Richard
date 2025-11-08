@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+  <defs>
+    <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f4ed8" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#1f4ed8" stop-opacity="0.02" />
+    </linearGradient>
+    <style>
+      .brand-title {
+        font-family: "Poppins", "Segoe UI", sans-serif;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+      }
+      .brand-highlight {
+        font-family: "Poppins", "Segoe UI", sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.3em;
+      }
+      .brand-tagline {
+        font-family: "Allura", "Pacifico", "Brush Script MT", cursive;
+        font-size: 42px;
+        letter-spacing: 0.08em;
+      }
+    </style>
+  </defs>
+
+  <rect width="500" height="500" fill="#ffffff" rx="38" ry="38" />
+
+  <g opacity="0.6" stroke="url(#waveGradient)" fill="none" stroke-width="1.6">
+    <path d="M40 70c80 40 160 40 240 0s160-40 240 0" />
+    <path d="M20 120c90 42 180 42 270 0s180-42 270 0" opacity="0.8" />
+    <path d="M-10 170c110 44 220 44 330 0s220-44 330 0" opacity="0.65" />
+    <path d="M0 220c120 46 240 46 360 0s240-46 360 0" opacity="0.5" />
+    <path d="M-30 270c140 48 280 48 420 0s280-48 420 0" opacity="0.35" />
+  </g>
+
+  <g transform="translate(60 180)">
+    <text class="brand-title" font-size="210" y="190" fill="#454545">M</text>
+    <text class="brand-title" font-size="210" x="150" y="190" fill="#1f4ed8">G</text>
+    <text class="brand-title" font-size="210" x="285" y="190" fill="#454545">N</text>
+  </g>
+
+  <text class="brand-highlight" x="250" y="360" font-size="32" text-anchor="middle" fill="#1f4ed8">
+    CODEWAVE
+  </text>
+
+  <text class="brand-tagline" x="250" y="410" text-anchor="middle" fill="#5c5c5c">
+    Solutions Digitales
+  </text>
+</svg>
