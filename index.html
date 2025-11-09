@@ -83,32 +83,44 @@
         <ul>
           <li>
             <a href="#hero" class="active"
-              ><i class="bi bi-house navicon"></i>Home</a
+              ><i class="bi bi-house navicon"></i>Accueil</a
             >
           </li>
           <li>
-            <a href="#about"><i class="bi bi-person navicon"></i> About</a>
+            <a href="#about"
+              ><i class="bi bi-person navicon"></i>À&nbsp;propos</a
+            >
+          </li>
+          <li>
+            <a href="#stats"
+              ><i class="bi bi-graph-up navicon"></i>Statistiques</a
+            >
+          </li>
+          <li>
+            <a href="#skills"><i class="bi bi-stars navicon"></i>Compétences</a>
           </li>
           <li>
             <a href="#resume"
-              ><i class="bi bi-file-earmark-text navicon"></i> Resume</a
+              ><i class="bi bi-file-earmark-text navicon"></i>Parcours</a
             >
           </li>
           <li>
             <a href="#portfolio"
-              ><i class="bi bi-images navicon"></i> Portfolio</a
+              ><i class="bi bi-kanban navicon"></i>Portfolio</a
             >
           </li>
           <li>
             <a href="#services"
-              ><i class="bi bi-hdd-stack navicon"></i> Services</a
+              ><i class="bi bi-hdd-stack navicon"></i>Services</a
             >
           </li>
-
           <li>
-            <a href="#contact"
-              ><i class="bi bi-envelope navicon"></i> Contact</a
+            <a href="#testimonials"
+              ><i class="bi bi-chat-quote navicon"></i>Témoignages</a
             >
+          </li>
+          <li>
+            <a href="#contact"><i class="bi bi-envelope navicon"></i>Contact</a>
           </li>
         </ul>
       </nav>
@@ -127,14 +139,7 @@
               class="typed"
               data-typed-items="Chrétien, Chef de Projet, Développeur, Freelancer, FullStack, Entrepreneur"
               >Chrétien</span
-            ><span
-              class="typed-cursor typed-cursor--blink"
-              aria-hidden="true"
-            ></span
-            ><span
-              class="typed-cursor typed-cursor--blink"
-              aria-hidden="true"
-            ></span>
+            >
           </p>
         </div>
       </section>
@@ -612,11 +617,11 @@
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <li data-filter="*" class="filter-active">Tout</li>
-              <li data-filter=".filter-app">Mobile</li>
-              <li data-filter=".filter-product">Web</li>
-              <li data-filter=".filter-branding">WordPress</li>
-              <li data-filter=".filter-logo">Logo</li>
+              <li data-filter="*" class="filter-active">Tous</li>
+              <li data-filter=".filter-app">Applications</li>
+              <li data-filter=".filter-web">Sites web</li>
+              <li data-filter=".filter-branding">Identité visuelle</li>
+              <li data-filter=".filter-doc">Documentation</li>
             </ul>
             <!-- End Portfolio Filters -->
 
@@ -625,452 +630,393 @@
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <!-- Portfolio Item 1: Mobile App (Flutter) -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
               >
-                <div class="portfolio-content h-100">
-                  <img
-                    src="assets/img/portfolio/wazup-logo.jpeg"
-                    class="img-fluid"
-                    alt="Application Mobile Flutter"
-                  />
-                  <div class="portfolio-info">
-                    <h4>Waz'UP</h4>
-                    <p>
-                      Conception et développement d'interfaces utilisateur
-                      multiplateformes (iOS & Android).
-                    </p>
-                    <a
-                      href="assets/img/portfolio/wazup-logo.jpeg"
-                      title="Waz'UP"
-                      data-gallery="portfolio-gallery-app"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                    <a
-                      href="wazup-details.html"
-                      title="Plus de détails"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                <article class="portfolio-card h-100">
+                  <div class="portfolio-media">
+                    <img
+                      src="assets/img/portfolio/wazup-logo.jpeg"
+                      class="portfolio-img img-fluid"
+                      alt="Application mobile Waz'UP"
+                    />
+                    <span class="portfolio-category">Application mobile</span>
                   </div>
-                </div>
+                  <div class="portfolio-body">
+                    <h3>Waz'UP</h3>
+                    <p>
+                      Super-app Flutter qui combine e-commerce, livraison et
+                      location avec une expérience utilisateur unifiée.
+                    </p>
+                    <ul class="portfolio-tags">
+                      <li>Flutter</li>
+                      <li>Product Design</li>
+                      <li>IA embarquée</li>
+                    </ul>
+                    <div class="portfolio-links">
+                      <a
+                        href="assets/img/portfolio/wazup-logo.jpeg"
+                        class="btn btn-outline-secondary btn-sm glightbox"
+                        data-gallery="portfolio-gallery-app"
+                        >Aperçu</a
+                      >
+                      <a
+                        href="wazup-details.html"
+                        class="btn btn-primary btn-sm"
+                        >Étude de cas</a
+                      >
+                    </div>
+                  </div>
+                </article>
               </div>
-              <!-- End Portfolio Item -->
 
-              <!-- Portfolio Item 2: Web Development (Drupal) -->
-              <!-- <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web filter-branding"
               >
-                <div class="portfolio-content h-100">
-                  <img
-                    src="https://placehold.co/600x400/4F46E5/FFFFFF?text=Drupal+Web+Dev"
-                    class="img-fluid"
-                    alt="Développement Web Drupal"
-                  />
-                  <div class="portfolio-info">
-                    <h4>Développement Web Drupal</h4>
-                    <p>
-                      Conception, programmation et maintenance de sites et
-                      plateformes web sous Drupal.
-                    </p>
-                    <a
-                      href="https://placehold.co/600x400/4F46E5/FFFFFF?text=Drupal+Web+Dev"
-                      title="Développement Web Drupal"
-                      data-gallery="portfolio-gallery-product"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                    <a href="#" title="Plus de détails" class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                <article class="portfolio-card h-100">
+                  <div class="portfolio-media">
+                    <img
+                      src="assets/img/portfolio/h2p-logo.png"
+                      class="portfolio-img img-fluid"
+                      alt="Identité numérique H2P Group"
+                    />
+                    <span class="portfolio-category">Site &amp; identité</span>
                   </div>
-                </div>
-              </div> -->
-              <!-- End Portfolio Item -->
+                  <div class="portfolio-body">
+                    <h3>H2P Group</h3>
+                    <p>
+                      Ecosystème digital complet pour un cabinet de coaching :
+                      branding, site vitrine et tunnel de prise de rendez-vous.
+                    </p>
+                    <ul class="portfolio-tags">
+                      <li>Drupal</li>
+                      <li>Brand Design</li>
+                      <li>CRM</li>
+                    </ul>
+                    <div class="portfolio-links">
+                      <a
+                        href="assets/img/portfolio/h2p-logo.png"
+                        class="btn btn-outline-secondary btn-sm glightbox"
+                        data-gallery="portfolio-gallery-branding"
+                        >Identité</a
+                      >
+                      <a href="h2p-details.html" class="btn btn-primary btn-sm"
+                        >Voir le projet</a
+                      >
+                    </div>
+                  </div>
+                </article>
+              </div>
 
-              <!-- Portfolio Item 3: Content Creation (Wordpress) -->
-              <!-- <div
+              <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
               >
-                <div class="portfolio-content h-100">
-                  <img
-                    src="https://placehold.co/600x400/22C55E/FFFFFF?text=WordPress+Content"
-                    class="img-fluid"
-                    alt="Création de Contenu WordPress"
-                  />
-                  <div class="portfolio-info">
-                    <h4>Création de Contenu WordPress</h4>
-                    <p>
-                      Responsable de la création de contenu pour des sites Web
-                      clients avec le CMS WordPress.
-                    </p>
-                    <a
-                      href="https://placehold.co/600x400/22C55E/FFFFFF?text=WordPress+Content"
-                      title="Création de Contenu WordPress"
-                      data-gallery="portfolio-gallery-branding"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                    <a href="#" title="Plus de détails" class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                <article class="portfolio-card h-100">
+                  <div class="portfolio-media">
+                    <img
+                      src="assets/img/portfolio/codewave.png"
+                      class="portfolio-img img-fluid"
+                      alt="Logo MGN CodeWave"
+                    />
+                    <span class="portfolio-category">Identité visuelle</span>
                   </div>
-                </div>
-              </div> -->
-              <!-- End Portfolio Item -->
-
-              <!-- Portfolio Item 4: Logo Design -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-logo"
-              >
-                <div class="portfolio-content h-100">
-                  <img
-                    src="assets/img/portfolio/MGN logo.png"
-                    class="img-fluid"
-                    alt="Logo MGN CodeWave"
-                  />
-                  <div class="portfolio-info">
-                    <h4>Logo MGN CodeWave</h4>
+                  <div class="portfolio-body">
+                    <h3>MGN CodeWave</h3>
                     <p>
-                      Design du logo d'un particulier, son entreprise se nomme :
-                      MGN CodeWave.
+                      Refonte d'identité couvrant logo, palette et univers
+                      graphique pour une agence tech spécialisée NoCode.
                     </p>
-                    <a
-                      href="assets/img/portfolio/MGN logo.png"
-                      title="Logo MGN CodeWave"
-                      data-gallery="portfolio-gallery-app"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                    <a
-                      href="mgn-codewave-details.html"
-                      title="Plus de détails"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                    <ul class="portfolio-tags">
+                      <li>Direction artistique</li>
+                      <li>Brand book</li>
+                    </ul>
+                    <div class="portfolio-links">
+                      <a
+                        href="assets/img/portfolio/codewave.png"
+                        class="btn btn-outline-secondary btn-sm glightbox"
+                        data-gallery="portfolio-gallery-branding"
+                        >Moodboard</a
+                      >
+                      <a
+                        href="mgn-codewave-details.html"
+                        class="btn btn-primary btn-sm"
+                        >Détails</a
+                      >
+                    </div>
                   </div>
-                </div>
+                </article>
               </div>
-              <!-- End Portfolio Item -->
 
-              <!-- Portfolio Item 4: Logo Design -->
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-logo filter-product"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web"
               >
-                <div class="portfolio-content h-100">
-                  <img
-                    src="assets/img/portfolio/h2p-logo.png"
-                    class="img-fluid"
-                    alt="Logo MGN CodeWave"
-                  />
-                  <div class="portfolio-info">
-                    <h4>Logo H2P Group</h4>
-                    <p>
-                      Conception du site web et design du logo d'une entreprise
-                      de formation et de coaching, son nom est : H2P Group
-                      (Helping to Perform).
-                    </p>
-                    <a
-                      href="assets/img/portfolio/h2p-logo.png"
-                      title="Logo H2P Group"
-                      data-gallery="portfolio-gallery-app"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                    <a
-                      href="h2p-details.html"
-                      title="Plus de détails"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                <article class="portfolio-card h-100">
+                  <div class="portfolio-media">
+                    <img
+                      src="assets/img/portfolio/LeBonWaz.jpeg"
+                      class="portfolio-img img-fluid"
+                      alt="Site e-commerce Le Bon Waz"
+                    />
+                    <span class="portfolio-category">Site web</span>
                   </div>
-                </div>
+                  <div class="portfolio-body">
+                    <h3>Le Bon Waz</h3>
+                    <p>
+                      Plateforme de vente en ligne avec catalogue dynamique et
+                      back-office de gestion des commandes.
+                    </p>
+                    <ul class="portfolio-tags">
+                      <li>Laravel</li>
+                      <li>Stripe</li>
+                      <li>UI Kit</li>
+                    </ul>
+                    <div class="portfolio-links">
+                      <a
+                        href="assets/img/portfolio/LeBonWaz.jpeg"
+                        class="btn btn-outline-secondary btn-sm glightbox"
+                        data-gallery="portfolio-gallery-web"
+                        >Aperçu</a
+                      >
+                      <a
+                        href="lebonwaz-details.html"
+                        class="btn btn-primary btn-sm"
+                        >Voir le projet</a
+                      >
+                    </div>
+                  </div>
+                </article>
               </div>
-              <!-- End Portfolio Item -->
 
-              <!-- Portfolio Item 5: Logo Design -->
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-logo filter-product"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web"
               >
-                <div class="portfolio-content h-100">
-                  <img
-                    src="assets/img/portfolio/codewave.png"
-                    class="img-fluid"
-                    alt="Logo MGN CodeWave"
-                  />
-                  <div class="portfolio-info">
-                    <h4>Logo MGN CodeWave</h4>
-                    <p>Design d'un autre logo de MGN CodeWave.</p>
-                    <a
-                      href="assets/img/portfolio/codewave.png"
-                      title="Projet MGN CodeWave"
-                      data-gallery="portfolio-gallery-app"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                    <a
-                      href="mgn-details.html"
-                      title="Plus de détails"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                <article class="portfolio-card h-100">
+                  <div class="portfolio-media">
+                    <img
+                      src="assets/img/portfolio/logo.png"
+                      class="portfolio-img img-fluid"
+                      alt="Site Lampe À Mes Pieds"
+                    />
+                    <span class="portfolio-category">Site web</span>
                   </div>
-                </div>
+                  <div class="portfolio-body">
+                    <h3>Lampe À Mes Pieds</h3>
+                    <p>
+                      Présentation éditoriale des collections avec modules de
+                      téléchargement et espace presse.
+                    </p>
+                    <ul class="portfolio-tags">
+                      <li>WordPress</li>
+                      <li>SEO</li>
+                      <li>Accessibilité</li>
+                    </ul>
+                    <div class="portfolio-links">
+                      <a
+                        href="assets/img/portfolio/logo.png"
+                        class="btn btn-outline-secondary btn-sm glightbox"
+                        data-gallery="portfolio-gallery-web"
+                        >Galerie</a
+                      >
+                      <a href="lamp-details.html" class="btn btn-primary btn-sm"
+                        >Étude de cas</a
+                      >
+                    </div>
+                  </div>
+                </article>
               </div>
-              <!-- End Portfolio Item -->
 
-              <!-- Added a fourth item to make it a full row, but it's not from the CV -->
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web"
               >
-                <div class="portfolio-content h-100">
-                  <img
-                    src="assets/img/portfolio/English-Fun-Club (1).jpeg"
-                    class="img-fluid"
-                    alt="English Fun Club"
-                  />
-                  <div class="portfolio-info">
-                    <h4>English Fun Club</h4>
-                    <p>
-                      Site web d'apprentissage de la langue anglaise avec du
-                      Fun.
-                    </p>
-                    <a
-                      href="assets/img/portfolio/English-Fun-Club (1).jpeg"
-                      title="English Fun Club"
-                      data-gallery="portfolio-gallery-product"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                    <a
-                      href="englishfunclub-details.html"
-                      title="Plus de détails"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                <article class="portfolio-card h-100">
+                  <div class="portfolio-media">
+                    <img
+                      src="assets/img/portfolio/English-Fun-Club (1).jpeg"
+                      class="portfolio-img img-fluid"
+                      alt="Plateforme English Fun Club"
+                    />
+                    <span class="portfolio-category">Site web</span>
                   </div>
-                </div>
+                  <div class="portfolio-body">
+                    <h3>English Fun Club</h3>
+                    <p>
+                      Plateforme e-learning gamifiée pour faciliter
+                      l'apprentissage de l'anglais chez les adolescents.
+                    </p>
+                    <ul class="portfolio-tags">
+                      <li>React</li>
+                      <li>Gamification</li>
+                    </ul>
+                    <div class="portfolio-links">
+                      <a
+                        href="assets/img/portfolio/English-Fun-Club (1).jpeg"
+                        class="btn btn-outline-secondary btn-sm glightbox"
+                        data-gallery="portfolio-gallery-web"
+                        >Aperçu</a
+                      >
+                      <a
+                        href="englishfunclub-details.html"
+                        class="btn btn-primary btn-sm"
+                        >Voir le projet</a
+                      >
+                    </div>
+                  </div>
+                </article>
               </div>
-              <!-- End Portfolio Item -->
 
-              <!-- Portfolio : Sites web -->
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web"
               >
-                <div class="portfolio-content h-100">
-                  <img
-                    src="assets/img/portfolio/Logo.jpg"
-                    class="img-fluid"
-                    alt="Découvre qui tu es"
-                  />
-                  <div class="portfolio-info">
-                    <h4>Découvre qui tu es</h4>
-                    <p>
-                      Site web de question et d'éclaircissement pour toutes
-                      personnes ayant la curiosité de découvrir sa vraie
-                      personnalité.
-                    </p>
-                    <a
-                      href="assets/img/portfolio/Logo.jpg"
-                      title="Découvre qui tu es"
-                      data-gallery="portfolio-gallery-product"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                    <a
-                      href="decouvre-details.html"
-                      title="Plus de détails"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                <article class="portfolio-card h-100">
+                  <div class="portfolio-media">
+                    <img
+                      src="assets/img/portfolio/Logo.jpg"
+                      class="portfolio-img img-fluid"
+                      alt="Site Découvre qui tu es"
+                    />
+                    <span class="portfolio-category">Site web</span>
                   </div>
-                </div>
-
-                <!-- End Portfolio Item -->
+                  <div class="portfolio-body">
+                    <h3>Découvre qui tu es</h3>
+                    <p>
+                      Expérience interactive basée sur des questionnaires pour
+                      révéler les profils de personnalité.
+                    </p>
+                    <ul class="portfolio-tags">
+                      <li>UX Research</li>
+                      <li>Vue.js</li>
+                    </ul>
+                    <div class="portfolio-links">
+                      <a
+                        href="assets/img/portfolio/Logo.jpg"
+                        class="btn btn-outline-secondary btn-sm glightbox"
+                        data-gallery="portfolio-gallery-web"
+                        >Aperçu</a
+                      >
+                      <a
+                        href="decouvre-details.html"
+                        class="btn btn-primary btn-sm"
+                        >Étude de cas</a
+                      >
+                    </div>
+                  </div>
+                </article>
               </div>
-              <!-- End of container -->
 
-              <!-- Portfolio : Sites web -->
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web"
               >
-                <div class="portfolio-content h-100">
-                  <img
-                    src="assets/img/portfolio/logo.png"
-                    class="img-fluid"
-                    alt="Lampe A Mes Pieds"
-                  />
-                  <div class="portfolio-info">
-                    <h4>Lampe A Mes Pieds</h4>
-                    <p>
-                      Site web de présentation des service de cette maison
-                      d'éditions, et des divers ouvrages qu'elle propose.
-                    </p>
-                    <a
-                      href="assets/img/portfolio/logo.png"
-                      title="Lampe A Mes Pieds"
-                      data-gallery="portfolio-gallery-product"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                    <a
-                      href="lamp-details.html"
-                      title="Plus de détails"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                <article class="portfolio-card h-100">
+                  <div class="portfolio-media">
+                    <img
+                      src="assets/img/portfolio/Projet Booki.png"
+                      class="portfolio-img img-fluid"
+                      alt="Projet Booki"
+                    />
+                    <span class="portfolio-category">Prototype</span>
                   </div>
-                </div>
-
-                <!-- End Portfolio Item -->
+                  <div class="portfolio-body">
+                    <h3>Projet Booki</h3>
+                    <p>
+                      Prototype responsive d'un portail de réservation d'hôtels,
+                      avec filtres dynamiques et intégration API.
+                    </p>
+                    <ul class="portfolio-tags">
+                      <li>HTML/CSS</li>
+                      <li>Responsive</li>
+                    </ul>
+                    <div class="portfolio-links">
+                      <a
+                        href="assets/img/portfolio/Projet Booki.png"
+                        class="btn btn-outline-secondary btn-sm glightbox"
+                        data-gallery="portfolio-gallery-web"
+                        >Aperçu</a
+                      >
+                      <a
+                        href="booki-details.html"
+                        class="btn btn-primary btn-sm"
+                        >Voir le projet</a
+                      >
+                    </div>
+                  </div>
+                </article>
               </div>
-              <!-- End of container -->
 
-              <!-- Portfolio : Sites web -->
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web"
               >
-                <div class="portfolio-content h-100">
-                  <img
-                    src="assets/img/portfolio/LeBonWaz.jpeg"
-                    class="img-fluid"
-                    alt="LE BON WAZ"
-                  />
-                  <div class="portfolio-info">
-                    <h4>LE BON WAZ</h4>
-                    <p>
-                      Site web institutionnel de présentation d'une entreprise
-                      de vente en ligne.
-                    </p>
-                    <a
-                      href="assets/img/portfolio/LeBonWaz.jpeg"
-                      title="LE BON WAZ"
-                      data-gallery="portfolio-gallery-product"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                    <a
-                      href="lebonwaz-details.html"
-                      title="Plus de détails"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                <article class="portfolio-card h-100">
+                  <div class="portfolio-media">
+                    <img
+                      src="assets/img/portfolio/Grace_D-1.jpeg"
+                      class="portfolio-img img-fluid"
+                      alt="Site Grâce Déployée"
+                    />
+                    <span class="portfolio-category">Site web</span>
                   </div>
-                </div>
-
-                <!-- End Portfolio Item -->
+                  <div class="portfolio-body">
+                    <h3>Grâce Déployée</h3>
+                    <p>
+                      Site communautaire pour une église locale : agenda, sermon
+                      en ligne et espace bénévoles.
+                    </p>
+                    <ul class="portfolio-tags">
+                      <li>Strapi</li>
+                      <li>Next.js</li>
+                    </ul>
+                    <div class="portfolio-links">
+                      <a
+                        href="assets/img/portfolio/Grace_D-1.jpeg"
+                        class="btn btn-outline-secondary btn-sm glightbox"
+                        data-gallery="portfolio-gallery-web"
+                        >Galerie</a
+                      >
+                      <a
+                        href="gracedeploye-details.html"
+                        class="btn btn-primary btn-sm"
+                        >Voir le projet</a
+                      >
+                    </div>
+                  </div>
+                </article>
               </div>
-              <!-- End of container -->
 
-              <!-- Portfolio : Sites web -->
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-doc"
               >
-                <div class="portfolio-content h-100">
-                  <img
-                    src="assets/img/portfolio/Projet Booki.png"
-                    class="img-fluid"
-                    alt="Projet Booki "
-                  />
-                  <div class="portfolio-info">
-                    <h4>Projet Booki</h4>
-                    <p>
-                      Site web de réservation d'hôtels, développé dans le cadre
-                      d'un projet scolaire.
-                    </p>
-                    <a
-                      href="assets/img/portfolio/Projet Booki.png"
-                      title="Projet Booki"
-                      data-gallery="portfolio-gallery-product"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                    <a
-                      href="booki-details.html"
-                      title="Plus de détails"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                <article class="portfolio-card h-100">
+                  <div class="portfolio-media">
+                    <img
+                      src="assets/img/portfolio/airtel-logo.png"
+                      class="portfolio-img img-fluid"
+                      alt="Documentation API Airtel"
+                    />
+                    <span class="portfolio-category">Documentation</span>
                   </div>
-                </div>
-
-                <!-- End Portfolio Item -->
+                  <div class="portfolio-body">
+                    <h3>API Airtel Money</h3>
+                    <p>
+                      Guide technique complet avec scénarios de tests et
+                      exemples de requêtes pour l'intégration Airtel Money.
+                    </p>
+                    <ul class="portfolio-tags">
+                      <li>API REST</li>
+                      <li>Markdown</li>
+                    </ul>
+                    <div class="portfolio-links">
+                      <a
+                        href="assets/img/portfolio/airtel-logo.png"
+                        class="btn btn-outline-secondary btn-sm glightbox"
+                        data-gallery="portfolio-gallery-doc"
+                        >Visuel</a
+                      >
+                      <a href="api-airtel.html" class="btn btn-primary btn-sm"
+                        >Télécharger</a
+                      >
+                    </div>
+                  </div>
+                </article>
               </div>
-              <!-- End of container -->
-
-              <!-- Portfolio : Sites web -->
-              <!-- <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
-              >
-                <div class="portfolio-content h-100">
-                  <img
-                    src="assets/img/portfolio/airtel-logo.png"
-                    class="img-fluid"
-                    alt="Découvre qui tu es"
-                  />
-                  <div class="portfolio-info">
-                    <h4>Documentation API Airtel</h4>
-                    <p>
-                      Documentation de l'API Airtel, détaillant les
-                      fonctionnalités, les points de terminaison et les exemples
-                      d'utilisation.
-                    </p>
-                    <a
-                      href="assets/img/portfolio/airtel-logo.png"
-                      title="Documentation API Airtel"
-                      data-gallery="portfolio-gallery-product"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                    <a
-                      href="api-airtel.html"
-                      title="Plus de détails"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
-                  </div>
-                </div>
-
-              </div> -->
-              <!-- End of container -->
-
-              <!-- Portfolio : Sites web -->
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
-              >
-                <div class="portfolio-content h-100">
-                  <img
-                    src="assets/img/portfolio/Grace_D-1.jpeg"
-                    class="img-fluid"
-                    alt="Grâce Déployée"
-                  />
-                  <div class="portfolio-info">
-                    <h4>Grâce Déployée</h4>
-                    <p>
-                      Site web de présentation de mon église locale "Grâce
-                      Déployée".
-                    </p>
-                    <a
-                      href="assets/img/portfolio/Grace_D-1.jpeg"
-                      title="Grâce Déployée"
-                      data-gallery="portfolio-gallery-product"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                    <a
-                      href="gracedeploye-details.html"
-                      title="Plus de détails"
-                      class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
-                  </div>
-                </div>
-
-                <!-- End Portfolio Item -->
-              </div>
-              <!-- End of container -->
             </div>
             <!-- End Portfolio Container -->
           </div>
@@ -1525,72 +1471,6 @@
     </main>
 
     <footer id="footer" class="footer position-relative light-background">
-      <style>
-        /* Styles pour la section du pied de page */
-        .footer {
-          background: #f8f9fa;
-          padding: 60px 0;
-          color: #333;
-          border-top: 1px solid #e9ecef;
-        }
-
-        .footer .container .row > div {
-          margin-bottom: 30px;
-        }
-
-        .footer .icon {
-          font-size: 48px;
-          margin-right: 15px;
-          color: #6c757d;
-        }
-
-        .footer h4 {
-          font-size: 20px;
-          font-weight: bold;
-          color: #555;
-          margin-bottom: 10px;
-        }
-
-        .footer p {
-          font-size: 15px;
-          line-height: 1.6;
-          color: #6c757d;
-        }
-
-        .footer .social-links a {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          background: #e9ecef;
-          color: #555;
-          margin-right: 10px;
-          transition: all 0.3s ease;
-        }
-
-        .footer .social-links a:hover {
-          background: #007bff;
-          color: #fff;
-        }
-
-        .footer .social-links i {
-          font-size: 18px;
-        }
-
-        .footer .copyright {
-          padding-top: 20px;
-          border-top: 1px solid #e9ecef;
-        }
-
-        .footer .copyright p {
-          margin-bottom: 0;
-          font-size: 14px;
-          color: #6c757d;
-        }
-      </style>
-
       <div class="container">
         <div class="row gy-3">
           <!-- About section -->
