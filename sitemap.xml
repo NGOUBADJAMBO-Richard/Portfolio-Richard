@@ -3,74 +3,74 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
-    <loc>https://ngoubadjambo-richard.com/</loc>
+    <loc>https://ngoubadjambo-richard.github.io/Portfolio-Richard/</loc>
     <lastmod>2025-01-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://ngoubadjambo-richard.com/assets/img/R N.png</image:loc>
+      <image:loc>https://ngoubadjambo-richard.github.io/Portfolio-Richard/assets/img/R N.png</image:loc>
       <image:title>NGOUBADJAMBO Richard - Ingénieur Informatique</image:title>
     </image:image>
   </url>
 
   <url>
-    <loc>https://ngoubadjambo-richard.com/#accueil</loc>
+    <loc>https://ngoubadjambo-richard.github.io/Portfolio-Richard/#accueil</loc>
     <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://ngoubadjambo-richard.com/#apropos</loc>
+    <loc>https://ngoubadjambo-richard.github.io/Portfolio-Richard/#apropos</loc>
     <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ngoubadjambo-richard.com/#entreprise</loc>
+    <loc>https://ngoubadjambo-richard.github.io/Portfolio-Richard/#entreprise</loc>
     <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ngoubadjambo-richard.com/#stats</loc>
+    <loc>https://ngoubadjambo-richard.github.io/Portfolio-Richard/#stats</loc>
     <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ngoubadjambo-richard.com/#competences</loc>
+    <loc>https://ngoubadjambo-richard.github.io/Portfolio-Richard/#competences</loc>
     <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ngoubadjambo-richard.com/#parcours</loc>
+    <loc>https://ngoubadjambo-richard.github.io/Portfolio-Richard/#parcours</loc>
     <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ngoubadjambo-richard.com/#portfolio</loc>
+    <loc>https://ngoubadjambo-richard.github.io/Portfolio-Richard/#portfolio</loc>
     <lastmod>2025-01-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://ngoubadjambo-richard.com/#services</loc>
+    <loc>https://ngoubadjambo-richard.github.io/Portfolio-Richard/#services</loc>
     <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ngoubadjambo-richard.com/#contact</loc>
+    <loc>https://ngoubadjambo-richard.github.io/Portfolio-Richard/#contact</loc>
     <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
