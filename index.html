@@ -1,1693 +1,1243 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta name="theme-color" content="#2563eb" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>
-      NGOUBADJAMBO Richard - Chef d'Entreprise & Ingénieur Fullstack | M.G.N
-      CodeWave
-    </title>
+    <!-- SEO Meta Tags -->
+    <title>NGOUBADJAMBO Richard | Ingénieur Informatique & Entrepreneur</title>
     <meta
       name="description"
-      content="Chef d'Entreprise et Ingénieur Informatique Fullstack. Fondateur de M.G.N CodeWave. Création de solutions web et mobile innovantes. Portfolio professionnel."
+      content="Portfolio professionnel de NGOUBADJAMBO Richard, Ingénieur Informatique & Entrepreneur. Découvrez mes projets, compétences et services de développement Fullstack et Mobile avec M.G.N CodeWave."
     />
     <meta
       name="keywords"
-      content="Chef d'entreprise, Ingénieur informatique, Fullstack developer, M.G.N CodeWave, développement web, développement mobile, Gabon"
+      content="développeur, ingénieur informatique, fullstack, mobile, web, portfolio, Libreville, Gabon"
     />
     <meta name="author" content="NGOUBADJAMBO Richard" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-    />
+    <meta name="robots" content="index, follow" />
+    <meta name="canonical" href="https://ngoubadjambo-richard.com" />
 
-    <!-- Open Graph Tags for Social Media -->
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ngoubadjambo-richard.com/" />
+    <meta property="og:url" content="https://ngoubadjambo-richard.com" />
     <meta
       property="og:title"
-      content="NGOUBADJAMBO Richard - Chef d'Entreprise & Ingénieur Fullstack"
+      content="NGOUBADJAMBO Richard | Ingénieur Informatique & Entrepreneur"
     />
     <meta
       property="og:description"
-      content="Chef d'Entreprise et Expert Fullstack. Créateur de solutions digitales innovantes avec M.G.N CodeWave"
-    />
-    <meta property="og:image" content="assets/img/Richard.jpeg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="NGOUBADJAMBO Richard - Portfolio Professionnel"
+      content="Portfolio professionnel - Développement Fullstack et Mobile avec M.G.N CodeWave"
     />
     <meta
-      name="twitter:description"
-      content="Chef d'Entreprise & Ingénieur Fullstack - Découvrez mes projets innovants"
+      property="og:image"
+      content="https://ngoubadjambo-richard.com/assets/img/R N.png"
     />
-    <meta name="twitter:image" content="assets/img/Richard.jpeg" />
-
-    <!-- Canonical URL -->
-    <meta name="canonical" content="https://ngoubadjambo-richard.com/" />
-
-    <!-- Additional SEO Tags -->
-    <meta name="robots" content="index, follow" />
-    <meta name="language" content="French" />
-    <meta name="revisit-after" content="7 days" />
+    <meta property="og:site_name" content="NGOUBADJAMBO Richard Portfolio" />
 
     <!-- Security Headers -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:;"
+      content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://cdnjs.cloudflare.com data:; frame-src 'self'; connect-src 'self' https://formspree.io"
     />
-    <meta name="referrer" content="strict-origin-when-cross-origin" />
 
     <!-- Favicons -->
-    <link href="assets/img/favicon_1.png" rel="icon" />
-    <link href="assets/img/favicon_1.png" rel="apple-touch-icon" />
+    <link href="assets/img/R N.png" rel="icon" />
+    <link href="assets/img/R N.png" rel="apple-touch-icon" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css/style.css" />
 
-    <!-- Vendor CSS Files -->
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-
-    <!-- Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet" />
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="preload" href="js/main.js" as="script" />
   </head>
-
-  <body class="index-page">
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "NGOUBADJAMBO Richard",
-        "jobTitle": [
-          "Chef d'Entreprise",
-          "Ingénieur Informatique",
-          "Développeur Fullstack"
-        ],
-        "description": "Chef d'Entreprise et Ingénieur Informatique Fullstack, Fondateur de M.G.N CodeWave",
-        "image": "assets/img/Richard.jpeg",
-        "url": "https://ngoubadjambo-richard.com/",
-        "email": "mailto:mboundagnangat8@gmail.com",
-        "telephone": "+241074676741",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Libreville",
-          "addressCountry": "GA"
-        },
-        "sameAs": [
-          "https://www.linkedin.com/in/richard-ngoubadjambo-239244325/",
-          "https://github.com/NGOUBADJAMBO-Richard",
-          "https://www.facebook.com/share/1ChamR4xqL/",
-          "https://www.instagram.com/ngoubadjambo_richard"
-        ],
-        "worksFor": {
-          "@type": "Organization",
-          "name": "M.G.N CodeWave",
-          "url": "https://mgn-codewave.com/"
-        }
-      }
-    </script>
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "M.G.N CodeWave",
-        "description": "Cabinet spécialisé en développement web et mobile innovant",
-        "url": "https://mgn-codewave.com/",
-        "logo": "assets/img/favicon_1.png",
-        "foundingDate": "2024",
-        "founder": {
-          "@type": "Person",
-          "name": "NGOUBADJAMBO Richard"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "Customer Support",
-          "email": "mboundagnangat8@gmail.com"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Libreville",
-          "addressCountry": "GA"
-        }
-      }
-    </script>
-
-    <header id="header" class="header dark-background d-flex flex-column">
-      <i class="header-toggle d-xl-none bi bi-list"></i>
-
-      <div class="profile-img">
-        <img
-          src="assets/img/Profil.jpeg"
-          alt="Portrait professionnel de NGOUBADJAMBO Richard"
-          class="img-fluid rounded-circle"
-        />
+  <body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+      <div class="loader-content">
+        <div class="loader-spinner"></div>
+        <div class="loader-text">Chargement...</div>
       </div>
+    </div>
 
-      <a
-        href="starter-page.html"
-        class="logo d-flex align-items-center justify-content-center"
-      >
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">NGOUBADJAMBO Richard</h1>
-      </a>
-
-      <div class="social-links text-center">
-        <a
-          href="https://www.facebook.com/share/1ChamR4xqL/"
-          class="facebook"
-          title="Suivez-moi sur Facebook"
-          ><i class="bi bi-facebook"></i
-        ></a>
-        <a
-          href="https://www.instagram.com/ngoubadjambo_richard?igsh=cWFycHppNHkza2g1"
-          class="instagram"
-          title="Suivez-moi sur Instagram"
-          ><i class="bi bi-instagram"></i
-        ></a>
-        <a
-          href="https://github.com/NGOUBADJAMBO-Richard"
-          class="github"
-          title="Voir mon profil GitHub"
-          ><i class="bi bi-github"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/richard-ngoubadjambo-239244325/"
-          class="linkedin"
-          title="Connectez-vous sur LinkedIn"
-          ><i class="bi bi-linkedin"></i
-        ></a>
-      </div>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li>
-            <a href="#hero" class="active"
-              ><i class="bi bi-house navicon"></i>Accueil</a
-            >
-          </li>
-          <li>
-            <a href="#about"
-              ><i class="bi bi-person navicon"></i>À&nbsp;propos</a
-            >
-          </li>
-          <li>
-            <a href="#stats"
-              ><i class="bi bi-graph-up navicon"></i>Statistiques</a
-            >
-          </li>
-          <li>
-            <a href="#skills"><i class="bi bi-stars navicon"></i>Compétences</a>
-          </li>
-          <li>
-            <a href="#resume"
-              ><i class="bi bi-file-earmark-text navicon"></i>Parcours</a
-            >
-          </li>
-          <li>
-            <a href="#portfolio"
-              ><i class="bi bi-kanban navicon"></i>Portfolio</a
-            >
-          </li>
-          <li>
-            <a href="#services"
-              ><i class="bi bi-hdd-stack navicon"></i>Services</a
-            >
-          </li>
-          <li>
-            <a href="#contact"><i class="bi bi-envelope navicon"></i>Contact</a>
-          </li>
+    <!-- Navigation -->
+    <nav id="navbar">
+      <div class="nav-container">
+        <a href="#accueil" class="logo-container">
+          <div class="logo">
+            <div class="logo-image">
+              <img
+                src="assets/img/R N.png"
+                alt="NGOUBADJAMBO Richard"
+                class="logo-profile-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="logo-info">
+              <p class="logo-name">Richard</p>
+              <p class="logo-title">Développeur</p>
+            </div>
+          </div>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#entreprise">Entreprise</a></li>
+          <li><a href="#stats">Statistiques</a></li>
+          <li><a href="#competences">Compétences</a></li>
+          <li><a href="#parcours">Parcours</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-      </nav>
-    </header>
+        <div
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
 
-    <main class="main">
-      <!-- Hero Section - MODIFIÉ -->
-      <section id="hero" class="hero section dark-background">
-        <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="" />
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <span class="eyebrow"
-            >Chef d'Entreprise & Ingénieur Informatique</span
-          >
-          <h2>
-            Je dirige M.G.N CodeWave tout en concevant des solutions digitales
-            innovantes.
-          </h2>
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>NGOUBADJAMBO Richard</h1>
+          <p class="subtitle">Ingénieur Informatique & Entrepreneur</p>
           <p>
-            En tant que
-            <strong>Fondateur & Chef d'Entreprise de M.G.N CodeWave</strong>, je
-            combine leadership entrepreneurial et expertise technique pour créer
-            des plateformes web et mobiles qui transforment les visions en
-            réalités concrètes.
+            Fondateur de M.G.N CodeWave, je conçois des solutions digitales
+            innovantes qui transforment les idées en réalité. Expertise en
+            développement Fullstack et Mobile.
           </p>
-          <p class="hero-roles">
-            <span>Je suis</span>
-            <span
-              class="typed"
-              data-typed-items="Chef d'Entreprise, Fondateur M.G.N CodeWave, Ingénieur Informatique, Développeur Fullstack, Chef de Projet IT, Entrepreneur"
-              >Chef d'Entreprise</span
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">Démarrer un projet</a>
+            <a href="#portfolio" class="btn btn-outline"
+              >Voir mes réalisations</a
             >
-          </p>
-          <div class="cta-group">
-            <a href="#contact" class="btn-gradient">
-              <span>Discutons de votre projet</span>
-              <i class="bi bi-arrow-up-right"></i>
-            </a>
-            <a href="#portfolio" class="btn-soft">
-              <i class="bi bi-play-circle"></i>
-              <span>Découvrir M.G.N CodeWave</span>
-            </a>
-          </div>
-          <div class="meta">
-            <span class="chip accent">
-              <i class="bi bi-building"></i>
-              <span>Chef d'Entreprise - M.G.N CodeWave</span>
-            </span>
-            <span class="chip">
-              <i class="bi bi-award"></i>
-              <span>Ingénieur d'État certifié</span>
-            </span>
-            <span class="chip">
-              <i class="bi bi-geo-alt"></i>
-              <span>Libreville & International</span>
-            </span>
           </div>
         </div>
-      </section>
-      <!-- /Hero Section -->
-
-      <!-- About Section - MODIFIÉ -->
-      <section id="about" class="about section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>À Propos</h2>
-          <p>
-            <strong>Chef d'entreprise de M.G.N CodeWave</strong> et Ingénieur
-            Informatique. Je dirige une structure dédiée à l'innovation digitale
-            tout en restant pleinement impliqué dans le développement technique
-            de nos solutions.
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-4 justify-content-center">
-            <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="150">
-              <a href="starter-page.html" target="_blank" class="profile-media">
-                <img
-                  src="assets/img/Richard.jpeg"
-                  class="img-fluid"
-                  alt="Portrait de Richard Ngoubadjambo - Chef d'entreprise M.G.N CodeWave"
-                />
-              </a>
-              <p class="text-center text-muted mt-3 mb-0 small">
-                <i class="bi bi-building me-1"></i>
-                Fondateur & Chef d'entreprise - M.G.N CodeWave
-              </p>
-            </div>
-            <div
-              class="col-lg-8 content"
-              data-aos="fade-left"
-              data-aos-delay="200"
-            >
-              <h2>
-                Chef d'entreprise technique & expert en développement fullstack.
-              </h2>
-              <p class="fst-italic py-3">
-                À la tête de <strong>M.G.N CodeWave</strong>, j'allie vision
-                stratégique d'entrepreneur et expertise technique d'ingénieur.
-                Cette double compétence me permet de comprendre parfaitement les
-                enjeux business tout en garantissant l'excellence technique de
-                nos réalisations.
-              </p>
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Nom:</strong> <span>NGOUBADJAMBO Richard</span>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Statut:</strong>
-                      <span class="text-accent">Chef d'Entreprise</span>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Entreprise:</strong>
-                      <span><strong>M.G.N CodeWave</strong></span>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Téléphone:</strong>
-                      <span
-                        ><a href="tel:+241074676741"
-                          >074676741 (WhatsApp)</a
-                        ></span
-                      >
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <ul>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Ville:</strong> <span>Libreville, Gabon</span>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Email:</strong>
-                      <span
-                        ><a href="mailto:mboundagnangat8@gmail.com"
-                          >mboundagnangat8@gmail.com</a
-                        ></span
-                      >
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Formation:</strong>
-                      <span>Ingénieur d'État en Informatique</span>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Expertise:</strong>
-                      <span>Fullstack Web & Mobile</span>
-                    </li>
-                  </ul>
-                </div>
+        <div class="hero-image">
+          <div class="profile-card">
+            <div class="profile-stats">
+              <div class="stat-item">
+                <span class="number">5+</span>
+                <span class="label">Années d'expérience</span>
               </div>
-              <div class="d-flex flex-wrap gap-2 gap-lg-3 mt-3">
-                <span class="chip accent">
-                  <i class="bi bi-building"></i>
-                  Chef d'Entreprise
-                </span>
-                <span class="chip">
-                  <i class="bi bi-code-slash"></i>
-                  Expert Fullstack
-                </span>
-                <span class="chip">
-                  <i class="bi bi-lightbulb"></i>
-                  Innovation Digitale
-                </span>
-                <span class="chip">
-                  <i class="bi bi-people"></i>
-                  Leadership Technique
-                </span>
+              <div class="stat-item">
+                <span class="number">15+</span>
+                <span class="label">Projets réalisés</span>
               </div>
-              <p class="mt-4 mb-0">
-                En tant que
-                <strong>Chef d'entreprise de M.G.N CodeWave</strong>, je
-                supervise la stratégie, le développement commercial et
-                l'exécution technique de nos projets. Mon rôle unique me permet
-                d'être à la fois le garant de la vision d'entreprise et le
-                garant de la qualité technique, assurant ainsi que chaque
-                solution livrée répond parfaitement aux attentes métier et aux
-                standards techniques les plus élevés.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /About Section -->
-
-      <!-- Stats Section - MODIFIÉ -->
-      <section id="stats" class="stats section">
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-4">
-            <div
-              class="col-lg-3 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="0"
-            >
-              <div class="stats-item">
-                <i class="bi bi-building"></i>
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="1"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p>
-                  <strong>Entreprise fondée</strong>
-                  <span>M.G.N CodeWave</span>
-                </p>
+              <div class="stat-item">
+                <span class="number">10+</span>
+                <span class="label">Technologies</span>
               </div>
-            </div>
-            <!-- End Stats Item -->
-
-            <div
-              class="col-lg-3 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="stats-item">
-                <i class="bi bi-journal-richtext"></i>
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="15"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p>
-                  <strong>Projets dirigés</strong>
-                  <span>en tant que Chef d'entreprise</span>
-                </p>
-              </div>
-            </div>
-            <!-- End Stats Item -->
-
-            <div
-              class="col-lg-3 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="stats-item">
-                <i class="bi bi-award"></i>
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="5"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p>
-                  <strong>Années d'expertise</strong>
-                  <span>technique & entrepreneuriale</span>
-                </p>
-              </div>
-            </div>
-            <!-- End Stats Item -->
-
-            <div
-              class="col-lg-3 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="stats-item">
-                <i class="bi bi-people"></i>
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="20"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p>
-                  <strong>Technologies maîtrisées</strong>
-                  <span>pour l'innovation M.G.N CodeWave</span>
-                </p>
-              </div>
-            </div>
-            <!-- End Stats Item -->
-          </div>
-        </div>
-      </section>
-      <!-- /Stats Section -->
-
-      <!-- Skills Section - MODIFIÉ -->
-      <section id="skills" class="skills section light-background">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Compétences</h2>
-          <p>
-            En tant que <strong>Chef d'entreprise de M.G.N CodeWave</strong>, je
-            combine compétences entrepreneuriales et expertise technique pour
-            offrir des solutions complètes à mes clients.
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row">
-            <!-- Compétences Entrepreneuriales -->
-            <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="150">
-              <h3 class="skills-subtitle mb-4">
-                <i class="bi bi-building me-2"></i>
-                Compétences Entrepreneuriales & Managériales
-              </h3>
-              <div class="skills-list">
-                <div class="skill-item">
-                  <span class="skill-name">Direction d'entreprise</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" data-width="95"></div>
-                  </div>
-                  <span class="skill-percent">95%</span>
-                </div>
-
-                <div class="skill-item">
-                  <span class="skill-name">Stratégie digitale</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" data-width="90"></div>
-                  </div>
-                  <span class="skill-percent">90%</span>
-                </div>
-
-                <div class="skill-item">
-                  <span class="skill-name">Gestion de projet IT</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" data-width="92"></div>
-                  </div>
-                  <span class="skill-percent">92%</span>
-                </div>
-
-                <div class="skill-item">
-                  <span class="skill-name">Leadership & Management</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" data-width="88"></div>
-                  </div>
-                  <span class="skill-percent">88%</span>
-                </div>
-
-                <div class="skill-item">
-                  <span class="skill-name">Développement commercial</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" data-width="85"></div>
-                  </div>
-                  <span class="skill-percent">85%</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Compétences Techniques -->
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
-              <h3 class="skills-subtitle mb-4">
-                <i class="bi bi-code-slash me-2"></i>
-                Expertise Technique M.G.N CodeWave
-              </h3>
-              <div class="skills-list">
-                <div class="skill-item">
-                  <span class="skill-name">Développement Fullstack</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" data-width="92"></div>
-                  </div>
-                  <span class="skill-percent">92%</span>
-                </div>
-
-                <div class="skill-item">
-                  <span class="skill-name">Flutter Mobile</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" data-width="90"></div>
-                  </div>
-                  <span class="skill-percent">90%</span>
-                </div>
-
-                <div class="skill-item">
-                  <span class="skill-name">Architecture Cloud</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" data-width="85"></div>
-                  </div>
-                  <span class="skill-percent">85%</span>
-                </div>
-
-                <div class="skill-item">
-                  <span class="skill-name">Bases de données</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" data-width="88"></div>
-                  </div>
-                  <span class="skill-percent">88%</span>
-                </div>
-
-                <div class="skill-item">
-                  <span class="skill-name">DevOps & CI/CD</span>
-                  <div class="skill-bar">
-                    <div class="skill-level" data-width="80"></div>
-                  </div>
-                  <span class="skill-percent">80%</span>
-                </div>
+              <div class="stat-item">
+                <span class="number">100%</span>
+                <span class="label">Satisfaction</span>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- /Skills Section -->
+      </div>
+    </section>
 
-      <!-- Resume Section - MODIFIÉ -->
-      <section id="resume" class="resume section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Parcours</h2>
-          <p>
-            Mon parcours unique alliant
-            <strong>leadership entrepreneurial</strong> avec M.G.N CodeWave et
-            <strong>expertise technique</strong> en ingénierie informatique.
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="resume-title">Profil Entrepreneurial</h3>
-
-              <div class="resume-item pb-0">
-                <h4>Chef d'Entreprise - M.G.N CodeWave</h4>
-                <p>
-                  <em
-                    >Fondateur et dirigeant d'une entreprise spécialisée dans
-                    les solutions digitales innovantes, combinant vision
-                    stratégique et excellence technique.</em
-                  >
-                </p>
-                <ul>
-                  <li><strong>Entreprise :</strong> M.G.N CodeWave</li>
-                  <li><strong>Rôle :</strong> Fondateur & Chef d'Entreprise</li>
-                  <li>
-                    <strong>Spécialisation :</strong> Solutions digitales web &
-                    mobile
-                  </li>
-                  <li>
-                    <strong>Approche :</strong> Leadership technique &
-                    innovation
-                  </li>
-                </ul>
-              </div>
-              <!-- End Resume Item -->
-
-              <h3 class="resume-title">Formation</h3>
-              <div class="resume-item">
-                <h4>DIPLÔME D'INGÉNIEUR D'ÉTAT EN INFORMATIQUE & RÉSEAUX</h4>
-                <h5>2018 - 2023</h5>
-                <p><em>École Marocaine Des Sciences de L'Ingénieur</em></p>
-                <p>
-                  Formation d'ingénieur complète, base solide pour le
-                  développement d'entreprises technologiques et la direction de
-                  projets complexes.
-                </p>
-              </div>
-              <!-- End Resume Item -->
-
-              <div class="resume-item">
-                <h4>CERTIFICATION WEB FULLSTACK</h4>
-                <h5>2024 (6 mois)</h5>
-                <p><em>GOMYCODE</em></p>
-                <p>
-                  Certification avancée complétant mon expertise technique,
-                  essentielle pour diriger une entreprise de développement
-                  digital.
-                </p>
-              </div>
-            </div>
-
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-              <h3 class="resume-title">Expérience Professionnelle</h3>
-
-              <div class="resume-item">
-                <h4>FONDATEUR & CHEF D'ENTREPRISE</h4>
-                <h5>Actuel</h5>
-                <p><em>M.G.N CodeWave - Libreville, Gabon</em></p>
-                <ul>
-                  <li>
-                    Direction stratégique et opérationnelle de l'entreprise
-                  </li>
-                  <li>Développement commercial et relations clients</li>
-                  <li>Supervision technique de tous les projets</li>
-                  <li>Innovation et recherche de nouvelles opportunités</li>
-                  <li>Gestion des équipes et des partenariats</li>
-                </ul>
-              </div>
-              <!-- End Resume Item -->
-
-              <div class="resume-item">
-                <h4>DEVELOPPEUR MOBILE - FLUTTER / CHEF DE PROJET</h4>
-                <h5>2025 (10 mois)</h5>
-                <p><em>Projet IT</em></p>
-                <ul>
-                  <li>
-                    Expertise technique en développement mobile multiplateforme
-                  </li>
-                  <li>Gestion de projet et coordination d'équipe technique</li>
-                  <li>
-                    Application de méthodologies agiles en contexte
-                    professionnel
-                  </li>
-                </ul>
-              </div>
-              <!-- End Resume Item -->
-
-              <div class="resume-item">
-                <h4>ACTIVITÉS ENTREPRENEURIALES</h4>
-                <h5>2022 - Présent</h5>
-                <ul>
-                  <li>Création et développement de M.G.N CodeWave</li>
-                  <li>Management d'équipe et leadership technique</li>
-                  <li>Stratégie de croissance et développement marché</li>
-                  <li>Innovation produit et service client</li>
-                </ul>
-              </div>
-              <!-- End Resume Item -->
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /Resume Section -->
-
-      <!-- Portfolio Section -->
-      <section id="portfolio" class="portfolio section light-background">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Portfolio</h2>
-          <p>
-            Découvrez une sélection de mes projets récents, mettant en avant mon
-            expertise en gestion de projet, en développement Fullstack, et ma
-            capacité à innover et à résoudre des problèmes complexes.
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container">
-          <div
-            class="isotope-layout"
-            data-default-filter="*"
-            data-layout="masonry"
-            data-sort="original-order"
-          >
-            <ul
-              class="portfolio-filters isotope-filters"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <li data-filter="*" class="filter-active">Tous</li>
-              <li data-filter=".filter-app">Applications</li>
-              <li data-filter=".filter-web">Sites web</li>
-              <li data-filter=".filter-branding">Identité visuelle</li>
-              <li data-filter=".filter-doc">Documentation</li>
-            </ul>
-            <!-- End Portfolio Filters -->
-
-            <div
-              class="row gy-4 isotope-container mb-4"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
-              >
-                <article class="portfolio-card h-100">
-                  <div class="portfolio-media">
-                    <img
-                      src="assets/img/portfolio/wazup-logo.jpeg"
-                      class="portfolio-img img-fluid"
-                      alt="Application mobile Waz'UP"
-                    />
-                    <span class="portfolio-category">Application mobile</span>
-                  </div>
-                  <div class="portfolio-body">
-                    <h3>Waz'UP</h3>
-                    <p>
-                      Super-app Flutter qui combine e-commerce, livraison et
-                      location avec une expérience utilisateur unifiée.
-                    </p>
-                    <ul class="portfolio-tags">
-                      <li>Flutter</li>
-                      <li>Product Design</li>
-                      <li>IA embarquée</li>
-                    </ul>
-                    <div class="portfolio-links">
-                      <a
-                        href="assets/img/portfolio/wazup-logo.jpeg"
-                        class="btn btn-outline-secondary btn-sm glightbox"
-                        data-gallery="portfolio-gallery-app"
-                        >Aperçu</a
-                      >
-                      <a
-                        href="wazup-details.html"
-                        class="btn btn-primary btn-sm"
-                        >Étude de cas</a
-                      >
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web filter-branding"
-              >
-                <article class="portfolio-card h-100">
-                  <div class="portfolio-media">
-                    <img
-                      src="assets/img/portfolio/h2p-logo.png"
-                      class="portfolio-img img-fluid"
-                      alt="Identité numérique H2P Group"
-                    />
-                    <span class="portfolio-category">Site &amp; identité</span>
-                  </div>
-                  <div class="portfolio-body">
-                    <h3>H2P Group</h3>
-                    <p>
-                      Ecosystème digital complet pour un cabinet de coaching :
-                      branding, site vitrine et tunnel de prise de rendez-vous.
-                    </p>
-                    <ul class="portfolio-tags">
-                      <li>HTML CSS</li>
-                      <li>Brand Design</li>
-                      <li>CRM</li>
-                    </ul>
-                    <div class="portfolio-links">
-                      <a
-                        href="assets/img/portfolio/h2p-logo.png"
-                        class="btn btn-outline-secondary btn-sm glightbox"
-                        data-gallery="portfolio-gallery-branding"
-                        >Identité</a
-                      >
-                      <a href="h2p-details.html" class="btn btn-primary btn-sm"
-                        >Voir le projet</a
-                      >
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
-              >
-                <article class="portfolio-card h-100">
-                  <div class="portfolio-media">
-                    <img
-                      src="assets/img/portfolio/codewave.png"
-                      class="portfolio-img img-fluid"
-                      alt="Logo MGN CodeWave"
-                    />
-                    <span class="portfolio-category">Identité visuelle</span>
-                  </div>
-                  <div class="portfolio-body">
-                    <h3>MGN CodeWave</h3>
-                    <p>
-                      Studio digital qui conçoit et opère des écosystèmes web
-                      &amp; mobile : design system, MVP sur-mesure et
-                      accélération produit pour PME et institutions.
-                    </p>
-                    <ul class="portfolio-tags">
-                      <li>Product Ops</li>
-                      <li>Design system</li>
-                      <li>Digital Solutions</li>
-                    </ul>
-                    <div class="portfolio-links">
-                      <a
-                        href="assets/img/portfolio/codewave.png"
-                        class="btn btn-outline-secondary btn-sm glightbox"
-                        data-gallery="portfolio-gallery-branding"
-                        >Moodboard</a
-                      >
-                      <a
-                        href="mgn-codewave-details.html"
-                        class="btn btn-primary btn-sm"
-                        >Détails</a
-                      >
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web"
-              >
-                <article class="portfolio-card h-100">
-                  <div class="portfolio-media">
-                    <img
-                      src="assets/img/portfolio/LeBonWaz.jpeg"
-                      class="portfolio-img img-fluid"
-                      alt="Site e-commerce Le Bon Waz"
-                    />
-                    <span class="portfolio-category">Site web</span>
-                  </div>
-                  <div class="portfolio-body">
-                    <h3>Le Bon Waz</h3>
-                    <p>
-                      Plateforme de vente en ligne avec catalogue dynamique et
-                      back-office de gestion des commandes.
-                    </p>
-                    <ul class="portfolio-tags">
-                      <li>HTML CSS BOOTSTRAP</li>
-                      <li>Stripe</li>
-                      <li>UI Kit</li>
-                    </ul>
-                    <div class="portfolio-links">
-                      <a
-                        href="assets/img/portfolio/LeBonWaz.jpeg"
-                        class="btn btn-outline-secondary btn-sm glightbox"
-                        data-gallery="portfolio-gallery-web"
-                        >Aperçu</a
-                      >
-                      <a
-                        href="lebonwaz-details.html"
-                        class="btn btn-primary btn-sm"
-                        >Voir le projet</a
-                      >
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web"
-              >
-                <article class="portfolio-card h-100">
-                  <div class="portfolio-media">
-                    <img
-                      src="assets/img/portfolio/logo.png"
-                      class="portfolio-img img-fluid"
-                      alt="Site Lampe À Mes Pieds"
-                    />
-                    <span class="portfolio-category">Site web</span>
-                  </div>
-                  <div class="portfolio-body">
-                    <h3>Lampe À Mes Pieds</h3>
-                    <p>
-                      Présentation éditoriale des collections avec modules de
-                      téléchargement et espace presse.
-                    </p>
-                    <ul class="portfolio-tags">
-                      <li>HTML CSS JAVASCRIPT</li>
-                      <li>E-COMMERCE</li>
-                      <li>Accessibilité</li>
-                    </ul>
-                    <div class="portfolio-links">
-                      <a
-                        href="assets/img/portfolio/logo.png"
-                        class="btn btn-outline-secondary btn-sm glightbox"
-                        data-gallery="portfolio-gallery-web"
-                        >Galerie</a
-                      >
-                      <a href="lamp-details.html" class="btn btn-primary btn-sm"
-                        >Étude de cas</a
-                      >
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web"
-              >
-                <article class="portfolio-card h-100">
-                  <div class="portfolio-media">
-                    <img
-                      src="assets/img/portfolio/English-Fun-Club (1).jpeg"
-                      class="portfolio-img img-fluid"
-                      alt="Plateforme English Fun Club"
-                    />
-                    <span class="portfolio-category">Site web</span>
-                  </div>
-                  <div class="portfolio-body">
-                    <h3>English Fun Club</h3>
-                    <p>
-                      Plateforme e-learning gamifiée pour faciliter
-                      l'apprentissage de l'anglais chez les adolescents.
-                    </p>
-                    <ul class="portfolio-tags">
-                      <li>HTML CSS</li>
-                      <li>Vitrine</li>
-                      <li>Apprenstissage</li>
-                    </ul>
-                    <div class="portfolio-links">
-                      <a
-                        href="assets/img/portfolio/English-Fun-Club (1).jpeg"
-                        class="btn btn-outline-secondary btn-sm glightbox"
-                        data-gallery="portfolio-gallery-web"
-                        >Aperçu</a
-                      >
-                      <a
-                        href="englishfunclub-details.html"
-                        class="btn btn-primary btn-sm"
-                        >Voir le projet</a
-                      >
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web"
-              >
-                <article class="portfolio-card h-100">
-                  <div class="portfolio-media">
-                    <img
-                      src="assets/img/portfolio/qui-es-tu.png"
-                      class="portfolio-img img-fluid"
-                      alt="Site Découvre qui tu es"
-                    />
-                    <span class="portfolio-category">Site web</span>
-                  </div>
-                  <div class="portfolio-body">
-                    <h3>Découvre qui tu es</h3>
-                    <p>
-                      Expérience interactive basée sur des questionnaires pour
-                      révéler les profils de personnalité.
-                    </p>
-                    <ul class="portfolio-tags">
-                      <li>HTML CSS</li>
-                      <li>Personnalités</li>
-                      <li>Tests</li>
-                    </ul>
-                    <div class="portfolio-links">
-                      <a
-                        href="assets/img/portfolio/qui-es-tu.png"
-                        class="btn btn-outline-secondary btn-sm glightbox"
-                        data-gallery="portfolio-gallery-web"
-                        >Aperçu</a
-                      >
-                      <a
-                        href="decouvre-details.html"
-                        class="btn btn-primary btn-sm"
-                        >Étude de cas</a
-                      >
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web"
-              >
-                <article class="portfolio-card h-100">
-                  <div class="portfolio-media">
-                    <img
-                      src="assets/img/portfolio/Projet Booki.png"
-                      class="portfolio-img img-fluid"
-                      alt="Projet Booki"
-                    />
-                    <span class="portfolio-category">Prototype</span>
-                  </div>
-                  <div class="portfolio-body">
-                    <h3>Projet Booki</h3>
-                    <p>
-                      Prototype responsive d'un portail de réservation d'hôtels,
-                      avec filtres dynamiques et intégration API.
-                    </p>
-                    <ul class="portfolio-tags">
-                      <li>HTML/CSS</li>
-                      <li>Responsive</li>
-                    </ul>
-                    <div class="portfolio-links">
-                      <a
-                        href="assets/img/portfolio/Projet Booki.png"
-                        class="btn btn-outline-secondary btn-sm glightbox"
-                        data-gallery="portfolio-gallery-web"
-                        >Aperçu</a
-                      >
-                      <a
-                        href="booki-details.html"
-                        class="btn btn-primary btn-sm"
-                        >Voir le projet</a
-                      >
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web"
-              >
-                <article class="portfolio-card h-100">
-                  <div class="portfolio-media">
-                    <img
-                      src="assets/img/portfolio/Grace_D-1.jpeg"
-                      class="portfolio-img img-fluid"
-                      alt="Site Grâce Déployée"
-                    />
-                    <span class="portfolio-category">Site web</span>
-                  </div>
-                  <div class="portfolio-body">
-                    <h3>Grâce Déployée</h3>
-                    <p>
-                      Site communautaire pour une église locale : agenda, sermon
-                      en ligne et espace bénévoles.
-                    </p>
-                    <ul class="portfolio-tags">
-                      <li>HTML CSS</li>
-                      <li>Eglise</li>
-                    </ul>
-                    <div class="portfolio-links">
-                      <a
-                        href="assets/img/portfolio/Grace_D-1.jpeg"
-                        class="btn btn-outline-secondary btn-sm glightbox"
-                        data-gallery="portfolio-gallery-web"
-                        >Galerie</a
-                      >
-                      <a
-                        href="gracedeploye-details.html"
-                        class="btn btn-primary btn-sm"
-                        >Voir le projet</a
-                      >
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-doc"
-              >
-                <article class="portfolio-card h-100">
-                  <div class="portfolio-media">
-                    <img
-                      src="assets/img/portfolio/airtel-logo.png"
-                      class="portfolio-img img-fluid"
-                      alt="Documentation API Airtel"
-                    />
-                    <span class="portfolio-category">Documentation</span>
-                  </div>
-                  <div class="portfolio-body">
-                    <h3>API Airtel Money</h3>
-                    <p>
-                      Guide technique complet avec scénarios de tests et
-                      exemples de requêtes pour l'intégration Airtel Money.
-                    </p>
-                    <ul class="portfolio-tags">
-                      <li>API REST</li>
-                      <li>Markdown</li>
-                    </ul>
-                    <div class="portfolio-links">
-                      <a
-                        href="assets/img/portfolio/airtel-logo.png"
-                        class="btn btn-outline-secondary btn-sm glightbox"
-                        data-gallery="portfolio-gallery-doc"
-                        >Visuel</a
-                      >
-                      <a href="api-airtel.html" class="btn btn-primary btn-sm"
-                        >Télécharger</a
-                      >
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-doc"
-              >
-                <article class="portfolio-card h-100">
-                  <div class="portfolio-media">
-                    <img
-                      src="assets/img/portfolio/LMS-Platform.png"
-                      class="portfolio-img img-fluid"
-                      alt="LMS-Platform"
-                    />
-                    <span class="portfolio-category">Plateforme</span>
-                  </div>
-                  <div class="portfolio-body">
-                    <h3>LMS Plateform</h3>
-                    <p>
-                      Plateforme de gestion de prospects (Leads Management
-                      Service), orientée entreprise, cet outils aide à la
-                      réalisation et l'atteinte de objectifs financiers via la
-                      gestion des partenariat et prospects au sein de
-                      l'entreprise.
-                    </p>
-                    <ul class="portfolio-tags">
-                      <li>React.js</li>
-                      <li>Firebase</li>
-                    </ul>
-                    <div class="portfolio-links">
-                      <a
-                        href="assets/img/portfolio/LMS-Platform.png"
-                        class="btn btn-outline-secondary btn-sm glightbox"
-                        data-gallery="portfolio-gallery-doc"
-                        >Visuel</a
-                      >
-                      <a
-                        href="gestion-prospects-details.html"
-                        class="btn btn-primary btn-sm"
-                        >Voir projet</a
-                      >
-                    </div>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Services Section -->
-      <section id="services" class="services section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Services</h2>
-          <p>
-            En tant que chef de projet et développeur fullstack, j'offre une
-            gamme complète de services pour accompagner la conception et la
-            réalisation de vos projets technologiques.
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container">
-          <div class="row gy-4">
-            <!-- Service Item 0: MGN CodeWave -->
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="50"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-stars"></i>
-              </div>
-              <div>
-                <h4 class="title">
-                  <a href="mgn-details.html" class="stretched-link"
-                    >MGN CodeWave : Solution digital</a
-                  >
-                </h4>
-                <p class="description">
-                  Offre phare orientée stratégie produit : cadrage, UX/UI,
-                  développement et lancement d'expériences web &amp; mobile dans
-                  des cycles courts et maîtrisés.
-                </p>
-                <ul class="service-tags">
-                  <li>Discovery</li>
-                  <li>Design System</li>
-                  <li>Delivery agile</li>
-                </ul>
-              </div>
-            </div>
-            <!-- End Service Item -->
-            <!-- Service Item 1: Project Management -->
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="150"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-gear"></i>
-              </div>
-              <div>
-                <h4 class="title">
-                  <a href="gestion-detail.html" class="stretched-link"
-                    >Gestion de Projet Technique</a
-                  >
-                </h4>
-                <p class="description">
-                  Responsable de la conception technique, des exigences clés, et
-                  du développement de fonctionnalités pour garantir le succès de
-                  votre projet.
-                </p>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <!-- Service Item 2: Fullstack Development -->
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="220"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-code-slash"></i>
-              </div>
-              <div>
-                <h4 class="title">
-                  <a href="fullstack-details.html" class="stretched-link"
-                    >Développement Fullstack</a
-                  >
-                </h4>
-                <p class="description">
-                  Maîtrise complète du développement frontend (JavaScript, HTML,
-                  CSS) et backend (Node.js) pour des applications web robustes
-                  et performantes.
-                </p>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <!-- Service Item 3: Mobile Development -->
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="290"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-phone"></i>
-              </div>
-              <div>
-                <h4 class="title">
-                  <a href="fullstack-details.html" class="stretched-link"
-                    >Développement Mobile (Flutter)</a
-                  >
-                </h4>
-                <p class="description">
-                  Conception et développement d'interfaces utilisateur
-                  multiplateformes (iOS et Android) pour des applications
-                  mobiles de haute qualité.
-                </p>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <!-- Service Item 4: Performance Optimization -->
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="360"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-speedometer2"></i>
-              </div>
-              <div>
-                <h4 class="title">
-                  <a href="optimisation-details.html" class="stretched-link"
-                    >Optimisation des Performances</a
-                  >
-                </h4>
-                <p class="description">
-                  Expertise dans l'amélioration de la vitesse et de l'efficacité
-                  des applications web et mobiles pour une expérience
-                  utilisateur optimale.
-                </p>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <!-- Service Item 5: Problem Solving & Innovation -->
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="430"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-lightbulb"></i>
-              </div>
-              <div>
-                <h4 class="title">
-                  <a href="inovation-details.html" class="stretched-link"
-                    >Résolution de Problèmes & Innovation</a
-                  >
-                </h4>
-                <p class="description">
-                  Capacité à identifier les défis complexes et à proposer des
-                  solutions créatives et innovantes pour les surmonter.
-                </p>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <!-- Service Item 6: Teamwork -->
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="500"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-people"></i>
-              </div>
-              <div>
-                <h4 class="title">
-                  <a href="leadership-details.html" class="stretched-link"
-                    >Travail d'équipe & Leadership</a
-                  >
-                </h4>
-                <p class="description">
-                  Fortes compétences en leadership pour diriger des équipes et
-                  collaborer efficacement dans des environnements de travail
-                  dynamiques.
-                </p>
-              </div>
-            </div>
-            <!-- End Service Item -->
-          </div>
-        </div>
-      </section>
-      <!-- /Services Section -->
-
-      <!-- Contact Section -->
-      <section id="contact" class="contact section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Contact</h2>
-          <p>
-            N'hésitez pas à me contacter pour toute opportunité de projet ou
-            collaboration. Je suis toujours disponible pour discuter de
-            nouvelles idées.
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-4">
-            <div class="col-lg-5">
-              <div class="info-wrap">
-                <div
-                  class="info-item d-flex"
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                >
-                  <i class="bi bi-geo-alt flex-shrink-0"></i>
-                  <div>
-                    <h3>Adresse</h3>
-                    <p>Libreville, Gabon</p>
-                  </div>
-                </div>
-                <!-- End Info Item -->
-
-                <div
-                  class="info-item d-flex"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                >
-                  <i class="bi bi-telephone flex-shrink-0"></i>
-                  <div>
-                    <h3>Appelez-moi</h3>
-                    <a href="tel:+241074676741">+241 074676741</a>
-                  </div>
-                </div>
-                <!-- End Info Item -->
-
-                <div
-                  class="info-item d-flex"
-                  data-aos="fade-up"
-                  data-aos-delay="400"
-                >
-                  <i class="bi bi-envelope flex-shrink-0"></i>
-                  <div>
-                    <h3>Écrivez-moi</h3>
-                    <a href="mailto:mbouandagnanga18@gmail.com"
-                      >mbouandagnanga18@gmail.com</a
-                    >
-                  </div>
-                </div>
-                <!-- End Info Item -->
-
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15957.540166687295!2d9.444321683416407!3d0.4003050965306631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x107f311756535555%3A0x633d7a840e53a311!2sLibreville%2C%20Gabon!5e0!3m2!1sfr!2sfr!4v1689264583163!5m2!1sfr!2sfr"
-                  title="Carte de localisation - Libreville, Gabon"
-                  frameborder="0"
-                  class="contact-map"
-                  allowfullscreen=""
-                ></iframe>
-              </div>
-            </div>
-
-            <div class="col-lg-7">
-              <form
-                action="https://formspree.io/f/mgvbrvjj"
-                method="post"
-                class="php-email-form"
-                name="Formulaire de Contact du Portfolio"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <!-- CSRF Token pour la sécurité -->
-                <input
-                  type="hidden"
-                  name="csrf_token"
-                  id="csrf_token"
-                  value=""
-                />
-
-                <div class="row gy-4">
-                  <div class="col-md-6">
-                    <label for="name-field" class="pb-2">Votre Nom</label>
-                    <input
-                      type="text"
-                      name="Nom Complet contact Portfolio"
-                      id="name-field"
-                      class="form-control"
-                      required=""
-                    />
-                  </div>
-
-                  <div class="col-md-6">
-                    <label for="email-field" class="pb-2">Votre Email</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="Email contact Portfolio"
-                      id="email-field"
-                      required=""
-                    />
-                  </div>
-
-                  <div class="col-md-12">
-                    <label for="subject-field" class="pb-2">Sujet</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="Sujet contact Portfolio"
-                      id="subject-field"
-                      required=""
-                    />
-                  </div>
-
-                  <div class="col-md-12">
-                    <label for="message-field" class="pb-2">Message</label>
-                    <textarea
-                      class="form-control"
-                      name="Message contact Portfolio"
-                      rows="10"
-                      id="message-field"
-                      required=""
-                    ></textarea>
-                  </div>
-
-                  <div class="col-md-12 text-center">
-                    <div class="loading">Envoi en cours</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">
-                      Votre message a été envoyé. Merci !
-                    </div>
-
-                    <button type="submit">Envoyer le message</button>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <!-- End Contact Form -->
-          </div>
-        </div>
-      </section>
-
-      <!-- /Contact Section -->
-    </main>
-
-    <footer id="footer" class="footer position-relative light-background">
+    <!-- About Section -->
+    <section id="apropos">
       <div class="container">
-        <div class="row gy-3">
-          <!-- About section -->
-          <div class="col-lg-4 col-md-6 d-flex">
-            <i class="bi bi-person icon"></i>
-            <div>
-              <h4>À Propos</h4>
+        <div class="section-title">
+          <h2>À propos de moi</h2>
+          <p>Découvrez mon parcours et mes valeurs</p>
+        </div>
+        <div class="about-content">
+          <div class="about-image">
+            <div class="profile-image">
+              <!-- <i class="fas fa-user-circle"></i>
+              <p class="image-placeholder">
+                
+              </p> -->
+              <img
+                src="assets/img/richard.jpeg"
+                alt="NGOUBADJAMBO Richard"
+                class="actual-profile-image"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="about-info">
+            <div class="info-item">
+              <i class="fas fa-user"></i>
+              <div>
+                <strong>Nom</strong>
+                <p>NGOUBADJAMBO Richard</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-briefcase"></i>
+              <div>
+                <strong>Statut</strong>
+                <p>Chef d'Entreprise</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-building"></i>
+              <div>
+                <strong>Entreprise</strong>
+                <p>M.G.N CodeWave</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <strong>Localisation</strong>
+                <p>Libreville, Gabon</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <strong>Formation</strong>
+                <p>Ingénieur d'État</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <strong>Email</strong>
+                <p>mbouandagnanga18@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-text">
+            <h3>Chef d'entreprise technique & Expert en développement</h3>
+            <p>
+              Fondateur et dirigeant de <strong>M.G.N CodeWave</strong>, j'allie
+              vision entrepreneuriale et expertise technique pour créer des
+              solutions digitales innovantes. Mon parcours unique me permet de
+              comprendre à la fois les enjeux business et les défis techniques.
+            </p>
+            <p>
+              Fort de plus de 3 années d'expérience dans le développement web et
+              mobile, je me spécialise dans la création d'applications
+              performantes utilisant React.js, Node.js, Flutter et les
+              technologies modernes.
+            </p>
+            <p>
+              Ma démarche repose sur trois piliers :
+              <strong>l'innovation</strong> pour imaginer des solutions
+              créatives, <strong>l'excellence technique</strong> pour garantir
+              la qualité, et <strong>la collaboration</strong> pour dépasser les
+              attentes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- M.G.N CodeWave Section -->
+    <section id="entreprise" class="company-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>M.G.N CodeWave</h2>
+          <p>Votre Partenaire Digital de Confiance</p>
+        </div>
+
+        <div class="company-content">
+          <div class="company-text">
+            <div class="company-description">
+              <h3>À Propos de Notre Entreprise</h3>
               <p>
-                Richard Ngoubadjambo<br />
-                Entrepreneur, Chef de Projet IT & Développeur Web/Mobile
+                <strong>M.G.N CodeWave</strong> est une agence digitale basée à
+                <strong>Libreville, Gabon</strong>, spécialisée dans la création
+                de solutions web et mobile performantes. Nous transformons vos
+                idées en sites web, applications et plateformes digitales qui
+                génèrent des résultats.
+              </p>
+            </div>
+
+            <div class="company-mission">
+              <h3>Notre Mission</h3>
+              <p>
+                Fournir des solutions digitales modernes, abordables et de haute
+                qualité pour propulser les entreprises vers la transformation
+                digitale. Nous croyons que chaque entreprise mérite un site web
+                professionnel et une présence digitale forte.
+              </p>
+            </div>
+
+            <div class="company-values">
+              <h3>Nos Valeurs</h3>
+              <ul class="values-list">
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span
+                    ><strong>Qualité Garantie</strong> - Designs modernes testés
+                    sur tous les appareils</span
+                  >
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span
+                    ><strong>Livraison Rapide</strong> - Votre site prêt en 2-4
+                    semaines</span
+                  >
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span
+                    ><strong>Support Dédié</strong> - Assistance 24/7 par
+                    WhatsApp, email ou téléphone</span
+                  >
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span
+                    ><strong>Prix Compétitifs</strong> - Les meilleurs tarifs au
+                    Gabon avec paiement flexible</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="company-services">
+            <h3>Nos Services</h3>
+            <div class="services-list">
+              <div class="service-item">
+                <div class="service-icon">
+                  <i class="fas fa-globe"></i>
+                </div>
+                <div class="service-detail">
+                  <h4>Sites Vitrines</h4>
+                  <p>Sites web professionnels pour présenter votre activité</p>
+                  <span class="price">À partir de 100 000 FCFA</span>
+                </div>
+              </div>
+
+              <div class="service-item">
+                <div class="service-icon">
+                  <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="service-detail">
+                  <h4>E-Commerce</h4>
+                  <p>Boutiques en ligne complètes avec paiement sécurisé</p>
+                  <span class="price">À partir de 300 000 FCFA</span>
+                </div>
+              </div>
+
+              <div class="service-item">
+                <div class="service-icon">
+                  <i class="fas fa-pen-fancy"></i>
+                </div>
+                <div class="service-detail">
+                  <h4>Blogs & Portfolios</h4>
+                  <p>Plateformes pour partager votre passion et réalisations</p>
+                  <span class="price">À partir de 80 000 FCFA</span>
+                </div>
+              </div>
+
+              <div class="service-item">
+                <div class="service-icon">
+                  <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="service-detail">
+                  <h4>Applications Mobiles</h4>
+                  <p>Développement Flutter pour iOS et Android</p>
+                  <span class="price">Sur devis</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="company-cta">
+              <a
+                href="https://mgncodewave-com.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+              >
+                Visiter le Site M.G.N CodeWave
+              </a>
+              <a
+                href="https://wa.me/24166198918?text=Bonjour,%20je%20souhaite%20discuter%20d%27un%20projet%20web"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline"
+              >
+                Devis Gratuit via WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="stat-number">3+</div>
+            <div class="stat-label">Années d'Expérience</div>
+            <div class="stat-text">
+              Expertise en développement web et mobile
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-project-diagram"></i>
+            </div>
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Projets Réalisés</div>
+            <div class="stat-text">
+              Applications, sites et solutions digitales
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Technologies</div>
+            <div class="stat-text">
+              React, Node.js, Flutter, et bien d'autres
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Satisfaction Client</div>
+            <div class="stat-text">Qualité et excellence garanties</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="competences">
+      <div class="container">
+        <div class="section-title">
+          <h2>Mes Compétences</h2>
+          <p>Technologies et expertises que je maîtrise</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3><i class="fas fa-code"></i> Frontend</h3>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>React.js / Next.js</span>
+                <span>92%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 92%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>HTML5 / CSS3 / JS</span>
+                <span>95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 95%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Tailwind / Bootstrap</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3><i class="fas fa-server"></i> Backend</h3>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Node.js / Express</span>
+                <span>88%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 88%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>API REST</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Drupal / WordPress</span>
+                <span>87%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 87%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3><i class="fas fa-mobile-alt"></i> Mobile</h3>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Flutter / Dart</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>iOS & Android</span>
+                <span>88%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 88%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>UI/UX Mobile</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3><i class="fas fa-database"></i> Bases de Données</h3>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>MongoDB / Firebase</span>
+                <span>88%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 88%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>MySQL / SQL Server</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Git / GitHub</span>
+                <span>92%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 92%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3><i class="fas fa-chart-line"></i> Management</h3>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Gestion de Projet</span>
+                <span>92%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 92%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Leadership</span>
+                <span>88%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 88%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Stratégie Digitale</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3><i class="fas fa-lightbulb"></i> Soft Skills</h3>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Résolution Problèmes</span>
+                <span>95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 95%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Travail d'Équipe</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Innovation</span>
+                <span>93%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 93%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="parcours">
+      <div class="container">
+        <div class="section-title">
+          <h2>Mon Parcours</h2>
+          <p>Formation et expériences professionnelles</p>
+        </div>
+
+        <h3 style="color: var(--primary); margin-bottom: 2rem">Formation</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-date">2018 - 2023</span>
+            <div class="timeline-content">
+              <h3>Diplôme d'Ingénieur d'État</h3>
+              <h4>École Marocaine Des Sciences de L'Ingénieur</h4>
+              <p>
+                Formation complète en Informatique & Réseaux. Base solide pour
+                le développement d'entreprises technologiques et la direction de
+                projets complexes.
               </p>
             </div>
           </div>
-          <!-- Contact details -->
-          <div class="col-lg-4 col-md-6 d-flex">
-            <i class="bi bi-globe icon"></i>
-            <div>
-              <h4>Contact</h4>
+
+          <div class="timeline-item">
+            <span class="timeline-date">2024 (6 mois)</span>
+            <div class="timeline-content">
+              <h3>Certification Web Fullstack</h3>
+              <h4>GOMYCODE</h4>
               <p>
-                Libreville, Gabon<br />
-                <strong
-                  >Téléphone:<a href="tel:+241074676741">
-                    +241 074676741</a
-                  ></strong
-                ><br />
-                <strong>Email:</strong>
-                <a href="mailto:mbouandagnanga18@gmail.com"
-                  >mbouandagnanga18@gmail.com</a
-                ><br />
+                Certification avancée en développement web moderne (MERN Stack).
               </p>
             </div>
           </div>
-          <!-- Social media links -->
-          <div class="col-lg-4 col-md-6 d-flex">
-            <i class="bi bi-share icon"></i>
-            <div>
-              <h4>Réseaux Sociaux</h4>
-              <div class="social-links text-center">
+
+          <div class="timeline-item">
+            <span class="timeline-date">2023 (4 mois)</span>
+            <div class="timeline-content">
+              <h3>Formation Web Fullstack</h3>
+              <h4>IT Pour Tous</h4>
+              <p>Formation pratique sur les technologies web modernes.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="color: var(--primary); margin: 3rem 0 2rem">
+          Expériences Professionnelles
+        </h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-date">Actuel</span>
+            <div class="timeline-content">
+              <h3>Fondateur & Chef d'Entreprise</h3>
+              <h4>M.G.N CodeWave - Libreville, Gabon</h4>
+              <ul>
+                <li>Direction stratégique et opérationnelle</li>
+                <li>Développement commercial</li>
+                <li>Supervision technique des projets</li>
+                <li>Innovation et R&D</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-date">2025 (10 mois)</span>
+            <div class="timeline-content">
+              <h3>Développeur Mobile Flutter / Chef de Projet IT</h3>
+              <h4>AKANDA - Gabon</h4>
+              <ul>
+                <li>Conception technique (exigences, wireframes)</li>
+                <li>Développement interfaces Flutter</li>
+                <li>Gestion fonctionnalités principales</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-date">2024 (3 mois)</span>
+            <div class="timeline-content">
+              <h3>Développeur Web - Drupal</h3>
+              <h4>Rabat Agdal - Maroc</h4>
+              <ul>
+                <li>Conception et programmation de sites web</li>
+                <li>Création de fonctionnalités</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-date">2023 (2 mois)</span>
+            <div class="timeline-content">
+              <h3>Chargé de Clientèle</h3>
+              <h4>Casablanca - Maroc</h4>
+              <ul>
+                <li>Gestion portefeuille clients</li>
+                <li>Fidélisation client</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+      <div class="container">
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>Découvrez mes réalisations</p>
+        </div>
+
+        <div class="portfolio-filters">
+          <button class="filter-btn active" data-filter="all">Tous</button>
+          <button class="filter-btn" data-filter="mobile">Mobile</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="platform">Plateformes</button>
+        </div>
+
+        <div class="portfolio-grid">
+          <div class="portfolio-item" data-category="mobile">
+            <div class="portfolio-image">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Waz'UP</h3>
+              <p>
+                Super-app Flutter combinant e-commerce, livraison et location
+                avec IA embarquée.
+              </p>
+              <div class="tech-tags">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">IA</span>
+              </div>
+              <a href="portfolio/wazup.html" class="btn btn-outline btn-sm"
+                >Voir les détails</a
+              >
+            </div>
+          </div>
+
+          <div class="portfolio-item" data-category="web">
+            <div class="portfolio-image">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>H2P Group</h3>
+              <p>Écosystème digital complet pour cabinet de coaching.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">HTML/CSS</span>
+                <span class="tech-tag">CRM</span>
+              </div>
+              <a href="portfolio/h2p-group.html" class="btn btn-outline btn-sm"
+                >Voir les détails</a
+              >
+            </div>
+          </div>
+
+          <div class="portfolio-item" data-category="web">
+            <div class="portfolio-image">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>MGN CodeWave</h3>
+              <p>Studio digital : design system et MVP sur-mesure.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">Product Ops</span>
+              </div>
+              <a
+                href="portfolio/mgn-codewave.html"
+                class="btn btn-outline btn-sm"
+                >Voir les détails</a
+              >
+            </div>
+          </div>
+
+          <div class="portfolio-item" data-category="web">
+            <div class="portfolio-image">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Le Bon Waz</h3>
+              <p>Plateforme e-commerce avec catalogue dynamique.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">Bootstrap</span>
+                <span class="tech-tag">Stripe</span>
+              </div>
+              <a href="portfolio/le-bon-waz.html" class="btn btn-outline btn-sm"
+                >Voir les détails</a
+              >
+            </div>
+          </div>
+
+          <div class="portfolio-item" data-category="web">
+            <div class="portfolio-image">
+              <i class="fas fa-book"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Lampe À Mes Pieds</h3>
+              <p>Présentation éditoriale avec téléchargement.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <a
+                href="portfolio/lampe-a-mes-pieds.html"
+                class="btn btn-outline btn-sm"
+                >Voir les détails</a
+              >
+            </div>
+          </div>
+
+          <div class="portfolio-item" data-category="web">
+            <div class="portfolio-image">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>English Fun Club</h3>
+              <p>Plateforme e-learning gamifiée.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">E-Learning</span>
+              </div>
+              <a
+                href="portfolio/english-fun-club.html"
+                class="btn btn-outline btn-sm"
+                >Voir les détails</a
+              >
+            </div>
+          </div>
+
+          <div class="portfolio-item" data-category="web">
+            <div class="portfolio-image">
+              <i class="fas fa-user-check"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Découvre qui tu es</h3>
+              <p>Questionnaires de profils personnalité.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <a
+                href="portfolio/decouvre-qui-tu-es.html"
+                class="btn btn-outline btn-sm"
+                >Voir les détails</a
+              >
+            </div>
+          </div>
+
+          <div class="portfolio-item" data-category="web">
+            <div class="portfolio-image">
+              <i class="fas fa-church"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Grâce Déployée</h3>
+              <p>Site communautaire pour église locale.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">CMS</span>
+              </div>
+              <a
+                href="portfolio/grace-deployee.html"
+                class="btn btn-outline btn-sm"
+                >Voir les détails</a
+              >
+            </div>
+          </div>
+
+          <div class="portfolio-item" data-category="platform">
+            <div class="portfolio-image">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>LMS Platform</h3>
+              <p>Plateforme de gestion de prospects.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">Firebase</span>
+              </div>
+              <a
+                href="portfolio/lms-platform.html"
+                class="btn btn-outline btn-sm"
+                >Voir les détails</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Mes Services</h2>
+          <p>Solutions digitales complètes</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3>M.G.N CodeWave</h3>
+            <p>
+              Offre phare orientée stratégie produit : cadrage, UX/UI,
+              développement et lancement d'expériences web & mobile dans des
+              cycles courts.
+            </p>
+            <div class="service-tags">
+              <span>Discovery</span>
+              <span>Design System</span>
+              <span>Agile</span>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-tasks"></i>
+            </div>
+            <h3>Gestion de Projet IT</h3>
+            <p>
+              Responsable de la conception technique, des exigences clés, et du
+              développement de fonctionnalités pour garantir le succès de votre
+              projet.
+            </p>
+            <div class="service-tags">
+              <span>Exigences</span>
+              <span>Architecture</span>
+              <span>Suivi</span>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3>Développement Fullstack</h3>
+            <p>
+              Maîtrise complète du développement frontend (React, JavaScript) et
+              backend (Node.js) pour des applications web robustes et
+              performantes.
+            </p>
+            <div class="service-tags">
+              <span>Frontend</span>
+              <span>Backend</span>
+              <span>API</span>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>Développement Mobile (Flutter)</h3>
+            <p>
+              Conception et développement d'interfaces utilisateur
+              multiplateformes (iOS et Android) pour des applications mobiles de
+              haute qualité.
+            </p>
+            <div class="service-tags">
+              <span>iOS</span>
+              <span>Android</span>
+              <span>UX</span>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-tachometer-alt"></i>
+            </div>
+            <h3>Optimisation Performance</h3>
+            <p>
+              Expertise dans l'amélioration de la vitesse et de l'efficacité des
+              applications web et mobiles pour une expérience utilisateur
+              optimale.
+            </p>
+            <div class="service-tags">
+              <span>Vitesse</span>
+              <span>SEO</span>
+              <span>Scalabilité</span>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3>Innovation & Solutions</h3>
+            <p>
+              Capacité à identifier les défis complexes et à proposer des
+              solutions créatives et innovantes pour les surmonter.
+            </p>
+            <div class="service-tags">
+              <span>Créativité</span>
+              <span>Problèmes</span>
+              <span>R&D</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Me Contacter</h2>
+          <p>Discutons de votre projet</p>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Informations</h3>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <strong>Adresse</strong>
+                <p>Libreville, Gabon</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <strong>Téléphone</strong>
+                <p>+241 074676741</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <strong>Email</strong>
+                <p>mbouandagnanga18@gmail.com</p>
+              </div>
+            </div>
+            <div
+              style="
+                margin-top: 2rem;
+                padding-top: 2rem;
+                border-top: 1px solid #e2e8f0;
+              "
+            >
+              <h4 style="color: var(--primary); margin-bottom: 1rem">
+                Réseaux Sociaux
+              </h4>
+              <div class="social-links" style="justify-content: flex-start">
                 <a
                   href="https://www.facebook.com/share/1ChamR4xqL/"
-                  class="facebook"
-                  title="Suivez-moi sur Facebook"
-                  ><i class="bi bi-facebook"></i
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Facebook"
+                  ><i class="fab fa-facebook"></i
                 ></a>
                 <a
                   href="https://www.instagram.com/ngoubadjambo_richard?igsh=cWFycHppNHkza2g1"
-                  class="instagram"
-                  title="Suivez-moi sur Instagram"
-                  ><i class="bi bi-instagram"></i
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Instagram"
+                  ><i class="fab fa-instagram"></i
                 ></a>
                 <a
                   href="https://github.com/NGOUBADJAMBO-Richard"
-                  class="github"
-                  title="Voir mon profil GitHub"
-                  ><i class="bi bi-github"></i
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="GitHub"
+                  ><i class="fab fa-github"></i
                 ></a>
                 <a
                   href="https://www.linkedin.com/in/richard-ngoubadjambo-239244325/"
-                  class="linkedin"
-                  title="Connectez-vous sur LinkedIn"
-                  ><i class="bi bi-linkedin"></i
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="LinkedIn"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+                <a
+                  href="https://wa.me/241074676741"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="WhatsApp"
+                  ><i class="fab fa-whatsapp"></i
                 ></a>
               </div>
             </div>
           </div>
+
+          <div class="contact-form">
+            <form
+              action="https://formspree.io/f/mgvbrvjj"
+              method="post"
+              id="contactForm"
+              name="Formulaire de Contact du Portfolio"
+            >
+              <div class="form-group">
+                <label for="name">Votre Nom *</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Votre Email *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="subject">Sujet *</label>
+                <input type="text" id="subject" name="subject" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="container copyright text-center mt-4">
-        <p>
-          © <span>Copyright</span>
-          <strong class="px-1">Richard Ngoubadjambo</strong>
-          <span>Tous droits réservés</span>
-        </p>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="logo">
+            <div class="logo-image">
+              <img
+                src="assets/img/R N.png"
+                alt="NGOUBADJAMBO Richard"
+                class="logo-profile-image"
+                loading="lazy"
+              />
+            </div>
+            <!-- <div class="logo-info">
+              <p class="logo-name">Richard</p>
+              <p class="logo-title">Développeur</p>
+            </div> -->
+          </div>
+          <h3>NGOUBADJAMBO Richard</h3>
+          <p>Entrepreneur & Ingénieur Informatique</p>
+          <p>Fondateur de M.G.N CodeWave</p>
+        </div>
+        <div class="footer-section">
+          <h3>Navigation</h3>
+          <a href="#accueil">Accueil</a>
+          <a href="#apropos">À propos</a>
+          <a href="#competences">Compétences</a>
+        </div>
+        <div class="footer-section">
+          <h3>Services</h3>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-section">
+          <h3>Réseaux Sociaux</h3>
+          <div class="social-links">
+            <a
+              href="https://www.facebook.com/share/1ChamR4xqL/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Facebook"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/ngoubadjambo_richard?igsh=cWFycHppNHkza2g1"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://github.com/NGOUBADJAMBO-Richard"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/richard-ngoubadjambo-239244325/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://wa.me/241074676741"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="WhatsApp"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 NGOUBADJAMBO Richard. Tous droits réservés.</p>
       </div>
     </footer>
 
-    <!-- Scroll Top -->
-    <a
-      href="#"
-      id="scroll-top"
-      class="scroll-top d-flex align-items-center justify-content-center"
-      title="Retour en haut de la page"
-      ><i class="bi bi-arrow-up-short"></i
-    ></a>
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+      <i class="fas fa-arrow-up"></i>
+    </button>
 
-    <!-- Preloader -->
-    <div id="preloader"></div>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle">
+      <i class="fas fa-moon"></i>
+    </button>
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/typed.js/typed.umd.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/monitoring.js"></script>
 
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <!-- Google Analytics (Configure with your ID) -->
+    <!-- Uncomment and add your Google Analytics ID
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX', {
+        'anonymize_ip': true,
+        'cookie_flags': 'SameSite=None;Secure'
+      });
+    </script>
+    -->
   </body>
 </html>

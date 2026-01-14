@@ -1,0 +1,95 @@
+{
+  "projectName": "Portfolio NGOUBADJAMBO Richard",
+  "version": "2.1.0",
+  "security": {
+    "sslRequired": true,
+    "httpOnlyHeaders": true,
+    "csrfProtection": true,
+    "rateLimiting": {
+      "enabled": true,
+      "requestsPerMinute": 60,
+      "formSubmissionsPerHour": 10
+    },
+    "formValidation": {
+      "name": {
+        "minLength": 2,
+        "maxLength": 100,
+        "pattern": "^[a-zA-ZÀ-ÿ\\s'-]+$"
+      },
+      "email": {
+        "minLength": 5,
+        "maxLength": 255,
+        "pattern": "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$"
+      },
+      "message": {
+        "minLength": 10,
+        "maxLength": 5000
+      }
+    },
+    "csp": {
+      "enabled": true,
+      "policy": "default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://cdnjs.cloudflare.com; frame-src 'self'; connect-src 'self' https://formspree.io"
+    }
+  },
+  "seo": {
+    "title": "NGOUBADJAMBO Richard | Ingénieur Informatique & Entrepreneur",
+    "description": "Portfolio professionnel de NGOUBADJAMBO Richard, Ingénieur Informatique & Entrepreneur. Découvrez mes projets, compétences et services de développement Fullstack et Mobile avec M.G.N CodeWave.",
+    "keywords": [
+      "développeur",
+      "ingénieur informatique",
+      "fullstack",
+      "mobile",
+      "web",
+      "portfolio",
+      "Libreville",
+      "Gabon"
+    ],
+    "canonical": "https://ngoubadjambo-richard.com",
+    "sitemap": "https://ngoubadjambo-richard.com/sitemap.xml",
+    "robots": "https://ngoubadjambo-richard.com/robots.txt",
+    "ogImage": "https://ngoubadjambo-richard.com/assets/img/R N.png"
+  },
+  "performance": {
+    "compressionEnabled": true,
+    "cacheEnabled": true,
+    "cdnEnabled": true,
+    "imageOptimization": {
+      "enabled": true,
+      "formats": ["webp", "jpeg", "png"],
+      "lazyLoadingEnabled": true
+    },
+    "minimization": {
+      "cssEnabled": true,
+      "jsEnabled": true,
+      "htmlEnabled": true
+    }
+  },
+  "analytics": {
+    "googleAnalyticsId": "G-XXXXXXXXXX",
+    "trackingEnabled": true,
+    "consentRequired": true,
+    "events": [
+      "contact_form_submission",
+      "portfolio_project_click",
+      "service_inquiry",
+      "external_link_click"
+    ]
+  },
+  "monitoring": {
+    "errorTracking": true,
+    "performanceMonitoring": true,
+    "uptimeMonitoring": true,
+    "alerting": {
+      "email": "admin@ngoubadjambo-richard.com",
+      "errorThreshold": 5,
+      "performanceThreshold": 3000
+    }
+  },
+  "deployment": {
+    "environment": "production",
+    "domain": "ngoubadjambo-richard.com",
+    "httpsRequired": true,
+    "autoBackup": true,
+    "backupFrequency": "daily"
+  }
+}

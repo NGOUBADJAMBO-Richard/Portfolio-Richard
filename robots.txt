@@ -1,36 +1,25 @@
-# Robots.txt for NGOUBADJAMBO Richard's Portfolio
-# Generated for SEO optimization
+# robots.txt for NGOUBADJAMBO Richard Portfolio
+# This file tells search engines how to crawl the website
 
-# Allow all robots
 User-agent: *
 Allow: /
-
-# Specific crawl delays
-Crawl-delay: 1
-
-# Disallow sensitive areas
-Disallow: /forms/
-Disallow: /assets/vendor/
-Disallow: /*.php$
+Allow: /assets/
+Allow: /css/
+Allow: /js/
 Disallow: /admin/
 Disallow: /private/
-Disallow: /.git/
+Disallow: /temp/
 Disallow: /.env
 
-# Allow access to important files
-Allow: /assets/
-Allow: /*.html$
-Allow: /index.html
+# Slow down aggressive crawlers
+User-agent: AhrefsBot
+Crawl-delay: 10
 
-# Sitemaps
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# Sitemap location
 Sitemap: https://ngoubadjambo-richard.com/sitemap.xml
 
-# Google-specific settings
-User-agent: Googlebot
-Crawl-delay: 0
-Allow: /
-
-# Bing-specific settings
-User-agent: Bingbot
-Crawl-delay: 1
-Allow: /
+# Preferred domain
+Prefer-http-equiv: Canonical

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palette de Couleurs - M.G.N CodeWave</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        padding: 3rem;
+        background: #f5f5f5;
+      }
+
+      h1 {
+        text-align: center;
+        color: #0052cc;
+        margin-bottom: 3rem;
+        font-size: 2.5rem;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .section {
+        margin-bottom: 3rem;
+      }
+
+      .section h2 {
+        color: #2d2d2d;
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+        border-bottom: 3px solid #0052cc;
+        padding-bottom: 1rem;
+      }
+
+      .colors-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+      }
+
+      .color-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .color-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .color-sample {
+        height: 150px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .color-info {
+        padding: 1.5rem;
+      }
+
+      .color-name {
+        font-weight: 600;
+        color: #2d2d2d;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+      }
+
+      .color-hex {
+        font-family: "Courier New", monospace;
+        color: #0052cc;
+        font-weight: bold;
+        margin-bottom: 0.3rem;
+      }
+
+      .color-usage {
+        font-size: 0.9rem;
+        color: #666;
+        line-height: 1.4;
+      }
+
+      .gradient-demo {
+        background: linear-gradient(135deg, #0052cc 0%, #0066ff 100%);
+        color: white;
+        padding: 3rem;
+        border-radius: 10px;
+        text-align: center;
+        margin: 2rem 0;
+      }
+
+      .gradient-demo h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .gradient-demo code {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        font-family: "Courier New", monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🎨 Palette de Couleurs M.G.N CodeWave</h1>
+
+      <!-- Mode Clair -->
+      <div class="section">
+        <h2>☀️ Mode Clair</h2>
+        <div class="colors-grid">
+          <div class="color-card">
+            <div class="color-sample" style="background-color: #0052cc"></div>
+            <div class="color-info">
+              <div class="color-name">Primaire</div>
+              <div class="color-hex">#0052cc</div>
+              <div class="color-usage">Boutons, textes importants</div>
+            </div>
+          </div>
+
+          <div class="color-card">
+            <div class="color-sample" style="background-color: #003d99"></div>
+            <div class="color-info">
+              <div class="color-name">Secondaire</div>
+              <div class="color-hex">#003d99</div>
+              <div class="color-usage">Hover, états actifs</div>
+            </div>
+          </div>
+
+          <div class="color-card">
+            <div class="color-sample" style="background-color: #0066ff"></div>
+            <div class="color-info">
+              <div class="color-name">Accent</div>
+              <div class="color-hex">#0066ff</div>
+              <div class="color-usage">Animations, dégradés</div>
+            </div>
+          </div>
+
+          <div class="color-card">
+            <div class="color-sample" style="background-color: #2d2d2d"></div>
+            <div class="color-info">
+              <div class="color-name">Texte Principal</div>
+              <div class="color-hex">#2d2d2d</div>
+              <div class="color-usage">Textes, titres</div>
+            </div>
+          </div>
+
+          <div class="color-card">
+            <div class="color-sample" style="background-color: #666666"></div>
+            <div class="color-info">
+              <div class="color-name">Texte Secondaire</div>
+              <div class="color-hex">#666666</div>
+              <div class="color-usage">Descriptions, metadata</div>
+            </div>
+          </div>
+
+          <div class="color-card">
+            <div
+              class="color-sample"
+              style="background-color: #f5f5f5; border: 2px solid #ddd"
+            ></div>
+            <div class="color-info">
+              <div class="color-name">Fond Clair</div>
+              <div class="color-hex">#f5f5f5</div>
+              <div class="color-usage">Arrière-plans</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dégradé -->
+      <div class="section">
+        <h2>✨ Dégradé Principal</h2>
+        <div class="gradient-demo">
+          <h3>linear-gradient(135deg, #0052cc 0%, #0066ff 100%)</h3>
+          <p>
+            Utilisé pour les boutons, la section Hero, les icônes et les
+            animations
+          </p>
+        </div>
+      </div>
+
+      <!-- Mode Sombre -->
+      <div class="section">
+        <h2>🌙 Mode Sombre</h2>
+        <div class="colors-grid">
+          <div class="color-card">
+            <div class="color-sample" style="background-color: #1a1a1a"></div>
+            <div class="color-info">
+              <div class="color-name">Fond Principal</div>
+              <div class="color-hex">#1a1a1a</div>
+              <div class="color-usage">Arrière-plan général</div>
+            </div>
+          </div>
+
+          <div class="color-card">
+            <div class="color-sample" style="background-color: #2a2a2a"></div>
+            <div class="color-info">
+              <div class="color-name">Surface</div>
+              <div class="color-hex">#2a2a2a</div>
+              <div class="color-usage">Cartes, conteneurs</div>
+            </div>
+          </div>
+
+          <div class="color-card">
+            <div class="color-sample" style="background-color: #303030"></div>
+            <div class="color-info">
+              <div class="color-name">Surface Alternative</div>
+              <div class="color-hex">#303030</div>
+              <div class="color-usage">Inputs, tags</div>
+            </div>
+          </div>
+
+          <div class="color-card">
+            <div class="color-sample" style="background-color: #242424"></div>
+            <div class="color-info">
+              <div class="color-name">Surface Contraste</div>
+              <div class="color-hex">#242424</div>
+              <div class="color-usage">Sections alternées</div>
+            </div>
+          </div>
+
+          <div class="color-card">
+            <div class="color-sample" style="background-color: #e0e0e0"></div>
+            <div class="color-info">
+              <div class="color-name">Texte Principal</div>
+              <div class="color-hex">#e0e0e0</div>
+              <div class="color-usage">Textes lisibles</div>
+            </div>
+          </div>
+
+          <div class="color-card">
+            <div class="color-sample" style="background-color: #0052cc"></div>
+            <div class="color-info">
+              <div class="color-name">Primaire</div>
+              <div class="color-hex">#0052cc</div>
+              <div class="color-usage">Accents, bordures</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

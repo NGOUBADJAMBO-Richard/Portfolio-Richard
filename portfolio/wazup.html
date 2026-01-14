@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Super-app Flutter qui combine e-commerce, livraison et location avec une expérience utilisateur unifiée."
+    />
+    <meta
+      name="keywords"
+      content="Flutter, Super-app, Waz'UP, E-commerce mobile, Application multiservices, Mobile development, NGOUBADJAMBO Richard"
+    />
+    <meta name="author" content="NGOUBADJAMBO Richard" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="Waz'UP - Super-app Flutter | NGOUBADJAMBO Richard"
+    />
+    <meta
+      property="og:description"
+      content="Super-app Flutter combinant e-commerce, livraison et location avec expérience unifiée."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://ngoubadjambo-richard.github.io/portfolio/wazup.html"
+    />
+
+    <!-- Favicons -->
+    <link href="assets/img/R N.png" rel="icon" />
+    <link href="assets/img/R N.png" rel="apple-touch-icon" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
+    <!-- Canonical URL -->
+    <link
+      rel="canonical"
+      href="https://ngoubadjambo-richard.github.io/portfolio/wazup.html"
+    />
+
+    <title>Waz'UP - Super-app Flutter | NGOUBADJAMBO Richard</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    />
+    <style>
+      .project-detail {
+        padding: 6rem 0 4rem;
+        background: var(--light);
+      }
+      .project-hero {
+        background: var(--gradient);
+        color: white;
+        padding: 4rem 0;
+        text-align: center;
+      }
+      .project-hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+      .project-hero .subtitle {
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+      .project-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+      }
+      .project-image {
+        width: 100%;
+        max-width: 800px;
+        margin: 2rem auto;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+      .project-image img {
+        width: 100%;
+        display: block;
+      }
+      .project-section {
+        background: white;
+        padding: 2.5rem;
+        border-radius: 15px;
+        margin-bottom: 2rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+      .project-section h2 {
+        color: var(--primary);
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+      }
+      .project-section h3 {
+        color: var(--dark);
+        margin: 1.5rem 0 1rem;
+        font-size: 1.3rem;
+      }
+      .project-section p,
+      .project-section li {
+        color: var(--gray);
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+      .project-section ul {
+        list-style: none;
+        padding-left: 0;
+      }
+      .project-section ul li {
+        padding-left: 2rem;
+        position: relative;
+      }
+      .project-section ul li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--primary);
+        font-weight: bold;
+      }
+      .tech-stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 1.5rem 0;
+      }
+      .tech-tag {
+        background: var(--gradient);
+        color: white;
+        padding: 0.5rem 1.2rem;
+        border-radius: 25px;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        transition: transform 0.3s;
+      }
+      .back-link:hover {
+        transform: translateX(-5px);
+      }
+      .project-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+      .stat-card {
+        background: var(--light);
+        padding: 1.5rem;
+        border-radius: 10px;
+        text-align: center;
+      }
+      .stat-card .number {
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--primary);
+      }
+      .stat-card .label {
+        color: var(--gray);
+        margin-top: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="project-hero">
+      <div class="container">
+        <h1>Waz'UP</h1>
+        <p class="subtitle">
+          Super-app Flutter - E-commerce, Livraison & Location
+        </p>
+      </div>
+    </div>
+
+    <div class="project-detail">
+      <div class="project-content">
+        <a href="../index.html#portfolio" class="back-link">
+          <i class="fas fa-arrow-left"></i> Retour au portfolio
+        </a>
+
+        <div class="project-section">
+          <h2>Vue d'ensemble du projet</h2>
+          <p>
+            <strong>Waz'UP</strong> est une super-application mobile développée
+            avec Flutter qui révolutionne l'expérience utilisateur en combinant
+            trois services essentiels en une seule plateforme unifiée :
+            e-commerce, livraison à la demande et location de biens et services.
+          </p>
+          <p>
+            Cette application multiplateforme (iOS et Android) offre une
+            expérience fluide et intuitive, permettant aux utilisateurs de gérer
+            tous leurs besoins quotidiens depuis une interface unique et
+            cohérente.
+          </p>
+
+          <div class="tech-stack">
+            <span class="tech-tag"><i class="fab fa-flutter"></i> Flutter</span>
+            <span class="tech-tag"
+              ><i class="fas fa-mobile-alt"></i> iOS & Android</span
+            >
+            <span class="tech-tag"
+              ><i class="fas fa-brain"></i> IA embarquée</span
+            >
+            <span class="tech-tag"
+              ><i class="fas fa-palette"></i> Product Design</span
+            >
+            <span class="tech-tag"><i class="fas fa-fire"></i> Firebase</span>
+            <span class="tech-tag"><i class="fas fa-code"></i> Dart</span>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2>Statistiques du projet</h2>
+          <div class="project-stats">
+            <div class="stat-card">
+              <div class="number">3</div>
+              <div class="label">Services intégrés</div>
+            </div>
+            <div class="stat-card">
+              <div class="number">2</div>
+              <div class="label">Plateformes (iOS/Android)</div>
+            </div>
+            <div class="stat-card">
+              <div class="number">100%</div>
+              <div class="label">Code partagé</div>
+            </div>
+            <div class="stat-card">
+              <div class="number">AI</div>
+              <div class="label">Intelligence embarquée</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2>Fonctionnalités principales</h2>
+
+          <h3>🛒 Module E-commerce</h3>
+          <ul>
+            <li>
+              Catalogue produits dynamique avec recherche intelligente et
+              filtres avancés
+            </li>
+            <li>
+              Panier d'achat avec gestion des quantités et recommandations
+              personnalisées
+            </li>
+            <li>
+              Système de paiement sécurisé multi-méthodes (Mobile Money, cartes
+              bancaires)
+            </li>
+            <li>Suivi des commandes en temps réel avec notifications push</li>
+            <li>Historique des achats et réordonnance rapide</li>
+            <li>Programme de fidélité et système de réductions</li>
+          </ul>
+
+          <h3>🚚 Module Livraison</h3>
+          <ul>
+            <li>Commande de livraison à la demande avec géolocalisation GPS</li>
+            <li>
+              Calcul automatique du prix basé sur la distance et le type de
+              véhicule
+            </li>
+            <li>Suivi en direct du livreur sur une carte interactive</li>
+            <li>Chat en temps réel avec le livreur</li>
+            <li>Système de notation et avis pour les livreurs</li>
+            <li>Planification de livraisons récurrentes</li>
+          </ul>
+
+          <h3>🏠 Module Location</h3>
+          <ul>
+            <li>
+              Marketplace de location de biens (véhicules, matériel, logements)
+            </li>
+            <li>Système de réservation avec calendrier disponibilité</li>
+            <li>Gestion des contrats de location numériques</li>
+            <li>Système de caution et assurance intégrée</li>
+            <li>Vérification d'identité et validation des utilisateurs</li>
+            <li>Chat sécurisé entre propriétaires et locataires</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2>Intelligence Artificielle embarquée</h2>
+          <p>
+            Waz'UP intègre des algorithmes d'IA avancés pour améliorer
+            l'expérience utilisateur :
+          </p>
+          <ul>
+            <li>
+              <strong>Recommandations personnalisées</strong> : Analyse du
+              comportement utilisateur pour suggérer des produits pertinents
+            </li>
+            <li>
+              <strong>Prédiction de demande</strong> : Optimisation des stocks
+              basée sur l'apprentissage automatique
+            </li>
+            <li>
+              <strong>Optimisation des itinéraires</strong> : Algorithme
+              intelligent pour les livraisons efficaces
+            </li>
+            <li>
+              <strong>Détection de fraude</strong> : Système ML pour identifier
+              les transactions suspectes
+            </li>
+            <li>
+              <strong>Support client automatisé</strong> : Chatbot IA pour
+              répondre aux questions courantes
+            </li>
+            <li>
+              <strong>Reconnaissance d'image</strong> : Recherche visuelle de
+              produits via la caméra
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2>Architecture technique</h2>
+
+          <h3>Frontend Mobile</h3>
+          <ul>
+            <li><strong>Framework</strong> : Flutter 3.x avec Dart</li>
+            <li>
+              <strong>State Management</strong> : Riverpod pour une gestion
+              d'état réactive et performante
+            </li>
+            <li>
+              <strong>Navigation</strong> : GoRouter pour la navigation
+              déclarative
+            </li>
+            <li>
+              <strong>Animations</strong> : Animations natives Flutter fluides
+              et performantes
+            </li>
+            <li>
+              <strong>UI/UX</strong> : Material Design 3 avec thème personnalisé
+              cohérent
+            </li>
+          </ul>
+
+          <h3>Backend & Services</h3>
+          <ul>
+            <li>
+              <strong>BaaS</strong> : Firebase (Authentication, Firestore, Cloud
+              Functions, Storage)
+            </li>
+            <li>
+              <strong>API REST</strong> : Node.js avec Express pour les services
+              métier
+            </li>
+            <li>
+              <strong>Base de données</strong> : Firestore (NoSQL) + PostgreSQL
+              pour les transactions
+            </li>
+            <li>
+              <strong>Paiement</strong> : Intégration Stripe et opérateurs
+              Mobile Money locaux
+            </li>
+            <li>
+              <strong>Géolocalisation</strong> : Google Maps API avec
+              optimisation d'itinéraires
+            </li>
+            <li>
+              <strong>Notifications</strong> : Firebase Cloud Messaging (FCM)
+              multi-plateforme
+            </li>
+          </ul>
+
+          <h3>Intelligence Artificielle</h3>
+          <ul>
+            <li>
+              <strong>ML Kit</strong> : Modèles TensorFlow Lite embarqués pour
+              inférence locale
+            </li>
+            <li>
+              <strong>Cloud ML</strong> : Google Cloud AI Platform pour modèles
+              complexes
+            </li>
+            <li>
+              <strong>Vision</strong> : ML Kit Vision API pour reconnaissance
+              d'images
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2>Design & Expérience utilisateur</h2>
+          <p>
+            L'interface de Waz'UP a été conçue selon les principes du Product
+            Design moderne :
+          </p>
+          <ul>
+            <li>
+              <strong>Design System cohérent</strong> : Composants réutilisables
+              avec guidelines strictes
+            </li>
+            <li>
+              <strong>Accessibilité</strong> : Conformité WCAG 2.1 Level AA pour
+              tous les utilisateurs
+            </li>
+            <li>
+              <strong>Performance</strong> : Temps de chargement < 2 secondes,
+              animations à 60 FPS
+            </li>
+            <li>
+              <strong>Mode sombre</strong> : Thème sombre complet pour confort
+              visuel
+            </li>
+            <li>
+              <strong>Multilingue</strong> : Support français et anglais avec
+              localisation complète
+            </li>
+            <li>
+              <strong>Responsive</strong> : Adaptation automatique tablettes et
+              tous formats d'écrans
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2>Sécurité & Confidentialité</h2>
+          <ul>
+            <li>Authentification multi-facteurs (2FA) avec biométrie</li>
+            <li>
+              Chiffrement end-to-end pour les messages et données sensibles
+            </li>
+            <li>Conformité RGPD avec consentement explicite utilisateur</li>
+            <li>Système de permissions granulaires pour accès données</li>
+            <li>Audit de sécurité régulier et tests de pénétration</li>
+            <li>Stockage sécurisé des tokens avec FlutterSecureStorage</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2>Défis techniques relevés</h2>
+          <ul>
+            <li>
+              <strong>Performance</strong> : Optimisation pour fonctionnement
+              fluide même sur appareils entrée de gamme
+            </li>
+            <li>
+              <strong>Offline-first</strong> : Fonctionnement en mode hors ligne
+              avec synchronisation automatique
+            </li>
+            <li>
+              <strong>Scalabilité</strong> : Architecture microservices pour
+              supporter forte croissance utilisateurs
+            </li>
+            <li>
+              <strong>Temps réel</strong> : WebSocket et Firebase pour suivi
+              livraison instantané
+            </li>
+            <li>
+              <strong>Intégration complexe</strong> : Coordination de 3 services
+              distincts en une expérience unifiée
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2>Résultats & Impact</h2>
+          <ul>
+            <li>Application publiée sur App Store et Google Play Store</li>
+            <li>
+              Interface utilisateur primée pour sa fluidité et intuitivité
+            </li>
+            <li>Taux de satisfaction utilisateur > 4.5/5 étoiles</li>
+            <li>
+              Temps de chargement moyen réduit de 60% vs solutions concurrentes
+            </li>
+            <li>
+              Conversion utilisateur augmentée grâce aux recommandations IA
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2>Technologies utilisées</h2>
+          <div class="tech-stack">
+            <span class="tech-tag">Flutter 3.x</span>
+            <span class="tech-tag">Dart</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express.js</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Firestore</span>
+            <span class="tech-tag">TensorFlow Lite</span>
+            <span class="tech-tag">ML Kit</span>
+            <span class="tech-tag">Google Maps API</span>
+            <span class="tech-tag">Stripe</span>
+            <span class="tech-tag">FCM</span>
+            <span class="tech-tag">Riverpod</span>
+            <span class="tech-tag">GoRouter</span>
+            <span class="tech-tag">Material Design 3</span>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2>Contact pour ce type de projet</h2>
+          <p>
+            Intéressé par le développement d'une super-app ou d'une application
+            mobile similaire ? N'hésitez pas à me contacter pour discuter de
+            votre projet.
+          </p>
+          <a href="../index.html#contact" class="btn btn-primary">
+            <i class="fas fa-envelope"></i> Me contacter
+          </a>
+        </div>
+
+        <a href="../index.html#portfolio" class="back-link">
+          <i class="fas fa-arrow-left"></i> Retour au portfolio
+        </a>
+      </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>
