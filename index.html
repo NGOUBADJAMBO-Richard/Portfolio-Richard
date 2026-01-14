@@ -3,9 +3,69 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>NGOUBADJAMBO Richard - Portfolio</title>
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
+    <meta name="theme-color" content="#2563eb" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>
+      NGOUBADJAMBO Richard - Chef d'Entreprise & Ingénieur Fullstack | M.G.N
+      CodeWave
+    </title>
+    <meta
+      name="description"
+      content="Chef d'Entreprise et Ingénieur Informatique Fullstack. Fondateur de M.G.N CodeWave. Création de solutions web et mobile innovantes. Portfolio professionnel."
+    />
+    <meta
+      name="keywords"
+      content="Chef d'entreprise, Ingénieur informatique, Fullstack developer, M.G.N CodeWave, développement web, développement mobile, Gabon"
+    />
+    <meta name="author" content="NGOUBADJAMBO Richard" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ngoubadjambo-richard.com/" />
+    <meta
+      property="og:title"
+      content="NGOUBADJAMBO Richard - Chef d'Entreprise & Ingénieur Fullstack"
+    />
+    <meta
+      property="og:description"
+      content="Chef d'Entreprise et Expert Fullstack. Créateur de solutions digitales innovantes avec M.G.N CodeWave"
+    />
+    <meta property="og:image" content="assets/img/Richard.jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="NGOUBADJAMBO Richard - Portfolio Professionnel"
+    />
+    <meta
+      name="twitter:description"
+      content="Chef d'Entreprise & Ingénieur Fullstack - Découvrez mes projets innovants"
+    />
+    <meta name="twitter:image" content="assets/img/Richard.jpeg" />
+
+    <!-- Canonical URL -->
+    <meta name="canonical" content="https://ngoubadjambo-richard.com/" />
+
+    <!-- Additional SEO Tags -->
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="French" />
+    <meta name="revisit-after" content="7 days" />
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:;"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
 
     <!-- Favicons -->
     <link href="assets/img/favicon_1.png" rel="icon" />
@@ -40,13 +100,74 @@
   </head>
 
   <body class="index-page">
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "NGOUBADJAMBO Richard",
+        "jobTitle": [
+          "Chef d'Entreprise",
+          "Ingénieur Informatique",
+          "Développeur Fullstack"
+        ],
+        "description": "Chef d'Entreprise et Ingénieur Informatique Fullstack, Fondateur de M.G.N CodeWave",
+        "image": "assets/img/Richard.jpeg",
+        "url": "https://ngoubadjambo-richard.com/",
+        "email": "mailto:mboundagnangat8@gmail.com",
+        "telephone": "+241074676741",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Libreville",
+          "addressCountry": "GA"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/richard-ngoubadjambo-239244325/",
+          "https://github.com/NGOUBADJAMBO-Richard",
+          "https://www.facebook.com/share/1ChamR4xqL/",
+          "https://www.instagram.com/ngoubadjambo_richard"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "M.G.N CodeWave",
+          "url": "https://mgn-codewave.com/"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "M.G.N CodeWave",
+        "description": "Cabinet spécialisé en développement web et mobile innovant",
+        "url": "https://mgn-codewave.com/",
+        "logo": "assets/img/favicon_1.png",
+        "foundingDate": "2024",
+        "founder": {
+          "@type": "Person",
+          "name": "NGOUBADJAMBO Richard"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "Customer Support",
+          "email": "mboundagnangat8@gmail.com"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Libreville",
+          "addressCountry": "GA"
+        }
+      }
+    </script>
+
     <header id="header" class="header dark-background d-flex flex-column">
       <i class="header-toggle d-xl-none bi bi-list"></i>
 
       <div class="profile-img">
         <img
           src="assets/img/Profil.jpeg"
-          alt=""
+          alt="Portrait professionnel de NGOUBADJAMBO Richard"
           class="img-fluid rounded-circle"
         />
       </div>
@@ -1391,6 +1512,14 @@
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
+                <!-- CSRF Token pour la sécurité -->
+                <input
+                  type="hidden"
+                  name="csrf_token"
+                  id="csrf_token"
+                  value=""
+                />
+
                 <div class="row gy-4">
                   <div class="col-md-6">
                     <label for="name-field" class="pb-2">Votre Nom</label>
