@@ -42,11 +42,44 @@
     />
     <meta property="og:site_name" content="NGOUBADJAMBO Richard Portfolio" />
 
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://ngoubadjambo-richard.github.io/Portfolio-Richard/",
+        "name": "NGOUBADJAMBO Richard",
+        "jobTitle": "Ingénieur Informatique & Entrepreneur",
+        "description": "Fondateur de M.G.N CodeWave. Expertise en développement Fullstack et Mobile.",
+        "url": "https://ngoubadjambo-richard.github.io/Portfolio-Richard/",
+        "image": "https://ngoubadjambo-richard.github.io/Portfolio-Richard/assets/img/Richard.jpeg",
+        "sameAs": [
+          "https://linkedin.com/in/richard-ngoubadjambo",
+          "https://github.com/NGOUBADJAMBO-Richard"
+        ],
+        "knowsAbout": [
+          "Full Stack Development",
+          "Mobile Development with Flutter",
+          "React.js",
+          "Node.js",
+          "Web Design",
+          "Project Management"
+        ],
+        "workLocation": {
+          "@type": "Place",
+          "name": "Libreville, Gabon"
+        }
+      }
+    </script>
+
     <!-- Security Headers -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://cdnjs.cloudflare.com data:; frame-src 'self'; connect-src 'self' https://formspree.io"
+      content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com 'strict-dynamic'; style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://cdnjs.cloudflare.com data:; frame-src 'self'; connect-src 'self' https://formspree.io; base-uri 'self'; form-action 'self' https://formspree.io"
     />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
 
     <!-- Favicons -->
     <link href="assets/img/R N.png" rel="icon" />
@@ -68,17 +101,27 @@
   </head>
   <body>
     <!-- Page Loader -->
-    <div class="page-loader" id="pageLoader">
+    <div
+      class="page-loader"
+      id="pageLoader"
+      role="status"
+      aria-live="polite"
+      aria-label="Chargement du contenu"
+    >
       <div class="loader-content">
-        <div class="loader-spinner"></div>
+        <div class="loader-spinner" aria-hidden="true"></div>
         <div class="loader-text">Chargement...</div>
       </div>
     </div>
 
     <!-- Navigation -->
-    <nav id="navbar">
+    <nav id="navbar" role="navigation" aria-label="Navigation principale">
       <div class="nav-container">
-        <a href="#accueil" class="logo-container">
+        <a
+          href="#accueil"
+          class="logo-container"
+          aria-label="Retour à l'accueil"
+        >
           <div class="logo">
             <div class="logo-image">
               <img
@@ -105,15 +148,17 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <div
+        <button
           class="menu-toggle"
           id="menuToggle"
-          aria-label="Toggle navigation menu"
+          aria-label="Basculer le menu de navigation"
+          aria-expanded="false"
+          aria-controls="navLinks"
         >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
       </div>
     </nav>
 
@@ -742,11 +787,43 @@
           <p>Découvrez mes réalisations</p>
         </div>
 
-        <div class="portfolio-filters">
-          <button class="filter-btn active" data-filter="all">Tous</button>
-          <button class="filter-btn" data-filter="mobile">Mobile</button>
-          <button class="filter-btn" data-filter="web">Web</button>
-          <button class="filter-btn" data-filter="platform">Plateformes</button>
+        <div
+          class="portfolio-filters"
+          role="group"
+          aria-label="Filtres de portfolio"
+        >
+          <button
+            class="filter-btn active"
+            data-filter="all"
+            aria-pressed="true"
+            aria-label="Afficher tous les projets"
+          >
+            Tous
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="mobile"
+            aria-pressed="false"
+            aria-label="Afficher les projets mobiles"
+          >
+            Mobile
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="web"
+            aria-pressed="false"
+            aria-label="Afficher les projets web"
+          >
+            Web
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="platform"
+            aria-pressed="false"
+            aria-label="Afficher les plateformes"
+          >
+            Plateformes
+          </button>
         </div>
 
         <div class="portfolio-grid">
@@ -1118,21 +1195,54 @@
             >
               <div class="form-group">
                 <label for="name">Votre Nom *</label>
-                <input type="text" id="name" name="name" required />
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  aria-required="true"
+                  pattern="^[a-zA-ZÀ-ÿ\s'-]{2,100}$"
+                  title="2-100 caractères, lettres uniquement"
+                />
               </div>
               <div class="form-group">
                 <label for="email">Votre Email *</label>
-                <input type="email" id="email" name="email" required />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  aria-required="true"
+                  maxlength="255"
+                />
               </div>
               <div class="form-group">
                 <label for="subject">Sujet *</label>
-                <input type="text" id="subject" name="subject" required />
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  required
+                  aria-required="true"
+                  maxlength="200"
+                />
               </div>
               <div class="form-group">
                 <label for="message">Message *</label>
-                <textarea id="message" name="message" required></textarea>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  aria-required="true"
+                  minlength="10"
+                  maxlength="5000"
+                  title="10-5000 caractères"
+                ></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Envoyer</button>
+              <input type="hidden" name="_csrf" value="" id="csrfToken" />
+              <button type="submit" class="btn btn-primary" id="submitBtn">
+                Envoyer
+              </button>
             </form>
           </div>
         </div>

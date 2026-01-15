@@ -28,6 +28,21 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
+/* Focus Visible pour Accessibilité */
+:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Respecter préférences utilisateur pour animations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Page Loader */
 .page-loader {
   position: fixed;
@@ -83,6 +98,12 @@ nav {
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   transition: all 0.3s ease;
+  padding: 1rem 0;
+}
+
+nav.scrolled {
+  padding: 0.5rem 0;
+}
 }
 
 .nav-container {
