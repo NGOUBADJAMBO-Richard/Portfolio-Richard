@@ -183,16 +183,37 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Service Worker Registration (Optionnel - En production seulement)
+// Service Worker Registration (En production seulement)
 if (
   "serviceWorker" in navigator &&
   location.hostname !== "localhost" &&
   location.hostname !== "127.0.0.1"
 ) {
   navigator.serviceWorker
-    .register("/js/service-worker.js")
-    .then(() => console.log("Service Worker registered"))
-    .catch((err) => console.log("Service Worker registration failed:", err));
+    .register("/service-worker.js", { scope: "/" })
+    .then((registration) => {
+      console.log(
+        "✅ Service Worker registered with scope:",
+        registration.scope
+      );
+
+      // Écouter les mises à jour
+      registration.onupdatefound = () => {
+        const newWorker = registration.installing;
+        newWorker.onstatechange = () => {
+          if (
+            newWorker.state === "installed" &&
+            navigator.serviceWorker.controller
+          ) {
+            console.log("🔄 Service Worker update available");
+            newWorker.postMessage({ type: "SKIP_WAITING" });
+          }
+        };
+      };
+    })
+    .catch((err) =>
+      console.warn("⚠️ Service Worker registration failed:", err)
+    );
 }
 
 // Console Easter Egg
