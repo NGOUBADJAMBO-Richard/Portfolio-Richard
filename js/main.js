@@ -183,8 +183,12 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Service Worker Registration
-if ("serviceWorker" in navigator) {
+// Service Worker Registration (Optionnel - En production seulement)
+if (
+  "serviceWorker" in navigator &&
+  location.hostname !== "localhost" &&
+  location.hostname !== "127.0.0.1"
+) {
   navigator.serviceWorker
     .register("/js/service-worker.js")
     .then(() => console.log("Service Worker registered"))

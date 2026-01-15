@@ -5,25 +5,32 @@ const ASSETS_TO_CACHE = [
   "/index.html",
   "/css/style.css",
   "/js/main.js",
-  "/js/monitoring.js",
   "/assets/img/R N.png",
-  "/assets/img/Richard.jpeg",
 ];
 
 // Installation du Service Worker
 self.addEventListener("install", (event) => {
   console.log("Service Worker installing...");
+  // Pré-cacher les assets essentiels
   event.waitUntil(
     caches
       .open(CACHE_VERSION)
       .then((cache) => {
         console.log("Cache opened");
-        return cache.addAll(ASSETS_TO_CACHE);
+        // Ajouter les assets de manière sécurisée (ignorer les erreurs)
+        return Promise.allSettled(
+          ASSETS_TO_CACHE.map((url) =>
+            cache.add(url).catch((err) => {
+              console.warn("Failed to cache:", url, err);
+            })
+          )
+        );
       })
       .catch((error) => {
         console.error("Cache installation failed:", error);
       })
   );
+  // Forcer l'activation immédiate
   self.skipWaiting();
 });
 
@@ -45,32 +52,55 @@ self.addEventListener("activate", (event) => {
   self.clients.claim();
 });
 
-// Fetch event - Caching strategy: Cache first, fall back to network
+// Fetch event - Network first pour HTML, Cache first pour autres
 self.addEventListener("fetch", (event) => {
   // Skip non-GET requests
   if (event.request.method !== "GET") {
     return;
   }
 
+  const url = new URL(event.request.url);
+
+  // Network first pour HTML (pour toujours avoir la version à jour)
+  if (event.request.destination === "document" || url.pathname === "/") {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          if (!response || response.status !== 200) {
+            return response;
+          }
+          const responseToCache = response.clone();
+          caches.open(CACHE_VERSION).then((cache) => {
+            cache.put(event.request, responseToCache);
+          });
+          return response;
+        })
+        .catch(() => {
+          return caches.match(event.request).then((response) => {
+            return response || caches.match("/");
+          });
+        })
+    );
+    return;
+  }
+
+  // Cache first pour les autres assets
   event.respondWith(
     caches.match(event.request).then((response) => {
       if (response) {
-        console.log("Found in cache:", event.request.url);
         return response;
       }
 
       return fetch(event.request)
         .then((response) => {
-          // Don't cache non-successful responses
           if (
             !response ||
             response.status !== 200 ||
-            response.type !== "basic"
+            response.type === "error"
           ) {
             return response;
           }
 
-          // Clone the response
           const responseToCache = response.clone();
           caches.open(CACHE_VERSION).then((cache) => {
             cache.put(event.request, responseToCache);
@@ -80,19 +110,9 @@ self.addEventListener("fetch", (event) => {
         })
         .catch(() => {
           // Offline fallback
-          console.log("Offline - serving from cache:", event.request.url);
-          return caches.match(event.request);
+          console.log("Offline - cannot fetch:", event.request.url);
+          return null;
         });
     })
   );
-});
-
-// Background sync (optionnel)
-self.addEventListener("sync", (event) => {
-  if (event.tag === "sync-contact-form") {
-    event.waitUntil(
-      // Resync form data when back online
-      Promise.resolve()
-    );
-  }
 });
