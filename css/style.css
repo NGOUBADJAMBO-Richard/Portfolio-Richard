@@ -238,6 +238,7 @@ nav.scrolled {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   background: var(--gradient);
   color: white;
   padding: 6rem 2rem 2rem;
@@ -247,6 +248,7 @@ nav.scrolled {
 
 .hero-content {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -256,40 +258,65 @@ nav.scrolled {
   z-index: 1;
 }
 
+.hero-text {
+  animation: fadeInLeft 1s ease;
+}
+
 .hero-text h1 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
   animation: fadeInUp 1s ease;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.5px;
 }
 
 .hero-text .subtitle {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  opacity: 0.9;
+  opacity: 0.95;
+  font-weight: 600;
+  line-height: 1.3;
 }
 
 .hero-text p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
-  opacity: 0.8;
+  opacity: 0.85;
+  line-height: 1.8;
+  max-width: 550px;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
 .btn {
-  padding: 0.8rem 2rem;
+  padding: 0.9rem 2rem;
   border: none;
   border-radius: 50px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+  transform: translateY(0);
 }
 
 .btn-primary {
@@ -298,8 +325,7 @@ nav.scrolled {
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background: #f0f0f0;
 }
 
 .btn-outline {
@@ -339,25 +365,42 @@ body.dark-mode .portfolio-item .btn-outline:hover {
   color: white;
 }
 
+.hero-image {
+  animation: fadeInRight 1s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .profile-card {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 20px;
-  padding: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2rem;
 }
 
 .profile-stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 1.5rem;
+  width: 100%;
 }
 
 .stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.1);
+  gap: 0.5rem;
+};
   border-radius: 10px;
 }
 
