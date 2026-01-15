@@ -97,12 +97,14 @@
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/hero-responsive.css" />
     <link rel="stylesheet" href="css/hero-content.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
 
     <!-- Preload critical resources -->
     <link rel="preload" href="css/style.css" as="style" />
     <link rel="preload" href="css/responsive.css" as="style" />
     <link rel="preload" href="css/hero-responsive.css" as="style" />
     <link rel="preload" href="css/hero-content.css" as="style" />
+    <link rel="preload" href="css/navbar.css" as="style" />
     <link rel="preload" href="js/main.js" as="script" />
   </head>
   <body>
@@ -144,16 +146,41 @@
           </div>
         </a>
         <ul class="nav-links" id="navLinks">
-          <li><a href="#accueil">Accueil</a></li>
-          <li><a href="#apropos">À propos</a></li>
-          <li><a href="#entreprise">Entreprise</a></li>
-          <li><a href="#stats">Statistiques</a></li>
-          <li><a href="#competences">Compétences</a></li>
-          <li><a href="#parcours">Parcours</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="#accueil" class="nav-link">
+              <span>Accueil</span>
+            </a>
+          </li>
+          <li>
+            <a href="#apropos" class="nav-link">
+              <span>À propos</span>
+            </a>
+          </li>
+          <li>
+            <a href="#competences" class="nav-link">
+              <span>Compétences</span>
+            </a>
+          </li>
+          <li>
+            <a href="#portfolio" class="nav-link">
+              <span>Portfolio</span>
+            </a>
+          </li>
+          <li>
+            <a href="#services" class="nav-link">
+              <span>Services</span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="nav-link">
+              <span>Contact</span>
+            </a>
+          </li>
         </ul>
+        <a href="#contact" class="nav-cta-btn" aria-label="Démarrer un projet">
+          <span>Démarrer un projet</span>
+          <span class="arrow">→</span>
+        </a>
         <button
           class="menu-toggle"
           id="menuToggle"
