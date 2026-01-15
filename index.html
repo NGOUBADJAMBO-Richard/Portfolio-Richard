@@ -97,14 +97,12 @@
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/hero-responsive.css" />
     <link rel="stylesheet" href="css/hero-content.css" />
-    <link rel="stylesheet" href="css/navbar.css" />
 
     <!-- Preload critical resources -->
     <link rel="preload" href="css/style.css" as="style" />
     <link rel="preload" href="css/responsive.css" as="style" />
     <link rel="preload" href="css/hero-responsive.css" as="style" />
     <link rel="preload" href="css/hero-content.css" as="style" />
-    <link rel="preload" href="css/navbar.css" as="style" />
     <link rel="preload" href="js/main.js" as="script" />
   </head>
   <body>
@@ -141,46 +139,21 @@
             </div>
             <div class="logo-info">
               <p class="logo-name">Richard</p>
-              <p class="logo-title">Developpeur & Entrepreneur</p>
+              <p class="logo-title">Développeur</p>
             </div>
           </div>
         </a>
         <ul class="nav-links" id="navLinks">
-          <li>
-            <a href="#accueil" class="nav-link">
-              <span>Accueil</span>
-            </a>
-          </li>
-          <li>
-            <a href="#apropos" class="nav-link">
-              <span>À propos</span>
-            </a>
-          </li>
-          <li>
-            <a href="#competences" class="nav-link">
-              <span>Compétences</span>
-            </a>
-          </li>
-          <li>
-            <a href="#portfolio" class="nav-link">
-              <span>Portfolio</span>
-            </a>
-          </li>
-          <li>
-            <a href="#services" class="nav-link">
-              <span>Services</span>
-            </a>
-          </li>
-          <li>
-            <a href="#contact" class="nav-link">
-              <span>Contact</span>
-            </a>
-          </li>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#entreprise">Entreprise</a></li>
+          <li><a href="#stats">Statistiques</a></li>
+          <li><a href="#competences">Compétences</a></li>
+          <li><a href="#parcours">Parcours</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-        <a href="#contact" class="nav-cta-btn" aria-label="Démarrer un projet">
-          <span>Démarrer un projet</span>
-          <span class="arrow">→</span>
-        </a>
         <button
           class="menu-toggle"
           id="menuToggle"
@@ -196,95 +169,170 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="accueil">
-      <div class="hero-bg-decoration"></div>
-      <div class="hero-content">
-        <div class="hero-text">
-          <div class="hero-badge">
-            <span class="badge-icon">🚀</span>
-            <span class="badge-text">Créateur de Solutions Digitales</span>
-          </div>
+    <section
+      class="hero"
+      id="accueil"
+      role="region"
+      aria-labelledby="hero-title"
+    >
+      <div class="hero-bg-decoration" aria-hidden="true"></div>
 
-          <h1>NGOUBADJAMBO Richard</h1>
-          <p class="subtitle">Ingénieur Informatique & Entrepreneur</p>
-          <p class="hero-description">
-            Fondateur de <strong>M.G.N CodeWave</strong>, je conçois des
-            solutions digitales innovantes qui transforment vos idées en
-            réalité. Spécialisé en développement <strong>Fullstack</strong> et
-            <strong>Mobile</strong>, avec une passion pour l'excellence et
-            l'innovation technologique.
-          </p>
-
-          <div class="hero-features">
-            <div class="feature-item">
-              <span class="feature-icon">⚡</span>
-              <span class="feature-text">Développement Rapide</span>
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <!-- Badge de positionnement -->
+            <div class="hero-badge" data-animation="slideInDown">
+              <span class="badge-icon" aria-hidden="true">🚀</span>
+              <span class="badge-text">Créateur de Solutions Digitales</span>
             </div>
-            <div class="feature-item">
-              <span class="feature-icon">🎯</span>
-              <span class="feature-text">Solutions Sur-mesure</span>
-            </div>
-            <div class="feature-item">
-              <span class="feature-icon">💡</span>
-              <span class="feature-text">Innovation Constante</span>
-            </div>
-          </div>
 
-          <div class="hero-buttons">
-            <a href="#contact" class="btn btn-primary">
-              <span class="btn-icon">✉️</span>
-              Démarrer un projet
-            </a>
-            <a href="#portfolio" class="btn btn-outline">
-              <span class="btn-icon">👀</span>
-              Voir mes réalisations
-            </a>
-          </div>
+            <!-- Titre principal -->
+            <h1
+              id="hero-title"
+              data-animation="slideInDown"
+              style="animation-delay: 0.1s"
+            >
+              NGOUBADJAMBO Richard
+            </h1>
 
-          <div class="hero-cta">
-            <p>👇 Ou explorez directement</p>
-            <a href="#portfolio" class="scroll-link">
-              <span class="scroll-icon">↓</span>
-            </a>
-          </div>
-        </div>
+            <!-- Sous-titre professionnel -->
+            <p
+              class="subtitle"
+              data-animation="fadeInUp"
+              style="animation-delay: 0.2s"
+            >
+              Ingénieur Informatique & Entrepreneur
+            </p>
 
-        <div class="hero-image">
-          <div class="profile-card">
-            <div class="card-background"></div>
-            <div class="profile-stats">
-              <div class="stat-item">
-                <span class="number">3+</span>
-                <span class="label">Années</span>
-                <span class="sublabel">d'expérience</span>
+            <!-- Description enrichie -->
+            <p
+              class="hero-description"
+              data-animation="fadeInUp"
+              style="animation-delay: 0.3s"
+            >
+              Fondateur de <strong>M.G.N CodeWave</strong>, je conçois des
+              <em>solutions digitales innovantes</em> qui transforment vos idées
+              en réalité. Spécialisé en développement
+              <strong>Fullstack</strong> et <strong>Mobile</strong>, avec une
+              passion pour l'excellence et l'innovation technologique.
+            </p>
+
+            <!-- Caractéristiques principales -->
+            <div
+              class="hero-features"
+              data-animation="fadeInUp"
+              style="animation-delay: 0.4s"
+              role="list"
+            >
+              <div class="feature-item" role="listitem">
+                <span class="feature-icon" aria-hidden="true">⚡</span>
+                <span class="feature-text">Développement Rapide</span>
               </div>
-              <div class="stat-item">
-                <span class="number">15+</span>
-                <span class="label">Projets</span>
-                <span class="sublabel">réalisés</span>
+              <div class="feature-item" role="listitem">
+                <span class="feature-icon" aria-hidden="true">🎯</span>
+                <span class="feature-text">Solutions Sur-mesure</span>
               </div>
-              <div class="stat-item">
-                <span class="number">10+</span>
-                <span class="label">Technologies</span>
-                <span class="sublabel">maîtrisées</span>
-              </div>
-              <div class="stat-item">
-                <span class="number">100%</span>
-                <span class="label">Satisfaction</span>
-                <span class="sublabel">client</span>
+              <div class="feature-item" role="listitem">
+                <span class="feature-icon" aria-hidden="true">💡</span>
+                <span class="feature-text">Innovation Constante</span>
               </div>
             </div>
-            <div class="card-gradient"></div>
+
+            <!-- Boutons d'appel à l'action -->
+            <div
+              class="hero-buttons"
+              data-animation="fadeInUp"
+              style="animation-delay: 0.5s"
+            >
+              <a
+                href="#contact"
+                class="btn btn-primary"
+                title="Démarrer un projet avec Richard"
+              >
+                <span class="btn-icon" aria-hidden="true">✉️</span>
+                <span class="btn-text">Démarrer un projet</span>
+              </a>
+              <a
+                href="#portfolio"
+                class="btn btn-outline"
+                title="Voir le portfolio et réalisations"
+              >
+                <span class="btn-icon" aria-hidden="true">👀</span>
+                <span class="btn-text">Voir mes réalisations</span>
+              </a>
+            </div>
+
+            <!-- Indicateur de scroll -->
+            <div
+              class="hero-cta"
+              data-animation="fadeInUp"
+              style="animation-delay: 0.6s"
+              aria-label="Naviguer vers le portfolio"
+            >
+              <p class="cta-text">Explorez mon travail</p>
+              <a
+                href="#portfolio"
+                class="scroll-link"
+                aria-label="Voir le portfolio"
+                title="Descendre vers le portfolio"
+              >
+                <span class="scroll-icon" aria-hidden="true">↓</span>
+              </a>
+            </div>
           </div>
 
-          <div class="hero-tech-stack">
-            <p class="tech-label">Stack Principal:</p>
-            <div class="tech-badges">
-              <span class="tech-badge">React.js</span>
-              <span class="tech-badge">Node.js</span>
-              <span class="tech-badge">Flutter</span>
-              <span class="tech-badge">TypeScript</span>
-              <span class="tech-badge">MongoDB</span>
+          <!-- Carte de profil avec statistiques -->
+          <div class="hero-image">
+            <div class="profile-card" data-animation="fadeInRight">
+              <div class="card-background" aria-hidden="true"></div>
+
+              <!-- Statistiques professionnelles -->
+              <div
+                class="profile-stats"
+                role="complementary"
+                aria-label="Statistiques professionnelles"
+              >
+                <div class="stat-item">
+                  <span class="number" aria-label="3 plus années">3+</span>
+                  <span class="label">Années</span>
+                  <span class="sublabel">d'expérience</span>
+                </div>
+                <div class="stat-item">
+                  <span class="number" aria-label="15 plus projets">15+</span>
+                  <span class="label">Projets</span>
+                  <span class="sublabel">réalisés</span>
+                </div>
+                <div class="stat-item">
+                  <span class="number" aria-label="10 plus technologies"
+                    >10+</span
+                  >
+                  <span class="label">Technologies</span>
+                  <span class="sublabel">maîtrisées</span>
+                </div>
+                <div class="stat-item">
+                  <span class="number" aria-label="100 pour cent">100%</span>
+                  <span class="label">Satisfaction</span>
+                  <span class="sublabel">client</span>
+                </div>
+              </div>
+
+              <div class="card-gradient" aria-hidden="true"></div>
+            </div>
+
+            <!-- Stack technologique -->
+            <div
+              class="hero-tech-stack"
+              role="complementary"
+              aria-label="Technologies principales"
+            >
+              <p class="tech-label">Stack Principal:</p>
+              <div class="tech-badges" role="list">
+                <span class="tech-badge" role="listitem">React.js</span>
+                <span class="tech-badge" role="listitem">Node.js</span>
+                <span class="tech-badge" role="listitem">Flutter</span>
+                <span class="tech-badge" role="listitem">TypeScript</span>
+                <span class="tech-badge" role="listitem">MongoDB</span>
+              </div>
             </div>
           </div>
         </div>
