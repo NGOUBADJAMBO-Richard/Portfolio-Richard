@@ -345,6 +345,41 @@
   transform: translateY(-2px);
 }
 
+/* Desktop layout refinements */
+.hero {
+  padding: 6rem 2rem 3.5rem;
+}
+
+.hero-content {
+  max-width: 1100px;
+  gap: 3rem;
+}
+
+.hero-text {
+  max-width: 560px;
+}
+
+.hero-features {
+  max-width: 540px;
+}
+
+.hero-buttons {
+  margin-top: 1.2rem;
+}
+
+.hero-image {
+  justify-content: flex-end;
+}
+
+.profile-card {
+  min-height: 360px;
+}
+
+.hero-tech-stack {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
 /* ========================================
    ANIMATIONS
    ======================================== */
