@@ -104,6 +104,8 @@ function generateCSRFToken() {
 }
 
 // Contact Form with Enhanced Security & Validation
+const i18n = window.i18n;
+const t = i18n && typeof i18n.t === "function" ? i18n.t : (key) => key;
 const contactForm = document.getElementById("contactForm");
 if (contactForm) {
   // Set CSRF token
@@ -122,42 +124,42 @@ if (contactForm) {
 
       // Validation - Name
       if (!data.name || data.name.trim().length < 2) {
-        showError("Le nom doit avoir au moins 2 caractères");
+        showError(t("error.nameMin"));
         return;
       }
       if (data.name.length > 100) {
-        showError("Le nom ne peut pas dépasser 100 caractères");
+        showError(t("error.nameMax"));
         return;
       }
 
       // Validation - Email (stronger regex)
       const emailRegex = /^[^\s@]{1,64}@[^\s@]{1,255}\.[^\s@]{2,6}$/;
       if (!emailRegex.test(data.email)) {
-        showError("Veuillez entrer une adresse email valide");
+        showError(t("error.emailInvalid"));
         return;
       }
       if (data.email.length > 255) {
-        showError("Email trop long (max 255 caractères)");
+        showError(t("error.emailMax"));
         return;
       }
 
       // Validation - Message
       if (!data.message || data.message.trim().length < 10) {
-        showError("Le message doit contenir au moins 10 caractères");
+        showError(t("error.messageMin"));
         return;
       }
       if (data.message.length > 5000) {
-        showError("Le message ne peut pas dépasser 5000 caractères");
+        showError(t("error.messageMax"));
         return;
       }
 
       // All validations passed
-      showSuccess(`Merci ${data.name} ! Votre message a été envoyé.`);
+      showSuccess(t("contact.success", { name: data.name || "" }));
       e.target.reset();
       csrfField.value = generateCSRFToken(); // Reset CSRF token
     } catch (error) {
       console.error("Form submission error:", error);
-      showError("Une erreur est survenue. Veuillez réessayer.");
+      showError(t("error.generic"));
     }
   });
 }
@@ -194,7 +196,7 @@ if (
     .then((registration) => {
       console.log(
         "✅ Service Worker registered with scope:",
-        registration.scope
+        registration.scope,
       );
 
       // Écouter les mises à jour
@@ -212,16 +214,16 @@ if (
       };
     })
     .catch((err) =>
-      console.warn("⚠️ Service Worker registration failed:", err)
+      console.warn("⚠️ Service Worker registration failed:", err),
     );
 }
 
 // Console Easter Egg
 console.log(
   "%c👋 Hello Developer!",
-  "font-size: 20px; color: #667eea; font-weight: bold;"
+  "font-size: 20px; color: #667eea; font-weight: bold;",
 );
 console.log(
   "%cPortfolio par Richard NGOUBADJAMBO",
-  "font-size: 14px; color: #764ba2;"
+  "font-size: 14px; color: #764ba2;",
 );

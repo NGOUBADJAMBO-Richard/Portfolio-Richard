@@ -1229,6 +1229,31 @@ footer {
   font-size: 1.3rem;
 }
 
+/* Language Toggle */
+.language-toggle {
+  position: fixed;
+  bottom: 170px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: white;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 999;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.language-toggle:hover {
+  transform: scale(1.1);
+}
+
 /* Dark Mode */
 body.dark-mode {
   background: #1a1a1a;
@@ -1237,6 +1262,12 @@ body.dark-mode {
 
 body.dark-mode nav {
   background: rgba(26, 26, 26, 0.95);
+}
+
+body.dark-mode .language-toggle {
+  background: var(--dark-surface);
+  color: #e0e0e0;
+  border-color: #e0e0e0;
 }
 
 body.dark-mode .logo-name {
