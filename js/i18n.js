@@ -2,7 +2,11 @@
   const STORAGE_KEY = "portfolio_richard_lang";
   const SUPPORTED_LANGS = ["fr", "en"];
 
-  const normalize = (text) => text.replace(/\s+/g, " ").trim();
+  const normalize = (text) =>
+    text
+      .replace(/\s*:\s*/g, " : ")
+      .replace(/\s+/g, " ")
+      .trim();
 
   const TRANSLATIONS_EN = {
     "NGOUBADJAMBO Richard | Ingénieur Informatique & Entrepreneur":
@@ -34,6 +38,16 @@
     "Ingénieur Informatique & Entrepreneur": "Software Engineer & Entrepreneur",
     "Fondateur de M.G.N CodeWave, je conçois des solutions digitales innovantes qui transforment vos idées en réalité. Spécialisé en développement Fullstack et Mobile, avec une passion pour l'excellence et l'innovation technologique.":
       "Founder of M.G.N CodeWave, I design innovative digital solutions that turn your ideas into reality. Specialized in Fullstack and Mobile development, with a passion for excellence and technological innovation.",
+    "Fondateur de": "Founder of",
+    ", je conçois des": ", I design",
+    "solutions digitales innovantes": "innovative digital solutions",
+    "qui transforment vos idées en réalité. Spécialisé en développement":
+      "that turn your ideas into reality. Specialized in",
+    Fullstack: "Fullstack",
+    et: "and",
+    Mobile: "Mobile",
+    ", avec une passion pour l'excellence et l'innovation technologique.":
+      ", with a passion for excellence and technological innovation.",
     "Développement Rapide": "Fast Development",
     "Solutions Sur-mesure": "Tailor-made Solutions",
     "Innovation Constante": "Constant Innovation",
@@ -74,26 +88,54 @@
       "Technical founder & Development expert",
     "Fondateur et dirigeant de M.G.N CodeWave, j'allie vision entrepreneuriale et expertise technique pour créer des solutions digitales innovantes. Mon parcours unique me permet de comprendre à la fois les enjeux business et les défis techniques.":
       "Founder and head of M.G.N CodeWave, I combine entrepreneurial vision and technical expertise to create innovative digital solutions. My unique background enables me to understand both business challenges and technical constraints.",
+    "Fondateur et dirigeant de": "Founder and head of",
+    ", j'allie vision entrepreneuriale et expertise technique pour créer des":
+      ", I combine entrepreneurial vision and technical expertise to create",
+    "solutions digitales innovantes. Mon parcours unique me permet de comprendre à la fois les enjeux business et les défis techniques.":
+      "innovative digital solutions. My unique background enables me to understand both business challenges and technical constraints.",
     "Fort de plus de 3 années d'expérience dans le développement web et mobile, je me spécialise dans la création d'applications performantes utilisant React.js, Node.js, Flutter et les technologies modernes.":
       "With more than 3 years of experience in web and mobile development, I specialize in building high-performance applications using React.js, Node.js, Flutter, and modern technologies.",
     "Ma démarche repose sur trois piliers : l'innovation pour imaginer des solutions créatives, l'excellence technique pour garantir la qualité, et la collaboration pour dépasser les attentes.":
       "My approach is built on three pillars: innovation to imagine creative solutions, technical excellence to ensure quality, and collaboration to exceed expectations.",
+    "Ma démarche repose sur trois piliers :":
+      "My approach is built on three pillars:",
+    "l'innovation": "innovation",
+    "pour imaginer des solutions": "to imagine creative solutions",
+    "créatives,": "creative,",
+    "l'excellence technique": "technical excellence",
+    "pour garantir la qualité, et": "to ensure quality, and",
+    "la collaboration": "collaboration",
+    "pour dépasser les attentes.": "to exceed expectations.",
     "Votre Partenaire Digital de Confiance": "Your Trusted Digital Partner",
     "À Propos de Notre Entreprise": "About Our Company",
     "M.G.N CodeWave est une agence digitale basée à Libreville, Gabon, spécialisée dans la création de solutions web et mobile performantes. Nous transformons vos idées en sites web, applications et plateformes digitales qui génèrent des résultats.":
       "M.G.N CodeWave is a digital agency based in Libreville, Gabon, specializing in high-performance web and mobile solutions. We turn your ideas into websites, applications and digital platforms that deliver results.",
+    "est une agence digitale basée à": "is a digital agency based in",
+    ", spécialisée dans la création de solutions web et mobile performantes. Nous transformons vos idées en sites web, applications et plateformes digitales qui génèrent des résultats.":
+      ", specializing in high-performance web and mobile solutions. We turn your ideas into websites, applications and digital platforms that deliver results.",
     "Notre Mission": "Our Mission",
     "Fournir des solutions digitales modernes, abordables et de haute qualité pour propulser les entreprises vers la transformation digitale. Nous croyons que chaque entreprise mérite un site web professionnel et une présence digitale forte.":
       "Deliver modern, affordable and high-quality digital solutions to drive businesses toward digital transformation. We believe every business deserves a professional website and a strong digital presence.",
     "Nos Valeurs": "Our Values",
     "Qualité Garantie - Designs modernes testés sur tous les appareils":
       "Guaranteed Quality - Modern designs tested on all devices",
+    "Qualité Garantie": "Guaranteed Quality",
+    "- Designs modernes testés sur tous les appareils":
+      "- Modern designs tested on all devices",
     "Livraison Rapide - Votre site prêt en 2-4 semaines":
       "Fast Delivery - Your site ready in 2-4 weeks",
+    "Livraison Rapide": "Fast Delivery",
+    "- Votre site prêt en 2-4 semaines": "- Your site ready in 2-4 weeks",
     "Support Dédié - Assistance 24/7 par WhatsApp, email ou téléphone":
       "Dedicated Support - 24/7 assistance via WhatsApp, email or phone",
+    "Support Dédié": "Dedicated Support",
+    "- Assistance 24/7 par WhatsApp, email ou téléphone":
+      "- 24/7 assistance via WhatsApp, email or phone",
     "Prix Compétitifs - Les meilleurs tarifs au Gabon avec paiement flexible":
       "Competitive Pricing - Best rates in Gabon with flexible payment",
+    "Prix Compétitifs": "Competitive Pricing",
+    "- Les meilleurs tarifs au Gabon avec paiement flexible":
+      "- Best rates in Gabon with flexible payment",
     "Nos Services": "Our Services",
     "Sites Vitrines": "Showcase Websites",
     "Sites web professionnels pour présenter votre activité":
@@ -192,6 +234,36 @@
     "Site communautaire pour église locale.":
       "Community site for a local church.",
     "Plateforme de gestion de prospects.": "Lead management platform.",
+    "Waz'UP application mobile de services multi-usage":
+      "Waz'UP multi-service mobile application",
+    "H2P Group ecosysteme digital pour cabinet de coaching":
+      "H2P Group digital ecosystem for a coaching firm",
+    "MGN CodeWave studio digital et design system":
+      "MGN CodeWave digital studio and design system",
+    "Le Bon Waz plateforme e-commerce et catalogue produit":
+      "Le Bon Waz e-commerce platform and product catalog",
+    "Lampe A Mes Pieds presentation editoriale et livre numerique":
+      "Lampe A Mes Pieds editorial showcase and digital book",
+    "English Fun Club plateforme e-learning gamifiee":
+      "English Fun Club gamified e-learning platform",
+    "Decouvre qui tu es questionnaires de profil personalite":
+      "Discover Who You Are personality profile questionnaires",
+    "Grace Deployee site communautaire pour eglise locale":
+      "Grace Deployee community site for local church",
+    "LMS Platform tableau de bord gestion de prospects":
+      "LMS Platform lead management dashboard",
+    "Atelier de conception produit et strategie digitale":
+      "Product design and digital strategy workshop",
+    "Gestion de projet IT en equipe avec tableaux et planning":
+      "IT project management in team with dashboards and planning",
+    "Developpement web fullstack sur ordinateur portable":
+      "Fullstack web development on laptop",
+    "Application mobile moderne pour iOS et Android":
+      "Modern mobile application for iOS and Android",
+    "Tableau de bord analytics pour performance web":
+      "Analytics dashboard for web performance",
+    "Innovation technologique et prototypage electronique":
+      "Technological innovation and electronic prototyping",
     "Mes Services": "My Services",
     "Solutions digitales complètes": "End-to-end digital solutions",
     "Offre phare orientée stratégie produit : cadrage, UX/UI, développement et lancement d'expériences web & mobile dans des cycles courts.":
@@ -281,6 +353,8 @@
     "Vue d'ensemble du projet": "Project overview",
     "Waz'UP est une super-application mobile développée avec Flutter qui révolutionne l'expérience utilisateur en combinant trois services essentiels en une seule plateforme unifiée : e-commerce, livraison à la demande et location de biens et services.":
       "Waz'UP is a mobile super-app built with Flutter that revolutionizes the user experience by combining three essential services into a single unified platform: e-commerce, on-demand delivery, and rental of goods and services.",
+    "est une super-application mobile développée avec Flutter qui révolutionne l'expérience utilisateur en combinant trois services essentiels en une seule plateforme unifiée : e-commerce, livraison à la demande et location de biens et services.":
+      "is a mobile super-app built with Flutter that revolutionizes the user experience by combining three essential services into a single unified platform: e-commerce, on-demand delivery, and rental of goods and services.",
     "Cette application multiplateforme (iOS et Android) offre une expérience fluide et intuitive, permettant aux utilisateurs de gérer tous leurs besoins quotidiens depuis une interface unique et cohérente.":
       "This cross-platform app (iOS and Android) provides a smooth and intuitive experience, allowing users to manage all their daily needs from a single, consistent interface.",
     "Statistiques du projet": "Project statistics",
@@ -574,6 +648,7 @@
     "Design responsive optimisé pour la lecture":
       "Responsive design optimized for reading",
     "Conformité accessibilité WCAG 2.1": "WCAG 2.1 accessibility compliance",
+    Accessibilité: "Accessibility",
     "Système de newsletter intégré": "Integrated newsletter system",
     "Découvrez le site éditorial Lampe À Mes Pieds avec accès aux téléchargements.":
       "Discover the Lampe À Mes Pieds editorial site with access to downloads.",
@@ -591,6 +666,8 @@
       "Complete Digital Ecosystem - Coaching Firm",
     "H2P Group est un projet d'envergure visant à créer un écosystème digital complet pour un cabinet de coaching professionnel. Ce projet englobe la création d'une identité visuelle forte, le développement d'un site vitrine moderne, et la mise en place d'un tunnel de conversion optimisé pour la prise de rendez-vous.":
       "H2P Group is a large-scale project aiming to create a complete digital ecosystem for a professional coaching firm. It includes creating a strong visual identity, developing a modern showcase site, and setting up an optimized appointment conversion funnel.",
+    "est un projet d'envergure visant à créer un écosystème digital complet pour un cabinet de coaching professionnel. Ce projet englobe la création d'une identité visuelle forte, le développement d'un site vitrine moderne, et la mise en place d'un tunnel de conversion optimisé pour la prise de rendez-vous.":
+      "is a large-scale project aiming to create a complete digital ecosystem for a professional coaching firm. It includes creating a strong visual identity, developing a modern showcase site, and setting up an optimized appointment conversion funnel.",
     "L'objectif principal était de transformer la présence digitale du cabinet en un outil puissant de génération de leads qualifiés, tout en reflétant les valeurs de professionnalisme et d'excellence du cabinet H2P Group.":
       "The main goal was to transform the firm's digital presence into a powerful qualified-lead generation tool, while reflecting H2P Group's values of professionalism and excellence.",
     "Statistiques du projet": "Project statistics",
@@ -747,6 +824,7 @@
     "Mise en cache navigateur et CDN": "Browser caching and CDN",
     "Score Lighthouse > 90/100 sur toutes les métriques":
       "Lighthouse score > 90/100 on all metrics",
+    "90/100 sur toutes les métriques": "90/100 on all metrics",
     "📊 Analytics & Tracking": "📊 Analytics & Tracking",
     "Google Analytics 4 pour suivi du trafic":
       "Google Analytics 4 for traffic tracking",
@@ -848,6 +926,7 @@
     "Tests de personnalité interactifs avec analyse détaillée et résultats personnalisés.":
       "Interactive personality tests with detailed analysis and personalized results.",
     "Tests de Personnalité Interactifs": "Interactive Personality Tests",
+    "Tests Personnalité": "Personality Tests",
     "Expérience interactive basée sur des questionnaires pour révéler les profils de personnalité. L'application propose une analyse détaillée et personnalisée basée sur les réponses des utilisateurs.":
       "Interactive experience based on questionnaires to reveal personality profiles. The application provides a detailed, personalized analysis based on users' responses.",
     "Questionnaires personnalisés avec choix multiples":
@@ -972,7 +1051,45 @@
     while (walker.nextNode()) {
       const node = walker.currentNode;
       const normalized = normalize(node.nodeValue);
-      const translation = dict[normalized];
+      let translation = dict[normalized];
+
+      if (!translation) {
+        const emojiMatch = normalized.match(/^([^\p{L}\p{N}]+)\s*(.+)$/u);
+        if (emojiMatch) {
+          const [, prefix, rest] = emojiMatch;
+          const restTranslation = dict[normalize(rest)];
+          if (restTranslation) {
+            translation = `${prefix.trim()} ${restTranslation}`.trim();
+          }
+        }
+      }
+
+      if (!translation && node.previousElementSibling) {
+        const previousText = normalize(
+          node.previousElementSibling.textContent || "",
+        );
+        if (previousText) {
+          const combined = normalize(`${previousText} ${normalized}`);
+          const combinedTranslation = dict[combined];
+          if (combinedTranslation) {
+            if (
+              combined.includes(" : ") &&
+              combinedTranslation.includes(" : ")
+            ) {
+              const [translatedPrefix, ...translatedSuffix] =
+                combinedTranslation.split(" : ");
+              const suffixText = translatedSuffix.join(" : ").trim();
+              const previousTranslation =
+                dict[previousText] || translatedPrefix.trim();
+              node.previousElementSibling.textContent = previousTranslation;
+              translation = `: ${suffixText}`;
+            } else {
+              translation = combinedTranslation;
+            }
+          }
+        }
+      }
+
       if (!translation) continue;
       const leading = node.nodeValue.match(/^\s*/)[0];
       const trailing = node.nodeValue.match(/\s*$/)[0];
