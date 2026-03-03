@@ -1,229 +1,302 @@
-// Page Loader
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    document.getElementById("pageLoader").classList.add("hidden");
-  }, 1000);
-});
+(() => {
+  const STORAGE_PREFIX = "portfolio_richard_";
+  const THEME_KEY = `${STORAGE_PREFIX}theme`;
+  const THEME_DARK = "dark";
+  const THEME_LIGHT = "light";
+  const MOTION_QUERY = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-// Menu Toggle with Accessibility
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
+  const getTranslator = () =>
+    window.i18n && typeof window.i18n.t === "function"
+      ? window.i18n.t
+      : (key) => key;
 
-menuToggle.addEventListener("click", () => {
-  const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-  menuToggle.setAttribute("aria-expanded", !isExpanded);
-  navLinks.classList.toggle("active");
-});
+  const setThemeUI = (theme) => {
+    const isDark = theme === THEME_DARK;
+    const themeToggle = document.getElementById("themeToggle");
+    if (!themeToggle) return;
 
-document.querySelectorAll(".nav-links a").forEach((link) => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("active");
-    menuToggle.setAttribute("aria-expanded", "false");
-  });
-});
+    const icon = themeToggle.querySelector("i");
+    document.body.classList.toggle("dark-mode", isDark);
+    document.body.dataset.theme = theme;
 
-// Navbar scroll - Use classList instead of inline styles
-window.addEventListener("scroll", () => {
-  const navbar = document.getElementById("navbar");
-  if (window.scrollY > 50) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
-  }
-});
-
-// Portfolio Filter with Accessibility
-const filterBtns = document.querySelectorAll(".filter-btn");
-const portfolioItems = document.querySelectorAll(".portfolio-item");
-
-filterBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    filterBtns.forEach((b) => {
-      b.classList.remove("active");
-      b.setAttribute("aria-pressed", "false");
-    });
-    btn.classList.add("active");
-    btn.setAttribute("aria-pressed", "true");
-
-    const filter = btn.dataset.filter;
-
-    portfolioItems.forEach((item) => {
-      if (filter === "all" || item.dataset.category === filter) {
-        item.style.display = "block";
-      } else {
-        item.style.display = "none";
-      }
-    });
-  });
-});
-
-// Back to Top
-const backToTop = document.getElementById("backToTop");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    backToTop.classList.add("show");
-  } else {
-    backToTop.classList.remove("show");
-  }
-});
-
-backToTop.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-// Theme Toggle with localStorage prefix
-const STORAGE_PREFIX = "portfolio_richard_";
-const themeToggle = document.getElementById("themeToggle");
-const body = document.body;
-const themeIcon = themeToggle.querySelector("i");
-
-const currentTheme = localStorage.getItem(STORAGE_PREFIX + "theme") || "light";
-if (currentTheme === "dark") {
-  body.classList.add("dark-mode");
-  themeIcon.classList.replace("fa-moon", "fa-sun");
-}
-
-themeToggle.addEventListener("click", () => {
-  body.classList.toggle("dark-mode");
-
-  if (body.classList.contains("dark-mode")) {
-    themeIcon.classList.replace("fa-moon", "fa-sun");
-    localStorage.setItem(STORAGE_PREFIX + "theme", "dark");
-  } else {
-    themeIcon.classList.replace("fa-sun", "fa-moon");
-    localStorage.setItem(STORAGE_PREFIX + "theme", "light");
-  }
-});
-
-// Generate CSRF Token
-function generateCSRFToken() {
-  return Array.from(crypto.getRandomValues(new Uint8Array(32)))
-    .map((b) => b.toString(16).padStart(2, "0"))
-    .join("");
-}
-
-// Contact Form with Enhanced Security & Validation
-const i18n = window.i18n;
-const t = i18n && typeof i18n.t === "function" ? i18n.t : (key) => key;
-const contactForm = document.getElementById("contactForm");
-if (contactForm) {
-  // Set CSRF token
-  const csrfField = contactForm.querySelector('input[name="_csrf"]');
-  if (csrfField) {
-    csrfField.value = generateCSRFToken();
-  }
-
-  contactForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    try {
-      // Get form data
-      const formData = new FormData(e.target);
-      const data = Object.fromEntries(formData);
-
-      // Validation - Name
-      if (!data.name || data.name.trim().length < 2) {
-        showError(t("error.nameMin"));
-        return;
-      }
-      if (data.name.length > 100) {
-        showError(t("error.nameMax"));
-        return;
-      }
-
-      // Validation - Email (stronger regex)
-      const emailRegex = /^[^\s@]{1,64}@[^\s@]{1,255}\.[^\s@]{2,6}$/;
-      if (!emailRegex.test(data.email)) {
-        showError(t("error.emailInvalid"));
-        return;
-      }
-      if (data.email.length > 255) {
-        showError(t("error.emailMax"));
-        return;
-      }
-
-      // Validation - Message
-      if (!data.message || data.message.trim().length < 10) {
-        showError(t("error.messageMin"));
-        return;
-      }
-      if (data.message.length > 5000) {
-        showError(t("error.messageMax"));
-        return;
-      }
-
-      // All validations passed
-      showSuccess(t("contact.success", { name: data.name || "" }));
-      e.target.reset();
-      csrfField.value = generateCSRFToken(); // Reset CSRF token
-    } catch (error) {
-      console.error("Form submission error:", error);
-      showError(t("error.generic"));
+    if (icon) {
+      icon.classList.toggle("fa-moon", !isDark);
+      icon.classList.toggle("fa-sun", isDark);
     }
-  });
-}
 
-function showError(message) {
-  alert(message);
-}
+    const t = getTranslator();
+    const label = isDark ? t("theme.enableLight") : t("theme.enableDark");
+    themeToggle.setAttribute("aria-label", label);
+    themeToggle.setAttribute("title", label);
+  };
 
-function showSuccess(message) {
-  alert(message);
-}
+  const applySavedTheme = () => {
+    const fallback = window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? THEME_DARK
+      : THEME_LIGHT;
+    const savedTheme = localStorage.getItem(THEME_KEY) || fallback;
+    setThemeUI(savedTheme);
+  };
 
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      const offset = 80;
-      const targetPosition = target.offsetTop - offset;
-      window.scrollTo({ top: targetPosition, behavior: "smooth" });
+  const initThemeToggle = () => {
+    const themeToggle = document.getElementById("themeToggle");
+    if (!themeToggle) return;
+
+    themeToggle.addEventListener("click", () => {
+      const nextTheme = document.body.classList.contains("dark-mode")
+        ? THEME_LIGHT
+        : THEME_DARK;
+
+      document.body.classList.add("theme-transition");
+      setThemeUI(nextTheme);
+      localStorage.setItem(THEME_KEY, nextTheme);
+      window.setTimeout(() => {
+        document.body.classList.remove("theme-transition");
+      }, 350);
+    });
+
+    window.addEventListener("portfolio:language-changed", () => {
+      const activeTheme = document.body.classList.contains("dark-mode")
+        ? THEME_DARK
+        : THEME_LIGHT;
+      setThemeUI(activeTheme);
+    });
+  };
+
+  const initMenu = () => {
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    if (!menuToggle || !navLinks) return;
+
+    menuToggle.addEventListener("click", () => {
+      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+      navLinks.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  };
+
+  const initStickyNavbar = () => {
+    const navbar = document.getElementById("navbar");
+    if (!navbar) return;
+
+    const onScroll = () => {
+      navbar.classList.toggle("scrolled", window.scrollY > 50);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  };
+
+  const initPortfolioFilter = () => {
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    const portfolioItems = document.querySelectorAll(".portfolio-item");
+    if (!filterBtns.length || !portfolioItems.length) return;
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const filter = btn.dataset.filter;
+
+        filterBtns.forEach((item) => {
+          item.classList.remove("active");
+          item.setAttribute("aria-pressed", "false");
+        });
+
+        btn.classList.add("active");
+        btn.setAttribute("aria-pressed", "true");
+
+        portfolioItems.forEach((card) => {
+          const shouldShow =
+            filter === "all" || card.dataset.category === filter;
+          card.style.display = shouldShow ? "block" : "none";
+          card.toggleAttribute("hidden", !shouldShow);
+        });
+      });
+    });
+  };
+
+  const initBackToTop = () => {
+    const backToTop = document.getElementById("backToTop");
+    if (!backToTop) return;
+
+    const onScroll = () => {
+      backToTop.classList.toggle("show", window.scrollY > 300);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  };
+
+  const initSmoothAnchors = () => {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", (event) => {
+        const href = anchor.getAttribute("href");
+        if (!href || href.length < 2) return;
+
+        const target = document.querySelector(href);
+        if (!target) return;
+
+        event.preventDefault();
+        const offset = 80;
+        const targetPosition = target.offsetTop - offset;
+        window.scrollTo({ top: targetPosition, behavior: "smooth" });
+      });
+    });
+  };
+
+  const initScrollReveal = () => {
+    const revealItems = document.querySelectorAll(".reveal-on-scroll");
+    if (!revealItems.length) return;
+
+    if (MOTION_QUERY.matches || !("IntersectionObserver" in window)) {
+      revealItems.forEach((item) => item.classList.add("is-visible"));
+      return;
     }
-  });
-});
 
-// Service Worker Registration (En production seulement)
-if (
-  "serviceWorker" in navigator &&
-  location.hostname !== "localhost" &&
-  location.hostname !== "127.0.0.1"
-) {
-  navigator.serviceWorker
-    .register("/service-worker.js", { scope: "/" })
-    .then((registration) => {
-      console.log(
-        "✅ Service Worker registered with scope:",
-        registration.scope,
-      );
-
-      // Écouter les mises à jour
-      registration.onupdatefound = () => {
-        const newWorker = registration.installing;
-        newWorker.onstatechange = () => {
-          if (
-            newWorker.state === "installed" &&
-            navigator.serviceWorker.controller
-          ) {
-            console.log("🔄 Service Worker update available");
-            newWorker.postMessage({ type: "SKIP_WAITING" });
-          }
-        };
-      };
-    })
-    .catch((err) =>
-      console.warn("⚠️ Service Worker registration failed:", err),
+    const observer = new IntersectionObserver(
+      (entries, currentObserver) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          currentObserver.unobserve(entry.target);
+        });
+      },
+      {
+        threshold: 0.15,
+        rootMargin: "0px 0px -10% 0px",
+      },
     );
-}
 
-// Console Easter Egg
-console.log(
-  "%c👋 Hello Developer!",
-  "font-size: 20px; color: #667eea; font-weight: bold;",
-);
-console.log(
-  "%cPortfolio par Richard NGOUBADJAMBO",
-  "font-size: 14px; color: #764ba2;",
-);
+    revealItems.forEach((item) => observer.observe(item));
+  };
+
+  const generateCSRFToken = () =>
+    Array.from(crypto.getRandomValues(new Uint8Array(32)))
+      .map((byte) => byte.toString(16).padStart(2, "0"))
+      .join("");
+
+  const initContactFormValidation = () => {
+    const contactForm = document.getElementById("contactForm");
+    if (!contactForm) return;
+
+    const csrfField = contactForm.querySelector('input[name="_csrf"]');
+    if (csrfField) {
+      csrfField.value = generateCSRFToken();
+    }
+
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const t = getTranslator();
+
+      try {
+        const data = Object.fromEntries(new FormData(contactForm));
+        const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,100}$/;
+        const emailRegex = /^[^\s@]{1,64}@[^\s@]{1,255}\.[^\s@]{2,6}$/;
+
+        if (!data.name || data.name.trim().length < 2) {
+          alert(t("error.nameMin"));
+          return;
+        }
+        if (data.name.length > 100) {
+          alert(t("error.nameMax"));
+          return;
+        }
+        if (!nameRegex.test(String(data.name || "").trim())) {
+          alert(t("error.namePattern"));
+          return;
+        }
+        if (!emailRegex.test(String(data.email || ""))) {
+          alert(t("error.emailInvalid"));
+          return;
+        }
+        if (String(data.email || "").length > 255) {
+          alert(t("error.emailMax"));
+          return;
+        }
+        if (!data.message || String(data.message).trim().length < 10) {
+          alert(t("error.messageMin"));
+          return;
+        }
+        if (String(data.message).length > 5000) {
+          alert(t("error.messageMax"));
+          return;
+        }
+
+        alert(t("contact.success", { name: data.name || "" }));
+        contactForm.reset();
+        if (csrfField) {
+          csrfField.value = generateCSRFToken();
+        }
+      } catch (error) {
+        console.error("Form submission error:", error);
+        alert(getTranslator()("error.generic"));
+      }
+    });
+  };
+
+  const initPageLoader = () => {
+    const pageLoader = document.getElementById("pageLoader");
+    if (!pageLoader) return;
+
+    window.addEventListener("load", () => {
+      window.setTimeout(() => {
+        pageLoader.classList.add("hidden");
+      }, 500);
+    });
+  };
+
+  const initServiceWorker = () => {
+    if (
+      !("serviceWorker" in navigator) ||
+      location.hostname === "localhost" ||
+      location.hostname === "127.0.0.1"
+    ) {
+      return;
+    }
+
+    navigator.serviceWorker
+      .register("/service-worker.js", { scope: "/" })
+      .then((registration) => {
+        registration.onupdatefound = () => {
+          const newWorker = registration.installing;
+          if (!newWorker) return;
+
+          newWorker.onstatechange = () => {
+            if (
+              newWorker.state === "installed" &&
+              navigator.serviceWorker.controller
+            ) {
+              newWorker.postMessage({ type: "SKIP_WAITING" });
+            }
+          };
+        };
+      })
+      .catch((error) => {
+        console.warn("Service Worker registration failed:", error);
+      });
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    applySavedTheme();
+    initThemeToggle();
+    initMenu();
+    initStickyNavbar();
+    initPortfolioFilter();
+    initBackToTop();
+    initSmoothAnchors();
+    initScrollReveal();
+    initContactFormValidation();
+    initPageLoader();
+    initServiceWorker();
+  });
+})();

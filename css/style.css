@@ -14,6 +14,9 @@
   --gradient: linear-gradient(135deg, #0052cc 0%, #0066ff 100%);
   --dark-bg: #1a1a1a;
   --dark-surface: #2a2a2a;
+  --surface: #ffffff;
+  --surface-muted: #f8fafc;
+  --text-inverse: #e0e0e0;
 }
 
 html {
@@ -25,7 +28,17 @@ body {
   line-height: 1.6;
   color: var(--dark);
   background: var(--light);
-  transition: background 0.3s, color 0.3s;
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease;
+}
+
+body.theme-transition * {
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 /* Focus Visible pour Accessibilité */
@@ -43,6 +56,43 @@ body {
   }
 }
 
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 {
+  transition-delay: 0.05s;
+}
+
+.delay-2 {
+  transition-delay: 0.1s;
+}
+
+.delay-3 {
+  transition-delay: 0.15s;
+}
+
+.delay-4 {
+  transition-delay: 0.2s;
+}
+
+.delay-5 {
+  transition-delay: 0.25s;
+}
+
+.delay-6 {
+  transition-delay: 0.3s;
+}
+
 /* Page Loader */
 .page-loader {
   position: fixed;
@@ -55,7 +105,9 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  transition: opacity 0.5s, visibility 0.5s;
+  transition:
+    opacity 0.5s,
+    visibility 0.5s;
 }
 
 .page-loader.hidden {
@@ -94,6 +146,7 @@ nav {
   top: 0;
   width: 100%;
   background: rgba(255, 255, 255, 0.95);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -200,8 +253,14 @@ nav.scrolled {
   text-decoration: none;
   color: var(--dark);
   font-weight: 500;
-  transition: color 0.3s;
+  transition:
+    color 0.3s,
+    transform 0.3s;
   position: relative;
+}
+
+.nav-links a:hover {
+  transform: translateY(-1px);
 }
 
 .nav-links a::after {
@@ -381,6 +440,7 @@ body.dark-mode .portfolio-item .btn-outline:hover {
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -400,7 +460,6 @@ body.dark-mode .portfolio-item .btn-outline:hover {
   align-items: center;
   text-align: center;
   gap: 0.5rem;
-};
   border-radius: 10px;
 }
 
@@ -788,7 +847,9 @@ section {
   background: var(--light);
   padding: 2rem;
   border-radius: 15px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
 .skill-category:hover {
@@ -827,6 +888,43 @@ section {
   background: var(--gradient);
   border-radius: 10px;
   transition: width 1s ease;
+}
+
+.skill-progress.w-78 {
+  width: 78%;
+}
+
+.skill-progress.w-80 {
+  width: 80%;
+}
+
+.skill-progress.w-82 {
+  width: 82%;
+}
+
+.skill-progress.w-83 {
+  width: 83%;
+}
+
+.skill-progress.w-85 {
+  width: 85%;
+}
+
+.skill-progress.w-86 {
+  width: 86%;
+}
+
+.skill-progress.w-88 {
+  width: 88%;
+}
+
+.timeline-heading {
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.timeline-heading-spaced {
+  margin: 3rem 0 2rem;
 }
 
 /* Timeline */
@@ -931,7 +1029,7 @@ section {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
   gap: 2rem;
 }
 
@@ -940,7 +1038,9 @@ section {
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
 .portfolio-item:hover {
@@ -978,6 +1078,19 @@ section {
 .portfolio-content p {
   color: var(--gray);
   margin-bottom: 1rem;
+}
+
+.project-points {
+  margin: 0 0 1rem;
+  padding-left: 1rem;
+  color: var(--gray);
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.project-points li {
+  line-height: 1.45;
 }
 
 .tech-tags {
@@ -1187,6 +1300,21 @@ footer {
   gap: 1rem;
 }
 
+.social-links-start {
+  justify-content: flex-start;
+}
+
+.contact-social-wrap {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.contact-social-title {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
 .social-links a {
   width: 40px;
   height: 40px;
@@ -1253,13 +1381,15 @@ footer {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
   z-index: 999;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .theme-toggle:hover {
-  transform: scale(1.1);
+  transform: translateY(-2px) scale(1.06);
 }
 
 .theme-toggle i {
@@ -1281,7 +1411,9 @@ footer {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
   z-index: 999;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   font-weight: 700;
@@ -1289,13 +1421,13 @@ footer {
 }
 
 .language-toggle:hover {
-  transform: scale(1.1);
+  transform: translateY(-2px) scale(1.06);
 }
 
 /* Dark Mode */
 body.dark-mode {
-  background: #1a1a1a;
-  color: #e0e0e0;
+  background: var(--dark-bg);
+  color: var(--text-inverse);
 }
 
 body.dark-mode nav {
@@ -1304,16 +1436,25 @@ body.dark-mode nav {
 
 body.dark-mode .language-toggle {
   background: var(--dark-surface);
-  color: #e0e0e0;
-  border-color: #e0e0e0;
+  color: var(--text-inverse);
+  border-color: var(--text-inverse);
+}
+
+body.dark-mode .theme-toggle {
+  background: var(--dark-surface);
+  border-color: var(--text-inverse);
+}
+
+body.dark-mode .theme-toggle i {
+  color: var(--text-inverse);
 }
 
 body.dark-mode .logo-name {
-  color: #e0e0e0;
+  color: var(--text-inverse);
 }
 
 body.dark-mode .nav-links a {
-  color: #e0e0e0;
+  color: var(--text-inverse);
 }
 
 body.dark-mode #competences,
@@ -1327,13 +1468,18 @@ body.dark-mode .timeline-item,
 body.dark-mode .portfolio-item,
 body.dark-mode .contact-info,
 body.dark-mode .contact-form {
-  background: #2a2a2a;
-  color: #e0e0e0;
+  background: var(--dark-surface);
+  color: var(--text-inverse);
 }
 
 body.dark-mode .skill-category,
 body.dark-mode .service-card {
   background: #303030;
+}
+
+body.dark-mode .project-points,
+body.dark-mode .portfolio-content p {
+  color: #c7c7c7;
 }
 
 body.dark-mode .form-group input,

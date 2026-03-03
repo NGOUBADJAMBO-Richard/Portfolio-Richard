@@ -77,7 +77,6 @@
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://cdnjs.cloudflare.com data:; frame-src 'self'; connect-src 'self' https://formspree.io; base-uri 'self'; form-action 'self' https://formspree.io"
     />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
 
@@ -103,6 +102,7 @@
     <link rel="preload" href="css/responsive.css" as="style" />
     <link rel="preload" href="css/hero-responsive.css" as="style" />
     <link rel="preload" href="css/hero-content.css" as="style" />
+    <link rel="preload" href="js/i18n.js" as="script" />
     <link rel="preload" href="js/main.js" as="script" />
   </head>
   <body>
@@ -121,12 +121,18 @@
     </div>
 
     <!-- Navigation -->
-    <nav id="navbar" role="navigation" aria-label="Navigation principale">
+    <nav
+      id="navbar"
+      role="navigation"
+      aria-label="Navigation principale"
+      data-i18n-attr="aria-label:nav.main"
+    >
       <div class="nav-container">
         <a
           href="#accueil"
           class="logo-container"
           aria-label="Retour à l'accueil"
+          data-i18n-attr="aria-label:nav.backHome"
         >
           <div class="logo">
             <div class="logo-image">
@@ -139,25 +145,26 @@
             </div>
             <div class="logo-info">
               <p class="logo-name">Richard</p>
-              <p class="logo-title">Développeur</p>
+              <p class="logo-title" data-i18n="brand.role">Développeur</p>
             </div>
           </div>
         </a>
         <ul class="nav-links" id="navLinks">
-          <li><a href="#accueil">Accueil</a></li>
-          <li><a href="#apropos">À propos</a></li>
-          <li><a href="#entreprise">Entreprise</a></li>
-          <li><a href="#stats">Statistiques</a></li>
-          <li><a href="#competences">Compétences</a></li>
-          <li><a href="#parcours">Parcours</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#accueil" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="#apropos" data-i18n="nav.about">À propos</a></li>
+          <li><a href="#entreprise" data-i18n="nav.company">Entreprise</a></li>
+          <li><a href="#stats" data-i18n="nav.stats">Statistiques</a></li>
+          <li><a href="#competences" data-i18n="nav.skills">Compétences</a></li>
+          <li><a href="#parcours" data-i18n="nav.journey">Parcours</a></li>
+          <li><a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
+          <li><a href="#services" data-i18n="nav.services">Services</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
         <button
           class="menu-toggle"
           id="menuToggle"
           aria-label="Basculer le menu de navigation"
+          data-i18n-attr="aria-label:nav.toggle"
           aria-expanded="false"
           aria-controls="navLinks"
         >
@@ -181,100 +188,115 @@
         <div class="hero-content">
           <div class="hero-text">
             <!-- Badge de positionnement -->
-            <div class="hero-badge" data-animation="slideInDown">
+            <div
+              class="hero-badge reveal-on-scroll"
+              data-animation="slideInDown"
+            >
               <span class="badge-icon" aria-hidden="true">🚀</span>
-              <span class="badge-text">Créateur de Solutions Digitales</span>
+              <span class="badge-text" data-i18n="hero.badge"
+                >Créateur de Solutions Digitales</span
+              >
             </div>
 
             <!-- Titre principal -->
             <h1
               id="hero-title"
+              class="reveal-on-scroll delay-1"
               data-animation="slideInDown"
-              style="animation-delay: 0.1s"
             >
               NGOUBADJAMBO Richard
             </h1>
 
             <!-- Sous-titre professionnel -->
             <p
-              class="subtitle"
+              class="subtitle reveal-on-scroll delay-2"
+              data-i18n="hero.subtitle"
               data-animation="fadeInUp"
-              style="animation-delay: 0.2s"
             >
               Ingénieur Informatique & Entrepreneur
             </p>
 
             <!-- Description enrichie -->
             <p
-              class="hero-description"
+              class="hero-description reveal-on-scroll delay-3"
+              data-i18n="hero.description"
               data-animation="fadeInUp"
-              style="animation-delay: 0.3s"
             >
-              Fondateur de <strong>M.G.N CodeWave</strong>, je conçois des
-              <em>solutions digitales innovantes</em> qui transforment vos idées
-              en réalité. Spécialisé en développement
-              <strong>Fullstack</strong> et <strong>Mobile</strong>, avec une
-              passion pour l'excellence et l'innovation technologique.
+              J'imagine, conçois et lance des produits web & mobile orientés
+              impact.
             </p>
 
             <!-- Caractéristiques principales -->
             <div
-              class="hero-features"
+              class="hero-features reveal-on-scroll delay-4"
               data-animation="fadeInUp"
-              style="animation-delay: 0.4s"
               role="list"
             >
               <div class="feature-item" role="listitem">
                 <span class="feature-icon" aria-hidden="true">⚡</span>
-                <span class="feature-text">Développement Rapide</span>
+                <span class="feature-text" data-i18n="hero.feature.1"
+                  >Développement Rapide</span
+                >
               </div>
               <div class="feature-item" role="listitem">
                 <span class="feature-icon" aria-hidden="true">🎯</span>
-                <span class="feature-text">Solutions Sur-mesure</span>
+                <span class="feature-text" data-i18n="hero.feature.2"
+                  >Solutions Sur-mesure</span
+                >
               </div>
               <div class="feature-item" role="listitem">
                 <span class="feature-icon" aria-hidden="true">💡</span>
-                <span class="feature-text">Innovation Constante</span>
+                <span class="feature-text" data-i18n="hero.feature.3"
+                  >Innovation Constante</span
+                >
               </div>
             </div>
 
             <!-- Boutons d'appel à l'action -->
             <div
-              class="hero-buttons"
+              class="hero-buttons reveal-on-scroll delay-5"
               data-animation="fadeInUp"
-              style="animation-delay: 0.5s"
             >
               <a
                 href="#contact"
                 class="btn btn-primary"
                 title="Démarrer un projet avec Richard"
+                data-i18n-attr="title:hero.cta.primary.title"
               >
                 <span class="btn-icon" aria-hidden="true">✉️</span>
-                <span class="btn-text">Démarrer un projet</span>
+                <span class="btn-text" data-i18n="hero.cta.primary"
+                  >Démarrer un projet</span
+                >
               </a>
               <a
                 href="#portfolio"
                 class="btn btn-outline"
                 title="Voir le portfolio et réalisations"
+                data-i18n-attr="title:hero.cta.secondary.title"
               >
                 <span class="btn-icon" aria-hidden="true">👀</span>
-                <span class="btn-text">Voir mes réalisations</span>
+                <span class="btn-text" data-i18n="hero.cta.secondary"
+                  >Voir mes réalisations</span
+                >
               </a>
             </div>
 
             <!-- Indicateur de scroll -->
             <div
-              class="hero-cta"
+              class="hero-cta reveal-on-scroll delay-6"
               data-animation="fadeInUp"
-              style="animation-delay: 0.6s"
               aria-label="Naviguer vers le portfolio"
+              data-i18n-attr="aria-label:hero.scroll.group"
             >
-              <p class="cta-text">Explorez mon travail</p>
+              <p class="cta-text" data-i18n="hero.scroll.text">
+                Explorez mon travail
+              </p>
               <a
                 href="#portfolio"
                 class="scroll-link"
                 aria-label="Voir le portfolio"
                 title="Descendre vers le portfolio"
+                data-i18n-attr="aria-label:hero.scroll.link;title:hero.scroll.title"
               >
                 <span class="scroll-icon" aria-hidden="true">↓</span>
               </a>
@@ -630,7 +652,7 @@
                 <span>85%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-progress" style="width: 85%"></div>
+                <div class="skill-progress w-85"></div>
               </div>
             </div>
             <div class="skill-item">
@@ -639,7 +661,7 @@
                 <span>88%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-progress" style="width: 88%"></div>
+                <div class="skill-progress w-88"></div>
               </div>
             </div>
             <div class="skill-item">
@@ -648,7 +670,7 @@
                 <span>83%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-progress" style="width: 83%"></div>
+                <div class="skill-progress w-83"></div>
               </div>
             </div>
           </div>
@@ -661,7 +683,7 @@
                 <span>82%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-progress" style="width: 82%"></div>
+                <div class="skill-progress w-82"></div>
               </div>
             </div>
             <div class="skill-item">
@@ -670,7 +692,7 @@
                 <span>78%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-progress" style="width: 78%"></div>
+                <div class="skill-progress w-78"></div>
               </div>
             </div>
             <div class="skill-item">
@@ -679,7 +701,7 @@
                 <span>80%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-progress" style="width: 80%"></div>
+                <div class="skill-progress w-80"></div>
               </div>
             </div>
           </div>
@@ -692,7 +714,7 @@
                 <span>85%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-progress" style="width: 85%"></div>
+                <div class="skill-progress w-85"></div>
               </div>
             </div>
             <div class="skill-item">
@@ -701,7 +723,7 @@
                 <span>82%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-progress" style="width: 82%"></div>
+                <div class="skill-progress w-82"></div>
               </div>
             </div>
             <div class="skill-item">
@@ -710,7 +732,7 @@
                 <span>78%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-progress" style="width: 78%"></div>
+                <div class="skill-progress w-78"></div>
               </div>
             </div>
           </div>
@@ -723,7 +745,7 @@
                 <span>82%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-progress" style="width: 82%"></div>
+                <div class="skill-progress w-82"></div>
               </div>
             </div>
             <div class="skill-item">
@@ -732,7 +754,7 @@
                 <span>78%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-progress" style="width: 78%"></div>
+                <div class="skill-progress w-78"></div>
               </div>
             </div>
             <div class="skill-item">
@@ -741,7 +763,7 @@
                 <span>85%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-progress" style="width: 85%"></div>
+                <div class="skill-progress w-85"></div>
               </div>
             </div>
           </div>
@@ -754,7 +776,7 @@
                 <span>85%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-progress" style="width: 85%"></div>
+                <div class="skill-progress w-85"></div>
               </div>
             </div>
             <div class="skill-item">
@@ -763,7 +785,7 @@
                 <span>82%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-progress" style="width: 82%"></div>
+                <div class="skill-progress w-82"></div>
               </div>
             </div>
             <div class="skill-item">
@@ -772,7 +794,7 @@
                 <span>83%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-progress" style="width: 83%"></div>
+                <div class="skill-progress w-83"></div>
               </div>
             </div>
           </div>
@@ -785,7 +807,7 @@
                 <span>88%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-progress" style="width: 88%"></div>
+                <div class="skill-progress w-88"></div>
               </div>
             </div>
             <div class="skill-item">
@@ -794,7 +816,7 @@
                 <span>83%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-progress" style="width: 83%"></div>
+                <div class="skill-progress w-83"></div>
               </div>
             </div>
             <div class="skill-item">
@@ -803,7 +825,7 @@
                 <span>86%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-progress" style="width: 86%"></div>
+                <div class="skill-progress w-86"></div>
               </div>
             </div>
           </div>
@@ -819,7 +841,7 @@
           <p>Formation et expériences professionnelles</p>
         </div>
 
-        <h3 style="color: var(--primary); margin-bottom: 2rem">Formation</h3>
+        <h3 class="timeline-heading">Formation</h3>
         <div class="timeline">
           <div class="timeline-item">
             <span class="timeline-date">2018 - 2023</span>
@@ -855,7 +877,7 @@
           </div>
         </div>
 
-        <h3 style="color: var(--primary); margin: 3rem 0 2rem">
+        <h3 class="timeline-heading timeline-heading-spaced">
           Expériences Professionnelles
         </h3>
         <div class="timeline">
@@ -917,51 +939,56 @@
     <section id="portfolio">
       <div class="container">
         <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Découvrez mes réalisations</p>
+          <h2 data-i18n="portfolio.title">Portfolio</h2>
+          <p data-i18n="portfolio.subtitle">Impact en 3 points</p>
         </div>
 
         <div
           class="portfolio-filters"
           role="group"
           aria-label="Filtres de portfolio"
+          data-i18n-attr="aria-label:portfolio.filters"
         >
           <button
             class="filter-btn active"
             data-filter="all"
             aria-pressed="true"
             aria-label="Afficher tous les projets"
+            data-i18n-attr="aria-label:portfolio.filter.all.label"
           >
-            Tous
+            <span data-i18n="portfolio.filter.all">Tous</span>
           </button>
           <button
             class="filter-btn"
             data-filter="mobile"
             aria-pressed="false"
             aria-label="Afficher les projets mobiles"
+            data-i18n-attr="aria-label:portfolio.filter.mobile.label"
           >
-            Mobile
+            <span data-i18n="portfolio.filter.mobile">Mobile</span>
           </button>
           <button
             class="filter-btn"
             data-filter="web"
             aria-pressed="false"
             aria-label="Afficher les projets web"
+            data-i18n-attr="aria-label:portfolio.filter.web.label"
           >
-            Web
+            <span data-i18n="portfolio.filter.web">Web</span>
           </button>
           <button
             class="filter-btn"
             data-filter="platform"
             aria-pressed="false"
             aria-label="Afficher les plateformes"
+            data-i18n-attr="aria-label:portfolio.filter.platform.label"
           >
-            Plateformes
+            <span data-i18n="portfolio.filter.platform">Plateformes</span>
           </button>
         </div>
 
         <div class="portfolio-grid">
-          <div class="portfolio-item" data-category="mobile">
+          <div class="portfolio-item reveal-on-scroll" data-category="mobile">
             <div class="portfolio-image">
               <img
                 src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80"
@@ -972,21 +999,31 @@
             </div>
             <div class="portfolio-content">
               <h3>Waz'UP</h3>
-              <p>
-                Super-app Flutter combinant e-commerce, livraison et location
-                avec IA embarquée.
-              </p>
+              <ul class="project-points">
+                <li data-i18n="portfolio.wazup.p1">
+                  Problème : services éclatés.
+                </li>
+                <li data-i18n="portfolio.wazup.p2">
+                  Solution : super-app Flutter.
+                </li>
+                <li data-i18n="portfolio.wazup.p3">
+                  Résultat : parcours unifié + rapide.
+                </li>
+              </ul>
               <div class="tech-tags">
                 <span class="tech-tag">Flutter</span>
                 <span class="tech-tag">IA</span>
               </div>
-              <a href="portfolio/wazup.html" class="btn btn-outline btn-sm"
+              <a
+                href="portfolio/wazup.html"
+                class="btn btn-outline btn-sm"
+                data-i18n="portfolio.details"
                 >Voir les détails</a
               >
             </div>
           </div>
 
-          <div class="portfolio-item" data-category="web">
+          <div class="portfolio-item reveal-on-scroll" data-category="web">
             <div class="portfolio-image">
               <img
                 src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80"
@@ -997,18 +1034,31 @@
             </div>
             <div class="portfolio-content">
               <h3>H2P Group</h3>
-              <p>Écosystème digital complet pour cabinet de coaching.</p>
+              <ul class="project-points">
+                <li data-i18n="portfolio.h2p.p1">
+                  Problème : outils dispersés.
+                </li>
+                <li data-i18n="portfolio.h2p.p2">
+                  Solution : écosystème digital complet.
+                </li>
+                <li data-i18n="portfolio.h2p.p3">
+                  Résultat : pilotage centralisé.
+                </li>
+              </ul>
               <div class="tech-tags">
                 <span class="tech-tag">HTML/CSS</span>
                 <span class="tech-tag">CRM</span>
               </div>
-              <a href="portfolio/h2p-group.html" class="btn btn-outline btn-sm"
+              <a
+                href="portfolio/h2p-group.html"
+                class="btn btn-outline btn-sm"
+                data-i18n="portfolio.details"
                 >Voir les détails</a
               >
             </div>
           </div>
 
-          <div class="portfolio-item" data-category="web">
+          <div class="portfolio-item reveal-on-scroll" data-category="web">
             <div class="portfolio-image">
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80"
@@ -1019,19 +1069,30 @@
             </div>
             <div class="portfolio-content">
               <h3>MGN CodeWave</h3>
-              <p>Studio digital : design system et MVP sur-mesure.</p>
+              <ul class="project-points">
+                <li data-i18n="portfolio.mgn.p1">
+                  Problème : time-to-market long.
+                </li>
+                <li data-i18n="portfolio.mgn.p2">
+                  Solution : design system + MVP.
+                </li>
+                <li data-i18n="portfolio.mgn.p3">
+                  Résultat : livraison accélérée.
+                </li>
+              </ul>
               <div class="tech-tags">
                 <span class="tech-tag">Product Ops</span>
               </div>
               <a
                 href="portfolio/mgn-codewave.html"
                 class="btn btn-outline btn-sm"
+                data-i18n="portfolio.details"
                 >Voir les détails</a
               >
             </div>
           </div>
 
-          <div class="portfolio-item" data-category="web">
+          <div class="portfolio-item reveal-on-scroll" data-category="web">
             <div class="portfolio-image">
               <img
                 src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
@@ -1042,18 +1103,31 @@
             </div>
             <div class="portfolio-content">
               <h3>Le Bon Waz</h3>
-              <p>Plateforme e-commerce avec catalogue dynamique.</p>
+              <ul class="project-points">
+                <li data-i18n="portfolio.bonwaz.p1">
+                  Problème : vente sans vitrine digitale.
+                </li>
+                <li data-i18n="portfolio.bonwaz.p2">
+                  Solution : catalogue e-commerce structuré.
+                </li>
+                <li data-i18n="portfolio.bonwaz.p3">
+                  Résultat : conversion en hausse.
+                </li>
+              </ul>
               <div class="tech-tags">
                 <span class="tech-tag">Bootstrap</span>
                 <span class="tech-tag">Stripe</span>
               </div>
-              <a href="portfolio/le-bon-waz.html" class="btn btn-outline btn-sm"
+              <a
+                href="portfolio/le-bon-waz.html"
+                class="btn btn-outline btn-sm"
+                data-i18n="portfolio.details"
                 >Voir les détails</a
               >
             </div>
           </div>
 
-          <div class="portfolio-item" data-category="web">
+          <div class="portfolio-item reveal-on-scroll" data-category="web">
             <div class="portfolio-image">
               <img
                 src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=900&q=80"
@@ -1064,19 +1138,30 @@
             </div>
             <div class="portfolio-content">
               <h3>Lampe À Mes Pieds</h3>
-              <p>Présentation éditoriale avec téléchargement.</p>
+              <ul class="project-points">
+                <li data-i18n="portfolio.lampe.p1">
+                  Problème : contenu peu accessible.
+                </li>
+                <li data-i18n="portfolio.lampe.p2">
+                  Solution : site éditorial clair.
+                </li>
+                <li data-i18n="portfolio.lampe.p3">
+                  Résultat : lecture et download facilités.
+                </li>
+              </ul>
               <div class="tech-tags">
                 <span class="tech-tag">JavaScript</span>
               </div>
               <a
                 href="portfolio/lampe-a-mes-pieds.html"
                 class="btn btn-outline btn-sm"
+                data-i18n="portfolio.details"
                 >Voir les détails</a
               >
             </div>
           </div>
 
-          <div class="portfolio-item" data-category="web">
+          <div class="portfolio-item reveal-on-scroll" data-category="web">
             <div class="portfolio-image">
               <img
                 src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
@@ -1087,19 +1172,30 @@
             </div>
             <div class="portfolio-content">
               <h3>English Fun Club</h3>
-              <p>Plateforme e-learning gamifiée.</p>
+              <ul class="project-points">
+                <li data-i18n="portfolio.efc.p1">
+                  Problème : faible engagement apprenant.
+                </li>
+                <li data-i18n="portfolio.efc.p2">
+                  Solution : parcours gamifiés.
+                </li>
+                <li data-i18n="portfolio.efc.p3">
+                  Résultat : meilleure rétention.
+                </li>
+              </ul>
               <div class="tech-tags">
                 <span class="tech-tag">E-Learning</span>
               </div>
               <a
                 href="portfolio/english-fun-club.html"
                 class="btn btn-outline btn-sm"
+                data-i18n="portfolio.details"
                 >Voir les détails</a
               >
             </div>
           </div>
 
-          <div class="portfolio-item" data-category="web">
+          <div class="portfolio-item reveal-on-scroll" data-category="web">
             <div class="portfolio-image">
               <img
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80"
@@ -1110,19 +1206,30 @@
             </div>
             <div class="portfolio-content">
               <h3>Découvre qui tu es</h3>
-              <p>Questionnaires de profils personnalité.</p>
+              <ul class="project-points">
+                <li data-i18n="portfolio.decouvre.p1">
+                  Problème : profiling non structuré.
+                </li>
+                <li data-i18n="portfolio.decouvre.p2">
+                  Solution : quiz guidés.
+                </li>
+                <li data-i18n="portfolio.decouvre.p3">
+                  Résultat : insights actionnables.
+                </li>
+              </ul>
               <div class="tech-tags">
                 <span class="tech-tag">JavaScript</span>
               </div>
               <a
                 href="portfolio/decouvre-qui-tu-es.html"
                 class="btn btn-outline btn-sm"
+                data-i18n="portfolio.details"
                 >Voir les détails</a
               >
             </div>
           </div>
 
-          <div class="portfolio-item" data-category="web">
+          <div class="portfolio-item reveal-on-scroll" data-category="web">
             <div class="portfolio-image">
               <img
                 src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
@@ -1133,19 +1240,30 @@
             </div>
             <div class="portfolio-content">
               <h3>Grâce Déployée</h3>
-              <p>Site communautaire pour église locale.</p>
+              <ul class="project-points">
+                <li data-i18n="portfolio.grace.p1">
+                  Problème : communication fragmentée.
+                </li>
+                <li data-i18n="portfolio.grace.p2">
+                  Solution : hub communautaire.
+                </li>
+                <li data-i18n="portfolio.grace.p3">
+                  Résultat : interactions renforcées.
+                </li>
+              </ul>
               <div class="tech-tags">
                 <span class="tech-tag">CMS</span>
               </div>
               <a
                 href="portfolio/grace-deployee.html"
                 class="btn btn-outline btn-sm"
+                data-i18n="portfolio.details"
                 >Voir les détails</a
               >
             </div>
           </div>
 
-          <div class="portfolio-item" data-category="platform">
+          <div class="portfolio-item reveal-on-scroll" data-category="platform">
             <div class="portfolio-image">
               <img
                 src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80"
@@ -1156,7 +1274,17 @@
             </div>
             <div class="portfolio-content">
               <h3>LMS Platform</h3>
-              <p>Plateforme de gestion de prospects.</p>
+              <ul class="project-points">
+                <li data-i18n="portfolio.lms.p1">
+                  Problème : suivi commercial manuel.
+                </li>
+                <li data-i18n="portfolio.lms.p2">
+                  Solution : dashboard React/Firebase.
+                </li>
+                <li data-i18n="portfolio.lms.p3">
+                  Résultat : pipeline mieux piloté.
+                </li>
+              </ul>
               <div class="tech-tags">
                 <span class="tech-tag">React.js</span>
                 <span class="tech-tag">Firebase</span>
@@ -1164,6 +1292,7 @@
               <a
                 href="portfolio/lms-platform.html"
                 class="btn btn-outline btn-sm"
+                data-i18n="portfolio.details"
                 >Voir les détails</a
               >
             </div>
@@ -1363,17 +1492,9 @@
                 <p>mbouandagnanga18@gmail.com</p>
               </div>
             </div>
-            <div
-              style="
-                margin-top: 2rem;
-                padding-top: 2rem;
-                border-top: 1px solid #e2e8f0;
-              "
-            >
-              <h4 style="color: var(--primary); margin-bottom: 1rem">
-                Réseaux Sociaux
-              </h4>
-              <div class="social-links" style="justify-content: flex-start">
+            <div class="contact-social-wrap">
+              <h4 class="contact-social-title">Réseaux Sociaux</h4>
+              <div class="social-links social-links-start">
                 <a
                   href="https://www.facebook.com/share/1ChamR4xqL/"
                   target="_blank"
@@ -1557,21 +1678,40 @@
     </footer>
 
     <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop">
+    <button
+      class="back-to-top"
+      id="backToTop"
+      type="button"
+      aria-label="Retour en haut"
+      title="Retour en haut"
+    >
       <i class="fas fa-arrow-up"></i>
     </button>
 
     <!-- Theme Toggle -->
-    <button class="theme-toggle" id="themeToggle">
+    <button
+      class="theme-toggle"
+      id="themeToggle"
+      type="button"
+      aria-label="Activer le mode sombre"
+      data-i18n-attr="aria-label:theme.enableDark;title:theme.enableDark"
+      title="Activer le mode sombre"
+    >
       <i class="fas fa-moon"></i>
     </button>
 
     <!-- Language Toggle -->
-    <button class="language-toggle" id="languageToggle"></button>
+    <button
+      class="language-toggle"
+      id="languageToggle"
+      type="button"
+      aria-label="Passer en anglais"
+      title="Passer en anglais"
+    ></button>
 
-    <script src="js/i18n.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/monitoring.js"></script>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/monitoring.js" defer></script>
 
     <!-- Google Analytics (Configure with your ID) -->
     <!-- Uncomment and add your Google Analytics ID
