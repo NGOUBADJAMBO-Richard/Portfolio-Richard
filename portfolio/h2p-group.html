@@ -43,123 +43,13 @@
 
     <title>H2P Group - Écosystème Digital Complet | NGOUBADJAMBO Richard</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/portfolio.css" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
       crossorigin="anonymous"
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     />
-    <style>
-      .project-detail {
-        padding: 6rem 0 4rem;
-        background: var(--light);
-      }
-      .project-hero {
-        background: var(--gradient);
-        color: white;
-        padding: 4rem 0;
-        text-align: center;
-      }
-      .project-hero h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-      }
-      .project-hero .subtitle {
-        font-size: 1.2rem;
-        opacity: 0.9;
-      }
-      .project-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 3rem 2rem;
-      }
-      .project-section {
-        background: white;
-        padding: 2.5rem;
-        border-radius: 15px;
-        margin-bottom: 2rem;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      }
-      .project-section h2 {
-        color: var(--primary);
-        margin-bottom: 1.5rem;
-        font-size: 1.8rem;
-      }
-      .project-section h3 {
-        color: var(--dark);
-        margin: 1.5rem 0 1rem;
-        font-size: 1.3rem;
-      }
-      .project-section p,
-      .project-section li {
-        color: var(--gray);
-        line-height: 1.8;
-        margin-bottom: 1rem;
-      }
-      .project-section ul {
-        list-style: none;
-        padding-left: 0;
-      }
-      .project-section ul li {
-        padding-left: 2rem;
-        position: relative;
-      }
-      .project-section ul li:before {
-        content: "✓";
-        position: absolute;
-        left: 0;
-        color: var(--primary);
-        font-weight: bold;
-      }
-      .tech-stack {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        margin: 1.5rem 0;
-      }
-      .tech-tag {
-        background: var(--gradient);
-        color: white;
-        padding: 0.5rem 1.2rem;
-        border-radius: 25px;
-        font-size: 0.9rem;
-        font-weight: 500;
-      }
-      .back-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        color: var(--primary);
-        text-decoration: none;
-        font-weight: 600;
-        margin-bottom: 2rem;
-        transition: transform 0.3s;
-      }
-      .back-link:hover {
-        transform: translateX(-5px);
-      }
-      .project-stats {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1.5rem;
-        margin: 2rem 0;
-      }
-      .stat-card {
-        background: var(--light);
-        padding: 1.5rem;
-        border-radius: 10px;
-        text-align: center;
-      }
-      .stat-card .number {
-        font-size: 2rem;
-        font-weight: bold;
-        color: var(--primary);
-      }
-      .stat-card .label {
-        color: var(--gray);
-        margin-top: 0.5rem;
-      }
-    </style>
   </head>
   <body>
     <div class="project-hero">
@@ -171,12 +61,13 @@
 
     <div class="project-detail">
       <div class="project-content">
-        <a href="../index.html#portfolio" class="back-link">
-          <i class="fas fa-arrow-left"></i> Retour au portfolio
-        </a>
+        <a href="../index.html#portfolio" class="back-link"
+          ><i class="fas fa-arrow-left"></i>
+          <span data-i18n="project.back">Retour au portfolio</span></a
+        >
 
         <div class="project-section">
-          <h2>Vue d'ensemble du projet</h2>
+          <h2 data-i18n="project.overview">Vue d'ensemble du projet</h2>
           <p>
             <strong>H2P Group</strong> est un projet d'envergure visant à créer
             un écosystème digital complet pour un cabinet de coaching
@@ -537,14 +428,16 @@
             entreprise ? N'hésitez pas à me contacter pour discuter de votre
             projet.
           </p>
-          <a href="../index.html#contact" class="btn btn-primary">
-            <i class="fas fa-envelope"></i> Me contacter
-          </a>
+          <a href="../index.html#contact" class="btn btn-primary"
+            ><i class="fas fa-envelope"></i>
+            <span data-i18n="project.contact">Me contacter</span></a
+          >
         </div>
 
-        <a href="../index.html#portfolio" class="back-link">
-          <i class="fas fa-arrow-left"></i> Retour au portfolio
-        </a>
+        <a href="../index.html#portfolio" class="back-link"
+          ><i class="fas fa-arrow-left"></i>
+          <span data-i18n="project.back">Retour au portfolio</span></a
+        >
       </div>
     </div>
 

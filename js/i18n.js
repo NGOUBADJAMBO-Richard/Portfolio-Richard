@@ -31,7 +31,7 @@
 
   const dictionary = {
     fr: {
-      "brand.role": "Développeur",
+      "brand.role": "Développeur/Entrepreneur",
       "nav.main": "Navigation principale",
       "nav.backHome": "Retour à l'accueil",
       "nav.toggle": "Basculer le menu de navigation",
@@ -102,9 +102,14 @@
       "theme.enableLight": "Activer le mode clair",
       "lang.toggle": "Passer en anglais",
       "lang.code": "FR",
+      "project.back": "Retour",
+      "project.contact": "Me contacter",
+      "project.view": "Voir le Projet",
+      "project.overview": "Vue d'ensemble",
+      "project.features": "Fonctionnalités",
     },
     en: {
-      "brand.role": "Developer",
+      "brand.role": "Developer/Entrepreneur",
       "nav.main": "Main navigation",
       "nav.backHome": "Back to home",
       "nav.toggle": "Toggle navigation menu",
@@ -175,6 +180,11 @@
       "theme.enableLight": "Enable light mode",
       "lang.toggle": "Switch to French",
       "lang.code": "EN",
+      "project.back": "Back",
+      "project.contact": "Contact me",
+      "project.view": "View project",
+      "project.overview": "Overview",
+      "project.features": "Features",
     },
   };
 
