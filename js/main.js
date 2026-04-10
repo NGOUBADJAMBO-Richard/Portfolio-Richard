@@ -215,8 +215,7 @@ const i18n = {
     "gh.sort.updated": "Plus recents",
     "gh.sort.stars": "Plus de stars",
     "gh.sort.name": "A-Z",
-    "gh.token.public": "Token: mode public (limite API faible)",
-    "gh.token.private": "Token: mode authentifie (limite API elevee)",
+    "gh.proxy.server": "Proxy serveur actif",
     "gh.repoCount": "projets",
     "gh.page.prev": "Precedent",
     "gh.page.next": "Suivant",
@@ -435,8 +434,7 @@ const i18n = {
     "gh.sort.updated": "Recently updated",
     "gh.sort.stars": "Most starred",
     "gh.sort.name": "A-Z",
-    "gh.token.public": "Token: public mode (low API rate limit)",
-    "gh.token.private": "Token: authenticated mode (high API rate limit)",
+    "gh.proxy.server": "Server proxy active",
     "gh.repoCount": "projects",
     "gh.page.prev": "Previous",
     "gh.page.next": "Next",
@@ -786,10 +784,8 @@ document.addEventListener("keydown", (e) => {
 // ===================== GITHUB DASHBOARD =====================
 const portfolioConfig = window.__PORTFOLIO_CONFIG__ || {};
 const GITHUB_USER = portfolioConfig.githubUser || "NGOUBADJAMBO-Richard";
-const GITHUB_TOKEN =
-  portfolioConfig.githubToken ||
-  localStorage.getItem("PORTFOLIO_GITHUB_TOKEN") ||
-  "";
+const API_BASE_URL = portfolioConfig.apiBaseUrl || "";
+const GITHUB_TOKEN = "";
 let githubDashboardState = null;
 let ghRepoPage = 1;
 const GH_REPOS_PER_PAGE = 12;
@@ -810,10 +806,14 @@ function safeText(value, fallback = "-") {
 
 async function fetchJson(url) {
   const headers = { Accept: "application/vnd.github+json" };
-  if (GITHUB_TOKEN) headers.Authorization = `Bearer ${GITHUB_TOKEN}`;
   const res = await fetch(url, { headers });
   if (!res.ok) throw new Error(`GitHub API error ${res.status}`);
   return res.json();
+}
+
+function buildApiUrl(path) {
+  const base = API_BASE_URL.replace(/\/$/, "");
+  return `${base}${path}`;
 }
 
 async function fetchAllUserRepos() {
@@ -1193,10 +1193,7 @@ function renderGithubDashboard(state) {
     username.textContent = `@${safeText(state.profile.login, GITHUB_USER)}`;
   if (status)
     status.textContent = safeText(state.profile.bio, t("gh.unavailable"));
-  if (tokenState)
-    tokenState.textContent = GITHUB_TOKEN
-      ? t("gh.token.private")
-      : t("gh.token.public");
+  if (tokenState) tokenState.textContent = t("gh.proxy.server");
   if (avatar) {
     avatar.innerHTML = state.profile.avatarUrl
       ? `<img src="${state.profile.avatarUrl}" alt="GitHub avatar">`
@@ -1235,19 +1232,11 @@ function renderGithubDashboard(state) {
 }
 
 async function loadGithubData() {
-  const [profile, repos, events] = await Promise.all([
-    fetchJson(`https://api.github.com/users/${GITHUB_USER}`),
-    fetchAllUserRepos(),
-    fetchJson(
-      `https://api.github.com/users/${GITHUB_USER}/events/public?per_page=100`,
+  return fetchJson(
+    buildApiUrl(
+      `/api/github/dashboard?user=${encodeURIComponent(GITHUB_USER)}`,
     ),
-  ]);
-
-  const languages = await computeGlobalLanguages(
-    Array.isArray(repos) ? repos : [],
   );
-  const taxonomy = detectTaxonomy(Array.isArray(repos) ? repos : []);
-  return normalizeDashboardData(profile, repos, events, languages, taxonomy);
 }
 
 async function initGithubDashboard() {
