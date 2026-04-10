@@ -44,6 +44,7 @@ Settings → Pages → Build and deployment
 ### 1.2 Vérifier le workflow GitHub Actions
 
 Le fichier `.github/workflows/deploy.yml` :
+
 - ✅ Déclenche automatiquement à chaque `push` sur `main`
 - ✅ Déploie les fichiers statiques (HTML, CSS, JS)
 - ✅ Active GitHub Pages
@@ -67,6 +68,7 @@ Le fichier `.github/workflows/deploy.yml` :
 ```
 
 **Configuration recommandée** :
+
 - **Project Name**: `portfolio-richard`
 - **Framework Preset**: Other (static)
 - **Root Directory**: `.` (racine)
@@ -114,6 +116,7 @@ GITHUB_USER = NGOUBADJAMBO-Richard
 ### 2.4 Vérifier `api/github/dashboard.js`
 
 La fonction accepte les requêtes CORS :
+
 ```javascript
 res.setHeader("Access-Control-Allow-Origin", "*");
 res.setHeader("Access-Control-Allow-Methods", "GET, OPTIONS");
@@ -157,14 +160,17 @@ git push origin main
 ### Test 3 : Vérifier l'URL de l'API
 
 Oter `localhost:XXXX` (ou GitHub Pages URL) dans la console :
+
 ```javascript
 // Depuis GitHub Pages:
 console.log(window.__PORTFOLIO_CONFIG__.apiBaseUrl);
 // → "https://portfolio-richard.vercel.app"
 
-fetch("https://portfolio-richard.vercel.app/api/github/dashboard?user=NGOUBADJAMBO-Richard")
-  .then(r => r.json())
-  .then(data => console.log(data));
+fetch(
+  "https://portfolio-richard.vercel.app/api/github/dashboard?user=NGOUBADJAMBO-Richard",
+)
+  .then((r) => r.json())
+  .then((data) => console.log(data));
 ```
 
 ## 🔑 Secrets & Sécurité
@@ -175,10 +181,10 @@ fetch("https://portfolio-richard.vercel.app/api/github/dashboard?user=NGOUBADJAM
 
 ## 🌍 Domaines Finaux
 
-| Composant | URL |
-|-----------|-----|
-| **Frontend** | https://NGOUBADJAMBO-Richard.github.io/Portfolio-Richard |
-| **API** | https://portfolio-richard.vercel.app/api/github/dashboard |
+| Composant    | URL                                                       |
+| ------------ | --------------------------------------------------------- |
+| **Frontend** | https://NGOUBADJAMBO-Richard.github.io/Portfolio-Richard  |
+| **API**      | https://portfolio-richard.vercel.app/api/github/dashboard |
 
 ## 🔄 Mise à Jour Continue
 
@@ -195,13 +201,13 @@ git push origin main
 
 ## ❌ Dépannage
 
-| Problème | Solution |
-|----------|----------|
-| Dashboard vide | Vérifier `GITHUB_TOKEN` dans Vercel env vars |
-| Erreur CORS | Vérifier headers dans `api/github/dashboard.js` |
-| API non trouvée | Vérifier la route `/api/github/dashboard` dans `vercel.json` |
-| GitHub Pages ne se met pas à jour | Attendre 2-3 min + hard refresh (Ctrl+Shift+R) |
-| Ancien domaine affiché | Vider le cache du navigateur ou incognito |
+| Problème                          | Solution                                                     |
+| --------------------------------- | ------------------------------------------------------------ |
+| Dashboard vide                    | Vérifier `GITHUB_TOKEN` dans Vercel env vars                 |
+| Erreur CORS                       | Vérifier headers dans `api/github/dashboard.js`              |
+| API non trouvée                   | Vérifier la route `/api/github/dashboard` dans `vercel.json` |
+| GitHub Pages ne se met pas à jour | Attendre 2-3 min + hard refresh (Ctrl+Shift+R)               |
+| Ancien domaine affiché            | Vider le cache du navigateur ou incognito                    |
 
 ## 📞 Prochaines Étapes
 
