@@ -22,6 +22,7 @@
       <li><a href="#about" data-i18n="nav.about">À propos</a></li>
       <li><a href="#skills" data-i18n="nav.skills">Compétences</a></li>
       <li><a href="#projects" data-i18n="nav.projects">Projets</a></li>
+      <li><a href="#github-dashboard" data-i18n="nav.dashboard">GitHub</a></li>
       <li><a href="#showcase" data-i18n="nav.mobile">Mobile</a></li>
       <li><a href="#services" data-i18n="nav.services">Services</a></li>
       <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
@@ -38,6 +39,7 @@
     <a href="#about" onclick="toggleMenu()" data-i18n="nav.about">À propos</a>
     <a href="#skills" onclick="toggleMenu()" data-i18n="nav.skills">Compétences</a>
     <a href="#projects" onclick="toggleMenu()" data-i18n="nav.projects">Projets</a>
+    <a href="#github-dashboard" onclick="toggleMenu()" data-i18n="nav.dashboard">GitHub</a>
     <a href="#showcase" onclick="toggleMenu()" data-i18n="nav.mobile">Mobile</a>
     <a href="#services" onclick="toggleMenu()" data-i18n="nav.services">Services</a>
     <a href="#contact" onclick="toggleMenu()" data-i18n="nav.contact">Contact</a>
@@ -440,6 +442,106 @@
   </div>
 </section>
 
+<!-- GITHUB DASHBOARD -->
+<section id="github-dashboard">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag" data-i18n="gh.tag">GITHUB DASHBOARD</div>
+      <h2 class="section-title" data-i18n="gh.title">Tableau de bord de mon activité GitHub</h2>
+      <p class="section-desc" data-i18n="gh.desc">Indicateurs clés, tendances et dépôts récents pour visualiser ma progression technique en temps réel.</p>
+    </div>
+
+    <div class="gh-head reveal">
+      <div class="gh-head-main">
+        <div class="gh-avatar" id="ghAvatar">GH</div>
+        <div>
+          <div class="gh-identity" id="ghUsername">@NGOUBADJAMBO-Richard</div>
+          <div class="gh-meta" id="ghStatus" data-i18n="gh.loading">Chargement des données GitHub...</div>
+          <div class="gh-token-state" id="ghTokenState">Token: public mode</div>
+        </div>
+      </div>
+      <div class="gh-actions">
+        <button class="btn-secondary" id="ghRefreshBtn" type="button" data-i18n="gh.refresh">Actualiser les donnees</button>
+        <a class="btn-secondary" href="https://github.com/NGOUBADJAMBO-Richard" target="_blank" rel="noreferrer" data-i18n="gh.profile">Voir le profil GitHub →</a>
+      </div>
+    </div>
+
+    <div class="gh-kpis">
+      <article class="gh-kpi-card reveal">
+        <div class="gh-kpi-label" data-i18n="gh.kpi.followers">Followers</div>
+        <div class="gh-kpi-value" id="ghFollowers">-</div>
+      </article>
+      <article class="gh-kpi-card reveal">
+        <div class="gh-kpi-label" data-i18n="gh.kpi.repos">Repositories publics</div>
+        <div class="gh-kpi-value" id="ghPublicRepos">-</div>
+      </article>
+      <article class="gh-kpi-card reveal">
+        <div class="gh-kpi-label" data-i18n="gh.kpi.stars">Total stars</div>
+        <div class="gh-kpi-value" id="ghStars">-</div>
+      </article>
+      <article class="gh-kpi-card reveal">
+        <div class="gh-kpi-label" data-i18n="gh.kpi.forks">Total forks</div>
+        <div class="gh-kpi-value" id="ghForks">-</div>
+      </article>
+      <article class="gh-kpi-card reveal">
+        <div class="gh-kpi-label" data-i18n="gh.kpi.active30">Repos actifs (30j)</div>
+        <div class="gh-kpi-value" id="ghActiveRepos">-</div>
+      </article>
+      <article class="gh-kpi-card reveal">
+        <div class="gh-kpi-label" data-i18n="gh.kpi.events14">Evenements (14j)</div>
+        <div class="gh-kpi-value" id="ghEvents14">-</div>
+      </article>
+    </div>
+
+    <div class="gh-panels">
+      <article class="gh-panel reveal">
+        <h3 class="gh-panel-title" data-i18n="gh.languages">Top langages</h3>
+        <div id="ghLanguages" class="gh-stack-list"></div>
+      </article>
+
+      <article class="gh-panel reveal">
+        <h3 class="gh-panel-title" data-i18n="gh.activity">Activite recente (14 jours)</h3>
+        <div id="ghActivity" class="gh-activity-chart"></div>
+      </article>
+
+      <article class="gh-panel reveal">
+        <h3 class="gh-panel-title" data-i18n="gh.tools">Fonctionnalites et outils detectes</h3>
+        <div id="ghTools" class="gh-chip-list"></div>
+      </article>
+
+      <article class="gh-panel reveal">
+        <h3 class="gh-panel-title" data-i18n="gh.features">Fonctionnalites construites</h3>
+        <div id="ghFeatures" class="gh-chip-list"></div>
+      </article>
+    </div>
+
+    <article class="gh-panel reveal">
+      <div class="gh-panel-head">
+        <h3 class="gh-panel-title" data-i18n="gh.topRepos">Depots recents mis a jour</h3>
+        <span class="gh-last-sync" id="ghLastSync">-</span>
+      </div>
+      <div id="ghTopRepos" class="gh-repo-list"></div>
+    </article>
+
+    <article class="gh-panel reveal">
+      <div class="gh-panel-head">
+        <h3 class="gh-panel-title" data-i18n="gh.allRepos">Tous les projets GitHub</h3>
+        <span class="gh-last-sync" id="ghRepoCount">0</span>
+      </div>
+      <div class="gh-repo-toolbar">
+        <input id="ghRepoSearch" class="gh-search" type="search" placeholder="Rechercher un projet, langage, outil..."/>
+        <select id="ghRepoSort" class="gh-sort">
+          <option value="updated" data-i18n="gh.sort.updated">Plus recents</option>
+          <option value="stars" data-i18n="gh.sort.stars">Plus de stars</option>
+          <option value="name" data-i18n="gh.sort.name">A-Z</option>
+        </select>
+      </div>
+      <div id="ghAllRepos" class="gh-repo-list"></div>
+      <div id="ghRepoPagination" class="gh-pagination"></div>
+    </article>
+  </div>
+</section>
+
 <!-- MOBILE SHOWCASE -->
 <section id="showcase">
   <div class="container">
@@ -712,6 +814,7 @@
 <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="js/env.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
