@@ -1,3 +1,29 @@
+/**
+ * ╔════════════════════════════════════════════════════════════════╗
+ * ║  Portfolio Server - Backend Express.js                         ║
+ * ║  GitHub Dashboard Proxy & Static File Server                  ║
+ * ╚════════════════════════════════════════════════════════════════╝
+ *
+ * @author Richard NGOUBADJAMBO
+ * @company M.G.N CodeWave
+ * @version 1.0.0
+ * @description Serveur Node.js + Express pour portfolio et proxy GitHub API
+ * @license MIT
+ *
+ * Fonctionnalités:
+ * - Serveur static pour fichiers HTML/CSS/JS
+ * - Proxy API GitHub avec cache pour éviter les rate limits
+ * - Endpoints:
+ *   • GET /api/github/dashboard - Dashboard utilisateur GitHub
+ *   • GET /api/github/activity - Activité récente
+ *   • Health check: GET /
+ *
+ * Env vars requises:
+ * - PORT: numéro port (défaut: 3000)
+ * - GITHUB_USER: username GitHub (défaut: NGOUBADJAMBO-Richard)
+ * - GITHUB_TOKEN: token authentification GitHub (optionnel)
+ */
+
 const express = require("express");
 const path = require("path");
 const dotenv = require("dotenv");

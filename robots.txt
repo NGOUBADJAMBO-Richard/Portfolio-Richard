@@ -1,0 +1,32 @@
+# Robots.txt - Portfolio Richard NGOUBADJAMBO
+# https://portfolio-richard.vercel.app/robots.txt
+# 
+# Reference: https://www.robotstxt.org/
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /.env
+Disallow: /node_modules/
+Disallow: /package-lock.json
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing specific
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Delay for other bots
+User-agent: *
+Crawl-delay: 2
+
+# Sitemap location
+Sitemap: https://portfolio-richard.vercel.app/sitemap.xml
+
+# Archive.org
+User-agent: archive.org_bot
+Disallow: /

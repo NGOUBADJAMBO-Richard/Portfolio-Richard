@@ -1,0 +1,304 @@
+/**
+ * Schema.org Structured Data - Portfolio Richard NGOUBADJAMBO
+ *
+ * Fichier JSON-LD pour:
+ * - Rich snippets Google Search
+ * - Breadcrumbs
+ * - Person schema
+ * - Organization schema
+ * - BreadcrumbList
+ *
+ * À inclure dans <head> du HTML:
+ * <script type="application/ld+json">
+ *   [Contenu de ce fichier]
+ * </script>
+ */
+
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://portfolio-richard.vercel.app/#website",
+      "url": "https://portfolio-richard.vercel.app",
+      "name": "Richard NGOUBADJAMBO — Ingénieur Fullstack & Mobile",
+      "description": "Portfolio professionnel de Richard NGOUBADJAMBO. Ingénieur Fullstack & Mobile, Expert Flutter, Chef de Projet IT.",
+      "publisher": {
+        "@id": "https://portfolio-richard.vercel.app/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://portfolio-richard.vercel.app/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://portfolio-richard.vercel.app/#person",
+      "name": "Richard NGOUBADJAMBO",
+      "url": "https://portfolio-richard.vercel.app",
+      "email": "contact@mgncodewavedev.com",
+      "jobTitle": [
+        "Ingénieur Fullstack & Mobile",
+        "Chef de Projet IT",
+        "Fondateur M.G.N CodeWave"
+      ],
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://portfolio-richard.vercel.app/assets/images/Richard.png",
+        "width": 1200,
+        "height": 630
+      },
+      "description": "Ingénieur d'État en Informatique avec 5+ ans d'expérience. Spécialisé en Flutter, Node.js, React. Fondateur de M.G.N CodeWave pour solutions digitales africaines.",
+      "sameAs": [
+        "https://github.com/NGOUBADJAMBO-Richard",
+        "https://twitter.com/ngoubadjambo",
+        "https://www.linkedin.com/in/richard-ngoubadjambo"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "@id": "https://portfolio-richard.vercel.app/#organization",
+        "name": "M.G.N CodeWave",
+        "url": "https://mgncodewavedev.com"
+      },
+      "knowsLanguage": [
+        {
+          "@type": "Language",
+          "name": "Français",
+          "alternateName": "FR"
+        },
+        {
+          "@type": "Language",
+          "name": "Anglais",
+          "alternateName": "EN"
+        }
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "EMSI - École Marocaine des Sciences de l'Ingénieur",
+        "location": {
+          "@type": "Place",
+          "name": "Rabat, Maroc"
+        }
+      },
+      "award": ["Ingénieur d'État en Informatique & Réseaux"]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://portfolio-richard.vercel.app/#organization",
+      "name": "M.G.N CodeWave",
+      "url": "https://mgncodewavedev.com",
+      "email": "contact@mgncodewavedev.com",
+      "description": "Solutions digitales complètes pour startups et entreprises africaines",
+      "founder": {
+        "@id": "https://portfolio-richard.vercel.app/#person"
+      },
+      "foundingDate": "2024",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Afrique"
+      },
+      "knowsAbout": [
+        "Développement Mobile Flutter",
+        "Applications Web React/Next.js",
+        "Backend Node.js",
+        "CMS Drupal/WordPress",
+        "Gestion de Projet IT",
+        "UI/UX & Branding Digital"
+      ],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://portfolio-richard.vercel.app/assets/images/MGN_Logo.png",
+        "width": 400,
+        "height": 400
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://portfolio-richard.vercel.app"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "À propos",
+          "item": "https://portfolio-richard.vercel.app#about"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Compétences",
+          "item": "https://portfolio-richard.vercel.app#skills"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Projets",
+          "item": "https://portfolio-richard.vercel.app#projects"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Services",
+          "item": "https://portfolio-richard.vercel.app#services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Contact",
+          "item": "https://portfolio-richard.vercel.app#contact"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://portfolio-richard.vercel.app/#webpage",
+      "url": "https://portfolio-richard.vercel.app",
+      "name": "Richard NGOUBADJAMBO — Ingénieur Fullstack & Mobile | Portfolio",
+      "description": "Portfolio professionnel de Richard NGOUBADJAMBO. Ingénieur Fullstack & Mobile, Expert Flutter, Chef de Projet IT. Solutions digitales pour startups et entreprises africaines.",
+      "isPartOf": {
+        "@id": "https://portfolio-richard.vercel.app/#website"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://portfolio-richard.vercel.app/assets/images/Richard.png",
+        "width": 1200,
+        "height": 630
+      },
+      "datePublished": "2024-01-15T08:00:00+00:00",
+      "dateModified": "2024-04-12T10:30:00+00:00",
+      "author": {
+        "@id": "https://portfolio-richard.vercel.app/#person"
+      },
+      "publisher": {
+        "@id": "https://portfolio-richard.vercel.app/#organization"
+      },
+      "inLanguage": "fr-FR",
+      "potentialAction": [
+        {
+          "@type": "ReadAction",
+          "target": "https://portfolio-richard.vercel.app#projects"
+        },
+        {
+          "@type": "ContactAction",
+          "target": "https://portfolio-richard.vercel.app#contact"
+        }
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://portfolio-richard.vercel.app/#localbusiness",
+      "name": "M.G.N CodeWave",
+      "description": "Agence digitale spécialisée en solutions mobiles et web",
+      "image": "https://portfolio-richard.vercel.app/assets/images/MGN_Logo.png",
+      "url": "https://mgncodewavedev.com",
+      "email": "contact@mgncodewavedev.com",
+      "telephone": "",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Afrique"
+      },
+      "priceRange": "$$$",
+      "knowsAbout": [
+        {
+          "@type": "Service",
+          "name": "Développement Mobile Flutter",
+          "description": "Applications iOS & Android performantes"
+        },
+        {
+          "@type": "Service",
+          "name": "Applications Web React/Next.js",
+          "description": "Interfaces web modernes et rapides"
+        },
+        {
+          "@type": "Service",
+          "name": "Backend & API Node.js",
+          "description": "Architectures backend robustes"
+        },
+        {
+          "@type": "Service",
+          "name": "CMS Drupal/WordPress",
+          "description": "Sites web corporate et e-commerce"
+        },
+        {
+          "@type": "Service",
+          "name": "Consulting & Gestion de Projet IT",
+          "description": "Cadrage et pilotage de projets digitaux"
+        },
+        {
+          "@type": "Service",
+          "name": "UI/UX & Branding Digital",
+          "description": "Design systems et identités visuelles"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qui est Richard NGOUBADJAMBO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Richard NGOUBADJAMBO est un ingénieur fullstack et mobile avec 5+ ans d'expérience. Diplômé d'État en Informatique de l'EMSI (Maroc), il a piloté des projets complexes et fondé M.G.N CodeWave pour proposer des solutions digitales complètes aux entreprises africaines."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quels services propose M.G.N CodeWave?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "M.G.N CodeWave propose 6 services: développement mobile Flutter, applications web React/Next.js, backend Node.js, CMS Drupal/WordPress, consulting & gestion de projet IT, et UI/UX & branding digital."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment contacter Richard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vous pouvez contacter Richard via le formulaire de contact sur son portfolio (https://portfolio-richard.vercel.app#contact), par email à contact@mgncodewavedev.com, ou sur Twitter @ngoubadjambo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel est le stack technique utilisé?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le portfolio utilise: Frontend (HTML5, CSS3, JavaScript ES6+), Backend (Node.js, Express.js), APIs (GitHub API), Déploiement (Vercel), et technologies variées selon les projets (Flutter, React, MongoDB, Firebase)."
+          }
+        }
+      ]
+    }
+  ]
+}
+
+/**
+ * 📝 INSTRUCTIONS D'UTILISATION
+ *
+ * 1. Copier ce contenu JSON dans un fichier separate (ex: schema.json)
+ * 2. Ajouter dans <head> du index.html avant </head>:
+ *
+ *   <script type="application/ld+json">
+ *     [Contenu complet du fichier]
+ *   </script>
+ *
+ * 3. Valider avec Google Rich Results Test:
+ *    https://search.google.com/test/rich-results
+ *
+ * 4. Vérifier dans Google Search Console
+ *
+ * ✅ BENEFITS:
+ * - Rich snippets dans Google Search
+ * - Meilleur CTR
+ * - Données structurées validées
+ * - FAQs apparaissent dans search results
+ * - Knowledge graph enrichi
+ * - Voice search optimization
+ */

@@ -1,4 +1,71 @@
-﻿:root[data-theme="dark"] {
+﻿/**
+ * ╔════════════════════════════════════════════════════════════════╗
+ * ║  Portfolio CSS - Richard NGOUBADJAMBO                          ║
+ * ║  Stylesheets et Design System                                  ║
+ * ╚════════════════════════════════════════════════════════════════╝
+ * 
+ * @file styles.css
+ * @author Richard NGOUBADJAMBO
+ * @company M.G.N CodeWave
+ * @license MIT
+ * @version 1.0.0
+ * @lastModified 2026-04
+ * 
+ * 📐 ARCHITECTURE CSS:
+ * ├── Variables CSS (Dark/Light themes)
+ * ├── Reset & Global styles
+ * ├── Navbar (Fixed, responsive)
+ * ├── Hero section
+ * ├── Stats bar
+ * ├── About section (Timeline)
+ * ├── Skills grid
+ * ├── Projects showcase (Filtrable)
+ * ├── Mobile Showcase
+ * ├── Services grid
+ * ├── GitHub Dashboard
+ * ├── Contact form
+ * ├── Footer
+ * ├── Animations (Scroll reveal, hover effects)
+ * └── Responsive design (Mobile-first)
+ * 
+ * 🎨 COLOR SCHEME:
+ * DARK MODE (défaut):
+ * - bg: #0a0e1a (background principal)
+ * - surface: #1a2340 (cards)
+ * - accent: #3d6fff (bleu)
+ * - accent2: #00d4ff (cyan)
+ * - accent3: #7b5ea7 (purple)
+ * - text: #e8eaf6 (blanc cassé)
+ * - text2: #9aa3c8 (gris clair)
+ * 
+ * LIGHT MODE:
+ * - bg: #f4f6fb (blanc light)
+ * - surface: #ffffff (blanc pur)
+ * - Same accents with adjusted opacity
+ * 
+ * 📱 RESPONSIVE BREAKPOINTS:
+ * - Mobile: < 768px
+ * - Tablet: 768px - 1024px
+ * - Desktop: > 1024px
+ * 
+ * ⚡ PERFORMANCE:
+ * - CSS custom properties (variables)
+ * - Transition smooth (0.4s)
+ * - Backdrop-filter blur (Glass morphism)
+ * - Hardware acceleration (transform, will-change)
+ * 
+ * 🔧 BROWSERS SUPPORT:
+ * - Modern browsers (Chrome, Firefox, Safari, Edge)
+ * - CSS Grid & Flexbox
+ * - CSS Custom Properties
+ * - Backdrop filter (with fallback)
+ * 
+ * 📦 DEPENDENCIES:
+ * - Google Fonts: Syne (headings), Space Grotesk (body)
+ * - No external CSS libraries
+ */
+
+:root[data-theme="dark"] {
   --bg: #0a0e1a;
   --bg2: #0f1628;
   --bg3: #151d35;

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://portfolio-richard.vercel.app</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://portfolio-richard.vercel.app/assets/images/Richard.png</image:loc>
+      <image:title>Richard NGOUBADJAMBO - Ingénieur Fullstack & Mobile</image:title>
+    </image:image>
+  </url>
+
+  <!-- Anchor links / Sections -->
+  <url>
+    <loc>https://portfolio-richard.vercel.app/#hero</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://portfolio-richard.vercel.app/#about</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://portfolio-richard.vercel.app/#skills</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://portfolio-richard.vercel.app/#projects</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>bi-weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://portfolio-richard.vercel.app/assets/images/MGN_Logo.png</image:loc>
+      <image:title>M.G.N CodeWave Logo</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://portfolio-richard.vercel.app/#showcase</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://portfolio-richard.vercel.app/#services</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://portfolio-richard.vercel.app/#github-dashboard</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://portfolio-richard.vercel.app/#contact</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://portfolio-richard.vercel.app/#mgn-agency</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+</urlset>

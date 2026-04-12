@@ -1,4 +1,31 @@
-﻿// ===================== I18N =====================
+﻿/**
+ * ╔════════════════════════════════════════════════════════════════╗
+ * ║  Portfolio - Richard NGOUBADJAMBO                              ║
+ * ║  Ingénieur Fullstack & Mobile | Chef de Projet IT             ║
+ * ║  M.G.N CodeWave - Solutions Digitales                          ║
+ * ╚════════════════════════════════════════════════════════════════╝
+ *
+ * @author Richard NGOUBADJAMBO
+ * @company M.G.N CodeWave
+ * @version 1.0.0
+ * @description Portfolio interactif avec i18n, thème dark/light, GitHub dashboard
+ * @license MIT
+ * @updated 2024
+ *
+ * Modules:
+ * - i18n: Internationalisation (FR/EN)
+ * - Theme: Gestion thème sombre/clair
+ * - GitHub Dashboard: Intégration API GitHub en temps réel
+ * - Animations: Scroll reveal et interactions Intersection Observer
+ * - Contact: Formulaire avec validation
+ */
+
+// ===================== I18N =====================
+/**
+ * Système d'internationalisation (FR/EN)
+ * Gère la traduction dynamique des contenus via attributs data-i18n
+ * @type {Object}
+ */
 const i18n = {
   fr: {
     "nav.about": "À propos",

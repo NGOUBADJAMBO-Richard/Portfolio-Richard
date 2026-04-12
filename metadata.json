@@ -1,0 +1,403 @@
+{
+  "project": {
+    "name": "Portfolio Richard NGOUBADJAMBO",
+    "slug": "portfolio-richard",
+    "version": "1.0.0",
+    "description": "Portfolio professionnel interactif avec GitHub dashboard en temps réel. Ingénieur Fullstack & Mobile - Solutions digitales complètes.",
+    "type": "portfolio",
+    "status": "production",
+    "author": {
+      "name": "Richard NGOUBADJAMBO",
+      "email": "mgncodewave18@gmail.com",
+      "title": "Ingénieur Fullstack & Mobile",
+      "company": "M.G.N CodeWave",
+      "github": "NGOUBADJAMBO-Richard",
+      "twitter": "@ngoubadjambo",
+      "location": "Afrique",
+      "bio": "Ingénieur d'État en Informatique & Réseaux, fondateur M.G.N CodeWave. Passionné par les solutions digitales impactantes."
+    },
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/NGOUBADJAMBO-Richard/Portfolio-Richard.git",
+      "branch": "main"
+    },
+    "homepage": "https://portfolio-richard.vercel.app",
+    "keywords": [
+      "ingénieur fullstack",
+      "développeur mobile flutter",
+      "chef de projet IT",
+      "solutions digitales",
+      "backend robuste",
+      "frontend react",
+      "firebase",
+      "drupal wordpress",
+      "portfolio",
+      "agence tech"
+    ]
+  },
+  "seo": {
+    "title": "Richard NGOUBADJAMBO — Ingénieur Fullstack & Mobile | Portfolio",
+    "description": "Portfolio professionnel de Richard NGOUBADJAMBO. Ingénieur Fullstack & Mobile, Expert Flutter, Chef de Projet IT. Solutions digitales pour startups et entreprises africaines.",
+    "canonical": "https://portfolio-richard.vercel.app",
+    "ogTitle": "Richard NGOUBADJAMBO — Ingénieur Fullstack & Mobile",
+    "ogDescription": "Je conçois et livre des solutions digitales complètes — du backend robuste aux interfaces mobiles élégantes. Ingénieur d'État avec une vision produit et une passion pour l'impact.",
+    "ogImage": "https://portfolio-richard.vercel.app/assets/images/Richard.png",
+    "ogType": "website",
+    "ogUrl": "https://portfolio-richard.vercel.app",
+    "twitterCard": "summary_large_image",
+    "twitterCreator": "@ngoubadjambo",
+    "twitterImage": "https://portfolio-richard.vercel.app/assets/images/Richard.png",
+    "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+    "locale": "fr_FR",
+    "language": "fr",
+    "themeColor": "#0a0e27",
+    "colorScheme": "dark light",
+    "revisitAfter": 7
+  },
+  "openGraph": {
+    "type": "website",
+    "url": "https://portfolio-richard.vercel.app",
+    "title": "Richard NGOUBADJAMBO — Ingénieur Fullstack & Mobile",
+    "description": "Je conçois et livre des solutions digitales complètes — du backend robuste aux interfaces mobiles élégantes.",
+    "image": "https://portfolio-richard.vercel.app/assets/images/Richard.png",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_alt": "Richard NGOUBADJAMBO - Ingénieur Fullstack & Mobile",
+    "site_name": "Portfolio Richard",
+    "locale": "fr_FR",
+    "locale_alternate": ["en_US"]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "site": "@ngoubadjambo",
+    "creator": "@ngoubadjambo",
+    "url": "https://portfolio-richard.vercel.app",
+    "title": "Richard NGOUBADJAMBO — Ingénieur Fullstack & Mobile",
+    "description": "Je conçois et livre des solutions digitales complètes — du backend robuste aux interfaces mobiles élégantes.",
+    "image": "https://portfolio-richard.vercel.app/assets/images/Richard.png",
+    "image_alt": "Richard NGOUBADJAMBO"
+  },
+  "linkedin": {
+    "card": "summary_large_image",
+    "url": "https://portfolio-richard.vercel.app",
+    "title": "Richard NGOUBADJAMBO — Ingénieur Fullstack & Mobile",
+    "description": "Portfolio professionnel complet - solutions digitales complètes.",
+    "image": "https://portfolio-richard.vercel.app/assets/images/Richard.png"
+  },
+  "tech": {
+    "frontend": {
+      "html": "5",
+      "css": "3",
+      "javascript": "ES6+",
+      "fonts": ["Google Fonts: Syne", "Google Fonts: Space Grotesk"],
+      "features": [
+        "i18n FR/EN",
+        "Dark/Light Mode",
+        "Intersection Observer",
+        "Responsive Design"
+      ]
+    },
+    "backend": {
+      "runtime": "Node.js 16+",
+      "framework": "Express.js 4.19+",
+      "apis": ["GitHub API v3"],
+      "cache": "Map with 10min TTL",
+      "security": ["GitHub Token", "CORS", "Rate Limiting"]
+    },
+    "deployment": {
+      "platform": "Vercel",
+      "build": "npm install && npm start",
+      "environment": "Node.js",
+      "https": true,
+      "autoDeployOnPush": true
+    },
+    "packages": {
+      "dotenv": "^16.4.5",
+      "express": "^4.19.2"
+    }
+  },
+  "performance": {
+    "targetLCP": "< 2.5s",
+    "targetFID": "< 100ms",
+    "targetCLS": "< 0.1",
+    "targetPageLoad": "< 3s",
+    "targetLighthouseScore": 90,
+    "optimizations": [
+      "Preconnect fonts",
+      "Lazy loading images",
+      "CSS minification",
+      "GitHub API caching (10min TTL)",
+      "Gzip compression (Vercel)"
+    ]
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "title": "Héros",
+      "label": "Présentation principale",
+      "content": "Intro + CTA principales"
+    },
+    {
+      "id": "stats",
+      "title": "Statistiques",
+      "label": "KPIs clés",
+      "content": "Expérience, projets, stacks, agence"
+    },
+    {
+      "id": "about",
+      "title": "À Propos",
+      "label": "Qui suis-je",
+      "content": "Bio + Timeline parcours et formation"
+    },
+    {
+      "id": "skills",
+      "title": "Compétences",
+      "label": "Stack technique",
+      "content": "Mobile Flutter, Frontend, Backend, CMS, Gestion de projet, Langues"
+    },
+    {
+      "id": "projects",
+      "title": "Projets",
+      "label": "Portfolio",
+      "content": "Grid filtrable - Web, Mobile, Branding"
+    },
+    {
+      "id": "showcase",
+      "title": "Mobile Showcase",
+      "label": "Case study Flutter",
+      "content": "Application Flutter Akanda Tech de A à Z"
+    },
+    {
+      "id": "services",
+      "title": "Services",
+      "label": "Offerings M.G.N CodeWave",
+      "content": "6 services: Mobile, Web, Backend, CMS, Consulting, UI/UX"
+    },
+    {
+      "id": "github-dashboard",
+      "title": "GitHub Dashboard",
+      "label": "Activity en temps réel",
+      "content": "Stats GitHub, repos, langages top"
+    },
+    {
+      "id": "contact",
+      "title": "Contact",
+      "label": "Formulaire",
+      "content": "Solliciter une collaboration"
+    }
+  ],
+  "services": [
+    {
+      "id": "s1",
+      "name": "Développement Mobile Flutter",
+      "description": "Applications iOS & Android performantes, développées avec Flutter. De l'idée à l'App Store.",
+      "features": [
+        "Architecture scalable (Provider/Clean)",
+        "Intégration Firebase complète",
+        "Optimisation des performances",
+        "Déploiement App Store / Play Store"
+      ],
+      "cost": "haute"
+    },
+    {
+      "id": "s2",
+      "name": "Applications Web React / Next.js",
+      "description": "Interfaces web modernes, rapides et accessibles. Dashboards, landing pages et plateformes SaaS.",
+      "features": [
+        "React.js / Next.js / Tailwind",
+        "Responsive mobile-first",
+        "Intégration API REST",
+        "Optimisation SEO & Core Web Vitals"
+      ],
+      "cost": "moyenne"
+    },
+    {
+      "id": "s3",
+      "name": "Backend & API Node.js",
+      "description": "Architectures backend robustes, APIs RESTful documentées, bases de données SQL et NoSQL.",
+      "features": [
+        "Node.js / Express.js",
+        "MongoDB & MySQL",
+        "Firebase Firestore",
+        "Authentification JWT / Firebase Auth"
+      ],
+      "cost": "moyenne"
+    },
+    {
+      "id": "s4",
+      "name": "Sites Web CMS (Drupal / WordPress)",
+      "description": "Sites corporate, e-commerce et blogs sur mesure. Optimisés pour le SEO et la performance.",
+      "features": [
+        "Drupal entreprise",
+        "WordPress sur mesure",
+        "SEO technique avancé",
+        "Maintenance et évolution"
+      ],
+      "cost": "basse"
+    },
+    {
+      "id": "s5",
+      "name": "Consulting & Gestion de Projet IT",
+      "description": "Cadrage de projet, spécifications fonctionnelles, coordination d'équipes tech.",
+      "features": [
+        "Cahier des charges & specs",
+        "Gestion Agile / Scrum",
+        "Coordination équipe dev",
+        "Reporting et relation client"
+      ],
+      "cost": "haute"
+    },
+    {
+      "id": "s6",
+      "name": "UI/UX & Branding Digital",
+      "description": "Identité visuelle, wireframes, prototypes interactifs et design systems cohérents.",
+      "features": [
+        "Wireframes & maquettes",
+        "Design system",
+        "Identité de marque",
+        "Optimisation UX"
+      ],
+      "cost": "moyenne"
+    }
+  ],
+  "projects": [
+    {
+      "id": "p1",
+      "name": "App Mobile Flutter — Akanda Tech",
+      "description": "Application multiplateforme iOS & Android développée de A à Z. Architecture Firebase Firestore, authentification, gestion d'état Provider.",
+      "category": "mobile",
+      "technologies": ["Flutter", "Dart", "Firebase"],
+      "link": "#"
+    },
+    {
+      "id": "p2",
+      "name": "Plateforme Web Drupal",
+      "description": "Développement et maintenance de plateformes web entreprises sous Drupal. Nouvelles fonctionnalités, optimisation SEO et relation client.",
+      "category": "web",
+      "technologies": ["Drupal", "PHP", "MySQL"],
+      "link": "#"
+    },
+    {
+      "id": "p3",
+      "name": "Interface React.js — Dashboard Analytics",
+      "description": "Design system component-driven avec React.js et Tailwind CSS.",
+      "category": "frontend",
+      "technologies": ["React", "Tailwind CSS", "JavaScript"],
+      "link": "#"
+    },
+    {
+      "id": "p4",
+      "name": "API Node.js + MongoDB",
+      "description": "Backend RESTful avec Node.js et MongoDB. Architecture modulaire, authentification JWT.",
+      "category": "backend",
+      "technologies": ["Node.js", "Express", "MongoDB"],
+      "link": "#"
+    },
+    {
+      "id": "p5",
+      "name": "M.G.N CodeWave — Identité de Marque",
+      "description": "Création complète de l'identité visuelle et digitale de l'agence.",
+      "category": "branding",
+      "technologies": ["Figma", "Design", "Branding"],
+      "link": "#"
+    },
+    {
+      "id": "p6",
+      "name": "Portfolio Mobile — MGN",
+      "description": "Application de présentation interactive des services MGN CodeWave.",
+      "category": "mobile",
+      "technologies": ["Flutter", "UI/UX"],
+      "link": "#"
+    }
+  ],
+  "i18n": {
+    "defaultLanguage": "fr",
+    "supportedLanguages": ["fr", "en"],
+    "direction": "LTR"
+  },
+  "theme": {
+    "defaultMode": "dark",
+    "supportedModes": ["dark", "light"],
+    "colors": {
+      "primary": "#0a0e27",
+      "accent": "#00D4FF",
+      "surface": "#16213E",
+      "border": "#2D3561",
+      "text": "#E8E8E8",
+      "textSecondary": "#B0B0B0"
+    }
+  },
+  "contact": {
+    "email": "contact@mgncodewavedev.com",
+    "services": [
+      "Projet Mobile Flutter",
+      "Application Web React/Next.js",
+      "Gestion de Projet IT",
+      "Backend Node.js",
+      "Autre demande"
+    ],
+    "formFields": ["name", "email", "subject", "message"],
+    "defaultMessage": "Bonjour, je souhaite vous solliciter pour..."
+  },
+  "agency": {
+    "name": "M.G.N CodeWave",
+    "description": "Solutions digitales complètes pour startups et entreprises africaines.",
+    "website": "https://mgncodewavedev.com",
+    "founded": 2024,
+    "focus": "Afrique",
+    "services": 6
+  },
+  "stats": {
+    "experience": "5+",
+    "projects": "10+",
+    "stacks": "3",
+    "agency": 1,
+    "yearsInTech": 5,
+    "clientsSatisfied": "10+",
+    "languagesSpoken": ["Français", "Anglais"]
+  },
+  "education": {
+    "degree": "Ingénieur d'État en Informatique & Réseaux",
+    "school": "EMSI (École Marocaine des Sciences de l'Ingénieur)",
+    "location": "Rabat, Maroc",
+    "graduation": 2020
+  },
+  "experience": [
+    {
+      "id": "exp1",
+      "title": "Chef de Projet IT / Dev Mobile Flutter",
+      "company": "Akanda Tech",
+      "duration": "10 mois",
+      "description": "Pilotage complet d'une application mobile iOS & Android. Spécifications, wireframes, Firebase, sprints, tests et mise en production."
+    },
+    {
+      "id": "exp2",
+      "title": "Développeur Web Drupal",
+      "company": "Divers clients",
+      "duration": "2+ ans",
+      "description": "Développement de plateformes web, nouvelles fonctionnalités, relation client, gestion de projet."
+    },
+    {
+      "id": "exp3",
+      "title": "Chargé de Clientèle",
+      "company": "Client Management",
+      "duration": "1 an",
+      "description": "Gestion et développement d'un portefeuille clients."
+    },
+    {
+      "id": "exp4",
+      "title": "Créateur de Contenu / Freelance WordPress",
+      "company": "Freelance",
+      "duration": "Continu",
+      "description": "Création de sites WordPress optimisés SEO pour des clients entreprises."
+    }
+  ],
+  "metadata": {
+    "created": "2024-01-15",
+    "updated": "2024-04-12",
+    "version": "1.0.0",
+    "lastReviewDate": "2024-04-12",
+    "nextReviewDate": "2024-07-12"
+  }
+}
