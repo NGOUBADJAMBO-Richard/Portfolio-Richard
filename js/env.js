@@ -5,7 +5,7 @@ const isProduction =
 const isGithubPages = window.location.hostname.includes("github.io");
 
 window.__PORTFOLIO_CONFIG__ = {
-  githubUser: "NGOUBADJAMBO-Richard",
+  githubUser: "NGOUBADJAMBO-Richard", // Nom d'utilisateur GitHub
 
   // Production sur GitHub Pages → API Vercel
   // Local (localhost) → API Express local
