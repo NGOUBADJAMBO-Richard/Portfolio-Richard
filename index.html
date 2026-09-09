@@ -1,13 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr" data-theme="dark" data-lang="fr">
 <head>
 <!-- Meta de Base -->
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
 <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-<title>Richard NGOUBADJAMBO — Ingénieur Fullstack & Mobile | Portfolio</title>
-<meta name="description" content="Portfolio professionnel de Richard NGOUBADJAMBO. Ingénieur Fullstack & Mobile, Expert Flutter, Chef de Projet IT. Solutions digitales pour startups et entreprises africaines."/>
-<meta name="keywords" content="ingénieur fullstack, développeur mobile flutter, chef de projet IT, solutions digitales, backend robuste, interfaces mobiles, MGN CodeWave"/>
+<title>Richard NGOUBADJAMBO — Ingénieur Fullstack &amp; Mobile | Portfolio</title>
+<meta name="description" content="Portfolio de Richard NGOUBADJAMBO, Ingénieur Fullstack &amp; Mobile et Chef de Projet IT. Applications PWA React / Node.js / PostgreSQL, mobile Flutter, pilotage agile de bout en bout pour startups et entreprises africaines."/>
+<meta name="keywords" content="ingénieur fullstack, développeur mobile flutter, chef de projet IT, PWA React, Node.js, PostgreSQL, Firebase Firestore, gestion de projet agile, cahier des charges, solutions digitales, MGN CodeWave, Libreville Gabon"/>
 <meta name="author" content="Richard NGOUBADJAMBO"/>
 <meta name="creator" content="Richard NGOUBADJAMBO"/>
 <meta name="publisher" content="M.G.N CodeWave"/>
@@ -29,7 +29,7 @@
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://portfolio-richard.vercel.app"/>
 <meta property="og:title" content="Richard NGOUBADJAMBO — Ingénieur Fullstack & Mobile"/>
-<meta property="og:description" content="Je conçois et livre des solutions digitales complètes — du backend robuste aux interfaces mobiles élégantes. Ingénieur d'État avec une vision produit et une passion pour l'impact."/>
+<meta property="og:description" content="Ingénieur Fullstack &amp; Mobile et Chef de Projet IT. Je pilote les produits de bout en bout — cahier des charges, UX, développement React / Node.js / Flutter, tests, déploiement et suivi de performance."/>
 <meta property="og:image" content="https://portfolio-richard.vercel.app/assets/images/Richard.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
@@ -42,7 +42,7 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:url" content="https://portfolio-richard.vercel.app"/>
 <meta name="twitter:title" content="Richard NGOUBADJAMBO — Ingénieur Fullstack & Mobile"/>
-<meta name="twitter:description" content="Je conçois et livre des solutions digitales complètes — du backend robuste aux interfaces mobiles élégantes."/>
+<meta name="twitter:description" content="Ingénieur Fullstack &amp; Mobile et Chef de Projet IT. Pilotage produit de bout en bout : PWA React / Node.js, mobile Flutter, sprints agiles."/>
 <meta name="twitter:image" content="https://portfolio-richard.vercel.app/assets/images/Richard.png"/>
 <meta name="twitter:image:alt" content="Richard NGOUBADJAMBO"/>
 <meta name="twitter:creator" content="@ngoubadjambo"/>
@@ -70,6 +70,43 @@
 </head>
 <body>
 
+<!-- SPRITE D'ICONES — stroke + currentColor, hérite de la couleur du texte -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2.5 6.5 9.5 6 9.5-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3h-3A1.5 1.5 0 0 0 2 4.5 17.5 17.5 0 0 0 19.5 22 1.5 1.5 0 0 0 21 20.5v-3a1.5 1.5 0 0 0-1.2-1.47l-3-.6a1.5 1.5 0 0 0-1.5.64l-.9 1.35a13 13 0 0 1-5.9-5.9l1.35-.9a1.5 1.5 0 0 0 .64-1.5l-.6-3A1.5 1.5 0 0 0 6.5 3Z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-11.9 7.8L3 21l1.7-6.1A8.5 8.5 0 1 1 21 11.5Z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="9" width="4" height="12" rx="1"/><circle cx="4" cy="4.5" r="2"/><path d="M10 21V9m0 5.5a4 4 0 0 1 8 0V21"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.5s7-5.7 7-11.5a7 7 0 1 0-14 0c0 5.8 7 11.5 7 11.5Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-smartphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18.2h2"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-6 6 6 6M16 6l6 6-6 6"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="7" rx="1.5"/><rect x="3" y="13" width="18" height="7" rx="1.5"/><path d="M7 7.5h.01M7 16.5h.01"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m7 10 3 2.5-3 2.5M13 15h4"/></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M9 11h6M9 15h4"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-9 12h7l-1 8 9-12h-7Z"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M17 8.2a3.5 3.5 0 0 1 0 6.6M18.2 20a6.6 6.6 0 0 0-2.4-5"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v9a2 2 0 0 1-2 2h-4v-6H9v6H5a2 2 0 0 1-2-2Z"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="12" r="4.5"/><path d="M12.5 12H22M18 12v3.5M21.5 12v2.5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.5s7.5-3.5 7.5-9.5V5.6L12 2.5 4.5 5.6V12c0 6 7.5 9.5 7.5 9.5Z"/><path d="m9 12 2.2 2.2L15.2 10"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.2 6.3L20.5 12l-6.3 2.7L12 21l-2.2-6.3L3.5 12l6.3-2.7Z"/></symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.2 12 2.6 2.6 5-5.2"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><rect x="5" y="11" width="3.2" height="7"/><rect x="10.4" y="6" width="3.2" height="12"/><rect x="15.8" y="14" width="3.2" height="4"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7.5 20-3.5-8.5L2.5 10Z"/><path d="M22 2 11 13"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M8 7V5.5A2.5 2.5 0 0 1 10.5 3h3A2.5 2.5 0 0 1 16 5.5V7M2 12.5h20"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4.5 21a7.5 7.5 0 0 1 15 0"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="8" height="15" rx="1"/><rect x="13" y="3" width="8" height="18" rx="1"/><path d="M6 10h2M6 14h2M16 7h2M16 11h2M16 15h2"/></symbol>
+    <symbol id="i-flutter" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 11l3 3 12-12Z"/><path d="m12 13-4 4 4 4h6l-4-4 4-4Z"/></symbol>
+  </defs>
+</svg>
+
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
@@ -85,14 +122,15 @@
       <li><a href="#showcase" data-i18n="nav.mobile">Mobile</a></li>
       <li><a href="#services" data-i18n="nav.services">Services</a></li>
       <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-      <li><a href="#mgn-agency" style="color:var(--accent);font-weight:700;" data-i18n="nav.agency">🚀 Mon Agence</a></li>
+      <li><a href="#mgn-agency" style="color:var(--accent);font-weight:700;" data-i18n="nav.agency">Mon Agence</a></li>
+    </ul>
     <div class="nav-controls">
-      <button class="toggle-btn" id="langToggle">EN</button>
-      <button class="toggle-btn" id="themeToggle">☀️</button>
+      <button class="toggle-btn" type="button" id="langToggle" aria-label="Switch to English">EN</button>
+      <button class="toggle-btn" type="button" id="themeToggle" aria-label="Basculer le thème clair / sombre"><svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"/></svg><svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"/></svg></button>
     </div>
-    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <button class="hamburger" type="button" id="hamburger" onclick="toggleMenu()" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
-    </div>
+    </button>
   </div>
   <div class="mobile-menu" id="mobileMenu">
     <a href="#about" onclick="toggleMenu()" data-i18n="nav.about">À propos</a>
@@ -102,7 +140,7 @@
     <a href="#showcase" onclick="toggleMenu()" data-i18n="nav.mobile">Mobile</a>
     <a href="#services" onclick="toggleMenu()" data-i18n="nav.services">Services</a>
     <a href="#contact" onclick="toggleMenu()" data-i18n="nav.contact">Contact</a>
-    <a href="#mgn-agency" onclick="toggleMenu()" style="color:var(--accent);font-weight:700;" data-i18n="nav.agency">🚀 Mon Agence</a>
+    <a href="#mgn-agency" onclick="toggleMenu()" style="color:var(--accent);font-weight:700;" data-i18n="nav.agency">Mon Agence</a>
   </div>
 </nav>
 
@@ -114,16 +152,17 @@
         <div class="hero-label" data-i18n="hero.label">✦ Disponible pour de nouveaux projets</div>
         <h1 class="hero-title">
           <span data-i18n="hero.title1">Ingénieur</span><br>
-          <span class="highlight" data-i18n="hero.title2">Fullstack & Mobile</span><br>
+          <span class="highlight" data-i18n="hero.title2">Fullstack &amp; Mobile</span><br>
           <span data-i18n="hero.title3">Fondateur MGN CodeWave</span>
         </h1>
         <p class="hero-subtitle" data-i18n="hero.subtitle">
           Je conçois et livre des solutions digitales complètes — du backend robuste aux interfaces mobiles élégantes. Ingénieur d'État avec une vision produit et une passion pour l'impact.
         </p>
+        <p class="hero-meta" data-i18n="hero.lastmission">Dernière mission : Chef de Projet IT &amp; Fullstack — Gabon Connect SARLU</p>
         <div class="hero-ctas">
-          <a href="#contact" class="btn-primary" data-i18n="hero.cta1">✉ Me contacter</a>
+          <a href="#contact" class="btn-primary" data-i18n="hero.cta1">Me contacter</a>
           <a href="#projects" class="btn-secondary" data-i18n="hero.cta2">Voir mes projets →</a>
-          <!-- <a href="" class="btn-secondary" target="_blank" data-i18n="hero.cta3">⬇ Télécharger CV</a> -->
+          <!-- <a href="" class="btn-secondary" target="_blank" rel="noopener" data-i18n="hero.cta3">⬇ Télécharger CV</a> -->
         </div>
       </div>
       <div class="hero-visual">
@@ -131,14 +170,14 @@
           <img src="assets/images/MGN_Logo.png" alt="MGN CodeWave Logo" onerror="this.style.display='none'; this.parentNode.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;font-family:Syne,sans-serif;font-weight:800;font-size:1rem;color:var(--accent)\'>NR</div>'"/>
         </div>
         <div class="photo-frame">
-          <img src="assets/images/Richard.png" alt="Richard NGOUBADJAMBO" onerror="this.style.display='none'; this.parentNode.style.background='var(--surface)'; this.parentNode.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;font-size:5rem;\'>👨🏾‍💻</div>'"/>
+          <img src="assets/images/Richard.png" alt="Richard NGOUBADJAMBO" onerror="this.style.display='none'; this.parentNode.style.background='var(--surface)'; this.parentNode.innerHTML='<div class=\'img-fallback\'><svg class=\'icon-xl\' aria-hidden=\'true\'><use href=\'#i-user\'/></svg></div>'"/>
         </div>
         <div class="photo-badge">
-          Chef de Projet IT<br>& Dev Mobile Flutter
+          Chef de Projet IT<br>&amp; Dev Mobile Flutter
         </div>
         <div class="float-card">
-          <strong>Akanda Tech</strong>
-          10 mois · Chef de Projet
+          <strong data-i18n="hero.float.org">Gabon Connect SARLU</strong>
+          <span data-i18n="hero.float.role">Chef de Projet IT &amp; Fullstack</span>
         </div>
       </div>
     </div>
@@ -174,27 +213,28 @@
           <div class="section-tag" data-i18n="about.tag">À PROPOS</div>
           <h2 class="section-title" data-i18n="about.title">Ingénieur. Entrepreneur.<br>Bâtisseur digital.</h2>
         </div>
-        <p data-i18n="about.p1">Diplômé Ingénieur d'État en Informatique & Réseaux de l'EMSI (Rabat), j'ai bâti ma carrière à l'intersection du code et du management de projet — un profil rare qui me permet de comprendre autant les enjeux techniques que business.</p>
-        <p data-i18n="about.p2">Chez Akanda Tech, j'ai piloté de A à Z le développement d'une application mobile Flutter — des spécifications aux tests utilisateurs, en passant par l'architecture Firebase. C'est cette expérience end-to-end qui fait ma valeur ajoutée.</p>
-        <p data-i18n="about.p3">Aujourd'hui, à travers M.G.N CodeWave, je propose des solutions digitales complètes aux entreprises et startups africaines qui veulent passer à l'ère numérique.</p>
+        <p data-i18n="about.p1">Diplômé Ingénieur d'État en Informatique &amp; Réseaux de l'EMSI (Rabat), j'ai bâti ma carrière à l'intersection du code et du management de projet — un profil rare qui me permet de comprendre autant les enjeux techniques que business.</p>
+        <p data-i18n="about.p2">De LEBONWAZ à Gabon Connect SARLU, je pilote les produits de bout en bout : cahier des charges, wireframing UX, développement, tests, déploiement et suivi de performance. C'est cette maîtrise du cycle complet qui fait ma valeur ajoutée.</p>
+        <p data-i18n="about.p3">Je travaille en relation client directe — recueil du besoin, arbitrages, reporting — et je coordonne équipes techniques et parties prenantes autour d'un plan de sprint clair et d'indicateurs suivis.</p>
+        <p data-i18n="about.p4">Aujourd'hui, à travers M.G.N CodeWave, je propose des solutions digitales complètes aux entreprises et startups africaines qui veulent passer à l'ère numérique.</p>
         <div class="about-values">
           <div class="val-card">
-            <div class="val-icon">⚡</div>
+            <div class="val-icon"><svg class="icon" aria-hidden="true"><use href="#i-zap"/></svg></div>
             <div class="val-title" data-i18n="val.speed">Livraison rapide</div>
-            <div class="val-desc" data-i18n="val.speed.desc">Sprints, MVP et iterations continues</div>
+            <div class="val-desc" data-i18n="val.speed.desc">Sprints agiles bihebdomadaires, MVP et itérations continues</div>
           </div>
           <div class="val-card">
-            <div class="val-icon">🎯</div>
+            <div class="val-icon"><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg></div>
             <div class="val-title" data-i18n="val.quality">Qualité orientée impact</div>
-            <div class="val-desc" data-i18n="val.quality.desc">Code propre, UX pensée pour l'utilisateur</div>
+            <div class="val-desc" data-i18n="val.quality.desc">Code propre, UX testée, qualité mesurée sur l'usage</div>
           </div>
           <div class="val-card">
-            <div class="val-icon">🤝</div>
+            <div class="val-icon"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></div>
             <div class="val-title" data-i18n="val.comm">Communication claire</div>
-            <div class="val-desc" data-i18n="val.comm.desc">Relation client transparente et régulière</div>
+            <div class="val-desc" data-i18n="val.comm.desc">Relation client directe, reporting et arbitrages tracés</div>
           </div>
           <div class="val-card">
-            <div class="val-icon">🌍</div>
+            <div class="val-icon"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg></div>
             <div class="val-title" data-i18n="val.africa">Vision Afrique</div>
             <div class="val-desc" data-i18n="val.africa.desc">Solutions adaptées aux marchés émergents</div>
           </div>
@@ -208,10 +248,13 @@
             <div class="tl-line"></div>
           </div>
           <div>
-            <div class="tl-title" data-i18n="tl1.title">Chef de Projet IT / Dev Mobile Flutter</div>
-            <div class="tl-org">Akanda Tech — Libreville, Gabon</div>
-            <div class="tl-date">2025 · 10 mois</div>
-            <div class="tl-desc" data-i18n="tl1.desc">Pilotage complet d'une application mobile iOS & Android. Spécifications, wireframes, Firebase, sprints, tests et mise en production.</div>
+            <div class="tl-head">
+              <div class="tl-title" data-i18n="tl1.title">Chef de Projet IT &amp; Développeur Fullstack</div>
+              <span class="tl-badge" data-i18n="tl.badge">Récent</span>
+            </div>
+            <div class="tl-org">Gabon Connect SARLU — Libreville, Gabon</div>
+            <div class="tl-date" data-i18n="tl1.date">Mai 2026 – Août 2026</div>
+            <div class="tl-desc" data-i18n="tl1.desc">Pilotage de bout en bout d'une application PWA pour un client majeur — analyse des besoins, spécifications, wireframes UX, sprints agiles et mise en production. Stack React / Node.js / PostgreSQL, Firebase Firestore temps réel et authentification JWT.</div>
           </div>
         </div>
         <div class="tl-item">
@@ -220,10 +263,10 @@
             <div class="tl-line"></div>
           </div>
           <div>
-            <div class="tl-title" data-i18n="tl2.title">Développeur Web Drupal</div>
-            <div class="tl-org">Agence Digitale — Rabat, Maroc</div>
-            <div class="tl-date">2024 · 3 mois</div>
-            <div class="tl-desc" data-i18n="tl2.desc">Développement de plateformes web, nouvelles fonctionnalités, relation client, gestion de projet.</div>
+            <div class="tl-title" data-i18n="tl2.title">Consultant Digital &amp; Entrepreneur Freelance</div>
+            <div class="tl-org">Services Web Indépendants — Libreville, Gabon</div>
+            <div class="tl-date" data-i18n="tl2.date">Novembre 2025 – aujourd'hui</div>
+            <div class="tl-desc" data-i18n="tl2.desc">Conception digitale complète — web, mobile et PWA — pour PME et startups gabonaises. Audits techniques, conseil en transformation digitale et gestion autonome du cycle projet.</div>
           </div>
         </div>
         <div class="tl-item">
@@ -232,10 +275,10 @@
             <div class="tl-line"></div>
           </div>
           <div>
-            <div class="tl-title" data-i18n="tl3.title">Chargé de Clientèle</div>
-            <div class="tl-org">Entreprise Commerciale — Casablanca, Maroc</div>
-            <div class="tl-date">2023 · 2 mois</div>
-            <div class="tl-desc" data-i18n="tl3.desc">Gestion et développement d'un portefeuille clients.</div>
+            <div class="tl-title" data-i18n="tl3.title">Développeur Mobile &amp; Chef de Projet</div>
+            <div class="tl-org">LEBONWAZ — Libreville, Gabon</div>
+            <div class="tl-date" data-i18n="tl3.date">Janvier 2025 – Novembre 2025 · 10 mois</div>
+            <div class="tl-desc" data-i18n="tl3.desc">Conception et livraison d'une application mobile Flutter iOS &amp; Android. Clean Architecture / MVC avec Provider, Firebase, optimisation du temps de démarrage, des animations et de la consommation mémoire-batterie.</div>
           </div>
         </div>
         <div class="tl-item">
@@ -243,16 +286,17 @@
             <div class="tl-dot" style="background:var(--text2)"></div>
           </div>
           <div>
-            <div class="tl-title" data-i18n="tl4.title">Créateur de Contenu / Freelance WordPress</div>
-            <div class="tl-org">Rabat, Maroc</div>
-            <div class="tl-date">2022 · 4 mois</div>
-            <div class="tl-desc" data-i18n="tl4.desc">Création de sites WordPress optimisés SEO pour des clients entreprises.</div>
+            <div class="tl-title" data-i18n="tl4.title">Développeur Frontend &amp; Web Designer</div>
+            <div class="tl-org">Agence Digitale — Rabat, Maroc</div>
+            <div class="tl-date" data-i18n="tl4.date">Mars 2024 – Juin 2024 · 3 mois</div>
+            <div class="tl-desc" data-i18n="tl4.desc">Interfaces web en approche component-driven adossée à un style guide partagé. Intégration d'APIs REST, plateformes Drupal, optimisation UX et performance sur iOS &amp; Android.</div>
           </div>
         </div>
         <div style="margin-top:28px;padding-top:24px;border-top:1px solid var(--border)">
           <div class="section-tag" style="margin-bottom:14px" data-i18n="about.edu.tag">FORMATION</div>
-          <div class="tl-desc"><strong style="color:var(--text)">Ingénieur d'État — Informatique & Réseaux</strong><br>EMSI, Rabat — 2018–2023</div>
-          <div class="tl-desc" style="margin-top:10px"><strong style="color:var(--text)">Certification Web Fullstack</strong><br>GOMYCODE — 2024</div>
+          <div class="tl-desc"><strong style="color:var(--text)" data-i18n="edu1.title">Certification Web Fullstack</strong><br>GOMYCODE Academy — 2024</div>
+          <div class="tl-desc" style="margin-top:10px"><strong style="color:var(--text)" data-i18n="edu2.title">Formation Web Fullstack</strong><br>IT Pour Tous, Rabat — 2023</div>
+          <div class="tl-desc" style="margin-top:10px"><strong style="color:var(--text)" data-i18n="edu3.title">Diplôme d'Ingénieur d'État — Informatique &amp; Réseaux</strong><br>EMSI, Rabat — 2018–2023</div>
         </div>
       </div>
     </div>
@@ -265,11 +309,11 @@
     <div class="photo-section-inner">
       <div class="photo-gallery reveal">
         <div class="photo-main">
-          <img class="photo-main-img" src="assets/images/Richard.png" alt="Richard NGOUBADJAMBO" loading="lazy" decoding="async" onerror="this.parentNode.style.display='flex';this.parentNode.style.alignItems='center';this.parentNode.style.justifyContent='center';this.parentNode.innerHTML='<div style=&quot;font-size:6rem&quot;>👨🏾‍💻</div>'"/>
-          <div class="photo-overlay-badge">Richard NGOUBADJAMBO · <span>Libreville, Gabon 🇬🇦</span></div>
+          <img class="photo-main-img" src="assets/images/Richard.png" alt="Richard NGOUBADJAMBO" loading="lazy" decoding="async" onerror="this.parentNode.style.display='flex';this.parentNode.style.alignItems='center';this.parentNode.style.justifyContent='center';this.parentNode.innerHTML='<div class=&quot;img-fallback&quot;><svg class=&quot;icon-xl&quot;><use href=&quot;#i-user&quot;/></svg></div>'"/>
+          <div class="photo-overlay-badge">Richard NGOUBADJAMBO · <span>Libreville, Gabon</span></div>
         </div>
         <div class="photo-secondary">
-          <img class="photo-secondary-img" src="assets/images/Richard.png" alt="Richard — profil" loading="lazy" decoding="async" onerror="this.parentNode.style.display='flex';this.parentNode.style.alignItems='center';this.parentNode.style.justifyContent='center';this.parentNode.innerHTML='<div style=&quot;font-size:3.5rem&quot;>💻</div>'"/>
+          <img class="photo-secondary-img" src="assets/images/Richard.png" alt="Richard — profil" loading="lazy" decoding="async" onerror="this.parentNode.style.display='flex';this.parentNode.style.alignItems='center';this.parentNode.style.justifyContent='center';this.parentNode.innerHTML='<div class=&quot;img-fallback&quot;><svg class=&quot;icon-lg&quot;><use href=&quot;#i-code&quot;/></svg></div>'"/>
         </div>
         <div class="photo-logo-box">
           <img src="assets/images/MGN_Logo.png" alt="MGN CodeWave Logo" onerror="this.parentNode.innerHTML='<div style=&quot;font-family:Syne,sans-serif;font-weight:800;font-size:1.8rem;color:var(--accent)&quot;>MGN<br><span style=&quot;font-size:0.65rem;letter-spacing:0.12em;color:var(--text2)&quot;>CODEWAVE</span></div>'"/>
@@ -289,9 +333,9 @@
         </div>
         <!-- MGN AGENCY LINK -->
         <div id="mgn-agency">
-          <a href="https://ngoubadjambo-richard.github.io/CodeWave/" target="_blank" class="mgn-link-card">
+          <a href="https://ngoubadjambo-richard.github.io/CodeWave/" target="_blank" rel="noopener" class="mgn-link-card">
             <div class="mgn-link-icon">
-              <img src="assets/images/MGN_Logo.png" alt="MGN" style="width:48px;height:48px;border-radius:12px;object-fit:cover;" onerror="this.outerHTML='🚀'"/>
+              <img src="assets/images/MGN_Logo.png" alt="MGN" style="width:48px;height:48px;border-radius:12px;object-fit:cover;" onerror="this.outerHTML='&lt;svg class=&quot;icon-lg&quot;&gt;&lt;use href=&quot;#i-layers&quot;/&gt;&lt;/svg&gt;'"/>
             </div>
             <div class="mgn-link-text">
               <div class="mgn-link-title" data-i18n="mgn.link.title">M.G.N CodeWave — Solutions Digitales</div>
@@ -301,7 +345,7 @@
           </a>
         </div>
         <div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;">
-          <a href="#contact" class="btn-primary" data-i18n="photo.cta1">✉ Me contacter</a>
+          <a href="#contact" class="btn-primary" data-i18n="photo.cta1">Me contacter</a>
           <a href="#projects" class="btn-secondary" data-i18n="photo.cta2">Voir mes projets →</a>
         </div>
       </div>
@@ -319,11 +363,11 @@
     </div>
     <div class="skills-wrapper">
       <div class="skill-group reveal">
-        <div class="skill-group-title"><span class="icon">📱</span><span data-i18n="sk.mobile">Mobile Flutter</span></div>
+        <div class="skill-group-title"><span class="icon"><svg class="icon" aria-hidden="true"><use href="#i-smartphone"/></svg></span><span data-i18n="sk.mobile">Mobile Flutter</span></div>
         <div class="badges">
           <span class="badge accent">Flutter</span>
           <span class="badge accent">Dart</span>
-          <span class="badge">iOS & Android</span>
+          <span class="badge">iOS &amp; Android</span>
           <span class="badge">Provider</span>
           <span class="badge">MVC</span>
           <span class="badge">Clean Architecture</span>
@@ -331,10 +375,12 @@
           <span class="badge">Firestore</span>
           <span class="badge">Firebase Storage</span>
           <span class="badge">Android Studio</span>
+          <span class="badge">Offline-first</span>
+          <span class="badge">Connectivité variable</span>
         </div>
       </div>
       <div class="skill-group reveal">
-        <div class="skill-group-title"><span class="icon">⚛️</span><span data-i18n="sk.frontend">Frontend Web</span></div>
+        <div class="skill-group-title"><span class="icon"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></span><span data-i18n="sk.frontend">Frontend Web</span></div>
         <div class="badges">
           <span class="badge accent">React.js</span>
           <span class="badge accent">Next.js</span>
@@ -345,22 +391,31 @@
           <span class="badge">Bootstrap</span>
           <span class="badge">REST API</span>
           <span class="badge">Axios</span>
+          <span class="badge">Context API</span>
+          <span class="badge">Custom hooks</span>
+          <span class="badge">Optimisation des re-renders</span>
+          <span class="badge">PWA</span>
         </div>
       </div>
       <div class="skill-group reveal">
-        <div class="skill-group-title"><span class="icon">🔧</span><span data-i18n="sk.backend">Backend & BDD</span></div>
+        <div class="skill-group-title"><span class="icon"><svg class="icon" aria-hidden="true"><use href="#i-server"/></svg></span><span data-i18n="sk.backend">Backend &amp; BDD</span></div>
         <div class="badges">
           <span class="badge accent">Node.js</span>
           <span class="badge">Express.js</span>
           <span class="badge">MongoDB</span>
           <span class="badge">MySQL</span>
           <span class="badge">SQL Server</span>
+          <span class="badge">PostgreSQL</span>
           <span class="badge">Firebase Firestore</span>
           <span class="badge">API REST</span>
+          <span class="badge">JWT</span>
+          <span class="badge">Architecture scalable</span>
+          <span class="badge">Microservices</span>
+          <span class="badge">System design</span>
         </div>
       </div>
       <div class="skill-group reveal">
-        <div class="skill-group-title"><span class="icon">🧰</span><span data-i18n="sk.tools">CMS & Outils</span></div>
+        <div class="skill-group-title"><span class="icon"><svg class="icon" aria-hidden="true"><use href="#i-terminal"/></svg></span><span data-i18n="sk.tools">Outils &amp; DevOps</span></div>
         <div class="badges">
           <span class="badge accent">Git / GitHub</span>
           <span class="badge">Drupal</span>
@@ -368,10 +423,16 @@
           <span class="badge">VS Code</span>
           <span class="badge">Figma/Wireframes</span>
           <span class="badge">SEO Technique</span>
+          <span class="badge">Docker &amp; Compose</span>
+          <span class="badge">GitHub Actions</span>
+          <span class="badge">Vercel / Railway</span>
+          <span class="badge">Cloudflare</span>
+          <span class="badge">Postman</span>
+          <span class="badge">Monday.com</span>
         </div>
       </div>
       <div class="skill-group reveal">
-        <div class="skill-group-title"><span class="icon">📋</span><span data-i18n="sk.pm">Gestion de Projet</span></div>
+        <div class="skill-group-title"><span class="icon"><svg class="icon" aria-hidden="true"><use href="#i-clipboard"/></svg></span><span data-i18n="sk.pm">Gestion de Projet</span></div>
         <div class="badges">
           <span class="badge accent">Chef de Projet IT</span>
           <span class="badge">Agile / Scrum</span>
@@ -380,10 +441,13 @@
           <span class="badge">Cahier des charges</span>
           <span class="badge">Wireframes</span>
           <span class="badge">Gestion des risques</span>
+          <span class="badge">Burn-down &amp; vélocité</span>
+          <span class="badge">Coordination stakeholders</span>
+          <span class="badge">Reporting client</span>
         </div>
       </div>
       <div class="skill-group reveal">
-        <div class="skill-group-title"><span class="icon">🌐</span><span data-i18n="sk.lang">Langues & Soft Skills</span></div>
+        <div class="skill-group-title"><span class="icon"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg></span><span data-i18n="sk.lang">Langues &amp; Soft Skills</span></div>
         <div class="badges">
           <span class="badge accent">Français (natif)</span>
           <span class="badge">Anglais (B1)</span>
@@ -406,97 +470,145 @@
       <p class="section-desc" data-i18n="proj.desc">Des projets concrets livrés — applications mobiles, plateformes web, systèmes backend et solutions de marque.</p>
     </div>
     <div class="filter-tabs" id="filterTabs">
-      <button class="filter-tab active" data-filter="all" data-i18n="filter.all">Tous</button>
-      <button class="filter-tab" data-filter="mobile" data-i18n="filter.mobile">📱 Mobile</button>
-      <button class="filter-tab" data-filter="web" data-i18n="filter.web">🌐 Web</button>
-      <button class="filter-tab" data-filter="branding" data-i18n="filter.branding">✨ Branding</button>
+      <button type="button" class="filter-tab active" data-filter="all" data-i18n="filter.all">Tous</button>
+      <button type="button" class="filter-tab" data-filter="mobile" data-i18n="filter.mobile">Mobile</button>
+      <button type="button" class="filter-tab" data-filter="web" data-i18n="filter.web">Web</button>
+      <button type="button" class="filter-tab" data-filter="client" data-i18n="filter.client">Mission client</button>
+      <button type="button" class="filter-tab" data-filter="branding" data-i18n="filter.branding">Branding</button>
     </div>
     <div class="projects-grid" id="projectsGrid">
-      <div class="project-card reveal" data-cat="mobile" onclick="openModal('p1')">
-        <div class="project-thumb">📱</div>
+      <article class="project-card reveal" data-cat="client" onclick="openModal('p7')">
+        <div class="project-thumb" aria-hidden="true"><svg class="icon-xl" aria-hidden="true"><use href="#i-building"/></svg></div>
+        <div class="project-body">
+          <div class="project-cat" data-i18n="cat.client">Mission client · Gabon Connect</div>
+          <h3 class="project-name" id="p7-name" data-i18n="p7.name">Gabonova — Plateforme immobilière</h3>
+          <p class="project-desc" data-i18n="p7.desc">Plateforme de mise en relation immobilière. Campagnes de tests fonctionnels documentées, rapports d'anomalies itératifs, supports vidéo de présentation et d'installation, et proposition de stratégie marketing de lancement.</p>
+          <div class="project-tags">
+            <span class="project-tag">React</span>
+            <span class="project-tag">Node.js</span>
+            <span class="project-tag">PostgreSQL</span>
+            <span class="project-tag">Tests fonctionnels</span>
+            <span class="project-tag">Go-to-market</span>
+          </div>
+          <div style="margin-top:14px"><button type="button" class="btn-secondary" style="font-size:0.78rem;padding:7px 14px;" data-i18n="detail.btn" aria-describedby="p7-name" onclick="event.stopPropagation();openModal('p7')">Voir les détails →</button></div>
+        </div>
+      </article>
+      <article class="project-card reveal" data-cat="client" onclick="openModal('p8')">
+        <div class="project-thumb" aria-hidden="true"><svg class="icon-xl" aria-hidden="true"><use href="#i-key"/></svg></div>
+        <div class="project-body">
+          <div class="project-cat" data-i18n="cat.client">Mission client · Gabon Connect</div>
+          <h3 class="project-name" id="p8-name" data-i18n="p8.name">AHPAM AssetView — Gestion locative bilingue</h3>
+          <p class="project-desc" data-i18n="p8.desc">Application de gestion locative bilingue FR/EN. Rédaction du plan et des cas de test, conduite des recettes fonctionnelles et formalisation des retours client pour alimenter les itérations produit.</p>
+          <div class="project-tags">
+            <span class="project-tag">PWA</span>
+            <span class="project-tag">i18n FR/EN</span>
+            <span class="project-tag">Plan de test</span>
+            <span class="project-tag">Recette</span>
+            <span class="project-tag">Firestore</span>
+          </div>
+          <div style="margin-top:14px"><button type="button" class="btn-secondary" style="font-size:0.78rem;padding:7px 14px;" data-i18n="detail.btn" aria-describedby="p8-name" onclick="event.stopPropagation();openModal('p8')">Voir les détails →</button></div>
+        </div>
+      </article>
+      <article class="project-card reveal" data-cat="client" onclick="openModal('p9')">
+        <div class="project-thumb" aria-hidden="true"><svg class="icon-xl" aria-hidden="true"><use href="#i-shield"/></svg></div>
+        <div class="project-body">
+          <div class="project-cat" data-i18n="cat.client">Mission client · Gabon Connect</div>
+          <h3 class="project-name" id="p9-name" data-i18n="p9.name">Delta Manga Sécurité — Site vitrine &amp; pilotage</h3>
+          <p class="project-desc" data-i18n="p9.desc">Contribution au site vitrine de DMS, reporting mensuel d'avancement, analyse comparative de 5 solutions de gestion du gardiennage et rédaction du cahier des charges du projet DMS 360°.</p>
+          <div class="project-tags">
+            <span class="project-tag">Site vitrine</span>
+            <span class="project-tag">Benchmark</span>
+            <span class="project-tag">Cahier des charges</span>
+            <span class="project-tag">Reporting</span>
+          </div>
+          <div style="margin-top:14px"><button type="button" class="btn-secondary" style="font-size:0.78rem;padding:7px 14px;" data-i18n="detail.btn" aria-describedby="p9-name" onclick="event.stopPropagation();openModal('p9')">Voir les détails →</button></div>
+        </div>
+      </article>
+      <article class="project-card reveal" data-cat="mobile" onclick="openModal('p1')">
+        <div class="project-thumb" aria-hidden="true"><svg class="icon-xl" aria-hidden="true"><use href="#i-smartphone"/></svg></div>
         <div class="project-body">
           <div class="project-cat" data-i18n="cat.mobile">Application Mobile</div>
-          <div class="project-name" data-i18n="p1.name">App Mobile Flutter — Akanda Tech</div>
-          <div class="project-desc" data-i18n="p1.desc">Application multiplateforme iOS & Android développée de A à Z. Architecture Firebase Firestore, authentification, gestion d'état Provider.</div>
+          <h3 class="project-name" id="p1-name" data-i18n="p1.name">App Mobile Flutter — LEBONWAZ</h3>
+          <p class="project-desc" data-i18n="p1.desc">Application multiplateforme iOS &amp; Android développée de A à Z. Architecture Firebase Firestore, authentification, gestion d'état Provider.</p>
           <div class="project-tags">
             <span class="project-tag">Flutter</span>
             <span class="project-tag">Firebase</span>
             <span class="project-tag">Dart</span>
             <span class="project-tag">MVC</span>
           </div>
-          <div style="margin-top:14px"><button class="btn-secondary" style="font-size:0.78rem;padding:7px 14px;" data-i18n="detail.btn">Voir les détails →</button></div>
+          <div style="margin-top:14px"><button type="button" class="btn-secondary" style="font-size:0.78rem;padding:7px 14px;" data-i18n="detail.btn" aria-describedby="p1-name" onclick="event.stopPropagation();openModal('p1')">Voir les détails →</button></div>
         </div>
-      </div>
-      <div class="project-card reveal" data-cat="web" onclick="openModal('p2')">
-        <div class="project-thumb">🌐</div>
+      </article>
+      <article class="project-card reveal" data-cat="web" onclick="openModal('p2')">
+        <div class="project-thumb" aria-hidden="true"><svg class="icon-xl" aria-hidden="true"><use href="#i-globe"/></svg></div>
         <div class="project-body">
           <div class="project-cat" data-i18n="cat.web">Plateforme Web</div>
-          <div class="project-name" data-i18n="p2.name">Plateforme Web Drupal — Agence Digitale</div>
-          <div class="project-desc" data-i18n="p2.desc">Développement et maintenance de plateformes web entreprises sous Drupal. Nouvelles fonctionnalités, optimisation SEO et relation client.</div>
+          <h3 class="project-name" id="p2-name" data-i18n="p2.name">Plateforme Web Drupal — Agence Digitale</h3>
+          <p class="project-desc" data-i18n="p2.desc">Développement et maintenance de plateformes web entreprises sous Drupal. Nouvelles fonctionnalités, optimisation SEO et relation client.</p>
           <div class="project-tags">
             <span class="project-tag">Drupal</span>
             <span class="project-tag">HTML5/CSS3</span>
             <span class="project-tag">SEO</span>
           </div>
-          <div style="margin-top:14px"><button class="btn-secondary" style="font-size:0.78rem;padding:7px 14px;" data-i18n="detail.btn">Voir les détails →</button></div>
+          <div style="margin-top:14px"><button type="button" class="btn-secondary" style="font-size:0.78rem;padding:7px 14px;" data-i18n="detail.btn" aria-describedby="p2-name" onclick="event.stopPropagation();openModal('p2')">Voir les détails →</button></div>
         </div>
-      </div>
-      <div class="project-card reveal" data-cat="web" onclick="openModal('p3')">
-        <div class="project-thumb">⚛️</div>
+      </article>
+      <article class="project-card reveal" data-cat="web" onclick="openModal('p3')">
+        <div class="project-thumb" aria-hidden="true"><svg class="icon-xl" aria-hidden="true"><use href="#i-code"/></svg></div>
         <div class="project-body">
           <div class="project-cat" data-i18n="cat.frontend">Frontend React</div>
-          <div class="project-name" data-i18n="p3.name">Interface React.js — Dashboard Analytics</div>
-          <div class="project-desc" data-i18n="p3.desc">Design system component-driven avec React.js et Tailwind CSS. Intégration API REST, responsive mobile-first et optimisation Core Web Vitals.</div>
+          <h3 class="project-name" id="p3-name" data-i18n="p3.name">Interface React.js — Dashboard Analytics</h3>
+          <p class="project-desc" data-i18n="p3.desc">Design system component-driven avec React.js et Tailwind CSS. Intégration API REST, responsive mobile-first et optimisation Core Web Vitals.</p>
           <div class="project-tags">
             <span class="project-tag">React.js</span>
             <span class="project-tag">Next.js</span>
             <span class="project-tag">Tailwind</span>
           </div>
-          <div style="margin-top:14px"><button class="btn-secondary" style="font-size:0.78rem;padding:7px 14px;" data-i18n="detail.btn">Voir les détails →</button></div>
+          <div style="margin-top:14px"><button type="button" class="btn-secondary" style="font-size:0.78rem;padding:7px 14px;" data-i18n="detail.btn" aria-describedby="p3-name" onclick="event.stopPropagation();openModal('p3')">Voir les détails →</button></div>
         </div>
-      </div>
-      <div class="project-card reveal" data-cat="web" onclick="openModal('p4')">
-        <div class="project-thumb">🔧</div>
+      </article>
+      <article class="project-card reveal" data-cat="web" onclick="openModal('p4')">
+        <div class="project-thumb" aria-hidden="true"><svg class="icon-xl" aria-hidden="true"><use href="#i-server"/></svg></div>
         <div class="project-body">
           <div class="project-cat" data-i18n="cat.fullstack">Fullstack</div>
-          <div class="project-name" data-i18n="p4.name">API Node.js + MongoDB</div>
-          <div class="project-desc" data-i18n="p4.desc">Backend RESTful avec Node.js et MongoDB. Architecture modulaire, authentification JWT, documentation API et déploiement cloud.</div>
+          <h3 class="project-name" id="p4-name" data-i18n="p4.name">API Node.js + MongoDB</h3>
+          <p class="project-desc" data-i18n="p4.desc">Backend RESTful avec Node.js et MongoDB. Architecture modulaire, authentification JWT, documentation API et déploiement cloud.</p>
           <div class="project-tags">
             <span class="project-tag">Node.js</span>
             <span class="project-tag">MongoDB</span>
             <span class="project-tag">REST API</span>
           </div>
-          <div style="margin-top:14px"><button class="btn-secondary" style="font-size:0.78rem;padding:7px 14px;" data-i18n="detail.btn">Voir les détails →</button></div>
+          <div style="margin-top:14px"><button type="button" class="btn-secondary" style="font-size:0.78rem;padding:7px 14px;" data-i18n="detail.btn" aria-describedby="p4-name" onclick="event.stopPropagation();openModal('p4')">Voir les détails →</button></div>
         </div>
-      </div>
-      <div class="project-card reveal" data-cat="branding" onclick="openModal('p5')">
-        <div class="project-thumb">✨</div>
+      </article>
+      <article class="project-card reveal" data-cat="branding" onclick="openModal('p5')">
+        <div class="project-thumb" aria-hidden="true"><svg class="icon-xl" aria-hidden="true"><use href="#i-sparkle"/></svg></div>
         <div class="project-body">
           <div class="project-cat" data-i18n="cat.brand">Branding</div>
-          <div class="project-name" data-i18n="p5.name">M.G.N CodeWave — Identité de Marque</div>
-          <div class="project-desc" data-i18n="p5.desc">Création complète de l'identité visuelle et digitale de l'agence M.G.N CodeWave — logo, charte graphique et présence en ligne.</div>
+          <h3 class="project-name" id="p5-name" data-i18n="p5.name">M.G.N CodeWave — Identité de Marque</h3>
+          <p class="project-desc" data-i18n="p5.desc">Création complète de l'identité visuelle et digitale de l'agence M.G.N CodeWave — logo, charte graphique et présence en ligne.</p>
           <div class="project-tags">
             <span class="project-tag">Branding</span>
             <span class="project-tag">Design System</span>
             <span class="project-tag">Figma</span>
           </div>
-          <div style="margin-top:14px"><button class="btn-secondary" style="font-size:0.78rem;padding:7px 14px;" data-i18n="detail.btn">Voir les détails →</button></div>
+          <div style="margin-top:14px"><button type="button" class="btn-secondary" style="font-size:0.78rem;padding:7px 14px;" data-i18n="detail.btn" aria-describedby="p5-name" onclick="event.stopPropagation();openModal('p5')">Voir les détails →</button></div>
         </div>
-      </div>
-      <div class="project-card reveal" data-cat="mobile" onclick="openModal('p6')">
-        <div class="project-thumb">🚀</div>
+      </article>
+      <article class="project-card reveal" data-cat="mobile" onclick="openModal('p6')">
+        <div class="project-thumb" aria-hidden="true"><svg class="icon-xl" aria-hidden="true"><use href="#i-layers"/></svg></div>
         <div class="project-body">
           <div class="project-cat" data-i18n="cat.mobile">Application Mobile</div>
-          <div class="project-name" data-i18n="p6.name">Portfolio Mobile — MGN</div>
-          <div class="project-desc" data-i18n="p6.desc">Application de présentation interactive des services MGN CodeWave, avec animations fluides et navigation optimisée iOS & Android.</div>
+          <h3 class="project-name" id="p6-name" data-i18n="p6.name">Portfolio Mobile — MGN</h3>
+          <p class="project-desc" data-i18n="p6.desc">Application de présentation interactive des services MGN CodeWave, avec animations fluides et navigation optimisée iOS &amp; Android.</p>
           <div class="project-tags">
             <span class="project-tag">Flutter</span>
             <span class="project-tag">Dart</span>
             <span class="project-tag">UI/UX</span>
           </div>
-          <div style="margin-top:14px"><button class="btn-secondary" style="font-size:0.78rem;padding:7px 14px;" data-i18n="detail.btn">Voir les détails →</button></div>
+          <div style="margin-top:14px"><button type="button" class="btn-secondary" style="font-size:0.78rem;padding:7px 14px;" data-i18n="detail.btn" aria-describedby="p6-name" onclick="event.stopPropagation();openModal('p6')">Voir les détails →</button></div>
         </div>
-      </div>
+      </article>
     </div>
   </div>
 </section>
@@ -608,19 +720,19 @@
       <div class="showcase-phones">
         <div class="phone-mockup">
           <div class="phone-screen">
-            🏠
+            <svg class="icon" aria-hidden="true"><use href="#i-home"/></svg>
             <div class="screen-title">HOME</div>
           </div>
         </div>
         <div class="phone-mockup">
           <div class="phone-screen">
-            📊
+            <svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg>
             <div class="screen-title">DASHBOARD</div>
           </div>
         </div>
         <div class="phone-mockup">
           <div class="phone-screen">
-            ⚙️
+            <svg class="icon" aria-hidden="true"><use href="#i-settings"/></svg>
             <div class="screen-title">SETTINGS</div>
           </div>
         </div>
@@ -629,35 +741,35 @@
         <div class="section-header reveal">
           <div class="section-tag" data-i18n="show.tag">MOBILE SHOWCASE</div>
           <h2 class="section-title" data-i18n="show.title">Flutter de A à Z.<br>Piloté et livré.</h2>
-          <p class="section-desc" data-i18n="show.desc">Chez Akanda Tech, j'ai été à la fois chef de projet et développeur principal — une combinaison rare qui garantit la cohérence entre vision produit et exécution technique.</p>
+          <p class="section-desc" data-i18n="show.desc">Chez LEBONWAZ, j'ai été à la fois chef de projet et développeur principal — une combinaison rare qui garantit la cohérence entre vision produit et exécution technique.</p>
         </div>
         <div class="feature-list">
           <div class="feature-item reveal">
-            <div class="feature-icon">🏗️</div>
+            <div class="feature-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-layout"/></svg></div>
             <div>
-              <div class="feature-title" data-i18n="feat1.title">Architecture & Spécifications</div>
+              <div class="feature-title" data-i18n="feat1.title">Architecture &amp; Spécifications</div>
               <div class="feature-desc" data-i18n="feat1.desc">Rédaction des exigences fonctionnelles, wireframes UX, choix d'architecture MVC/Provider pour une base de code scalable.</div>
             </div>
           </div>
           <div class="feature-item reveal">
-            <div class="feature-icon">⚡</div>
+            <div class="feature-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-zap"/></svg></div>
             <div>
-              <div class="feature-title" data-i18n="feat2.title">Performance & Optimisation</div>
+              <div class="feature-title" data-i18n="feat2.title">Performance &amp; Optimisation</div>
               <div class="feature-desc" data-i18n="feat2.desc">Temps de démarrage optimisé, animations fluides 60fps, gestion mémoire et latence Firebase Firestore réduite.</div>
             </div>
           </div>
           <div class="feature-item reveal">
-            <div class="feature-icon">🔥</div>
+            <div class="feature-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-database"/></svg></div>
             <div>
               <div class="feature-title" data-i18n="feat3.title">Firebase Full Stack</div>
               <div class="feature-desc" data-i18n="feat3.desc">Firestore (données temps réel), Firebase Auth (authentification sécurisée), Firebase Storage (médias).</div>
             </div>
           </div>
           <div class="feature-item reveal">
-            <div class="feature-icon">🧪</div>
+            <div class="feature-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-check"/></svg></div>
             <div>
-              <div class="feature-title" data-i18n="feat4.title">Tests & Mise en production</div>
-              <div class="feature-desc" data-i18n="feat4.desc">Coordination des tests utilisateurs, iterations basées sur les feedbacks, déploiement iOS & Android.</div>
+              <div class="feature-title" data-i18n="feat4.title">Tests &amp; Mise en production</div>
+              <div class="feature-desc" data-i18n="feat4.desc">Coordination des tests utilisateurs, iterations basées sur les feedbacks, déploiement iOS &amp; Android.</div>
             </div>
           </div>
         </div>
@@ -676,9 +788,9 @@
     </div>
     <div class="services-grid">
       <div class="service-card reveal">
-        <div class="service-icon">📱</div>
+        <div class="service-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-smartphone"/></svg></div>
         <div class="service-name" data-i18n="s1.name">Développement Mobile Flutter</div>
-        <div class="service-desc" data-i18n="s1.desc">Applications iOS & Android performantes, natives, développées avec Flutter. De l'idée à l'App Store.</div>
+        <div class="service-desc" data-i18n="s1.desc">Applications iOS &amp; Android performantes, natives, développées avec Flutter. De l'idée à l'App Store.</div>
         <ul class="service-features">
           <li data-i18n="s1.f1">Architecture scalable (Provider/Clean)</li>
           <li data-i18n="s1.f2">Intégration Firebase complète</li>
@@ -687,29 +799,29 @@
         </ul>
       </div>
       <div class="service-card reveal">
-        <div class="service-icon">⚛️</div>
+        <div class="service-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-code"/></svg></div>
         <div class="service-name" data-i18n="s2.name">Applications Web React / Next.js</div>
         <div class="service-desc" data-i18n="s2.desc">Interfaces web modernes, rapides et accessibles. Design systems, dashboards, landing pages et plateformes SaaS.</div>
         <ul class="service-features">
           <li data-i18n="s2.f1">React.js / Next.js / Tailwind</li>
           <li data-i18n="s2.f2">Responsive mobile-first</li>
           <li data-i18n="s2.f3">Intégration API REST</li>
-          <li data-i18n="s2.f4">Optimisation SEO & Core Web Vitals</li>
+          <li data-i18n="s2.f4">Optimisation SEO &amp; Core Web Vitals</li>
         </ul>
       </div>
       <div class="service-card reveal">
-        <div class="service-icon">🔧</div>
-        <div class="service-name" data-i18n="s3.name">Backend & API Node.js</div>
+        <div class="service-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-server"/></svg></div>
+        <div class="service-name" data-i18n="s3.name">Backend &amp; API Node.js</div>
         <div class="service-desc" data-i18n="s3.desc">Architectures backend robustes, APIs RESTful documentées, bases de données SQL et NoSQL.</div>
         <ul class="service-features">
           <li data-i18n="s3.f1">Node.js / Express.js</li>
-          <li data-i18n="s3.f2">MongoDB & MySQL</li>
+          <li data-i18n="s3.f2">MongoDB &amp; MySQL</li>
           <li data-i18n="s3.f3">Firebase Firestore</li>
           <li data-i18n="s3.f4">Authentification JWT / Firebase Auth</li>
         </ul>
       </div>
       <div class="service-card reveal">
-        <div class="service-icon">🌐</div>
+        <div class="service-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-globe"/></svg></div>
         <div class="service-name" data-i18n="s4.name">Sites Web CMS (Drupal / WordPress)</div>
         <div class="service-desc" data-i18n="s4.desc">Sites corporate, e-commerce et blogs sur mesure. Optimisés pour le SEO et la performance.</div>
         <ul class="service-features">
@@ -720,22 +832,22 @@
         </ul>
       </div>
       <div class="service-card reveal">
-        <div class="service-icon">📋</div>
-        <div class="service-name" data-i18n="s5.name">Consulting & Gestion de Projet IT</div>
+        <div class="service-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-clipboard"/></svg></div>
+        <div class="service-name" data-i18n="s5.name">Consulting &amp; Gestion de Projet IT</div>
         <div class="service-desc" data-i18n="s5.desc">Cadrage de projet, spécifications fonctionnelles, coordination d'équipes tech et suivi des livraisons.</div>
         <ul class="service-features">
-          <li data-i18n="s5.f1">Cahier des charges & specs</li>
+          <li data-i18n="s5.f1">Cahier des charges &amp; specs</li>
           <li data-i18n="s5.f2">Gestion Agile / Scrum</li>
           <li data-i18n="s5.f3">Coordination équipe dev</li>
           <li data-i18n="s5.f4">Reporting et relation client</li>
         </ul>
       </div>
       <div class="service-card reveal">
-        <div class="service-icon">✨</div>
-        <div class="service-name" data-i18n="s6.name">UI/UX & Branding Digital</div>
+        <div class="service-icon"><svg class="icon-lg" aria-hidden="true"><use href="#i-sparkle"/></svg></div>
+        <div class="service-name" data-i18n="s6.name">UI/UX &amp; Branding Digital</div>
         <div class="service-desc" data-i18n="s6.desc">Identité visuelle, wireframes, prototypes interactifs et design systems cohérents pour vos produits.</div>
         <ul class="service-features">
-          <li data-i18n="s6.f1">Wireframes & maquettes</li>
+          <li data-i18n="s6.f1">Wireframes &amp; maquettes</li>
           <li data-i18n="s6.f2">Design system</li>
           <li data-i18n="s6.f3">Identité de marque</li>
           <li data-i18n="s6.f4">Optimisation UX</li>
@@ -750,6 +862,21 @@
   </div>
 </section>
 
+<!-- RECOMMANDATION -->
+<section id="testimonial">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag" data-i18n="testi.tag">RECOMMANDATION</div>
+      <h2 class="section-title" data-i18n="testi.title">Ce qu'en dit<br>un client.</h2>
+    </div>
+    <figure class="testi-card reveal">
+      <span class="testi-mark" aria-hidden="true">&ldquo;</span>
+      <blockquote class="testi-quote" data-i18n="testi.quote">Rigueur du reporting, capacité à formaliser un besoin client encore flou en un cahier des charges exploitable, et esprit de proposition constant.</blockquote>
+      <figcaption class="testi-source" data-i18n="testi.source">Extrait d'une lettre de recommandation — direction, Gabon Connect SARLU</figcaption>
+    </figure>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="container">
@@ -761,39 +888,46 @@
       <div class="contact-info">
         <p class="section-desc" data-i18n="cont.desc">Vous avez un projet web, mobile ou une mission de chef de projet ? Je suis disponible pour des collaborations en Afrique et à l'international.</p>
         <div class="contact-links">
-          <a href="/cdn-cgi/l/email-protection#1d707f72687c73797c7a737c737a7c2c255d7a707c7471337e7270" class="contact-link">
-            <div class="cl-icon">✉️</div>
+          <a href="mailto:mbouandagnanga18@gmail.com" class="contact-link">
+            <div class="cl-icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></div>
             <div>
               <div class="cl-label">Email</div>
-              <div class="cl-val"><span class="__cf_email__" data-cfemail="59343b362c38373d383e3738373e386861193e34383035773a3634">[email&#160;protected]</span></div>
+              <div class="cl-val">mbouandagnanga18@gmail.com</div>
             </div>
           </a>
-          <a href="tel:+241074676741" class="contact-link">
-            <div class="cl-icon">📞</div>
+          <a href="tel:+24166198918" class="contact-link">
+            <div class="cl-icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></div>
+            <div>
+              <div class="cl-label" data-i18n="cont.phone">Téléphone</div>
+              <div class="cl-val">+241&nbsp;66&nbsp;19&nbsp;89&nbsp;18</div>
+            </div>
+          </a>
+          <a href="https://wa.me/24174676741" target="_blank" rel="noopener" class="contact-link">
+            <div class="cl-icon"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg></div>
             <div>
               <div class="cl-label">WhatsApp</div>
-              <div class="cl-val">+241 074 676 741</div>
+              <div class="cl-val">+241&nbsp;074&nbsp;67&nbsp;67&nbsp;41</div>
             </div>
           </a>
-          <a href="https://www.linkedin.com/in/richard-ngoubadjambo-239244325/" target="_blank" class="contact-link">
-            <div class="cl-icon">🔗</div>
+          <a href="https://www.linkedin.com/in/richard-ngoubadjambo-239244325/" target="_blank" rel="noopener" class="contact-link">
+            <div class="cl-icon"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></div>
             <div>
               <div class="cl-label">LinkedIn</div>
               <div class="cl-val">NGOUBADJAMBO Richard</div>
             </div>
           </a>
-          <a href="https://ngoubadjambo-richard.github.io/Portfolio-Richard/" target="_blank" class="contact-link">
-            <div class="cl-icon">🌐</div>
+          <a href="https://ngoubadjambo-richard.github.io/Portfolio-Richard/" target="_blank" rel="noopener" class="contact-link">
+            <div class="cl-icon"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg></div>
             <div>
               <div class="cl-label" data-i18n="cont.portfolio">Portfolio actuel</div>
               <div class="cl-val">ngoubadjambo-richard.github.io</div>
             </div>
           </a>
           <div class="contact-link" style="cursor:default">
-            <div class="cl-icon">📍</div>
+            <div class="cl-icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></div>
             <div>
               <div class="cl-label" data-i18n="cont.loc">Localisation</div>
-              <div class="cl-val">Libreville, Gabon 🇬🇦</div>
+              <div class="cl-val">Libreville, Gabon</div>
             </div>
           </div>
         </div>
@@ -824,7 +958,7 @@
             <label data-i18n="form.msg">Message</label>
             <textarea placeholder="Décrivez votre projet..." required></textarea>
           </div>
-          <button type="submit" class="btn-primary" style="width:100%;justify-content:center" data-i18n="form.send">✉ Envoyer le message</button>
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center" data-i18n="form.send">Envoyer le message</button>
         </form>
       </div>
     </div>
@@ -836,11 +970,11 @@
   <div class="modal-box" id="modalBox">
     <div class="modal-header">
       <div>
-        <div class="modal-thumb" id="modalThumb">📱</div>
+        <div class="modal-thumb" id="modalThumb"><svg class="icon-lg" aria-hidden="true"><use href="#i-smartphone"/></svg></div>
         <div class="modal-cat" id="modalCat">Application Mobile</div>
         <div class="modal-title" id="modalTitle">Projet</div>
       </div>
-      <button class="modal-close" onclick="closeModal()">✕</button>
+      <button type="button" class="modal-close" onclick="closeModal()" aria-label="Fermer">✕</button>
     </div>
     <div class="modal-body">
       <div class="modal-section-label" id="lblDesc">Description</div>
@@ -851,8 +985,8 @@
       <ul class="modal-highlights" id="modalHighlights"></ul>
     </div>
     <div class="modal-footer">
-      <a href="https://wa.me/24166198918?text=Bonjour,%20je%20souhaite%20discuter%20de%20mon%20projet." class="btn-primary" onclick="closeModal()" id="modalCta">✉ Discuter de ce projet</a>
-      <a href="https://ngoubadjambo-richard.github.io/CodeWave/portfolio.html" target="_blank" class="btn-secondary" id="modalLink">Voir le portfolio →</a>
+      <a href="https://wa.me/24174676741?text=Bonjour,%20je%20souhaite%20discuter%20de%20mon%20projet." class="btn-primary" onclick="closeModal()" id="modalCta">Discuter de ce projet</a>
+      <a href="https://ngoubadjambo-richard.github.io/CodeWave/portfolio.html" target="_blank" rel="noopener" class="btn-secondary" id="modalLink">Voir le portfolio →</a>
     </div>
   </div>
 </div>
@@ -863,16 +997,15 @@
     <div class="footer-copy">© 2026 Richard NGOUBADJAMBO · <span data-i18n="footer.rights">Tous droits réservés</span> · M.G.N CodeWave</div>
     <div class="footer-links">
       <a href="#hero" data-i18n="footer.top">Haut de page</a>
-      <a href="https://www.linkedin.com/in/richard-ngoubadjambo-239244325/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/NGOUBADJAMBO-Richard" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/richard-ngoubadjambo-239244325/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/NGOUBADJAMBO-Richard" target="_blank" rel="noopener">GitHub</a>
     </div>
   </div>
 </footer>
 
 <!-- SCROLL TOP -->
-<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<button type="button" class="scroll-top" id="scrollTop" aria-label="Remonter en haut de page" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script src="js/env.js"></script>
 <script src="js/main.js"></script>
 </body>

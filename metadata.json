@@ -166,7 +166,7 @@
       "id": "showcase",
       "title": "Mobile Showcase",
       "label": "Case study Flutter",
-      "content": "Application Flutter Akanda Tech de A à Z"
+      "content": "Application Flutter LEBONWAZ de A à Z"
     },
     {
       "id": "services",
@@ -264,7 +264,7 @@
   "projects": [
     {
       "id": "p1",
-      "name": "App Mobile Flutter — Akanda Tech",
+      "name": "App Mobile Flutter — LEBONWAZ",
       "description": "Application multiplateforme iOS & Android développée de A à Z. Architecture Firebase Firestore, authentification, gestion d'état Provider.",
       "category": "mobile",
       "technologies": ["Flutter", "Dart", "Firebase"],
@@ -367,7 +367,7 @@
     {
       "id": "exp1",
       "title": "Chef de Projet IT / Dev Mobile Flutter",
-      "company": "Akanda Tech",
+      "company": "LEBONWAZ",
       "duration": "10 mois",
       "description": "Pilotage complet d'une application mobile iOS & Android. Spécifications, wireframes, Firebase, sprints, tests et mise en production."
     },

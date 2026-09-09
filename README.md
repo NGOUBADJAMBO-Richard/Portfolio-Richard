@@ -101,7 +101,7 @@ portfolio-richard/
 | À Propos         | Bio + timeline parcours et formation        | ✅     |
 | Compétences      | Grid des stacks techniques                  | ✅     |
 | Projets          | Portfolio filtrable (Web, Mobile, Branding) | ✅     |
-| Mobile Showcase  | Case study Flutter @ Akanda Tech            | ✅     |
+| Mobile Showcase  | Case study Flutter @ LEBONWAZ            | ✅     |
 | Services         | 6 offres M.G.N CodeWave                     | ✅     |
 | GitHub Dashboard | Stats et repos temps réel                   | ✅     |
 | Contact          | Formulaire + info                           | ✅     |
@@ -328,7 +328,7 @@ GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxxx
 - Cache GitHub API (10min TTL)
 - Compression Gzip (Vercel)
 
-## 📱 Mobile Showcase - Flutter @ Akanda Tech
+## 📱 Mobile Showcase - Flutter @ LEBONWAZ
 
 **Project**: Application mobile iOS & Android
 
@@ -375,7 +375,7 @@ MIT License - Libre d'utilisation selon les conditions du fichier LICENSE
 Ingénieur d'État en Informatique & Réseaux, passionné par la création de solutions digitales performantes.
 
 - 🎓 Formation EMSI (Maroc)
-- 💼 Chef de Projet IT @ Akanda Tech (10 mois)
+- 💼 Chef de Projet IT @ LEBONWAZ (10 mois)
 - 🚀 Fondateur M.G.N CodeWave
 - 🌍 Vision: Transformer les marchés émergents africains via le digital
 

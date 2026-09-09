@@ -41,9 +41,12 @@ const i18n = {
     "hero.title3": "Fondateur MGN CodeWave",
     "hero.subtitle":
       "Je conçois et livre des solutions digitales complètes — du backend robuste aux interfaces mobiles élégantes. Ingénieur d'État avec une vision produit et une passion pour l'impact.",
-    "hero.cta1": "✉ Me contacter",
+    "hero.cta1": "Me contacter",
     "hero.cta2": "Voir mes projets →",
-    "hero.cta3": "⬇ Télécharger CV",
+    "hero.cta3": "Télécharger CV",
+    "hero.lastmission": "Dernière mission : Chef de Projet IT & Fullstack — Gabon Connect SARLU",
+    "hero.float.org": "Gabon Connect SARLU",
+    "hero.float.role": "Chef de Projet IT & Fullstack",
     "stats.exp": "Ans d'expérience",
     "stats.projects": "Projets livrés",
     "stats.stack": "Stacks maîtrisés",
@@ -53,38 +56,49 @@ const i18n = {
     "about.p1":
       "Diplômé Ingénieur d'État en Informatique & Réseaux de l'EMSI (Rabat), j'ai bâti ma carrière à l'intersection du code et du management de projet — un profil rare qui me permet de comprendre autant les enjeux techniques que business.",
     "about.p2":
-      "Chez Akanda Tech, j'ai piloté de A à Z le développement d'une application mobile Flutter — des spécifications aux tests utilisateurs, en passant par l'architecture Firebase. C'est cette expérience end-to-end qui fait ma valeur ajoutée.",
+      "De LEBONWAZ à Gabon Connect SARLU, je pilote les produits de bout en bout : cahier des charges, wireframing UX, développement, tests, déploiement et suivi de performance. C'est cette maîtrise du cycle complet qui fait ma valeur ajoutée.",
     "about.p3":
+      "Je travaille en relation client directe — recueil du besoin, arbitrages, reporting — et je coordonne équipes techniques et parties prenantes autour d'un plan de sprint clair et d'indicateurs suivis.",
+    "about.p4":
       "Aujourd'hui, à travers M.G.N CodeWave, je propose des solutions digitales complètes aux entreprises et startups africaines qui veulent passer à l'ère numérique.",
     "val.speed": "Livraison rapide",
-    "val.speed.desc": "Sprints, MVP et iterations continues",
+    "val.speed.desc": "Sprints agiles bihebdomadaires, MVP et itérations continues",
     "val.quality": "Qualité orientée impact",
-    "val.quality.desc": "Code propre, UX pensée pour l'utilisateur",
+    "val.quality.desc": "Code propre, UX testée, qualité mesurée sur l'usage",
     "val.comm": "Communication claire",
-    "val.comm.desc": "Relation client transparente et régulière",
+    "val.comm.desc": "Relation client directe, reporting et arbitrages tracés",
     "val.africa": "Vision Afrique",
     "val.africa.desc": "Solutions adaptées aux marchés émergents",
     "about.exp.tag": "PARCOURS",
     "about.edu.tag": "FORMATION",
-    "tl1.title": "Chef de Projet IT / Dev Mobile Flutter",
+    "edu1.title": "Certification Web Fullstack",
+    "edu2.title": "Formation Web Fullstack",
+    "edu3.title": "Diplôme d'Ingénieur d'État — Informatique & Réseaux",
+    "tl1.title": "Chef de Projet IT & Développeur Fullstack",
+    "tl1.date": "Mai 2026 – Août 2026",
     "tl1.desc":
-      "Pilotage complet d'une application mobile iOS & Android. Spécifications, wireframes, Firebase, sprints, tests et mise en production.",
-    "tl2.title": "Développeur Web Drupal",
+      "Pilotage de bout en bout d'une application PWA pour un client majeur — analyse des besoins, spécifications, wireframes UX, sprints agiles et mise en production. Stack React / Node.js / PostgreSQL, Firebase Firestore temps réel et authentification JWT.",
+    "tl.badge": "Récent",
+    "tl2.title": "Consultant Digital & Entrepreneur Freelance",
+    "tl2.date": "Novembre 2025 – aujourd'hui",
     "tl2.desc":
-      "Développement de plateformes web, nouvelles fonctionnalités, relation client, gestion de projet.",
-    "tl3.title": "Chargé de Clientèle",
-    "tl3.desc": "Gestion et développement d'un portefeuille clients.",
-    "tl4.title": "Créateur de Contenu / Freelance WordPress",
+      "Conception digitale complète — web, mobile et PWA — pour PME et startups gabonaises. Audits techniques, conseil en transformation digitale et gestion autonome du cycle projet.",
+    "tl3.title": "Développeur Mobile & Chef de Projet",
+    "tl3.date": "Janvier 2025 – Novembre 2025 · 10 mois",
+    "tl3.desc":
+      "Conception et livraison d'une application mobile Flutter iOS & Android. Clean Architecture / MVC avec Provider, Firebase, optimisation du temps de démarrage, des animations et de la consommation mémoire-batterie.",
+    "tl4.title": "Développeur Frontend & Web Designer",
+    "tl4.date": "Mars 2024 – Juin 2024 · 3 mois",
     "tl4.desc":
-      "Création de sites WordPress optimisés SEO pour des clients entreprises.",
+      "Interfaces web en approche component-driven adossée à un style guide partagé. Intégration d'APIs REST, plateformes Drupal, optimisation UX et performance sur iOS & Android.",
     "skills.tag": "COMPÉTENCES TECHNIQUES",
     "skills.title": "Stack complet.\nDu mobile au cloud.",
     "skills.desc":
-      "Un profil polyvalent qui couvre l'ensemble du cycle de développement.",
+      "Un profil polyvalent qui couvre l'ensemble du cycle de développement — de la base de données à l'interface utilisateur, du web au mobile natif.",
     "sk.mobile": "Mobile Flutter",
     "sk.frontend": "Frontend Web",
     "sk.backend": "Backend & BDD",
-    "sk.tools": "CMS & Outils",
+    "sk.tools": "Outils & DevOps",
     "sk.pm": "Gestion de Projet",
     "sk.lang": "Langues & Soft Skills",
     "proj.tag": "PROJETS",
@@ -92,18 +106,20 @@ const i18n = {
     "proj.desc":
       "Des projets concrets livrés — applications mobiles, plateformes web, systèmes backend et solutions de marque.",
     "filter.all": "Tous",
-    "filter.mobile": "📱 Mobile",
-    "filter.web": "🌐 Web",
-    "filter.branding": "✨ Branding",
+    "filter.mobile": "Mobile",
+    "filter.web": "Web",
+    "filter.client": "Mission client",
+    "filter.branding": "Branding",
     "cat.mobile": "Application Mobile",
     "cat.web": "Plateforme Web",
+    "cat.client": "Mission client · Gabon Connect",
     "cat.frontend": "Frontend React",
     "cat.fullstack": "Fullstack",
     "cat.brand": "Branding",
-    "p1.name": "App Mobile Flutter — Akanda Tech",
+    "p1.name": "App Mobile Flutter — LEBONWAZ",
     "p1.desc":
       "Application multiplateforme iOS & Android développée de A à Z. Architecture Firebase Firestore, authentification, gestion d'état Provider.",
-    "p2.name": "Plateforme Web Drupal",
+    "p2.name": "Plateforme Web Drupal — Agence Digitale",
     "p2.desc":
       "Développement et maintenance de plateformes web entreprises sous Drupal. Nouvelles fonctionnalités, optimisation SEO et relation client.",
     "p3.name": "Interface React.js — Dashboard Analytics",
@@ -117,10 +133,19 @@ const i18n = {
     "p6.name": "Portfolio Mobile — MGN",
     "p6.desc":
       "Application de présentation interactive des services MGN CodeWave.",
+    "p7.name": "Gabonova — Plateforme immobilière",
+    "p7.desc":
+      "Plateforme de mise en relation immobilière. Campagnes de tests fonctionnels documentées, rapports d'anomalies itératifs, supports vidéo de présentation et d'installation, et proposition de stratégie marketing de lancement.",
+    "p8.name": "AHPAM AssetView — Gestion locative bilingue",
+    "p8.desc":
+      "Application de gestion locative bilingue FR/EN. Rédaction du plan et des cas de test, conduite des recettes fonctionnelles et formalisation des retours client pour alimenter les itérations produit.",
+    "p9.name": "Delta Manga Sécurité — Site vitrine & pilotage",
+    "p9.desc":
+      "Contribution au site vitrine de DMS, reporting mensuel d'avancement, analyse comparative de 5 solutions de gestion du gardiennage et rédaction du cahier des charges du projet DMS 360°.",
     "show.tag": "MOBILE SHOWCASE",
     "show.title": "Flutter de A à Z.\nPiloté et livré.",
     "show.desc":
-      "Chez Akanda Tech, j'ai été à la fois chef de projet et développeur principal — une combinaison rare.",
+      "Chez LEBONWAZ, j'ai été à la fois chef de projet et développeur principal — une combinaison rare.",
     "feat1.title": "Architecture & Spécifications",
     "feat1.desc":
       "Rédaction des exigences fonctionnelles, wireframes UX, choix d'architecture MVC/Provider.",
@@ -183,17 +208,24 @@ const i18n = {
     "mgn.desc":
       "Votre partenaire pour des projets digitaux ambitieux en Afrique et à l'international. Qualité ingénieur, rapidité startup.",
     "mgn.cta": "Travailler avec nous →",
+    "testi.tag": "RECOMMANDATION",
+    "testi.title": "Ce qu'en dit\nun client.",
+    "testi.quote":
+      "Rigueur du reporting, capacité à formaliser un besoin client encore flou en un cahier des charges exploitable, et esprit de proposition constant.",
+    "testi.source":
+      "Extrait d'une lettre de recommandation — direction, Gabon Connect SARLU",
     "cont.tag": "CONTACT",
     "cont.title": "Parlons de votre\nprochain projet.",
     "cont.desc":
       "Vous avez un projet web, mobile ou une mission de chef de projet ? Je suis disponible pour des collaborations en Afrique et à l'international.",
     "cont.portfolio": "Portfolio actuel",
     "cont.loc": "Localisation",
+    "cont.phone": "Téléphone",
     "form.name": "Nom complet",
     "form.email": "Email",
     "form.subject": "Sujet",
     "form.msg": "Message",
-    "form.send": "✉ Envoyer le message",
+    "form.send": "Envoyer le message",
     "form.opt1": "Projet Mobile Flutter",
     "form.opt2": "Application Web React/Next.js",
     "form.opt3": "Gestion de Projet IT",
@@ -205,11 +237,11 @@ const i18n = {
     "photo.title": "Ingénieur d'État.\nBâtisseur de produits.",
     "photo.desc":
       "Né au Gabon, formé au Maroc, je suis un ingénieur informatique passionné par la création de solutions digitales qui ont un impact réel. Mon approche combine rigueur technique, vision produit et sens du leadership.",
-    "photo.cta1": "✉ Me contacter",
+    "photo.cta1": "Me contacter",
     "photo.cta2": "Voir mes projets →",
     "mgn.link.title": "M.G.N CodeWave — Solutions Digitales",
     "mgn.link.sub": "Visiter l'agence · Web · Mobile · Branding",
-    "nav.agency": "🚀 Mon Agence",
+    "nav.agency": "Mon Agence",
     "detail.btn": "Voir les détails →",
     "gh.tag": "GITHUB DASHBOARD",
     "gh.title": "Tableau de bord de mon activité GitHub",
@@ -262,9 +294,12 @@ const i18n = {
     "hero.title3": "Founder of MGN CodeWave",
     "hero.subtitle":
       "I design and deliver complete digital solutions — from robust backends to elegant mobile interfaces. State Engineer with a product vision and a passion for impact.",
-    "hero.cta1": "✉ Contact me",
+    "hero.cta1": "Contact me",
     "hero.cta2": "View my projects →",
-    "hero.cta3": "⬇ Download CV",
+    "hero.cta3": "Download CV",
+    "hero.lastmission": "Latest mission: IT Project Manager & Fullstack — Gabon Connect SARLU",
+    "hero.float.org": "Gabon Connect SARLU",
+    "hero.float.role": "IT Project Manager & Fullstack",
     "stats.exp": "Years experience",
     "stats.projects": "Projects delivered",
     "stats.stack": "Stacks mastered",
@@ -274,37 +309,49 @@ const i18n = {
     "about.p1":
       "A State-certified Engineer in Computer Science & Networks from EMSI (Rabat), I built my career at the intersection of code and project management — a rare profile that lets me understand both technical and business challenges.",
     "about.p2":
-      "At Akanda Tech, I drove a Flutter mobile app from A to Z — from specs and wireframes to Firebase architecture and user testing. This end-to-end ownership is my core differentiator.",
+      "From LEBONWAZ to Gabon Connect SARLU, I manage products end to end: requirements, UX wireframing, development, testing, deployment and performance monitoring. This mastery of the full cycle is my core added value.",
     "about.p3":
+      "I work in a direct client relationship — gathering needs, making trade-offs, reporting — and I coordinate technical teams and stakeholders around a clear sprint plan and tracked indicators.",
+    "about.p4":
       "Today, through M.G.N CodeWave, I offer complete digital solutions to companies and African startups ready to enter the digital era.",
     "val.speed": "Fast delivery",
-    "val.speed.desc": "Sprints, MVPs and continuous iterations",
+    "val.speed.desc": "Biweekly agile sprints, MVPs and continuous iterations",
     "val.quality": "Impact-driven quality",
-    "val.quality.desc": "Clean code, UX built for real users",
+    "val.quality.desc": "Clean code, tested UX, quality measured on real usage",
     "val.comm": "Clear communication",
-    "val.comm.desc": "Transparent, regular client relationship",
+    "val.comm.desc": "Direct client relationship, tracked reporting and decisions",
     "val.africa": "Africa vision",
     "val.africa.desc": "Solutions tailored to emerging markets",
     "about.exp.tag": "EXPERIENCE",
     "about.edu.tag": "EDUCATION",
-    "tl1.title": "IT Project Manager / Flutter Mobile Dev",
+    "edu1.title": "Web Fullstack Certification",
+    "edu2.title": "Web Fullstack Training",
+    "edu3.title": "State Engineering Degree — Computer Science & Networks",
+    "tl1.title": "IT Project Manager & Fullstack Developer",
+    "tl1.date": "May 2026 – August 2026",
     "tl1.desc":
-      "Full ownership of iOS & Android mobile app. Specs, wireframes, Firebase, sprints, testing and deployment.",
-    "tl2.title": "Drupal Web Developer",
+      "End-to-end delivery of a PWA for a major client — needs analysis, specifications, UX wireframes, agile sprints and production deployment. Stack React / Node.js / PostgreSQL, real-time Firebase Firestore and JWT authentication.",
+    "tl.badge": "Recent",
+    "tl2.title": "Digital Consultant & Freelance Entrepreneur",
+    "tl2.date": "November 2025 – present",
     "tl2.desc":
-      "Web platform development, new features, client management, project coordination.",
-    "tl3.title": "Account Manager",
-    "tl3.desc": "Management and growth of a client portfolio.",
-    "tl4.title": "Content Creator / WordPress Freelancer",
-    "tl4.desc": "SEO-optimised WordPress websites for business clients.",
+      "Full digital design — web, mobile and PWA — for Gabonese SMEs and startups. Technical audits, digital transformation consulting and autonomous project cycle management.",
+    "tl3.title": "Mobile Developer & Project Manager",
+    "tl3.date": "January 2025 – November 2025 · 10 months",
+    "tl3.desc":
+      "Design and delivery of a Flutter iOS & Android mobile app. Clean Architecture / MVC with Provider, Firebase, and optimisation of startup time, animations and battery-memory usage.",
+    "tl4.title": "Frontend Developer & Web Designer",
+    "tl4.date": "March 2024 – June 2024 · 3 months",
+    "tl4.desc":
+      "Web interfaces built with a component-driven approach backed by a shared style guide. REST API integration, Drupal platforms, UX and performance optimisation on iOS & Android.",
     "skills.tag": "TECHNICAL SKILLS",
     "skills.title": "Full stack.\nFrom mobile to cloud.",
     "skills.desc":
-      "A versatile profile covering the entire development lifecycle.",
+      "A versatile profile covering the entire development lifecycle — from database to user interface, from web to native mobile.",
     "sk.mobile": "Flutter Mobile",
     "sk.frontend": "Frontend Web",
     "sk.backend": "Backend & DB",
-    "sk.tools": "CMS & Tools",
+    "sk.tools": "Tools & DevOps",
     "sk.pm": "Project Management",
     "sk.lang": "Languages & Soft Skills",
     "proj.tag": "PROJECTS",
@@ -312,18 +359,20 @@ const i18n = {
     "proj.desc":
       "Concrete delivered projects — mobile apps, web platforms, backend systems and branding solutions.",
     "filter.all": "All",
-    "filter.mobile": "📱 Mobile",
-    "filter.web": "🌐 Web",
-    "filter.branding": "✨ Branding",
+    "filter.mobile": "Mobile",
+    "filter.web": "Web",
+    "filter.client": "Client mission",
+    "filter.branding": "Branding",
     "cat.mobile": "Mobile App",
     "cat.web": "Web Platform",
+    "cat.client": "Client mission · Gabon Connect",
     "cat.frontend": "React Frontend",
     "cat.fullstack": "Fullstack",
     "cat.brand": "Branding",
-    "p1.name": "Flutter Mobile App — Akanda Tech",
+    "p1.name": "Flutter Mobile App — LEBONWAZ",
     "p1.desc":
       "Cross-platform iOS & Android app built end-to-end. Firebase Firestore architecture, authentication, Provider state management.",
-    "p2.name": "Drupal Web Platform",
+    "p2.name": "Drupal Web Platform — Digital Agency",
     "p2.desc":
       "Development and maintenance of enterprise web platforms under Drupal. New features, SEO optimisation and client management.",
     "p3.name": "React.js Interface — Analytics Dashboard",
@@ -336,10 +385,19 @@ const i18n = {
       "Complete visual and digital identity creation for the MGN CodeWave agency.",
     "p6.name": "Mobile Portfolio — MGN",
     "p6.desc": "Interactive presentation app for MGN CodeWave services.",
+    "p7.name": "Gabonova — Real estate platform",
+    "p7.desc":
+      "Real estate matching platform. Documented functional testing campaigns, iterative issue reports, video support for demos and installation, plus a go-to-market strategy proposal.",
+    "p8.name": "AHPAM AssetView — Bilingual rental management",
+    "p8.desc":
+      "Bilingual FR/EN rental management app. Writing the test plan and test cases, running functional acceptance reviews and formalising client feedback to feed product iterations.",
+    "p9.name": "Delta Manga Sécurité — Showcase site & delivery",
+    "p9.desc":
+      "Contribution to DMS's showcase website, monthly progress reporting, comparative analysis of 5 guard-management solutions and writing the requirements spec for the DMS 360° project.",
     "show.tag": "MOBILE SHOWCASE",
     "show.title": "Flutter end-to-end.\nManaged and shipped.",
     "show.desc":
-      "At Akanda Tech, I was both project manager and lead developer — a rare combination.",
+      "At LEBONWAZ, I was both project manager and lead developer — a rare combination.",
     "feat1.title": "Architecture & Specifications",
     "feat1.desc":
       "Writing functional requirements, UX wireframes, MVC/Provider architecture choices.",
@@ -402,17 +460,24 @@ const i18n = {
     "mgn.desc":
       "Your partner for ambitious digital projects in Africa and internationally. Engineer quality, startup speed.",
     "mgn.cta": "Work with us →",
+    "testi.tag": "RECOMMENDATION",
+    "testi.title": "What a client\nsays about me.",
+    "testi.quote":
+      "Reporting rigour, the ability to turn a still-vague client need into an actionable specification, and a constant spirit of initiative.",
+    "testi.source":
+      "Excerpt from a recommendation letter — management, Gabon Connect SARLU",
     "cont.tag": "CONTACT",
     "cont.title": "Let's talk about your\nnext project.",
     "cont.desc":
       "Have a web, mobile project or an IT project management mission? I'm available for collaborations in Africa and internationally.",
     "cont.portfolio": "Current portfolio",
     "cont.loc": "Location",
+    "cont.phone": "Phone",
     "form.name": "Full name",
     "form.email": "Email",
     "form.subject": "Subject",
     "form.msg": "Message",
-    "form.send": "✉ Send message",
+    "form.send": "Send message",
     "form.opt1": "Flutter Mobile Project",
     "form.opt2": "React/Next.js Web App",
     "form.opt3": "IT Project Management",
@@ -424,11 +489,11 @@ const i18n = {
     "photo.title": "State Engineer.\nProduct Builder.",
     "photo.desc":
       "Born in Gabon, trained in Morocco, I'm a software engineer passionate about creating digital solutions with real impact. My approach combines technical rigour, product vision and leadership.",
-    "photo.cta1": "✉ Contact me",
+    "photo.cta1": "Contact me",
     "photo.cta2": "View my projects →",
     "mgn.link.title": "M.G.N CodeWave — Digital Solutions",
     "mgn.link.sub": "Visit the agency · Web · Mobile · Branding",
-    "nav.agency": "🚀 My Agency",
+    "nav.agency": "My Agency",
     "detail.btn": "View details →",
     "gh.tag": "GITHUB DASHBOARD",
     "gh.title": "GitHub activity dashboard",
@@ -472,6 +537,24 @@ const i18n = {
 let currentLang = "fr";
 let currentTheme = "dark";
 
+/**
+ * Ecrit une traduction dans un element en restituant les sauts de ligne ("\n")
+ * sous forme de <br>, sans passer par innerHTML.
+ * @param {Element} el
+ * @param {string} value
+ */
+function setLocalizedText(el, value) {
+  if (!value.includes("\n")) {
+    el.textContent = value;
+    return;
+  }
+  el.textContent = "";
+  value.split("\n").forEach((line, index) => {
+    if (index > 0) el.appendChild(document.createElement("br"));
+    el.appendChild(document.createTextNode(line));
+  });
+}
+
 function applyLang(lang) {
   currentLang = lang;
   document.documentElement.setAttribute("data-lang", lang);
@@ -479,7 +562,9 @@ function applyLang(lang) {
     lang === "fr" ? "EN" : "FR";
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
-    if (i18n[lang][key]) el.textContent = i18n[lang][key];
+    const value = i18n[lang][key];
+    if (value === undefined) return;
+    setLocalizedText(el, value);
   });
   const searchInput = document.getElementById("ghRepoSearch");
   if (searchInput) searchInput.placeholder = t("gh.search");
@@ -488,9 +573,21 @@ function applyLang(lang) {
 
 function applyTheme(theme) {
   currentTheme = theme;
-  document.documentElement.setAttribute("data-theme", theme);
-  document.getElementById("themeToggle").textContent =
-    theme === "dark" ? "☀️" : "🌙";
+  const root = document.documentElement;
+  // Coupe les transitions pendant le basculement puis les rétablit à la frame
+  // suivante : le thème change d'un coup au lieu de fondre pendant 300 ms.
+  root.classList.add("theme-switching");
+  root.setAttribute("data-theme", theme);
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => root.classList.remove("theme-switching"));
+  });
+  // Les icones soleil/lune sont dans le sprite : le CSS affiche la bonne
+  // selon data-theme. Ecrire ici en textContent les effacerait.
+  const toggle = document.getElementById("themeToggle");
+  toggle.setAttribute(
+    "aria-label",
+    theme === "dark" ? "Activer le thème clair" : "Activer le thème sombre",
+  );
 }
 
 document.getElementById("langToggle").addEventListener("click", () => {
@@ -517,6 +614,17 @@ document.getElementById("filterTabs").addEventListener("click", (e) => {
   });
 });
 
+// PROJECT CARDS KEYBOARD ACCESS (Enter / Space)
+document.querySelectorAll(".project-card").forEach((card) => {
+  card.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      const id = card.getAttribute("onclick").match(/openModal\('(\w+)'\)/)?.[1];
+      if (id && projectData[id]) openModal(id);
+    }
+  });
+});
+
 // SCROLL REVEAL
 const observer = new IntersectionObserver(
   (entries) => {
@@ -538,7 +646,9 @@ window.addEventListener("scroll", () => {
 
 // MOBILE MENU
 function toggleMenu() {
-  document.getElementById("mobileMenu").classList.toggle("open");
+  const open = document.getElementById("mobileMenu").classList.toggle("open");
+  const burger = document.getElementById("hamburger");
+  if (burger) burger.setAttribute("aria-expanded", String(open));
 }
 
 // FORM
@@ -566,15 +676,15 @@ document.querySelectorAll(".nav-links a").forEach((a) => {
 // PROJECT DETAIL MODAL DATA
 const projectData = {
   p1: {
-    thumb: "📱",
+    icon: "smartphone",
     cat: { fr: "Application Mobile", en: "Mobile App" },
     title: {
-      fr: "App Mobile Flutter — Akanda Tech",
-      en: "Flutter Mobile App — Akanda Tech",
+      fr: "App Mobile Flutter — LEBONWAZ",
+      en: "Flutter Mobile App — LEBONWAZ",
     },
     desc: {
-      fr: "Projet phare de 10 mois chez Akanda Tech (Libreville, Gabon). Chef de Projet IT et Développeur principal, j'ai conçu et livré une application mobile multiplateforme iOS & Android avec Flutter, de l'analyse des besoins jusqu'à la mise en production.",
-      en: "10-month flagship project at Akanda Tech (Libreville, Gabon). As IT Project Manager and Lead Developer, I designed and delivered a cross-platform iOS & Android mobile app with Flutter, from requirements analysis through to production deployment.",
+      fr: "Projet phare de 10 mois chez LEBONWAZ (Libreville, Gabon). Chef de Projet IT et Développeur principal, j'ai conçu et livré une application mobile multiplateforme iOS & Android avec Flutter, de l'analyse des besoins jusqu'à la mise en production.",
+      en: "10-month flagship project at LEBONWAZ (Libreville, Gabon). As IT Project Manager and Lead Developer, I designed and delivered a cross-platform iOS & Android mobile app with Flutter, from requirements analysis through to production deployment.",
     },
     tags: [
       "Flutter",
@@ -606,7 +716,7 @@ const projectData = {
     },
   },
   p2: {
-    thumb: "🌐",
+    icon: "globe",
     cat: { fr: "Plateforme Web", en: "Web Platform" },
     title: {
       fr: "Plateforme Web Drupal — Agence Digitale",
@@ -635,7 +745,7 @@ const projectData = {
     },
   },
   p3: {
-    thumb: "⚛️",
+    icon: "code",
     cat: { fr: "Frontend React", en: "React Frontend" },
     title: {
       fr: "Interface React.js — Dashboard Analytics",
@@ -672,7 +782,7 @@ const projectData = {
     },
   },
   p4: {
-    thumb: "🔧",
+    icon: "server",
     cat: { fr: "Fullstack", en: "Fullstack" },
     title: { fr: "API Node.js + MongoDB", en: "Node.js API + MongoDB" },
     desc: {
@@ -706,7 +816,7 @@ const projectData = {
     },
   },
   p5: {
-    thumb: "✨",
+    icon: "sparkle",
     cat: { fr: "Branding", en: "Branding" },
     title: {
       fr: "M.G.N CodeWave — Identité de Marque",
@@ -742,7 +852,7 @@ const projectData = {
     },
   },
   p6: {
-    thumb: "🚀",
+    icon: "layers",
     cat: { fr: "Application Mobile", en: "Mobile App" },
     title: {
       fr: "Portfolio Mobile — MGN CodeWave",
@@ -770,12 +880,100 @@ const projectData = {
       ],
     },
   },
+  p7: {
+    icon: "building",
+    cat: { fr: "Mission client · Gabon Connect", en: "Client mission · Gabon Connect" },
+    title: {
+      fr: "Gabonova — Plateforme immobilière",
+      en: "Gabonova — Real estate platform",
+    },
+    desc: {
+      fr: "Mission menée chez Gabon Connect SARLU pour Gabonova, plateforme de mise en relation immobilière. Orchestration de campagnes de tests fonctionnels documentées, production de rapports d'anomalies itératifs, réalisation de supports vidéo de présentation et d'installation, et proposition d'une stratégie marketing de lancement.",
+      en: "Mission carried out at Gabon Connect SARLU for Gabonova, a real estate matching platform. Orchestration of documented functional testing campaigns, delivery of iterative issue reports, production of video support for demo and installation, and proposal of a go-to-market strategy.",
+    },
+    tags: ["React", "Node.js", "PostgreSQL", "Tests fonctionnels", "Go-to-market"],
+    highlights: {
+      fr: [
+        "Campagnes de tests fonctionnels documentées sur l'ensemble du parcours utilisateur",
+        "Rapports d'anomalies itératifs transmis à l'équipe de développement",
+        "Supports vidéo de présentation produit et d'installation",
+        "Proposition de stratégie marketing de lancement",
+        "Suivi des corrections et validation des itérations",
+      ],
+      en: [
+        "Documented functional testing campaigns across the whole user journey",
+        "Iterative issue reports delivered to the development team",
+        "Video support for product demo and installation",
+        "Go-to-market strategy proposal",
+        "Fix tracking and validation of iterations",
+      ],
+    },
+  },
+  p8: {
+    icon: "key",
+    cat: { fr: "Mission client · Gabon Connect", en: "Client mission · Gabon Connect" },
+    title: {
+      fr: "AHPAM AssetView — Gestion locative bilingue",
+      en: "AHPAM AssetView — Bilingual rental management",
+    },
+    desc: {
+      fr: "Intervention chez Gabon Connect SARLU sur AHPAM AssetView, application de gestion locative bilingue FR/EN. Rédaction du plan et des cas de test, conduite des recettes fonctionnelles et formalisation des retours client pour alimenter les itérations produit.",
+      en: "Assignment at Gabon Connect SARLU on AHPAM AssetView, a bilingual FR/EN rental management app. Writing the test plan and test cases, running functional acceptance reviews and formalising client feedback to feed product iterations.",
+    },
+    tags: ["PWA", "i18n FR/EN", "Plan de test", "Recette", "Firestore"],
+    highlights: {
+      fr: [
+        "Rédaction d'un plan de test structuré (périmètre, critères, cas nominaux et limites)",
+        "Conduite des recettes fonctionnelles avec le client",
+        "Formalisation des retours client en backlog produit",
+        "Suivi des corrections et re-test avant livraison",
+        "Interface bilingue FR/EN validée sur les deux langues",
+      ],
+      en: [
+        "Structured test plan (scope, criteria, nominal and edge cases)",
+        "Functional acceptance reviews run with the client",
+        "Client feedback formalised into a product backlog",
+        "Fix tracking and re-testing before delivery",
+        "Bilingual FR/EN interface validated in both languages",
+      ],
+    },
+  },
+  p9: {
+    icon: "shield",
+    cat: { fr: "Mission client · Gabon Connect", en: "Client mission · Gabon Connect" },
+    title: {
+      fr: "Delta Manga Sécurité — Site vitrine & pilotage",
+      en: "Delta Manga Sécurité — Showcase site & delivery",
+    },
+    desc: {
+      fr: "Accompagnement de Delta Manga Sécurité (DMS) via Gabon Connect SARLU : contribution au site vitrine, reporting mensuel d'avancement, analyse comparative de 5 solutions de gestion du gardiennage et rédaction du cahier des charges du projet DMS 360°.",
+      en: "Support for Delta Manga Sécurité (DMS) through Gabon Connect SARLU: contribution to the showcase website, monthly progress reporting, comparative analysis of 5 guard-management solutions and writing the requirements spec for the DMS 360° project.",
+    },
+    tags: ["Site vitrine", "Benchmark", "Cahier des charges", "Reporting"],
+    highlights: {
+      fr: [
+        "Contribution au site vitrine de DMS",
+        "Reporting mensuel d'avancement auprès de la direction",
+        "Analyse comparative de 5 solutions de gestion du gardiennage",
+        "Rédaction du cahier des charges du projet DMS 360°",
+        "Cadrage des besoins et recommandations de déploiement",
+      ],
+      en: [
+        "Contribution to DMS's showcase website",
+        "Monthly progress reporting to management",
+        "Comparative analysis of 5 guard-management solutions",
+        "Requirements spec for the DMS 360° project",
+        "Need-framing and deployment recommendations",
+      ],
+    },
+  },
 };
 
 function openModal(id) {
   const d = projectData[id];
   const lang = currentLang;
-  document.getElementById("modalThumb").textContent = d.thumb;
+  document.getElementById("modalThumb").innerHTML =
+    '<svg class="icon-lg" aria-hidden="true"><use href="#i' + "-" + d.icon + '"/></svg>';
   document.getElementById("modalCat").textContent = d.cat[lang];
   document.getElementById("modalTitle").textContent = d.title[lang];
   document.getElementById("modalDesc").textContent = d.desc[lang];
@@ -791,7 +989,7 @@ function openModal(id) {
   document.getElementById("lblHighlights").textContent =
     lang === "fr" ? "Points clés" : "Key highlights";
   document.getElementById("modalCta").textContent =
-    lang === "fr" ? "✉ Discuter de ce projet" : "✉ Discuss this project";
+    lang === "fr" ? "Discuter de ce projet" : "Discuss this project";
   document.getElementById("modalLink").textContent =
     lang === "fr" ? "Voir le portfolio →" : "View portfolio →";
   document.getElementById("modalOverlay").classList.add("open");

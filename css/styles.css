@@ -573,8 +573,9 @@ section {
   transform: translateY(-2px);
 }
 .val-icon {
-  font-size: 1.4rem;
-  margin-bottom: 8px;
+  color: var(--accent-text);
+  margin-bottom: 10px;
+  line-height: 0;
 }
 .val-title {
   font-family: "Syne", sans-serif;
@@ -631,6 +632,26 @@ section {
   color: var(--text2);
   line-height: 1.6;
   margin-top: 6px;
+}
+.tl-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.tl-badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--tag-bg);
+  color: var(--accent-text);
+  border: 1px solid var(--accent);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 100px;
+  white-space: nowrap;
 }
 
 /* SKILLS */
@@ -1173,8 +1194,9 @@ section {
   border-color: var(--accent);
 }
 .feature-icon {
-  font-size: 1.3rem;
+  color: var(--accent-text);
   margin-top: 2px;
+  line-height: 0;
 }
 .feature-title {
   font-family: "Syne", sans-serif;
@@ -1227,8 +1249,9 @@ section {
   opacity: 1;
 }
 .service-icon {
-  font-size: 2.2rem;
+  color: var(--accent-text);
   margin-bottom: 18px;
+  line-height: 0;
 }
 .service-name {
   font-family: "Syne", sans-serif;
@@ -1311,6 +1334,53 @@ section {
 .btn-white:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* TESTIMONIAL */
+#testimonial {
+  padding: 100px 0;
+  background: var(--bg3);
+}
+.testi-card {
+  max-width: 860px;
+  margin: 0 auto;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 48px 56px;
+  text-align: center;
+  transition:
+    border-color 0.3s,
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.testi-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px var(--glow);
+}
+.testi-mark {
+  display: block;
+  font-family: "Syne", sans-serif;
+  font-size: 4.5rem;
+  line-height: 0.8;
+  color: var(--accent);
+  opacity: 0.3;
+  margin-bottom: 18px;
+  user-select: none;
+}
+.testi-quote {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: var(--text);
+  font-style: italic;
+  margin: 0 0 24px;
+}
+.testi-source {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text2);
 }
 
 /* CONTACT */
@@ -1565,8 +1635,9 @@ section {
   );
 }
 .mgn-link-icon {
-  font-size: 2rem;
   flex-shrink: 0;
+  line-height: 0;
+  color: var(--accent-text);
 }
 .mgn-link-text .mgn-link-title {
   font-family: "Syne", sans-serif;
@@ -1660,11 +1731,15 @@ section {
   color: var(--accent);
 }
 .modal-thumb {
-  font-size: 4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  color: #fff;
   background: linear-gradient(135deg, var(--accent), var(--accent3));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .modal-cat {
   font-size: 0.7rem;
@@ -1845,6 +1920,165 @@ footer {
   transform: none;
 }
 
+/* =====================================================================
+   AJOUTS 2026 — dernière mission (hero), badge timeline, recommandation
+   Réutilise les tokens existants : aucune nouvelle couleur de marque.
+   Espacements sur une échelle de 4 px, transitions alignées sur .project-card.
+   ===================================================================== */
+
+/* --accent (#3d6fff) tombe à 3.9:1 sur les fonds sombres : sous le seuil
+   AA 4.5:1 pour du petit texte. --accent-text est la variante lisible,
+   réservée au TEXTE ; aplats, bordures et puces gardent --accent. */
+:root[data-theme="dark"] {
+  --accent-text: #5c86ff;
+}
+:root[data-theme="light"] {
+  --accent-text: #2049d8;
+}
+.section-tag,
+.tl-org,
+.project-cat,
+.modal-cat,
+.modal-section-label,
+.gh-repo-trend,
+.photo-overlay-badge span {
+  color: var(--accent-text);
+}
+
+/* Bascule de thème : transitions coupées le temps du changement.
+   Sans ça, les 'transition: all' font fondre toute la page à chaque clic. */
+:root.theme-switching *,
+:root.theme-switching *::before,
+:root.theme-switching *::after {
+  transition: none !important;
+}
+
+/* Focus clavier visible sur tous les éléments interactifs */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid var(--accent2);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* HERO — ligne « dernière mission » */
+.hero-meta {
+  margin: 0 0 24px;
+  padding-left: 12px;
+  border-left: 2px solid var(--accent);
+  color: var(--text2);
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+/* Respect de prefers-reduced-motion sur les animations décoratives */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* =====================================================================
+   SYSTEME D'ICONES SVG
+   Remplace les emoji : rendu identique sur tous les OS, couleur pilotee par
+   currentColor donc themable, et alignement typographique maitrise.
+   Trois tailles seulement : 20 (inline), 28 (bloc), 44 (vignette).
+   ===================================================================== */
+.icon,
+.icon-lg,
+.icon-xl {
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: middle;
+  fill: none;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+}
+.icon-lg {
+  width: 28px;
+  height: 28px;
+}
+.icon-xl {
+  width: 44px;
+  height: 44px;
+}
+
+/* Bascule de theme : une seule icone visible a la fois */
+.toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  line-height: 0;
+}
+#themeToggle .icon {
+  width: 18px;
+  height: 18px;
+}
+:root[data-theme="dark"] #themeToggle .icon-moon,
+:root[data-theme="light"] #themeToggle .icon-sun {
+  display: none;
+}
+
+/* Titres de groupes de competences */
+.skill-group-title .icon {
+  width: 22px;
+  height: 22px;
+  color: var(--accent-text);
+}
+
+/* Vignette de carte projet : pastille geometrique plutot qu'un gros emoji */
+.project-thumb .icon-xl {
+  position: relative;
+  z-index: 1;
+  color: var(--accent-text);
+  stroke-width: 1.4;
+}
+
+/* Icones de contact : pastille carree alignee sur la grille de 4 px */
+.cl-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--tag-bg);
+  color: var(--accent-text);
+  flex-shrink: 0;
+}
+
+/* Ecrans de la maquette telephone */
+.phone-screen .icon {
+  width: 32px;
+  height: 32px;
+  color: var(--accent-text);
+}
+
+/* Repli quand une image ne charge pas */
+.img-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text2);
+}
+
 /* RESPONSIVE */
 @media (max-width: 968px) {
   .photo-main {
@@ -1943,6 +2177,15 @@ footer {
   .stats-bar {
     grid-template-columns: repeat(2, 1fr);
   }
+  .testi-card {
+    padding: 32px 22px;
+  }
+  .testi-quote {
+    font-size: 1rem;
+  }
+  .testi-mark {
+    font-size: 3.5rem;
+  }
   .form-row {
     grid-template-columns: 1fr;
   }
@@ -1958,5 +2201,8 @@ footer {
   }
   .gh-repo-item {
     grid-template-columns: 1fr;
+  }
+  .hero-meta {
+    font-size: 0.8rem;
   }
 }

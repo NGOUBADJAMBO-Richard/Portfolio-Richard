@@ -35,7 +35,7 @@
 
 ### Expérience Professionnelle
 
-1. **Chef de Projet IT / Dev Mobile Flutter** - Akanda Tech (10 mois)
+1. **Chef de Projet IT / Dev Mobile Flutter** - LEBONWAZ (10 mois)
    - Applications iOS & Android Flutter
    - Architecture Firebase, sprints, production
 
@@ -260,7 +260,7 @@
 
 ### 7. Mobile Showcase
 
-- Case study: App Flutter Akanda Tech
+- Case study: App Flutter LEBONWAZ
 - Architecture & spécifications
 - Performance & optimisation
 - Firebase full stack
