@@ -263,6 +263,7 @@ const i18n = {
     "footer.rights": "Tous droits réservés",
     "footer.top": "Haut de page",
     "photo.tag": "QUI SUIS-JE",
+    "photo.tile": "Projets livrés",
     "photo.title": "Ingénieur d'État.\nBâtisseur de produits.",
     "photo.desc":
       "Né au Gabon, formé au Maroc, je suis un ingénieur informatique passionné par la création de solutions digitales qui ont un impact réel. Mon approche combine rigueur technique, vision produit et sens du leadership.",
@@ -530,6 +531,7 @@ const i18n = {
     "footer.rights": "All rights reserved",
     "footer.top": "Back to top",
     "photo.tag": "WHO I AM",
+    "photo.tile": "Projects delivered",
     "photo.title": "State Engineer.\nProduct Builder.",
     "photo.desc":
       "Born in Gabon, trained in Morocco, I'm a software engineer passionate about creating digital solutions with real impact. My approach combines technical rigour, product vision and leadership.",
@@ -1698,7 +1700,7 @@ function initCircuitField() {
     ctx.lineWidth = 1;
     ctx.lineJoin = "round";
     for (const trace of traces) {
-      ctx.strokeStyle = `rgba(${rgb}, 0.22)`;
+      ctx.strokeStyle = `rgba(${rgb}, 0.34)`;
       ctx.beginPath();
       ctx.moveTo(trace.points[0].x, trace.points[0].y);
       for (let i = 1; i < trace.points.length; i++) {
@@ -1715,7 +1717,7 @@ function initCircuitField() {
           Math.hypot(pt.x - pointer.x, pt.y - (pointer.y - fieldShift)) < 140;
         ctx.beginPath();
         ctx.arc(pt.x, pt.y, proche ? 3.4 : 2, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${rgb}, ${proche ? 0.85 : 0.45})`;
+        ctx.fillStyle = `rgba(${rgb}, ${proche ? 0.95 : 0.6})`;
         ctx.fill();
       }
     }

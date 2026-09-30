@@ -444,6 +444,10 @@
      3. #bgCanvas — champ de particules suivant un champ de bruit (JS) -->
 <div class="aurora" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
 <div class="pattern-dots" aria-hidden="true"></div>
+<div class="beams" aria-hidden="true"><span></span><span></span></div>
+<!-- Voile de lecture : c'est lui, et non les sections, qui garantit le
+     contraste du texte. Voir la section 22 de la feuille de style. -->
+<div class="content-veil" aria-hidden="true"></div>
 <div class="grid-bg" aria-hidden="true"></div>
 <!-- Monogramme en filigrane. Redessine en SVG : les fichiers de logo ont un
      fond carre opaque, inutilisable en surimpression. -->
@@ -507,7 +511,7 @@
 <nav>
   <div class="nav-inner">
     <a class="nav-logo" href="#hero">
-      <img src="assets/images/R_N.png" alt="NR Logo" class="nav-logo-img" onerror="this.style.display='none'"/>
+      <img src="assets/images/R_N.png" alt="NR Logo" class="nav-logo-img" width="500" height="500" decoding="async" onerror="this.style.display='none'"/>
       <span>N.<span class="nav-logo-accent">R</span></span>
     </a>
     <ul class="nav-links">
@@ -566,10 +570,10 @@
       </div>
       <div class="hero-visual">
         <div class="logo-frame">
-          <img src="assets/images/MGN_Logo.png" alt="MGN CodeWave Logo" onerror="this.style.display='none'; this.parentNode.innerHTML='<div class=\'logo-fallback\'>NR</div>'"/>
+          <img src="assets/images/MGN_Logo.png" alt="MGN CodeWave Logo" width="500" height="500" decoding="async" onerror="this.style.display='none'; this.parentNode.innerHTML='<div class=\'logo-fallback\'>NR</div>'"/>
         </div>
         <div class="photo-frame">
-          <img src="assets/images/Richard.png" alt="Richard NGOUBADJAMBO" onerror="this.style.display='none'; this.parentNode.style.background='var(--surface)'; this.parentNode.innerHTML='<div class=\'img-fallback\'><svg class=\'icon-xl\' aria-hidden=\'true\'><use href=\'#i-user\'/></svg></div>'"/>
+          <img src="assets/images/Richard.png" alt="Richard NGOUBADJAMBO" width="1024" height="1536" fetchpriority="high" decoding="async" onerror="this.style.display='none'; this.parentNode.style.background='var(--surface)'; this.parentNode.innerHTML='<div class=\'img-fallback\'><svg class=\'icon-xl\' aria-hidden=\'true\'><use href=\'#i-user\'/></svg></div>'"/>
         </div>
         <div class="photo-badge">
           Chef de Projet IT<br>&amp; Dev Mobile Flutter
@@ -759,14 +763,17 @@
     <div class="photo-section-inner">
       <div class="photo-gallery reveal">
         <div class="photo-main">
-          <img class="photo-main-img" src="assets/images/Richard.png" alt="Richard NGOUBADJAMBO" loading="lazy" decoding="async" onerror="this.parentNode.style.display='flex';this.parentNode.style.alignItems='center';this.parentNode.style.justifyContent='center';this.parentNode.innerHTML='<div class=&quot;img-fallback&quot;><svg class=&quot;icon-xl&quot;><use href=&quot;#i-user&quot;/></svg></div>'"/>
+          <img class="photo-main-img" src="assets/images/Richard.png" alt="Richard NGOUBADJAMBO" width="1024" height="1536" loading="lazy" decoding="async" onerror="this.parentNode.style.display='flex';this.parentNode.style.alignItems='center';this.parentNode.style.justifyContent='center';this.parentNode.innerHTML='<div class=&quot;img-fallback&quot;><svg class=&quot;icon-xl&quot;><use href=&quot;#i-user&quot;/></svg></div>'"/>
           <div class="photo-overlay-badge">Richard NGOUBADJAMBO · <span>Libreville, Gabon</span></div>
         </div>
-        <div class="photo-secondary">
-          <img class="photo-secondary-img" src="assets/images/Richard.png" alt="Richard — profil" loading="lazy" decoding="async" onerror="this.parentNode.style.display='flex';this.parentNode.style.alignItems='center';this.parentNode.style.justifyContent='center';this.parentNode.innerHTML='<div class=&quot;img-fallback&quot;><svg class=&quot;icon-lg&quot;><use href=&quot;#i-code&quot;/></svg></div>'"/>
+        <!-- Cette tuile repetait le portrait de la tuile principale, ce qui
+             se lisait comme une erreur. Elle porte desormais un chiffre. -->
+        <div class="photo-tile">
+          <div class="photo-tile-num">16</div>
+          <div class="photo-tile-label" data-i18n="photo.tile">Projets livrés</div>
         </div>
         <div class="photo-logo-box">
-          <img src="assets/images/MGN_Logo.png" alt="MGN CodeWave Logo" onerror="this.parentNode.innerHTML='<div class=&quot;logo-fallback logo-fallback--lg&quot;>MGN<span>CODEWAVE</span></div>'"/>
+          <img src="assets/images/MGN_Logo.png" alt="MGN CodeWave Logo" width="500" height="500" loading="lazy" decoding="async" onerror="this.parentNode.innerHTML='<div class=&quot;logo-fallback logo-fallback--lg&quot;>MGN<span>CODEWAVE</span></div>'"/>
         </div>
       </div>
       <div class="photo-content reveal">
