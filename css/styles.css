@@ -558,8 +558,7 @@ nav.scrolled {
 /* --- Boutons --------------------------------------------------------- */
 
 .btn-primary,
-.btn-secondary,
-.btn-white {
+.btn-secondary {
   display: inline-flex;
   align-items: center;
   gap: var(--s2);
@@ -594,15 +593,6 @@ nav.scrolled {
 .btn-secondary:hover {
   border-color: var(--ink);
   background: var(--accent-soft);
-}
-
-.btn-white {
-  background: var(--surface);
-  color: var(--ink);
-  border-color: var(--rule);
-}
-.btn-white:hover {
-  border-color: var(--ink);
 }
 
 .btn-sm {
@@ -1042,60 +1032,6 @@ nav.scrolled {
   margin-top: var(--s6);
 }
 
-#mgn-agency {
-  margin-top: var(--s6);
-}
-.mgn-link-card {
-  display: flex;
-  align-items: center;
-  gap: var(--s4);
-  padding: var(--s4);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius-lg);
-  background: var(--surface);
-  text-decoration: none;
-  transition: border-color 0.2s ease;
-}
-.mgn-link-card:hover {
-  border-color: var(--ink);
-}
-.mgn-link-icon {
-  flex-shrink: 0;
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  color: var(--accent-ink);
-}
-.mgn-link-img {
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius);
-  object-fit: cover;
-}
-.mgn-link-text {
-  flex: 1;
-  min-width: 0;
-}
-.mgn-link-title {
-  font-family: var(--serif);
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--ink);
-}
-.mgn-link-sub {
-  font-size: 0.8rem;
-  color: var(--ink-3);
-}
-.mgn-link-arrow {
-  color: var(--ink-3);
-  font-size: 1.1rem;
-  transition: transform 0.2s ease;
-}
-.mgn-link-card:hover .mgn-link-arrow {
-  transform: translateX(4px);
-  color: var(--accent-ink);
-}
 
 /* =====================================================================
    7. COMPETENCES
@@ -1354,24 +1290,6 @@ nav.scrolled {
 }
 .service-features li:last-child {
   border-bottom: 0;
-}
-
-.mgn-banner {
-  margin-top: var(--s8);
-  padding: var(--s8) var(--s7);
-  border: 1px solid var(--rule-strong);
-  border-radius: var(--radius-lg);
-  background: var(--surface);
-  text-align: center;
-}
-.mgn-banner h3 {
-  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
-  margin-bottom: var(--s3);
-}
-.mgn-banner p {
-  max-width: 54ch;
-  margin: 0 auto var(--s6);
-  color: var(--ink-2);
 }
 
 /* =====================================================================
@@ -2062,9 +1980,6 @@ footer {
   .modal-footer {
     padding-left: var(--s5);
     padding-right: var(--s5);
-  }
-  .mgn-banner {
-    padding: var(--s6) var(--s5);
   }
   .filter-tabs {
     gap: var(--s4);
@@ -3080,5 +2995,250 @@ section:nth-of-type(even)::after {
     width: 62vw;
     top: 2%;
     opacity: 0.4;
+  }
+}
+
+/* =====================================================================
+   20. MON AGENCE
+   ---------------------------------------------------------------------
+   L'entree de menu « Mon Agence » menait a une simple carte-lien posee
+   dans la section Identite. Elle devient une section a part entiere,
+   placee apres Methode : ce que je fais, comment, puis avec quelle
+   structure.
+   ===================================================================== */
+
+.agency-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
+  gap: var(--s8);
+  align-items: start;
+}
+
+.agency-brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s5);
+  padding: var(--s6);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--surface) 82%, transparent);
+}
+
+/* Le monogramme est redessine en SVG : les fichiers de logo ont un fond
+   carre opaque, impossible a poser sur une surface translucide. */
+.agency-mark {
+  width: 96px;
+  color: var(--accent-ink);
+}
+.agency-mark svg {
+  width: 100%;
+  height: auto;
+  animation: markSpin 90s linear infinite;
+}
+.agency-mark-text {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  fill: currentColor;
+  stroke: none;
+}
+
+.agency-pitch {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+
+.agency-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+}
+
+.agency-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s3);
+  margin-top: auto;
+}
+
+/* Les offres sont une liste : une ligne par prestation, separee par un
+   filet. Plus lisible qu'une grille de cartes pour comparer des prix. */
+.agency-offers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--rule-strong);
+}
+.agency-offer {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) auto;
+  gap: var(--s4);
+  align-items: start;
+  padding: var(--s5) 0;
+  border-bottom: 1px solid var(--rule);
+  transition: background 0.25s ease;
+}
+.agency-offer:hover {
+  background: var(--accent-soft);
+}
+.agency-offer-icon {
+  display: grid;
+  place-items: center;
+  color: var(--accent-ink);
+}
+.agency-offer-body {
+  min-width: 0;
+}
+.agency-offer-name {
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 var(--s1);
+}
+.agency-offer-desc {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+.agency-offer-price {
+  align-self: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--accent-2);
+}
+
+@media (max-width: 1024px) {
+  .agency-grid {
+    grid-template-columns: 1fr;
+    gap: var(--s7);
+  }
+  .agency-ctas {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .agency-offer {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: var(--s3);
+  }
+  .agency-offer-icon .icon-lg {
+    width: 22px;
+    height: 22px;
+  }
+  /* Le prix passe sous la description plutot que de comprimer le titre. */
+  .agency-offer-price {
+    grid-column: 2;
+    align-self: start;
+    margin-top: var(--s2);
+  }
+}
+
+/* =====================================================================
+   21. MISE EN PAGE EDITORIALE — rail de libelle, largeur exploitee
+   ---------------------------------------------------------------------
+   Deux faiblesses corrigees ici.
+
+   1. A 1920 px, une colonne de 1120 px centree laissait un tiers de
+      l'ecran vide de chaque cote. La page est elargie a 1240 px.
+
+   2. Les en-tetes empilaient libelle, titre et chapeau sur une seule
+      colonne, ce qui gaspillait la largeur et affaiblissait la hierarchie.
+      Le libelle numerote passe dans un rail a gauche, le titre et le
+      chapeau occupent la colonne principale — la mise en page canonique
+      d'une page editoriale.
+
+   Le rail ne s'applique qu'aux en-tetes de pleine largeur : celui de la
+   section A propos vit dans une colonne etroite et resterait a plat.
+   ===================================================================== */
+
+:root {
+  --page: 1240px;
+}
+
+section > .container > .section-header {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  column-gap: var(--s7);
+  align-items: start;
+  max-width: none;
+}
+section > .container > .section-header > .section-tag {
+  grid-column: 1;
+  grid-row: 1;
+  margin-bottom: 0;
+}
+section > .container > .section-header > .section-title {
+  grid-column: 2;
+  grid-row: 1;
+}
+section > .container > .section-header > .section-desc {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* Le filet appartient a l'en-tete, pas au libelle : il souligne la section
+   entiere au lieu de surligner trois mots. Il se trace a l'entree dans le
+   champ de vision, comme le faisait celui du libelle. */
+section > .container > .section-header {
+  position: relative;
+  padding-top: var(--s4);
+}
+section > .container > .section-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--rule-strong);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+section > .container > .section-header.visible::before {
+  transform: scaleX(1);
+}
+section > .container > .section-header > .section-tag {
+  padding-top: 0;
+}
+section > .container > .section-header > .section-tag::after {
+  display: none;
+}
+
+/* Titres plus affirmes : la largeur gagnee sert a la typographie. */
+.section-title {
+  font-size: clamp(2rem, 3.8vw, 3.4rem);
+  line-height: 1.08;
+}
+.hero-title {
+  font-size: clamp(2.4rem, 5.8vw, 4.8rem);
+}
+
+/* Le chapeau garde une mesure de lecture confortable malgre la largeur. */
+.section-desc {
+  max-width: 56ch;
+}
+
+@media (max-width: 900px) {
+  /* Sous 900 px le rail comprimerait le titre : on repasse a plat. */
+  section > .container > .section-header {
+    grid-template-columns: 1fr;
+    row-gap: var(--s4);
+  }
+  section > .container > .section-header > .section-tag,
+  section > .container > .section-header > .section-title,
+  section > .container > .section-header > .section-desc {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  section > .container > .section-header > .section-tag::after {
+    right: 0;
   }
 }
