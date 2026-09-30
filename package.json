@@ -2,10 +2,14 @@
   "name": "portfolio-richard",
   "version": "1.0.0",
   "private": true,
-  "description": "Portfolio Richard NGOUBADJAMBO with GitHub dashboard proxy backend",
+  "description": "Portfolio bilingue de Richard NGOUBADJAMBO, page unique sans framework",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "check": "node tools/check.js && npx html-validate index.html",
+    "sync:metadata": "node tools/sync-metadata.js",
+    "build:jsonld": "node tools/build-jsonld.js",
+    "sync:all": "node tools/sync-metadata.js && node tools/build-jsonld.js && node tools/check.js"
   },
   "dependencies": {
     "dotenv": "^16.4.5",

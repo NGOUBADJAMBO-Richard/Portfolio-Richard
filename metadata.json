@@ -3,7 +3,7 @@
     "name": "Portfolio Richard NGOUBADJAMBO",
     "slug": "portfolio-richard",
     "version": "1.0.0",
-    "description": "Portfolio professionnel interactif avec GitHub dashboard en temps réel. Ingénieur Fullstack & Mobile - Solutions digitales complètes.",
+    "description": "Portfolio professionnel bilingue, page unique sans framework. Direction editoriale claire et aeree.",
     "type": "portfolio",
     "status": "production",
     "author": {
@@ -66,7 +66,9 @@
     "image_alt": "Richard NGOUBADJAMBO - Ingénieur Fullstack & Mobile",
     "site_name": "Portfolio Richard",
     "locale": "fr_FR",
-    "locale_alternate": ["en_US"]
+    "locale_alternate": [
+      "en_US"
+    ]
   },
   "twitter": {
     "card": "summary_large_image",
@@ -90,20 +92,28 @@
       "html": "5",
       "css": "3",
       "javascript": "ES6+",
-      "fonts": ["Google Fonts: Syne", "Google Fonts: Space Grotesk"],
+      "fonts": [
+        "Google Fonts: Newsreader",
+        "Google Fonts: Space Grotesk"
+      ],
       "features": [
-        "i18n FR/EN",
-        "Dark/Light Mode",
+        "i18n FR/EN persistee",
+        "Theme clair/sombre persiste",
         "Intersection Observer",
-        "Responsive Design"
+        "Canvas decoratif",
+        "Donnees structurees JSON-LD",
+        "Responsive 320-1920"
       ]
     },
     "backend": {
       "runtime": "Node.js 16+",
       "framework": "Express.js 4.19+",
-      "apis": ["GitHub API v3"],
-      "cache": "Map with 10min TTL",
-      "security": ["GitHub Token", "CORS", "Rate Limiting"]
+      "security": [
+        "GitHub Token",
+        "CORS",
+        "Rate Limiting"
+      ],
+      "role": "Serveur statique de developpement uniquement"
     },
     "deployment": {
       "platform": "Vercel",
@@ -122,69 +132,74 @@
     "targetFID": "< 100ms",
     "targetCLS": "< 0.1",
     "targetPageLoad": "< 3s",
-    "targetLighthouseScore": 90,
     "optimizations": [
-      "Preconnect fonts",
-      "Lazy loading images",
-      "CSS minification",
-      "GitHub API caching (10min TTL)",
-      "Gzip compression (Vercel)"
+      "Preconnect Google Fonts",
+      "Lazy loading des images",
+      "Canvas coupe sous 768px et a longlet masque",
+      "Respect de prefers-reduced-motion",
+      "Aucune dependance front"
     ]
   },
   "sections": [
     {
       "id": "hero",
       "title": "Héros",
-      "label": "Présentation principale",
-      "content": "Intro + CTA principales"
-    },
-    {
-      "id": "stats",
-      "title": "Statistiques",
-      "label": "KPIs clés",
-      "content": "Expérience, projets, stacks, agence"
+      "content": "Présentation, statut freelance, dernière mission"
     },
     {
       "id": "about",
-      "title": "À Propos",
-      "label": "Qui suis-je",
-      "content": "Bio + Timeline parcours et formation"
+      "title": "À propos",
+      "content": "Bio + timeline parcours et formation"
+    },
+    {
+      "id": "photo-section",
+      "title": "Identité",
+      "content": "Qui suis-je et lien vers M.G.N CodeWave"
     },
     {
       "id": "skills",
       "title": "Compétences",
-      "label": "Stack technique",
-      "content": "Mobile Flutter, Frontend, Backend, CMS, Gestion de projet, Langues"
+      "content": "Six groupes de stacks techniques"
     },
     {
       "id": "projects",
       "title": "Projets",
-      "label": "Portfolio",
-      "content": "Grid filtrable - Web, Mobile, Branding"
+      "content": "Seize projets filtrables avec modales détaillées"
+    },
+    {
+      "id": "github-dashboard",
+      "title": "Dashboard GitHub",
+      "content": "Indicateurs et dépôts en temps réel"
     },
     {
       "id": "showcase",
       "title": "Mobile Showcase",
-      "label": "Case study Flutter",
-      "content": "Application Flutter LEBONWAZ de A à Z"
+      "content": "Flutter de bout en bout chez LEBONWAZ"
     },
     {
       "id": "services",
       "title": "Services",
-      "label": "Offerings M.G.N CodeWave",
-      "content": "6 services: Mobile, Web, Backend, CMS, Consulting, UI/UX"
+      "content": "Six offres M.G.N CodeWave"
     },
     {
-      "id": "github-dashboard",
-      "title": "GitHub Dashboard",
-      "label": "Activity en temps réel",
-      "content": "Stats GitHub, repos, langages top"
+      "id": "method",
+      "title": "Méthode",
+      "content": "Cadrage, design system, delivery agile, recette et support"
+    },
+    {
+      "id": "testimonial",
+      "title": "Recommandation",
+      "content": "Extrait de lettre de recommandation"
+    },
+    {
+      "id": "faq",
+      "title": "FAQ",
+      "content": "Sept questions fréquentes, balisées FAQPage"
     },
     {
       "id": "contact",
       "title": "Contact",
-      "label": "Formulaire",
-      "content": "Solliciter une collaboration"
+      "content": "Coordonnées et formulaire par client mail"
     }
   ],
   "services": [
@@ -263,62 +278,222 @@
   ],
   "projects": [
     {
+      "id": "p7",
+      "name": "Gabonova — Plateforme immobilière",
+      "description": "Mission menée chez Gabon Connect SARLU pour Gabonova, plateforme de mise en relation immobilière. Orchestration de campagnes de tests fonctionnels documentées, production de rapports d'anomalies itératifs, réalisation de supports vidéo de présentation et d'installation, et proposition d'une stratégie marketing de lancement.",
+      "category": "client",
+      "technologies": [
+        "React",
+        "Node.js",
+        "PostgreSQL",
+        "Tests fonctionnels",
+        "Go-to-market"
+      ]
+    },
+    {
+      "id": "p8",
+      "name": "AHPAM AssetView — Gestion locative bilingue",
+      "description": "Intervention chez Gabon Connect SARLU sur AHPAM AssetView, application de gestion locative bilingue FR/EN. Rédaction du plan et des cas de test, conduite des recettes fonctionnelles et formalisation des retours client pour alimenter les itérations produit.",
+      "category": "client",
+      "technologies": [
+        "PWA",
+        "i18n FR/EN",
+        "Plan de test",
+        "Recette",
+        "Firestore"
+      ]
+    },
+    {
+      "id": "p9",
+      "name": "Delta Manga Sécurité — Site vitrine & pilotage",
+      "description": "Accompagnement de Delta Manga Sécurité (DMS) via Gabon Connect SARLU : contribution au site vitrine, reporting mensuel d'avancement, analyse comparative de 5 solutions de gestion du gardiennage et rédaction du cahier des charges du projet DMS 360°.",
+      "category": "client",
+      "technologies": [
+        "Site vitrine",
+        "Benchmark",
+        "Cahier des charges",
+        "Reporting"
+      ]
+    },
+    {
+      "id": "p10",
+      "name": "Waz'UP — Super-app Flutter",
+      "description": "Super-application mobile Flutter réunissant trois services en une seule plateforme : e-commerce, livraison à la demande et location de biens et services. Une base de code unique pour iOS et Android.",
+      "category": "mobile",
+      "technologies": [
+        "Flutter 3.x",
+        "Riverpod",
+        "Firebase",
+        "Node.js",
+        "Stripe"
+      ],
+      "repository": "https://github.com/NGOUBADJAMBO-Richard/flutter_wazup"
+    },
+    {
       "id": "p1",
       "name": "App Mobile Flutter — LEBONWAZ",
-      "description": "Application multiplateforme iOS & Android développée de A à Z. Architecture Firebase Firestore, authentification, gestion d'état Provider.",
+      "description": "Projet phare de 10 mois chez LEBONWAZ (Libreville, Gabon). Chef de Projet IT et Développeur principal, j'ai conçu et livré une application mobile multiplateforme iOS & Android avec Flutter, de l'analyse des besoins jusqu'à la mise en production.",
       "category": "mobile",
-      "technologies": ["Flutter", "Dart", "Firebase"],
-      "link": "#"
+      "technologies": [
+        "Flutter",
+        "Firebase",
+        "Dart",
+        "MVC"
+      ]
+    },
+    {
+      "id": "p13",
+      "name": "H2P Group — Écosystème digital complet",
+      "description": "Projet en trois phases pour un cabinet de coaching : création de l'identité visuelle, développement du site vitrine, puis mise en place d'un tunnel de prise de rendez-vous connecté au CRM.",
+      "category": "branding",
+      "technologies": [
+        "Brand Design",
+        "Figma",
+        "GSAP",
+        "Node.js",
+        "CRM"
+      ]
+    },
+    {
+      "id": "p12",
+      "name": "LMS Platform — Gestion des prospects",
+      "description": "Leads Management System complet : tableau de bord analytique, suivi du pipeline commercial et automatisation des campagnes marketing, construit en React et Firebase.",
+      "category": "web",
+      "technologies": [
+        "React.js",
+        "Firebase",
+        "CRM",
+        "Analytics"
+      ],
+      "link": "https://gestion-des-prospects.vercel.app/dashboard"
+    },
+    {
+      "id": "p11",
+      "name": "Le Bon Waz — Plateforme e-commerce",
+      "description": "Plateforme de vente en ligne avec catalogue dynamique et back-office de gestion des commandes, pensée pour que des commerçants puissent tenir leur boutique sans compétence technique.",
+      "category": "web",
+      "technologies": [
+        "Bootstrap",
+        "PHP",
+        "MySQL",
+        "Stripe"
+      ]
+    },
+    {
+      "id": "p14",
+      "name": "English Fun Club — Plateforme gamifiée",
+      "description": "Plateforme e-learning destinée aux adolescents pour apprendre l'anglais. Le parti pris : maintenir l'engagement par le jeu plutôt que par la contrainte, avec des parcours progressifs et un feedback immédiat.",
+      "category": "web",
+      "technologies": [
+        "JavaScript",
+        "E-Learning",
+        "Gamification"
+      ],
+      "link": "https://justin-patoki-site.vercel.app/",
+      "repository": "https://github.com/NGOUBADJAMBO-Richard/englishfunclub.club"
+    },
+    {
+      "id": "p15",
+      "name": "Découvre qui tu es — Tests de personnalité",
+      "description": "Application de questionnaires interactifs qui restitue un profil de personnalité détaillé. Tout l'enjeu était l'algorithme de pondération des réponses et la lisibilité du résultat.",
+      "category": "web",
+      "technologies": [
+        "JavaScript",
+        "Data viz",
+        "HTML5 / CSS3"
+      ],
+      "link": "https://decouvre-qui-tu-es.vercel.app/",
+      "repository": "https://github.com/NGOUBADJAMBO-Richard/Decouvre-qui-tu-es"
+    },
+    {
+      "id": "p16",
+      "name": "Lampe À Mes Pieds — Site éditorial",
+      "description": "Site de présentation de collections littéraires avec modules de téléchargement et espace presse. Priorité donnée au confort de lecture et à l'accessibilité.",
+      "category": "web",
+      "technologies": [
+        "JavaScript",
+        "Accessibilité",
+        "WCAG 2.1"
+      ],
+      "link": "https://edition-lampe-a-mes-pieds.vercel.app/"
+    },
+    {
+      "id": "p17",
+      "name": "Grâce Déployée — Site communautaire",
+      "description": "Site d'une église locale : agenda des événements, bibliothèque de sermons en ligne et espace bénévoles. L'objectif était de donner à une communauté non technique un outil qu'elle puisse tenir seule.",
+      "category": "web",
+      "technologies": [
+        "HTML5 / CSS3",
+        "CMS",
+        "Community"
+      ],
+      "link": "https://grace-deployee.vercel.app/"
+    },
+    {
+      "id": "p19",
+      "name": "API Airtel Money — Documentation d'intégration",
+      "description": "Documentation technique complète pour intégrer l'API de paiement mobile Airtel Money : authentification, endpoints, webhooks et cas d'erreur, avec exemples de requêtes exécutables.",
+      "category": "web",
+      "technologies": [
+        "API REST",
+        "OAuth2",
+        "Webhooks",
+        "Mobile Money"
+      ],
+      "link": "https://ngoubadjambo-richard.github.io/Documentation-API-Airtel/",
+      "repository": "https://github.com/NGOUBADJAMBO-Richard/Documentation-API-Airtel"
+    },
+    {
+      "id": "p18",
+      "name": "Booki — Réservation d'hébergements",
+      "description": "Prototype d'interface de réservation d'hébergements touristiques. Exercice d'intégration pure : aucun framework, tout repose sur la sémantique HTML et la maîtrise de Flexbox.",
+      "category": "web",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "Flexbox"
+      ],
+      "link": "https://booki-projet.vercel.app/"
     },
     {
       "id": "p2",
-      "name": "Plateforme Web Drupal",
-      "description": "Développement et maintenance de plateformes web entreprises sous Drupal. Nouvelles fonctionnalités, optimisation SEO et relation client.",
+      "name": "Plateforme Web Drupal — Agence Digitale",
+      "description": "Mission de 3 mois dans une agence digitale à Rabat (Maroc). Développement et maintenance de plateformes web enterprise sous Drupal pour plusieurs clients. Gestion de la relation client et coordination des livraisons.",
       "category": "web",
-      "technologies": ["Drupal", "PHP", "MySQL"],
-      "link": "#"
-    },
-    {
-      "id": "p3",
-      "name": "Interface React.js — Dashboard Analytics",
-      "description": "Design system component-driven avec React.js et Tailwind CSS.",
-      "category": "frontend",
-      "technologies": ["React", "Tailwind CSS", "JavaScript"],
-      "link": "#"
-    },
-    {
-      "id": "p4",
-      "name": "API Node.js + MongoDB",
-      "description": "Backend RESTful avec Node.js et MongoDB. Architecture modulaire, authentification JWT.",
-      "category": "backend",
-      "technologies": ["Node.js", "Express", "MongoDB"],
-      "link": "#"
+      "technologies": [
+        "Drupal",
+        "HTML5/CSS3",
+        "SEO"
+      ]
     },
     {
       "id": "p5",
-      "name": "M.G.N CodeWave — Identité de Marque",
-      "description": "Création complète de l'identité visuelle et digitale de l'agence.",
+      "name": "M.G.N CodeWave — Studio digital",
+      "description": "Mon studio digital : identité de marque, design system et delivery produit pour PME et institutions. J'en ai conçu l'identité complète puis la plateforme qui porte l'offre, du naming à la mise en ligne.",
       "category": "branding",
-      "technologies": ["Figma", "Design", "Branding"],
-      "link": "#"
-    },
-    {
-      "id": "p6",
-      "name": "Portfolio Mobile — MGN",
-      "description": "Application de présentation interactive des services MGN CodeWave.",
-      "category": "mobile",
-      "technologies": ["Flutter", "UI/UX"],
-      "link": "#"
+      "technologies": [
+        "Branding",
+        "Design System",
+        "Figma",
+        "Product Ops"
+      ],
+      "link": "https://codewave-psi.vercel.app/"
     }
   ],
   "i18n": {
     "defaultLanguage": "fr",
-    "supportedLanguages": ["fr", "en"],
+    "supportedLanguages": [
+      "fr",
+      "en"
+    ],
     "direction": "LTR"
   },
   "theme": {
     "defaultMode": "dark",
-    "supportedModes": ["dark", "light"],
+    "supportedModes": [
+      "dark",
+      "light"
+    ],
     "colors": {
       "primary": "#0a0e27",
       "accent": "#00D4FF",
@@ -337,7 +512,12 @@
       "Backend Node.js",
       "Autre demande"
     ],
-    "formFields": ["name", "email", "subject", "message"],
+    "formFields": [
+      "name",
+      "email",
+      "subject",
+      "message"
+    ],
     "defaultMessage": "Bonjour, je souhaite vous solliciter pour..."
   },
   "agency": {
@@ -349,13 +529,15 @@
     "services": 6
   },
   "stats": {
-    "experience": "5+",
-    "projects": "10+",
-    "stacks": "3",
+    "experience": "3+",
+    "projects": "16",
+    "domains": "6",
     "agency": 1,
-    "yearsInTech": 5,
-    "clientsSatisfied": "10+",
-    "languagesSpoken": ["Français", "Anglais"]
+    "languagesSpoken": [
+      "Français (natif)",
+      "Anglais (B1)"
+    ],
+    "availability": "Freelance — disponible immédiatement"
   },
   "education": {
     "degree": "Ingénieur d'État en Informatique & Réseaux",
@@ -395,9 +577,9 @@
   ],
   "metadata": {
     "created": "2024-01-15",
-    "updated": "2024-04-12",
+    "updated": "2026-09-30",
     "version": "1.0.0",
-    "lastReviewDate": "2024-04-12",
-    "nextReviewDate": "2024-07-12"
+    "lastReviewDate": "2026-09-30",
+    "nextReviewDate": "2026-12-29"
   }
 }
