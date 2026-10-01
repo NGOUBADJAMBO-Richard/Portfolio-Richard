@@ -203,10 +203,6 @@ const i18n = {
     "s6.f2": "Design system",
     "s6.f3": "Identité de marque",
     "s6.f4": "Optimisation UX",
-    "mgn.title": "M.G.N CodeWave — Solutions Digitales",
-    "mgn.desc":
-      "Votre partenaire pour des projets digitaux ambitieux en Afrique et à l'international. Qualité ingénieur, rapidité startup.",
-    "mgn.cta": "Travailler avec nous →",
     "testi.tag": "RECOMMANDATION",
     "testi.title": "Ce qu'en dit\nun client.",
     "testi.quote":
@@ -267,14 +263,31 @@ const i18n = {
     "footer.rights": "Tous droits réservés",
     "footer.top": "Haut de page",
     "photo.tag": "QUI SUIS-JE",
+    "photo.tile": "Projets livrés",
     "photo.title": "Ingénieur d'État.\nBâtisseur de produits.",
     "photo.desc":
       "Né au Gabon, formé au Maroc, je suis un ingénieur informatique passionné par la création de solutions digitales qui ont un impact réel. Mon approche combine rigueur technique, vision produit et sens du leadership.",
     "photo.cta1": "Me contacter",
     "photo.cta2": "Voir mes projets →",
-    "mgn.link.title": "M.G.N CodeWave — Solutions Digitales",
-    "mgn.link.sub": "Visiter l'agence · Web · Mobile · Branding",
     "nav.agency": "Mon Agence",
+    "agency.tag": "MON AGENCE",
+    "agency.title": "M.G.N CodeWave.\nLe studio derrière les projets.",
+    "agency.desc": "Quand un projet dépasse ce qu'une personne seule peut porter, il passe par mon studio. Même méthode, mêmes exigences, une capacité de livraison élargie.",
+    "agency.pitch": "Studio digital qui conçoit et opère des écosystèmes web et mobile complets : design system, MVP sur mesure et accélération produit pour PME et institutions.",
+    "agency.cta1": "Visiter le studio ↗",
+    "agency.cta2": "Démarrer un projet",
+    "ag1.name": "Plateformes e-commerce",
+    "ag1.desc": "Catalogue, panier, paiement et back-office de gestion des commandes et des stocks.",
+    "ag1.price": "à partir de 300 000 FCFA",
+    "ag2.name": "Applications mobiles Flutter",
+    "ag2.desc": "iOS et Android depuis une base de code unique, du cadrage au dépôt sur les stores.",
+    "ag2.price": "sur devis",
+    "ag3.name": "Sites vitrines, blogs et portfolios",
+    "ag3.desc": "Présence en ligne soignée, optimisée pour le référencement et tenue par vos équipes.",
+    "ag3.price": "à partir de 80 000 FCFA",
+    "ag4.name": "Consulting et accompagnement",
+    "ag4.desc": "Audit technique, choix d'architecture, plan de modernisation priorisé et chiffré.",
+    "ag4.price": "sur devis",
     "wa.fab": "Discutons sur WhatsApp",
     "nav.method": "Méthode",
     "nav.faq": "FAQ",
@@ -458,10 +471,6 @@ const i18n = {
     "s6.f2": "Design system",
     "s6.f3": "Brand identity",
     "s6.f4": "UX optimisation",
-    "mgn.title": "M.G.N CodeWave — Digital Solutions",
-    "mgn.desc":
-      "Your partner for ambitious digital projects in Africa and internationally. Engineer quality, startup speed.",
-    "mgn.cta": "Work with us →",
     "testi.tag": "RECOMMENDATION",
     "testi.title": "What a client\nsays about me.",
     "testi.quote":
@@ -522,14 +531,31 @@ const i18n = {
     "footer.rights": "All rights reserved",
     "footer.top": "Back to top",
     "photo.tag": "WHO I AM",
+    "photo.tile": "Projects delivered",
     "photo.title": "State Engineer.\nProduct Builder.",
     "photo.desc":
       "Born in Gabon, trained in Morocco, I'm a software engineer passionate about creating digital solutions with real impact. My approach combines technical rigour, product vision and leadership.",
     "photo.cta1": "Contact me",
     "photo.cta2": "View my projects →",
-    "mgn.link.title": "M.G.N CodeWave — Digital Solutions",
-    "mgn.link.sub": "Visit the agency · Web · Mobile · Branding",
     "nav.agency": "My Agency",
+    "agency.tag": "MY AGENCY",
+    "agency.title": "M.G.N CodeWave.\nThe studio behind the projects.",
+    "agency.desc": "When a project outgrows what one person can carry, it goes through my studio. Same method, same standards, wider delivery capacity.",
+    "agency.pitch": "A digital studio that designs and operates complete web and mobile ecosystems: design system, bespoke MVP and product acceleration for SMEs and institutions.",
+    "agency.cta1": "Visit the studio ↗",
+    "agency.cta2": "Start a project",
+    "ag1.name": "E-commerce platforms",
+    "ag1.desc": "Catalogue, cart, payment and a back-office for orders and stock management.",
+    "ag1.price": "from 300,000 FCFA",
+    "ag2.name": "Flutter mobile apps",
+    "ag2.desc": "iOS and Android from a single codebase, from framing to store submission.",
+    "ag2.price": "on quotation",
+    "ag3.name": "Brochure sites, blogs and portfolios",
+    "ag3.desc": "A polished online presence, search-optimised and maintainable by your own team.",
+    "ag3.price": "from 80,000 FCFA",
+    "ag4.name": "Consulting and support",
+    "ag4.desc": "Technical audit, architecture choices, prioritised and costed modernisation plan.",
+    "ag4.price": "on quotation",
     "wa.fab": "Let's talk on WhatsApp",
     "nav.method": "Method",
     "nav.faq": "FAQ",
@@ -692,6 +718,38 @@ const observer = new IntersectionObserver(
   { threshold: 0.1 },
 );
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+/**
+ * Filet de securite des revelations.
+ *
+ * Une animation decorative ne doit jamais pouvoir masquer du contenu de
+ * facon definitive. Ce cas s'est produit : un clip-path pose sur un element
+ * observe le reduisait a une aire nulle, IntersectionObserver rapportait
+ * intersectionRatio 0 en plein ecran, .visible n'arrivait jamais et le clip
+ * n'etait jamais leve. Le portrait de la galerie est reste invisible.
+ *
+ * La cause est corrigee (le balayage porte sur l'image, pas sur le cadre),
+ * mais le controle reste : il s'appuie sur la geometrie, que ni un clip ni
+ * une opacite n'influencent.
+ */
+function filetDeSecuriteRevelations() {
+  const revele = () => {
+    document.querySelectorAll(".reveal:not(.visible)").forEach((el) => {
+      const r = el.getBoundingClientRect();
+      if (r.width > 0 && r.top < window.innerHeight && r.bottom > 0) {
+        el.classList.add("visible");
+      }
+    });
+  };
+  let attente = 0;
+  const differe = () => {
+    clearTimeout(attente);
+    attente = setTimeout(revele, 200);
+  };
+  window.addEventListener("load", differe, { once: true });
+  window.addEventListener("scroll", differe, { passive: true });
+}
+filetDeSecuriteRevelations();
 
 // SCROLL TO TOP
 window.addEventListener("scroll", () => {
@@ -1674,7 +1732,7 @@ function initCircuitField() {
     ctx.lineWidth = 1;
     ctx.lineJoin = "round";
     for (const trace of traces) {
-      ctx.strokeStyle = `rgba(${rgb}, 0.22)`;
+      ctx.strokeStyle = `rgba(${rgb}, 0.34)`;
       ctx.beginPath();
       ctx.moveTo(trace.points[0].x, trace.points[0].y);
       for (let i = 1; i < trace.points.length; i++) {
@@ -1691,7 +1749,7 @@ function initCircuitField() {
           Math.hypot(pt.x - pointer.x, pt.y - (pointer.y - fieldShift)) < 140;
         ctx.beginPath();
         ctx.arc(pt.x, pt.y, proche ? 3.4 : 2, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${rgb}, ${proche ? 0.85 : 0.45})`;
+        ctx.fillStyle = `rgba(${rgb}, ${proche ? 0.95 : 0.6})`;
         ctx.fill();
       }
     }
@@ -2020,8 +2078,14 @@ function initRevealDirections() {
   });
   // Ces elements recoivent .reveal apres la creation de l'observateur : il
   // faut les lui donner explicitement, sinon ils restent masques a jamais.
-  document.querySelectorAll(".photo-main, .photo-secondary").forEach((el) => {
-    el.classList.add("reveal", "wipe");
+  //
+  // .wipe-host et non .wipe : le balayage doit porter sur l'image, pas sur
+  // le cadre observe. Un clip-path sur l'element observe le reduit a une
+  // aire nulle, IntersectionObserver rapporte alors intersectionRatio 0 et
+  // n'ajoute jamais .visible, donc le clip n'est jamais leve. Impasse
+  // circulaire mesuree : le portrait restait invisible en permanence.
+  document.querySelectorAll(".photo-main").forEach((el) => {
+    el.classList.add("reveal", "wipe-host");
     observer.observe(el);
   });
 }

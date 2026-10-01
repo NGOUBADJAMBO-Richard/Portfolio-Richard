@@ -45,7 +45,8 @@
   --node-2: 180, 84, 10;
   /* Remonte de 0,32 a 0,85 : a 0,32 sur des traits deja translucides, la
      mesure ne relevait que 5 pixels perceptibles sur 1,8 million. */
-  --canvas-opacity: 0.85;
+  --canvas-opacity: 1;
+  --veil: rgba(252, 252, 250, 0.88);
   --shadow-modal: 0 24px 80px rgba(23, 25, 28, 0.22);
 }
 
@@ -64,7 +65,8 @@
   --accent-on: #0d1016;
   --node: 138, 164, 255;
   --node-2: 240, 163, 94;
-  --canvas-opacity: 0.95;
+  --canvas-opacity: 1;
+  --veil: rgba(16, 17, 20, 0.88);
   --shadow-modal: 0 24px 80px rgba(0, 0, 0, 0.6);
 }
 
@@ -209,7 +211,7 @@ summary:focus-visible,
   inset: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  z-index: -2;
   pointer-events: none;
   opacity: var(--canvas-opacity);
 }
@@ -339,12 +341,6 @@ nav.scrolled {
   text-decoration: none;
   letter-spacing: -0.01em;
   flex-shrink: 0;
-}
-.nav-logo-img {
-  height: 32px;
-  width: 32px;
-  border-radius: var(--radius);
-  object-fit: cover;
 }
 .nav-logo-accent {
   color: var(--accent-ink);
@@ -558,8 +554,7 @@ nav.scrolled {
 /* --- Boutons --------------------------------------------------------- */
 
 .btn-primary,
-.btn-secondary,
-.btn-white {
+.btn-secondary {
   display: inline-flex;
   align-items: center;
   gap: var(--s2);
@@ -596,15 +591,6 @@ nav.scrolled {
   background: var(--accent-soft);
 }
 
-.btn-white {
-  background: var(--surface);
-  color: var(--ink);
-  border-color: var(--rule);
-}
-.btn-white:hover {
-  border-color: var(--ink);
-}
-
 .btn-sm {
   padding: 7px 14px;
   font-size: 0.8rem;
@@ -635,41 +621,6 @@ nav.scrolled {
   height: 100%;
   object-fit: cover;
   object-position: top;
-}
-
-.photo-badge {
-  position: absolute;
-  bottom: -14px;
-  right: -8px;
-  max-width: 190px;
-  padding: var(--s3) var(--s4);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  background: var(--surface);
-  font-size: 0.78rem;
-  line-height: 1.45;
-  font-weight: 600;
-  color: var(--ink);
-}
-
-.logo-frame {
-  position: absolute;
-  top: -16px;
-  left: -8px;
-  width: 64px;
-  height: 64px;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  background: var(--surface);
-  z-index: 2;
-}
-.logo-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .float-card {
@@ -706,13 +657,6 @@ nav.scrolled {
   align-items: stretch;
   gap: 0;
 }
-.logo-frame {
-  position: static;
-  order: -1;
-  width: 40px;
-  height: 40px;
-  margin-bottom: var(--s4);
-}
 .photo-frame {
   position: static;
   order: 1;
@@ -731,20 +675,6 @@ nav.scrolled {
   background: none;
   margin-top: var(--s4);
 }
-.photo-badge {
-  position: static;
-  order: 3;
-  max-width: none;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: none;
-  font-size: 0.8rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: var(--ink-3);
-}
-
 /* Repli des images manquantes. */
 .img-fallback {
   display: grid;
@@ -959,7 +889,9 @@ nav.scrolled {
 .photo-main {
   position: relative;
   grid-column: 1 / -1;
-  aspect-ratio: 4 / 3;
+  /* 4/3 paysage pour une source portrait 2/3 rognait 50 % de la photo.
+     En 4/5, la perte tombe a 17 % et le cadrage reste celui d'un portrait. */
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   border: 1px solid var(--rule);
   border-radius: var(--radius-lg);
@@ -969,7 +901,7 @@ nav.scrolled {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 22%;
+  object-position: center 18%;
 }
 .photo-overlay-badge {
   position: absolute;
@@ -988,18 +920,12 @@ nav.scrolled {
   color: var(--ink-3);
   font-weight: 400;
 }
-.photo-secondary,
 .photo-logo-box {
   aspect-ratio: 1;
   overflow: hidden;
   border: 1px solid var(--rule);
   border-radius: var(--radius-lg);
   background: var(--surface-2);
-}
-.photo-secondary-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 .photo-logo-box {
   display: grid;
@@ -1008,7 +934,13 @@ nav.scrolled {
   background: var(--surface);
 }
 .photo-logo-box img {
-  max-height: 100%;
+  /* Les deux axes sont contraints. "max-height: 100%" ne suffisait pas : la
+     hauteur du cadre vient d'un aspect-ratio, donc le pourcentage se resout
+     contre une hauteur qui depend du contenu et la contrainte est abandonnee.
+     L'image gardait alors sa hauteur d'attribut (500 px) et debordait de
+     286 px, ecretee par overflow: hidden. */
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
@@ -1042,60 +974,6 @@ nav.scrolled {
   margin-top: var(--s6);
 }
 
-#mgn-agency {
-  margin-top: var(--s6);
-}
-.mgn-link-card {
-  display: flex;
-  align-items: center;
-  gap: var(--s4);
-  padding: var(--s4);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius-lg);
-  background: var(--surface);
-  text-decoration: none;
-  transition: border-color 0.2s ease;
-}
-.mgn-link-card:hover {
-  border-color: var(--ink);
-}
-.mgn-link-icon {
-  flex-shrink: 0;
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  color: var(--accent-ink);
-}
-.mgn-link-img {
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius);
-  object-fit: cover;
-}
-.mgn-link-text {
-  flex: 1;
-  min-width: 0;
-}
-.mgn-link-title {
-  font-family: var(--serif);
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--ink);
-}
-.mgn-link-sub {
-  font-size: 0.8rem;
-  color: var(--ink-3);
-}
-.mgn-link-arrow {
-  color: var(--ink-3);
-  font-size: 1.1rem;
-  transition: transform 0.2s ease;
-}
-.mgn-link-card:hover .mgn-link-arrow {
-  transform: translateX(4px);
-  color: var(--accent-ink);
-}
 
 /* =====================================================================
    7. COMPETENCES
@@ -1354,24 +1232,6 @@ nav.scrolled {
 }
 .service-features li:last-child {
   border-bottom: 0;
-}
-
-.mgn-banner {
-  margin-top: var(--s8);
-  padding: var(--s8) var(--s7);
-  border: 1px solid var(--rule-strong);
-  border-radius: var(--radius-lg);
-  background: var(--surface);
-  text-align: center;
-}
-.mgn-banner h3 {
-  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
-  margin-bottom: var(--s3);
-}
-.mgn-banner p {
-  max-width: 54ch;
-  margin: 0 auto var(--s6);
-  color: var(--ink-2);
 }
 
 /* =====================================================================
@@ -1844,7 +1704,8 @@ footer {
 .scroll-top {
   position: fixed;
   right: var(--s5);
-  bottom: var(--s5);
+  /* Empile au-dessus de la pilule WhatsApp (46 px), qui occupe le coin. */
+  bottom: calc(var(--s5) + 46px + var(--s3));
   z-index: 90;
   width: 42px;
   height: 42px;
@@ -2063,9 +1924,6 @@ footer {
     padding-left: var(--s5);
     padding-right: var(--s5);
   }
-  .mgn-banner {
-    padding: var(--s6) var(--s5);
-  }
   .filter-tabs {
     gap: var(--s4);
   }
@@ -2149,17 +2007,17 @@ main[id] {
    signaler ce qui est vivant (mission recente, demo en ligne). */
 :root[data-theme="light"] {
   --accent-2: #b4540a;
-  --aurora-1: rgba(27, 63, 216, 0.3);
-  --aurora-2: rgba(180, 84, 10, 0.2);
-  --aurora-3: rgba(27, 63, 216, 0.18);
-  --grid-line: rgba(23, 25, 28, 0.1);
+  --aurora-1: rgba(27, 63, 216, 0.6);
+  --aurora-2: rgba(180, 84, 10, 0.46);
+  --aurora-3: rgba(27, 63, 216, 0.4);
+  --grid-line: rgba(23, 25, 28, 0.16);
 }
 :root[data-theme="dark"] {
   --accent-2: #f0a35e;
-  --aurora-1: rgba(138, 164, 255, 0.26);
-  --aurora-2: rgba(240, 163, 94, 0.16);
-  --aurora-3: rgba(138, 164, 255, 0.2);
-  --grid-line: rgba(255, 255, 255, 0.09);
+  --aurora-1: rgba(138, 164, 255, 0.54);
+  --aurora-2: rgba(240, 163, 94, 0.38);
+  --aurora-3: rgba(138, 164, 255, 0.42);
+  --grid-line: rgba(255, 255, 255, 0.14);
 }
 
 /* --- Calque 1 : nappes de couleur -----------------------------------
@@ -2168,7 +2026,7 @@ main[id] {
 .aurora {
   position: fixed;
   inset: 0;
-  z-index: -3;
+  z-index: -4;
   pointer-events: none;
   overflow: hidden;
 }
@@ -2255,48 +2113,28 @@ main[id] {
 
 /* Les sections restent opaques : le fond anime ne doit jamais passer
    derriere un paragraphe. Seules les respirations le laissent voir. */
-/* Sections translucides, sans flou de fond.
-   Un backdrop-filter par section coutait tout le budget d'images : le fond a
-   flouter est un canvas qui change en permanence, donc chaque section devait
-   le reflouter a chaque image. Mesure : 1 image en 1,2 s.
-   A 85 %, le pire cas de contraste (impulsion a pleine intensite derriere du
-   texte tertiaire) reste a 4,58:1, au-dessus du seuil AA. */
+/* Les sections ne portent plus la lisibilite : c'est le role du voile de
+   lecture (section 22). Elles ne gardent qu'une teinte legere, juste assez
+   pour marquer l'alternance des bandes.
+   Avant : 85-89 % d'opacite sur toute la page, soit un arriere-plan ramene a
+   13 % de son intensite partout sauf dans le hero. */
 section,
 .stats-bar,
 footer {
-  background: var(--paper);
-  background: color-mix(in srgb, var(--paper) 85%, transparent);
+  background: transparent;
 }
 #about,
 #skills,
 #method,
 #faq {
-  background: var(--surface-2);
-  background: color-mix(in srgb, var(--surface-2) 89%, transparent);
+  background: color-mix(in srgb, var(--surface-2) 34%, transparent);
 }
 
 /* Le hero est la seule section entierement transparente : c'est la que
    l'arriere-plan doit se voir. Son texte reste lisible grace au voile
    degrade ci-dessous, qui n'opacifie que la colonne de gauche. */
-/* Le hero garde un fond franchement visible : pas de flou, un simple voile
-   degrade qui protege la colonne de texte. C'est la zone ou l'arriere-plan
-   doit etre net. */
 #hero {
   background: transparent;
-}
-#hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background: linear-gradient(
-    100deg,
-    var(--paper) 0%,
-    color-mix(in srgb, var(--paper) 92%, transparent) 38%,
-    color-mix(in srgb, var(--paper) 30%, transparent) 62%,
-    transparent 100%
-  );
 }
 
 /* =====================================================================
@@ -2600,12 +2438,20 @@ main
 .reveal.from-left:not(.visible) {
   transform: translateX(-22px);
 }
-.reveal.wipe {
-  clip-path: inset(0 0 100% 0);
+/* Le balayage porte sur l'IMAGE, pas sur le cadre observe.
+   Un clip-path pose sur l'element observe le reduit a une aire nulle :
+   IntersectionObserver rapporte intersectionRatio 0 meme en plein ecran, donc
+   .visible n'arrive jamais et le clip n'est jamais leve. Mesure sur un cadre
+   de 440x550 place dans un viewport de 900 : isIntersecting false.
+   Le cadre garde donc une revelation par opacite, que l'observateur voit. */
+.reveal.wipe-host {
   transform: none;
-  opacity: 1;
 }
-.reveal.wipe.visible {
+.wipe-host > img {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.wipe-host.visible > img {
   clip-path: inset(0 0 0 0);
 }
 
@@ -2698,7 +2544,7 @@ main
   .tl-line::after {
     display: none;
   }
-  .reveal.wipe {
+  .wipe-host > img {
     clip-path: none;
   }
 }
@@ -2746,7 +2592,9 @@ main
 .wa-fab {
   --wa: #25d366;
   position: fixed;
-  left: var(--s5);
+  /* En bas a gauche, le bouton recouvrait le CTA principal du hero.
+     A droite, il ne croise aucun element interactif. */
+  right: var(--s5);
   bottom: var(--s5);
   z-index: 95;
   display: inline-flex;
@@ -2813,13 +2661,13 @@ main
    les deux sont affiches sur un ecran etroit. */
 @media (max-width: 600px) {
   .wa-fab {
-    left: var(--s4);
+    right: var(--s4);
     bottom: var(--s4);
     height: 44px;
   }
   .scroll-top {
     right: var(--s4);
-    bottom: var(--s4);
+    bottom: calc(var(--s4) + 44px + var(--s2));
   }
 }
 
@@ -2837,12 +2685,7 @@ main
    couleur, le rapport tombait a 3,9:1 (AA exige 4,5:1). On repasse donc le
    voile en aplat sous 1024 px. L'arriere-plan reste visible partout
    ailleurs : bandeau, marges, respirations entre sections. */
-@media (max-width: 1024px) {
-  #hero::before {
-    background: var(--paper);
-    background: color-mix(in srgb, var(--paper) 94%, transparent);
-  }
-}
+
 
 /* =====================================================================
    18. ARRIERE-PLAN ENRICHI — motifs, couleurs, filigrane
@@ -2855,16 +2698,20 @@ main
    ===================================================================== */
 
 :root[data-theme="light"] {
-  --aurora-4: rgba(20, 130, 120, 0.16);
-  --aurora-5: rgba(96, 60, 190, 0.14);
-  --dot: rgba(23, 25, 28, 0.14);
-  --watermark-ink: rgba(27, 63, 216, 0.09);
+  --aurora-4: rgba(20, 130, 120, 0.4);
+  --aurora-5: rgba(96, 60, 190, 0.4);
+  --dot: rgba(23, 25, 28, 0.3);
+  --watermark-ink: rgba(27, 63, 216, 0.24);
+  --beam-1: rgba(27, 63, 216, 0.24);
+  --beam-2: rgba(180, 84, 10, 0.2);
 }
 :root[data-theme="dark"] {
-  --aurora-4: rgba(60, 200, 190, 0.14);
-  --aurora-5: rgba(150, 120, 255, 0.16);
-  --dot: rgba(255, 255, 255, 0.11);
-  --watermark-ink: rgba(138, 164, 255, 0.11);
+  --aurora-4: rgba(60, 200, 190, 0.36);
+  --aurora-5: rgba(150, 120, 255, 0.42);
+  --dot: rgba(255, 255, 255, 0.24);
+  --watermark-ink: rgba(138, 164, 255, 0.26);
+  --beam-1: rgba(138, 164, 255, 0.24);
+  --beam-2: rgba(240, 163, 94, 0.2);
 }
 
 /* Deux nappes de plus, sur deux teintes supplementaires : le fond n'est
@@ -3080,5 +2927,497 @@ section:nth-of-type(even)::after {
     width: 62vw;
     top: 2%;
     opacity: 0.4;
+  }
+}
+
+/* =====================================================================
+   20. MON AGENCE
+   ---------------------------------------------------------------------
+   L'entree de menu « Mon Agence » menait a une simple carte-lien posee
+   dans la section Identite. Elle devient une section a part entiere,
+   placee apres Methode : ce que je fais, comment, puis avec quelle
+   structure.
+   ===================================================================== */
+
+.agency-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
+  gap: var(--s8);
+  align-items: start;
+}
+
+.agency-brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s5);
+  padding: var(--s6);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--surface) 82%, transparent);
+}
+
+/* Le monogramme est redessine en SVG : les fichiers de logo ont un fond
+   carre opaque, impossible a poser sur une surface translucide. */
+.agency-mark {
+  width: 96px;
+  color: var(--accent-ink);
+}
+.agency-mark svg {
+  width: 100%;
+  height: auto;
+  animation: markSpin 90s linear infinite;
+}
+.agency-mark-text {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  fill: currentColor;
+  stroke: none;
+}
+
+.agency-pitch {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+
+.agency-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+}
+
+.agency-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s3);
+  margin-top: auto;
+}
+
+/* Les offres sont une liste : une ligne par prestation, separee par un
+   filet. Plus lisible qu'une grille de cartes pour comparer des prix. */
+.agency-offers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--rule-strong);
+}
+.agency-offer {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) auto;
+  gap: var(--s4);
+  align-items: start;
+  padding: var(--s5) 0;
+  border-bottom: 1px solid var(--rule);
+  transition: background 0.25s ease;
+}
+.agency-offer:hover {
+  background: var(--accent-soft);
+}
+.agency-offer-icon {
+  display: grid;
+  place-items: center;
+  color: var(--accent-ink);
+}
+.agency-offer-body {
+  min-width: 0;
+}
+.agency-offer-name {
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 var(--s1);
+}
+.agency-offer-desc {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+.agency-offer-price {
+  align-self: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--accent-2);
+}
+
+@media (max-width: 1024px) {
+  .agency-grid {
+    grid-template-columns: 1fr;
+    gap: var(--s7);
+  }
+  .agency-ctas {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .agency-offer {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: var(--s3);
+  }
+  .agency-offer-icon .icon-lg {
+    width: 22px;
+    height: 22px;
+  }
+  /* Le prix passe sous la description plutot que de comprimer le titre. */
+  .agency-offer-price {
+    grid-column: 2;
+    align-self: start;
+    margin-top: var(--s2);
+  }
+}
+
+/* =====================================================================
+   21. MISE EN PAGE EDITORIALE — rail de libelle, largeur exploitee
+   ---------------------------------------------------------------------
+   Deux faiblesses corrigees ici.
+
+   1. A 1920 px, une colonne de 1120 px centree laissait un tiers de
+      l'ecran vide de chaque cote. La page est elargie a 1240 px.
+
+   2. Les en-tetes empilaient libelle, titre et chapeau sur une seule
+      colonne, ce qui gaspillait la largeur et affaiblissait la hierarchie.
+      Le libelle numerote passe dans un rail a gauche, le titre et le
+      chapeau occupent la colonne principale — la mise en page canonique
+      d'une page editoriale.
+
+   Le rail ne s'applique qu'aux en-tetes de pleine largeur : celui de la
+   section A propos vit dans une colonne etroite et resterait a plat.
+   ===================================================================== */
+
+:root {
+  --page: 1240px;
+}
+
+section > .container > .section-header {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  column-gap: var(--s7);
+  align-items: start;
+  max-width: none;
+}
+section > .container > .section-header > .section-tag {
+  grid-column: 1;
+  grid-row: 1;
+  margin-bottom: 0;
+}
+section > .container > .section-header > .section-title {
+  grid-column: 2;
+  grid-row: 1;
+}
+section > .container > .section-header > .section-desc {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* Le filet appartient a l'en-tete, pas au libelle : il souligne la section
+   entiere au lieu de surligner trois mots. Il se trace a l'entree dans le
+   champ de vision, comme le faisait celui du libelle. */
+section > .container > .section-header {
+  position: relative;
+  padding-top: var(--s4);
+}
+section > .container > .section-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--rule-strong);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+section > .container > .section-header.visible::before {
+  transform: scaleX(1);
+}
+section > .container > .section-header > .section-tag {
+  padding-top: 0;
+}
+section > .container > .section-header > .section-tag::after {
+  display: none;
+}
+
+/* Titres plus affirmes : la largeur gagnee sert a la typographie. */
+.section-title {
+  font-size: clamp(2rem, 3.8vw, 3.4rem);
+  line-height: 1.08;
+}
+.hero-title {
+  font-size: clamp(2.4rem, 5.8vw, 4.8rem);
+}
+
+/* Le chapeau garde une mesure de lecture confortable malgre la largeur. */
+.section-desc {
+  max-width: 56ch;
+}
+
+@media (max-width: 900px) {
+  /* Sous 900 px le rail comprimerait le titre : on repasse a plat. */
+  section > .container > .section-header {
+    grid-template-columns: 1fr;
+    row-gap: var(--s4);
+  }
+  section > .container > .section-header > .section-tag,
+  section > .container > .section-header > .section-title,
+  section > .container > .section-header > .section-desc {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  section > .container > .section-header > .section-tag::after {
+    right: 0;
+  }
+}
+
+/* =====================================================================
+   22. VOILE DE LECTURE ET FAISCEAUX
+   ---------------------------------------------------------------------
+   Le voile est le seul calque qui protege le texte. Le fait de le
+   centraliser a deux consequences :
+
+   - les sections peuvent devenir transparentes, donc l'arriere-plan passe
+     a pleine intensite partout ou il n'y a pas de texte ;
+   - le calcul de contraste porte sur un calque unique et previsible, au
+     lieu d'etre a refaire a chaque ajout de motif.
+
+   Au-dela de 1500 px, le voile s'ouvre sur les cotes : la colonne de
+   lecture fait 1240 px, le reste est du fond a pleine intensite. En
+   dessous, il n'y a pas de marge a offrir, le voile reste uniforme.
+   ===================================================================== */
+
+/* Le voile plein ecran est retire. Mesure a 1440 px : uniforme a 88 %, il ne
+   laissait passer que 12 % du fond, et son ouverture laterale ne se
+   declenchait qu'a partir de 1500 px. Le fond n'arrivait donc jamais a
+   l'ecran sur une largeur d'ordinateur portable courante.
+   Il est remplace par un voile local sous chaque colonne de contenu
+   (section 24), ce qui rouvre les respirations verticales et les gouttieres a
+   toutes les largeurs, sans toucher au contraste derriere le texte. */
+.content-veil {
+  display: none;
+}
+
+/* Faisceaux : deux cones de couleur en rotation lente. Ils apportent du
+   mouvement colore sur toute la hauteur, la ou les nappes restent des
+   taches localisees. */
+.beams {
+  position: fixed;
+  inset: 0;
+  z-index: -5;
+  pointer-events: none;
+  overflow: hidden;
+}
+.beams span {
+  position: absolute;
+  display: block;
+  width: 130vmax;
+  height: 130vmax;
+  border-radius: 50%;
+  will-change: transform;
+}
+.beams span:nth-child(1) {
+  top: -40vmax;
+  left: -30vmax;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    var(--beam-1) 24deg,
+    transparent 62deg,
+    transparent 180deg,
+    var(--beam-1) 214deg,
+    transparent 254deg,
+    transparent 360deg
+  );
+  animation: beamSpin 96s linear infinite;
+}
+.beams span:nth-child(2) {
+  bottom: -46vmax;
+  right: -34vmax;
+  background: conic-gradient(
+    from 120deg,
+    transparent 0deg,
+    var(--beam-2) 30deg,
+    transparent 76deg,
+    transparent 360deg
+  );
+  animation: beamSpin 137s linear infinite reverse;
+}
+@keyframes beamSpin {
+  to {
+    rotate: 360deg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .beams {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Deux cones de 130vmax a composer en permanence : le rapport entre le
+     cout et ce qu'on en voit sur un telephone ne le justifie pas. */
+  .beams {
+    display: none;
+  }
+}
+
+/* =====================================================================
+   23. AFFICHAGE DES IMAGES
+   ---------------------------------------------------------------------
+   Les images arrivaient brutalement et sans place reservee. Elles ont
+   maintenant des dimensions declarees dans le markup, et se revelent par
+   un fondu avec un leger recadrage — la meme grammaire que les
+   revelations du reste de la page.
+   ===================================================================== */
+
+.photo-frame img,
+.photo-main-img,
+.photo-logo-box img {
+  /* Le recadrage de depart evite l'effet de vignette qui apparait quand une
+     image se decode par bandes sur une connexion lente. */
+  animation: imgIn 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes imgIn {
+  from {
+    opacity: 0;
+    scale: 1.06;
+  }
+}
+
+/* Le portrait principal reagit au survol, comme les cartes projet. */
+.photo-main {
+  overflow: hidden;
+}
+.photo-main-img {
+  transition: scale 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.photo-main:hover .photo-main-img {
+  scale: 1.04;
+}
+
+/* Un filet interieur separe l'image de la page sans ajouter de bordure
+   franche : les photos ont des bords clairs qui se fondaient dans le fond. */
+.photo-frame,
+.photo-main,
+.photo-tile,
+.photo-logo-box {
+  position: relative;
+}
+.photo-frame::after,
+.photo-main::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px var(--rule);
+}
+
+/* Tuile de chiffre, en remplacement du portrait duplique. */
+.photo-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  aspect-ratio: 1;
+  padding: var(--s4);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--surface) 70%, transparent);
+}
+.photo-tile-num {
+  font-family: var(--serif);
+  font-size: 2.6rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--accent-ink);
+  font-variant-numeric: tabular-nums;
+}
+.photo-tile-label {
+  margin-top: var(--s2);
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+/* Le logo MGN a un fond carre opaque : sur une page claire il forme un
+   bloc sombre. On l'inscrit dans une tuile assumee plutot que de le poser
+   a nu. */
+.photo-logo-box {
+  padding: var(--s4);
+}
+.photo-logo-box img {
+  border-radius: var(--radius);
+}
+@media (prefers-reduced-motion: reduce) {
+  .photo-frame img,
+  .photo-main-img,
+  .photo-logo-box img {
+    animation: none;
+  }
+  .photo-main:hover .photo-main-img {
+    scale: 1;
+  }
+}
+
+/* =====================================================================
+   24. VOILE LOCAL DE LECTURE
+   ---------------------------------------------------------------------
+   Le voile suit la colonne de contenu, pas la fenetre.
+
+   Ce qui redevient du fond a pleine intensite :
+     - les 128 px de padding vertical de chaque section, soit 256 px entre
+       deux blocs de contenu ;
+     - les gouttieres laterales ;
+     - et ce, a toutes les largeurs.
+
+   Le contraste derriere le texte est inchange : le coeur du voile garde
+   l'opacite de 0,88 du voile global qu'il remplace.
+
+   Le bord doux vient de "filter: blur()" applique au voile lui-meme — un
+   rectangle plein et statique. Ce n'est pas "backdrop-filter", qui
+   reechantillonnerait le canvas anime a chaque image : cette piste avait
+   fait tomber la page a 1 image en 1,2 s.
+   ===================================================================== */
+
+section > .container,
+footer > .container {
+  position: relative;
+}
+
+section > .container::before,
+footer > .container::before {
+  content: "";
+  position: absolute;
+  /* Le voile depasse la colonne pour que le texte de bord reste couvert,
+     tout en laissant le padding de section ouvert. */
+  inset: calc(-1 * var(--s5)) calc(-1 * var(--s4));
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 48px;
+  background: var(--veil);
+  filter: blur(30px);
+}
+
+/* La bande de statistiques et le hero portent leur propre respiration :
+   un voile deborde y serait visible comme une plaque. */
+.stats-bar > .container::before {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  section > .container::before,
+  footer > .container::before {
+    /* Sur mobile la gouttiere fait 24 px : un voile deborde de 32 px sortirait
+       de l'ecran. On le resserre et on adoucit moins. */
+    inset: calc(-1 * var(--s4)) calc(-1 * var(--s3));
+    border-radius: 32px;
+    filter: blur(20px);
   }
 }

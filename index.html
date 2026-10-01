@@ -21,16 +21,17 @@
 <link rel="canonical" href="https://portfolio-richard.vercel.app"/>
 
 <!-- Favicons & Icons -->
-<link rel="icon" type="image/png" href="assets/images/R_N.png"/>
-<link rel="apple-touch-icon" href="assets/images/R_N.png"/>
-<link rel="shortcut icon" href="assets/images/R_N.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon-180.png"/>
+<link rel="shortcut icon" href="assets/images/favicon-32.png"/>
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://portfolio-richard.vercel.app"/>
 <meta property="og:title" content="Richard NGOUBADJAMBO — Ingénieur Fullstack & Mobile"/>
 <meta property="og:description" content="Ingénieur Fullstack &amp; Mobile et Chef de Projet IT, freelance disponible immédiatement. Je pilote les produits de bout en bout — cahier des charges, UX, développement React / Node.js / Flutter, tests, déploiement et suivi de performance."/>
-<meta property="og:image" content="https://portfolio-richard.vercel.app/assets/images/Richard.png"/>
+<meta property="og:image" content="https://portfolio-richard.vercel.app/assets/images/og-cover.jpg"/>
+<meta property="og:image:type" content="image/jpeg"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta property="og:image:alt" content="Richard NGOUBADJAMBO - Ingénieur Fullstack & Mobile"/>
@@ -43,7 +44,7 @@
 <meta name="twitter:url" content="https://portfolio-richard.vercel.app"/>
 <meta name="twitter:title" content="Richard NGOUBADJAMBO — Ingénieur Fullstack & Mobile"/>
 <meta name="twitter:description" content="Ingénieur Fullstack &amp; Mobile et Chef de Projet IT, freelance disponible. Pilotage produit de bout en bout : PWA React / Node.js, super-app Flutter, sprints agiles."/>
-<meta name="twitter:image" content="https://portfolio-richard.vercel.app/assets/images/Richard.png"/>
+<meta name="twitter:image" content="https://portfolio-richard.vercel.app/assets/images/og-cover.jpg"/>
 <meta name="twitter:image:alt" content="Richard NGOUBADJAMBO"/>
 <meta name="twitter:creator" content="@ngoubadjambo"/>
 
@@ -79,7 +80,7 @@
       "jobTitle": "Ingénieur Fullstack & Mobile — Chef de Projet IT",
       "description": "Ingénieur Informatique & Réseaux. Pilotage de solutions digitales de l'analyse des besoins à la mise en production : web, mobile et PWA.",
       "url": "https://portfolio-richard.vercel.app",
-      "image": "https://portfolio-richard.vercel.app/assets/images/Richard.png",
+      "image": "https://portfolio-richard.vercel.app/assets/images/richard.jpg",
       "email": "mailto:contact@mgncodewavedev.com",
       "address": {
         "@type": "PostalAddress",
@@ -444,6 +445,10 @@
      3. #bgCanvas — champ de particules suivant un champ de bruit (JS) -->
 <div class="aurora" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
 <div class="pattern-dots" aria-hidden="true"></div>
+<div class="beams" aria-hidden="true"><span></span><span></span></div>
+<!-- Voile de lecture : c'est lui, et non les sections, qui garantit le
+     contraste du texte. Voir la section 22 de la feuille de style. -->
+<div class="content-veil" aria-hidden="true"></div>
 <div class="grid-bg" aria-hidden="true"></div>
 <!-- Monogramme en filigrane. Redessine en SVG : les fichiers de logo ont un
      fond carre opaque, inutilisable en surimpression. -->
@@ -507,7 +512,9 @@
 <nav>
   <div class="nav-inner">
     <a class="nav-logo" href="#hero">
-      <img src="assets/images/R_N.png" alt="NR Logo" class="nav-logo-img" onerror="this.style.display='none'"/>
+      <!-- Le lockup R_N.png embarque du texte ("NGOUBADJAMBO RICHARD",
+           "Since 2026") sur un carre gris opaque : illisible a 32 px. Le
+           mot-symbole typographique le remplace, net a toute taille. -->
       <span>N.<span class="nav-logo-accent">R</span></span>
     </a>
     <ul class="nav-links">
@@ -565,14 +572,8 @@
         </div>
       </div>
       <div class="hero-visual">
-        <div class="logo-frame">
-          <img src="assets/images/MGN_Logo.png" alt="MGN CodeWave Logo" onerror="this.style.display='none'; this.parentNode.innerHTML='<div class=\'logo-fallback\'>NR</div>'"/>
-        </div>
         <div class="photo-frame">
-          <img src="assets/images/Richard.png" alt="Richard NGOUBADJAMBO" onerror="this.style.display='none'; this.parentNode.style.background='var(--surface)'; this.parentNode.innerHTML='<div class=\'img-fallback\'><svg class=\'icon-xl\' aria-hidden=\'true\'><use href=\'#i-user\'/></svg></div>'"/>
-        </div>
-        <div class="photo-badge">
-          Chef de Projet IT<br>&amp; Dev Mobile Flutter
+          <img src="assets/images/richard.jpg" alt="Richard NGOUBADJAMBO" width="760" height="1140" fetchpriority="high" decoding="async" onerror="this.style.display='none'; this.parentNode.style.background='var(--surface)'; this.parentNode.innerHTML='<div class=\'img-fallback\'><svg class=\'icon-xl\' aria-hidden=\'true\'><use href=\'#i-user\'/></svg></div>'"/>
         </div>
         <div class="float-card">
           <strong data-i18n="hero.float.org">Gabon Connect SARLU</strong>
@@ -759,14 +760,17 @@
     <div class="photo-section-inner">
       <div class="photo-gallery reveal">
         <div class="photo-main">
-          <img class="photo-main-img" src="assets/images/Richard.png" alt="Richard NGOUBADJAMBO" loading="lazy" decoding="async" onerror="this.parentNode.style.display='flex';this.parentNode.style.alignItems='center';this.parentNode.style.justifyContent='center';this.parentNode.innerHTML='<div class=&quot;img-fallback&quot;><svg class=&quot;icon-xl&quot;><use href=&quot;#i-user&quot;/></svg></div>'"/>
+          <img class="photo-main-img" src="assets/images/richard.jpg" alt="Richard NGOUBADJAMBO" width="760" height="1140" loading="lazy" decoding="async" onerror="this.parentNode.style.display='flex';this.parentNode.style.alignItems='center';this.parentNode.style.justifyContent='center';this.parentNode.innerHTML='<div class=&quot;img-fallback&quot;><svg class=&quot;icon-xl&quot;><use href=&quot;#i-user&quot;/></svg></div>'"/>
           <div class="photo-overlay-badge">Richard NGOUBADJAMBO · <span>Libreville, Gabon</span></div>
         </div>
-        <div class="photo-secondary">
-          <img class="photo-secondary-img" src="assets/images/Richard.png" alt="Richard — profil" loading="lazy" decoding="async" onerror="this.parentNode.style.display='flex';this.parentNode.style.alignItems='center';this.parentNode.style.justifyContent='center';this.parentNode.innerHTML='<div class=&quot;img-fallback&quot;><svg class=&quot;icon-lg&quot;><use href=&quot;#i-code&quot;/></svg></div>'"/>
+        <!-- Cette tuile repetait le portrait de la tuile principale, ce qui
+             se lisait comme une erreur. Elle porte desormais un chiffre. -->
+        <div class="photo-tile">
+          <div class="photo-tile-num">16</div>
+          <div class="photo-tile-label" data-i18n="photo.tile">Projets livrés</div>
         </div>
         <div class="photo-logo-box">
-          <img src="assets/images/MGN_Logo.png" alt="MGN CodeWave Logo" onerror="this.parentNode.innerHTML='<div class=&quot;logo-fallback logo-fallback--lg&quot;>MGN<span>CODEWAVE</span></div>'"/>
+          <img src="assets/images/mgn-logo.png" alt="MGN CodeWave Logo" width="256" height="256" loading="lazy" decoding="async" onerror="this.parentNode.innerHTML='<div class=&quot;logo-fallback logo-fallback--lg&quot;>MGN<span>CODEWAVE</span></div>'"/>
         </div>
       </div>
       <div class="photo-content reveal">
