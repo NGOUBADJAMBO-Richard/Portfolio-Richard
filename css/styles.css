@@ -1881,11 +1881,6 @@ footer {
     padding-left: 0;
     border-left: 0;
   }
-  /* Le canvas coute plus qu'il ne rapporte sur mobile : moins de place,
-     plus de contraintes de batterie. Le JS ne le dessine pas non plus. */
-  #bgCanvas {
-    display: none;
-  }
 }
 
 @media (max-width: 600px) {
@@ -2550,10 +2545,10 @@ main
 }
 
 @media (max-width: 768px) {
-  /* Deux calques de fond sur quatre suffisent sur mobile : le canvas et la
-     trame sont ce qui coute le plus cher a composer. */
+  /* La trame est un degrade CSS repete : son cout est negligeable. Elle
+     reste donc affichee, seul son pas se resserre. */
   .grid-bg {
-    display: none;
+    background-size: 36px 36px;
   }
   .aurora span {
     filter: blur(70px);
@@ -2840,9 +2835,16 @@ main
 }
 
 @media (max-width: 768px) {
-  /* Le filigrane deborderait sur le texte en une seule colonne. */
+  /* Le filigrane etait masque parce qu'il passait sous le texte. Le voile
+     local se place maintenant directement derriere la colonne de lecture et
+     l'en protege : il peut revenir, en plus discret et decale vers le bas,
+     la ou la colonne est la plus aeree. */
   .watermark {
-    display: none;
+    width: 58vw;
+    top: auto;
+    bottom: 6vh;
+    right: -12vw;
+    opacity: 0.75;
   }
   .pattern-dots {
     background-size:

@@ -1,0 +1,26 @@
+{
+  "name": "Richard NGOUBADJAMBO — Ingénieur Fullstack & Mobile",
+  "short_name": "Richard N.",
+  "description": "Portfolio de Richard NGOUBADJAMBO, Ingénieur Fullstack & Mobile et Chef de Projet IT, freelance à Libreville et à distance.",
+  "lang": "fr",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#fcfcfa",
+  "theme_color": "#fcfcfa",
+  "icons": [
+    {
+      "src": "assets/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

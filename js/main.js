@@ -1588,7 +1588,10 @@ function initCircuitField() {
   const ctx = canvas.getContext("2d", { alpha: true });
   if (!ctx) return;
 
-  const STEP = 44; // pas de la grille de routage, en pixels CSS
+  // Pas de la grille de routage, en pixels CSS. Il s'elargit sur un ecran
+  // etroit : moins de pistes a tracer, pour un rendu equivalent a l'oeil
+  // puisque la surface est plus petite.
+  let STEP = 44;
   let traces = [];
   let pulses = [];
   let echoes = [];
@@ -1671,9 +1674,14 @@ function initCircuitField() {
   }
 
   function resize() {
-    dpr = Math.min(window.devicePixelRatio || 1, 2);
     width = window.innerWidth;
     height = window.innerHeight;
+    const etroit = width < 768;
+    STEP = etroit ? 70 : 44;
+    // Un telephone affiche souvent en densite 3 : plafonner a 1,5 divise le
+    // nombre de pixels a composer par quatre, pour un trace fin ou la
+    // difference ne se voit pas.
+    dpr = Math.min(window.devicePixelRatio || 1, etroit ? 1.5 : 2);
     canvas.width = Math.round(width * dpr);
     canvas.height = Math.round(height * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -1681,7 +1689,12 @@ function initCircuitField() {
     // Le champ couvre deux ecrans : on peut le translater d'une hauteur
     // complete sans jamais laisser de zone vide en bas.
     fieldHeight = height * 2;
-    const lignes = Math.max(16, Math.min(Math.round(fieldHeight / STEP / 1.9), 40));
+    // Le plancher de 16 lignes maintenait la densite du bureau sur un
+    // telephone, ou la surface est pourtant trois fois plus petite.
+    const lignes = Math.max(
+      etroit ? 9 : 16,
+      Math.min(Math.round(fieldHeight / STEP / 1.9), etroit ? 14 : 40),
+    );
     traces = [];
     for (let i = 0; i < lignes; i++) {
       const y0 = Math.round(((i + 0.5) / lignes) * fieldHeight);
