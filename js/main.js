@@ -719,6 +719,38 @@ const observer = new IntersectionObserver(
 );
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
+/**
+ * Filet de securite des revelations.
+ *
+ * Une animation decorative ne doit jamais pouvoir masquer du contenu de
+ * facon definitive. Ce cas s'est produit : un clip-path pose sur un element
+ * observe le reduisait a une aire nulle, IntersectionObserver rapportait
+ * intersectionRatio 0 en plein ecran, .visible n'arrivait jamais et le clip
+ * n'etait jamais leve. Le portrait de la galerie est reste invisible.
+ *
+ * La cause est corrigee (le balayage porte sur l'image, pas sur le cadre),
+ * mais le controle reste : il s'appuie sur la geometrie, que ni un clip ni
+ * une opacite n'influencent.
+ */
+function filetDeSecuriteRevelations() {
+  const revele = () => {
+    document.querySelectorAll(".reveal:not(.visible)").forEach((el) => {
+      const r = el.getBoundingClientRect();
+      if (r.width > 0 && r.top < window.innerHeight && r.bottom > 0) {
+        el.classList.add("visible");
+      }
+    });
+  };
+  let attente = 0;
+  const differe = () => {
+    clearTimeout(attente);
+    attente = setTimeout(revele, 200);
+  };
+  window.addEventListener("load", differe, { once: true });
+  window.addEventListener("scroll", differe, { passive: true });
+}
+filetDeSecuriteRevelations();
+
 // SCROLL TO TOP
 window.addEventListener("scroll", () => {
   const btn = document.getElementById("scrollTop");
@@ -2046,8 +2078,14 @@ function initRevealDirections() {
   });
   // Ces elements recoivent .reveal apres la creation de l'observateur : il
   // faut les lui donner explicitement, sinon ils restent masques a jamais.
-  document.querySelectorAll(".photo-main, .photo-secondary").forEach((el) => {
-    el.classList.add("reveal", "wipe");
+  //
+  // .wipe-host et non .wipe : le balayage doit porter sur l'image, pas sur
+  // le cadre observe. Un clip-path sur l'element observe le reduit a une
+  // aire nulle, IntersectionObserver rapporte alors intersectionRatio 0 et
+  // n'ajoute jamais .visible, donc le clip n'est jamais leve. Impasse
+  // circulaire mesuree : le portrait restait invisible en permanence.
+  document.querySelectorAll(".photo-main").forEach((el) => {
+    el.classList.add("reveal", "wipe-host");
     observer.observe(el);
   });
 }

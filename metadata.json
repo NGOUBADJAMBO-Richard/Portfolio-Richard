@@ -42,12 +42,12 @@
     "canonical": "https://portfolio-richard.vercel.app",
     "ogTitle": "Richard NGOUBADJAMBO — Ingénieur Fullstack & Mobile",
     "ogDescription": "Je conçois et livre des solutions digitales complètes — du backend robuste aux interfaces mobiles élégantes. Ingénieur d'État avec une vision produit et une passion pour l'impact.",
-    "ogImage": "https://portfolio-richard.vercel.app/assets/images/Richard.png",
+    "ogImage": "https://portfolio-richard.vercel.app/assets/images/og-cover.jpg",
     "ogType": "website",
     "ogUrl": "https://portfolio-richard.vercel.app",
     "twitterCard": "summary_large_image",
     "twitterCreator": "@ngoubadjambo",
-    "twitterImage": "https://portfolio-richard.vercel.app/assets/images/Richard.png",
+    "twitterImage": "https://portfolio-richard.vercel.app/assets/images/og-cover.jpg",
     "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
     "locale": "fr_FR",
     "language": "fr",
@@ -60,7 +60,7 @@
     "url": "https://portfolio-richard.vercel.app",
     "title": "Richard NGOUBADJAMBO — Ingénieur Fullstack & Mobile",
     "description": "Je conçois et livre des solutions digitales complètes — du backend robuste aux interfaces mobiles élégantes.",
-    "image": "https://portfolio-richard.vercel.app/assets/images/Richard.png",
+    "image": "https://portfolio-richard.vercel.app/assets/images/richard.jpg",
     "image_width": 1200,
     "image_height": 630,
     "image_alt": "Richard NGOUBADJAMBO - Ingénieur Fullstack & Mobile",
@@ -77,7 +77,7 @@
     "url": "https://portfolio-richard.vercel.app",
     "title": "Richard NGOUBADJAMBO — Ingénieur Fullstack & Mobile",
     "description": "Je conçois et livre des solutions digitales complètes — du backend robuste aux interfaces mobiles élégantes.",
-    "image": "https://portfolio-richard.vercel.app/assets/images/Richard.png",
+    "image": "https://portfolio-richard.vercel.app/assets/images/richard.jpg",
     "image_alt": "Richard NGOUBADJAMBO"
   },
   "linkedin": {
@@ -85,7 +85,7 @@
     "url": "https://portfolio-richard.vercel.app",
     "title": "Richard NGOUBADJAMBO — Ingénieur Fullstack & Mobile",
     "description": "Portfolio professionnel complet - solutions digitales complètes.",
-    "image": "https://portfolio-richard.vercel.app/assets/images/Richard.png"
+    "image": "https://portfolio-richard.vercel.app/assets/images/richard.jpg"
   },
   "tech": {
     "frontend": {

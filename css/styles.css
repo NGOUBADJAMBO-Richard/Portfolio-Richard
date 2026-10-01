@@ -342,12 +342,6 @@ nav.scrolled {
   letter-spacing: -0.01em;
   flex-shrink: 0;
 }
-.nav-logo-img {
-  height: 32px;
-  width: 32px;
-  border-radius: var(--radius);
-  object-fit: cover;
-}
 .nav-logo-accent {
   color: var(--accent-ink);
 }
@@ -629,41 +623,6 @@ nav.scrolled {
   object-position: top;
 }
 
-.photo-badge {
-  position: absolute;
-  bottom: -14px;
-  right: -8px;
-  max-width: 190px;
-  padding: var(--s3) var(--s4);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  background: var(--surface);
-  font-size: 0.78rem;
-  line-height: 1.45;
-  font-weight: 600;
-  color: var(--ink);
-}
-
-.logo-frame {
-  position: absolute;
-  top: -16px;
-  left: -8px;
-  width: 64px;
-  height: 64px;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  background: var(--surface);
-  z-index: 2;
-}
-.logo-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .float-card {
   position: absolute;
   top: 40px;
@@ -698,13 +657,6 @@ nav.scrolled {
   align-items: stretch;
   gap: 0;
 }
-.logo-frame {
-  position: static;
-  order: -1;
-  width: 40px;
-  height: 40px;
-  margin-bottom: var(--s4);
-}
 .photo-frame {
   position: static;
   order: 1;
@@ -723,20 +675,6 @@ nav.scrolled {
   background: none;
   margin-top: var(--s4);
 }
-.photo-badge {
-  position: static;
-  order: 3;
-  max-width: none;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: none;
-  font-size: 0.8rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: var(--ink-3);
-}
-
 /* Repli des images manquantes. */
 .img-fallback {
   display: grid;
@@ -951,7 +889,9 @@ nav.scrolled {
 .photo-main {
   position: relative;
   grid-column: 1 / -1;
-  aspect-ratio: 4 / 3;
+  /* 4/3 paysage pour une source portrait 2/3 rognait 50 % de la photo.
+     En 4/5, la perte tombe a 17 % et le cadrage reste celui d'un portrait. */
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   border: 1px solid var(--rule);
   border-radius: var(--radius-lg);
@@ -961,7 +901,7 @@ nav.scrolled {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 22%;
+  object-position: center 18%;
 }
 .photo-overlay-badge {
   position: absolute;
@@ -994,7 +934,13 @@ nav.scrolled {
   background: var(--surface);
 }
 .photo-logo-box img {
-  max-height: 100%;
+  /* Les deux axes sont contraints. "max-height: 100%" ne suffisait pas : la
+     hauteur du cadre vient d'un aspect-ratio, donc le pourcentage se resout
+     contre une hauteur qui depend du contenu et la contrainte est abandonnee.
+     L'image gardait alors sa hauteur d'attribut (500 px) et debordait de
+     286 px, ecretee par overflow: hidden. */
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
@@ -1758,7 +1704,8 @@ footer {
 .scroll-top {
   position: fixed;
   right: var(--s5);
-  bottom: var(--s5);
+  /* Empile au-dessus de la pilule WhatsApp (46 px), qui occupe le coin. */
+  bottom: calc(var(--s5) + 46px + var(--s3));
   z-index: 90;
   width: 42px;
   height: 42px;
@@ -2060,16 +2007,16 @@ main[id] {
    signaler ce qui est vivant (mission recente, demo en ligne). */
 :root[data-theme="light"] {
   --accent-2: #b4540a;
-  --aurora-1: rgba(27, 63, 216, 0.48);
-  --aurora-2: rgba(180, 84, 10, 0.34);
-  --aurora-3: rgba(27, 63, 216, 0.3);
+  --aurora-1: rgba(27, 63, 216, 0.6);
+  --aurora-2: rgba(180, 84, 10, 0.46);
+  --aurora-3: rgba(27, 63, 216, 0.4);
   --grid-line: rgba(23, 25, 28, 0.16);
 }
 :root[data-theme="dark"] {
   --accent-2: #f0a35e;
-  --aurora-1: rgba(138, 164, 255, 0.42);
-  --aurora-2: rgba(240, 163, 94, 0.28);
-  --aurora-3: rgba(138, 164, 255, 0.32);
+  --aurora-1: rgba(138, 164, 255, 0.54);
+  --aurora-2: rgba(240, 163, 94, 0.38);
+  --aurora-3: rgba(138, 164, 255, 0.42);
   --grid-line: rgba(255, 255, 255, 0.14);
 }
 
@@ -2491,12 +2438,20 @@ main
 .reveal.from-left:not(.visible) {
   transform: translateX(-22px);
 }
-.reveal.wipe {
-  clip-path: inset(0 0 100% 0);
+/* Le balayage porte sur l'IMAGE, pas sur le cadre observe.
+   Un clip-path pose sur l'element observe le reduit a une aire nulle :
+   IntersectionObserver rapporte intersectionRatio 0 meme en plein ecran, donc
+   .visible n'arrive jamais et le clip n'est jamais leve. Mesure sur un cadre
+   de 440x550 place dans un viewport de 900 : isIntersecting false.
+   Le cadre garde donc une revelation par opacite, que l'observateur voit. */
+.reveal.wipe-host {
   transform: none;
-  opacity: 1;
 }
-.reveal.wipe.visible {
+.wipe-host > img {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.wipe-host.visible > img {
   clip-path: inset(0 0 0 0);
 }
 
@@ -2589,7 +2544,7 @@ main
   .tl-line::after {
     display: none;
   }
-  .reveal.wipe {
+  .wipe-host > img {
     clip-path: none;
   }
 }
@@ -2637,7 +2592,9 @@ main
 .wa-fab {
   --wa: #25d366;
   position: fixed;
-  left: var(--s5);
+  /* En bas a gauche, le bouton recouvrait le CTA principal du hero.
+     A droite, il ne croise aucun element interactif. */
+  right: var(--s5);
   bottom: var(--s5);
   z-index: 95;
   display: inline-flex;
@@ -2704,13 +2661,13 @@ main
    les deux sont affiches sur un ecran etroit. */
 @media (max-width: 600px) {
   .wa-fab {
-    left: var(--s4);
+    right: var(--s4);
     bottom: var(--s4);
     height: 44px;
   }
   .scroll-top {
     right: var(--s4);
-    bottom: var(--s4);
+    bottom: calc(var(--s4) + 44px + var(--s2));
   }
 }
 
@@ -2741,20 +2698,20 @@ main
    ===================================================================== */
 
 :root[data-theme="light"] {
-  --aurora-4: rgba(20, 130, 120, 0.3);
-  --aurora-5: rgba(96, 60, 190, 0.28);
-  --dot: rgba(23, 25, 28, 0.22);
-  --watermark-ink: rgba(27, 63, 216, 0.16);
-  --beam-1: rgba(27, 63, 216, 0.16);
-  --beam-2: rgba(180, 84, 10, 0.13);
+  --aurora-4: rgba(20, 130, 120, 0.4);
+  --aurora-5: rgba(96, 60, 190, 0.4);
+  --dot: rgba(23, 25, 28, 0.3);
+  --watermark-ink: rgba(27, 63, 216, 0.24);
+  --beam-1: rgba(27, 63, 216, 0.24);
+  --beam-2: rgba(180, 84, 10, 0.2);
 }
 :root[data-theme="dark"] {
-  --aurora-4: rgba(60, 200, 190, 0.26);
-  --aurora-5: rgba(150, 120, 255, 0.3);
-  --dot: rgba(255, 255, 255, 0.18);
-  --watermark-ink: rgba(138, 164, 255, 0.18);
-  --beam-1: rgba(138, 164, 255, 0.16);
-  --beam-2: rgba(240, 163, 94, 0.12);
+  --aurora-4: rgba(60, 200, 190, 0.36);
+  --aurora-5: rgba(150, 120, 255, 0.42);
+  --dot: rgba(255, 255, 255, 0.24);
+  --watermark-ink: rgba(138, 164, 255, 0.26);
+  --beam-1: rgba(138, 164, 255, 0.24);
+  --beam-2: rgba(240, 163, 94, 0.2);
 }
 
 /* Deux nappes de plus, sur deux teintes supplementaires : le fond n'est
@@ -3234,24 +3191,15 @@ section > .container > .section-header > .section-tag::after {
    dessous, il n'y a pas de marge a offrir, le voile reste uniforme.
    ===================================================================== */
 
+/* Le voile plein ecran est retire. Mesure a 1440 px : uniforme a 88 %, il ne
+   laissait passer que 12 % du fond, et son ouverture laterale ne se
+   declenchait qu'a partir de 1500 px. Le fond n'arrivait donc jamais a
+   l'ecran sur une largeur d'ordinateur portable courante.
+   Il est remplace par un voile local sous chaque colonne de contenu
+   (section 24), ce qui rouvre les respirations verticales et les gouttieres a
+   toutes les largeurs, sans toucher au contraste derriere le texte. */
 .content-veil {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background: var(--veil);
-}
-
-@media (min-width: 1500px) {
-  .content-veil {
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      var(--veil) 15%,
-      var(--veil) 85%,
-      transparent 100%
-    );
-  }
+  display: none;
 }
 
 /* Faisceaux : deux cones de couleur en rotation lente. Ils apportent du
@@ -3407,11 +3355,6 @@ section > .container > .section-header > .section-tag::after {
 .photo-logo-box img {
   border-radius: var(--radius);
 }
-.nav-logo-img,
-.logo-frame img {
-  border-radius: var(--radius);
-}
-
 @media (prefers-reduced-motion: reduce) {
   .photo-frame img,
   .photo-main-img,
@@ -3420,5 +3363,61 @@ section > .container > .section-header > .section-tag::after {
   }
   .photo-main:hover .photo-main-img {
     scale: 1;
+  }
+}
+
+/* =====================================================================
+   24. VOILE LOCAL DE LECTURE
+   ---------------------------------------------------------------------
+   Le voile suit la colonne de contenu, pas la fenetre.
+
+   Ce qui redevient du fond a pleine intensite :
+     - les 128 px de padding vertical de chaque section, soit 256 px entre
+       deux blocs de contenu ;
+     - les gouttieres laterales ;
+     - et ce, a toutes les largeurs.
+
+   Le contraste derriere le texte est inchange : le coeur du voile garde
+   l'opacite de 0,88 du voile global qu'il remplace.
+
+   Le bord doux vient de "filter: blur()" applique au voile lui-meme — un
+   rectangle plein et statique. Ce n'est pas "backdrop-filter", qui
+   reechantillonnerait le canvas anime a chaque image : cette piste avait
+   fait tomber la page a 1 image en 1,2 s.
+   ===================================================================== */
+
+section > .container,
+footer > .container {
+  position: relative;
+}
+
+section > .container::before,
+footer > .container::before {
+  content: "";
+  position: absolute;
+  /* Le voile depasse la colonne pour que le texte de bord reste couvert,
+     tout en laissant le padding de section ouvert. */
+  inset: calc(-1 * var(--s5)) calc(-1 * var(--s4));
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 48px;
+  background: var(--veil);
+  filter: blur(30px);
+}
+
+/* La bande de statistiques et le hero portent leur propre respiration :
+   un voile deborde y serait visible comme une plaque. */
+.stats-bar > .container::before {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  section > .container::before,
+  footer > .container::before {
+    /* Sur mobile la gouttiere fait 24 px : un voile deborde de 32 px sortirait
+       de l'ecran. On le resserre et on adoucit moins. */
+    inset: calc(-1 * var(--s4)) calc(-1 * var(--s3));
+    border-radius: 32px;
+    filter: blur(20px);
   }
 }
